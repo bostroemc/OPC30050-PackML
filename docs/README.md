@@ -1,6 +1,6 @@
-# OPCUA-Specification-Template
+# OPC30050-PackML
 
-Read the specifications: <https://studious-journey-jgjejm8.pages.github.io/>
+Read the specifications: <{"message":"Not Found","documentation_url":"https://docs.github.com/rest/pages/pages#get-a-apiname-pages-site","status":"404"}>
 
 | Specification | Where |
 |---|---|
