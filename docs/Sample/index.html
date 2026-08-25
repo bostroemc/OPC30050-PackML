@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OPC 20020 — OPC UA for Sample Applications</title>
+<link rel="stylesheet" href="../spec.css">
+</head>
+<body>
+<header class="doc-header">
+<p class="doc-number">OPC 20020</p>
+<h1>OPC UA for Sample Applications</h1>
+<p class="doc-facts">Version 1.0.0 · 30 July 2026</p>
+</header>
+<nav class="toc" aria-label="Contents">
+<details class="toc-panel" open>
+<summary>Contents</summary>
+<ul class="toc-pages">
+<li><a href="../agreement-of-use.html">Agreement of Use</a></li>
+</ul>
+<ul>
+<li><a href="#sec_1"><span class="label">1</span> Scope</a></li>
+<li><a href="#sec_2"><span class="label">2</span> Normative references</a></li>
+<li><a href="#sec_3"><span class="label">3</span> Terms, definitions and abbreviations</a>
+<ul>
+<li><a href="#sec_3-1"><span class="label">3.1</span> Overview</a></li>
+<li><a href="#sec_3-2"><span class="label">3.2</span> Terms and definitions</a></li>
+<li><a href="#sec_3-3"><span class="label">3.3</span> Abbreviations</a></li>
+</ul>
+</li>
+<li><a href="#sec_4"><span class="label">4</span> Editing Guidelines</a>
+<ul>
+<li><a href="#sec_4-1"><span class="label">4.1</span> Overview</a></li>
+<li><a href="#sec_4-2"><span class="label">4.2</span> Word Documents</a></li>
+<li><a href="#sec_4-3"><span class="label">4.3</span> Figures</a></li>
+<li><a href="#sec_4-4"><span class="label">4.4</span> Headings</a></li>
+<li><a href="#sec_4-5"><span class="label">4.5</span> References</a></li>
+</ul>
+</li>
+<li><a href="#sec_5"><span class="label">5</span> General information</a></li>
+<li><a href="#sec_6"><span class="label">6</span> Use cases</a>
+<ul>
+<li><a href="#sec_6-1"><span class="label">6.1</span> [First use case]</a></li>
+<li><a href="#sec_6-2"><span class="label">6.2</span> [Second use case]</a></li>
+</ul>
+</li>
+<li><a href="#sec_7"><span class="label">7</span> Information Model overview</a></li>
+<li><a href="#sec_8"><span class="label">8</span> OPC UA ObjectTypes</a>
+<ul>
+<li><a href="#sec_8-1"><span class="label">8.1</span> SomeType</a></li>
+<li><a href="#sec_8-2"><span class="label">8.2</span> SomeMethod</a></li>
+<li><a href="#sec_8-3"><span class="label">8.3</span> SomeInstance</a></li>
+<li><a href="#sec_8-4"><span class="label">8.4</span> SomeStateMachineType</a></li>
+<li><a href="#sec_8-5"><span class="label">8.5</span> Start</a></li>
+<li><a href="#sec_8-6"><span class="label">8.6</span> Stop</a></li>
+<li><a href="#sec_8-7"><span class="label">8.7</span> SomeEventType</a></li>
+</ul>
+</li>
+<li><a href="#sec_9"><span class="label">9</span> OPC UA VariableTypes</a>
+<ul>
+<li><a href="#sec_9-1"><span class="label">9.1</span> SomeVariableType</a></li>
+</ul>
+</li>
+<li><a href="#sec_10"><span class="label">10</span> OPC UA DataTypes</a>
+<ul>
+<li><a href="#sec_10-1"><span class="label">10.1</span> SomeStructure</a></li>
+<li><a href="#sec_10-2"><span class="label">10.2</span> SomeUnion</a></li>
+<li><a href="#sec_10-3"><span class="label">10.3</span> SomeEnumeration</a></li>
+<li><a href="#sec_10-4"><span class="label">10.4</span> SomeOptionSet</a></li>
+</ul>
+</li>
+<li><a href="#sec_11"><span class="label">11</span> OPC UA ReferenceTypes</a>
+<ul>
+<li><a href="#sec_11-1"><span class="label">11.1</span> HasSomeRelation</a></li>
+</ul>
+</li>
+<li><a href="#sec_12"><span class="label">12</span> Profiles and Conformance Units</a>
+<ul>
+<li><a href="#sec_12-1"><span class="label">12.1</span> Conformance Units</a></li>
+<li><a href="#sec_12-2"><span class="label">12.2</span> Profiles</a>
+<ul>
+<li><a href="#sec_12-2-1"><span class="label">12.2.1</span> Profile list</a></li>
+<li><a href="#sec_12-2-2"><span class="label">12.2.2</span> Server Facets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec_13"><span class="label">13</span> Namespaces</a>
+<ul>
+<li><a href="#sec_13-1"><span class="label">13.1</span> Namespace Metadata</a></li>
+<li><a href="#sec_13-2"><span class="label">13.2</span> Handling of OPC UA Namespaces</a></li>
+</ul>
+</li>
+<li><a href="#sec_A"><span class="label">Annex A</span> Namespaces and Mappings</a>
+<ul>
+<li><a href="#sec_A-1"><span class="label">A.1</span> NodeSets and Supplementary Files</a></li>
+</ul>
+</li>
+</ul>
+</details>
+</nav>
+<main>
+<section id="sec_1" class="clause">
+<h2><span class="label">1</span> Scope<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="17-49" title="Open the source of this clause">&#128221;</a></h2>
+<p>This document specifies [WHAT THIS COMPANION SPECIFICATION COVERS].</p>
+<p><strong>OPC Foundation</strong></p>
+<p>OPC is the interoperability standard for the secure and reliable exchange of data and information in the industrial automation space and in other industries. It is platform independent and ensures the seamless flow of information among devices from multiple vendors. The OPC Foundation is responsible for the development and maintenance of this standard.</p>
+<p>OPC UA is a platform independent service-oriented architecture that integrates all the functionality of the individual OPC Classic specifications into one extensible framework. This multi-layered approach accomplishes the original design specification goals of:</p>
+<ul class="list-bullet">
+<li>Platform independence: from an embedded microcontroller to cloud-based infrastructure</li>
+<li>Secure: encryption, authentication, authorisation, and auditing</li>
+<li>Extensible: ability to add new features including transports without affecting existing applications</li>
+<li>Comprehensive information modelling capabilities: for defining any model from simple to complex</li>
+</ul>
+<p><strong>Other Organization</strong></p>
+<p>[INFORMATION ABOUT OTHER ORGANIZATION CONTRIBUTING TO THE SPECIFICATION]</p>
+</section>
+<section id="sec_2" class="refs">
+<h2><span class="label">2</span> Normative references<a class="src" href="../../source/Sample/manifest.json" data-src="source/Sample/manifest.json" data-line="131" title="Generated - open source/Sample/manifest.json, which decides what this clause says">&#128221;</a></h2>
+<p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments and errata) applies.</p>
+<section class="refs" id="normative-references">
+<h2></h2>
+<ul class="ref-list">
+<li id="ref-uapart1"><em>OPC Unified Architecture - Part 1: Overview and Concepts</em> <a href="http://www.opcfoundation.org/documents/10000-1/" class="ext">http://www.opcfoundation.org/documents/10000-1/</a></li>
+<li id="ref-uapart2"><em>OPC Unified Architecture - Part 2: Security Model</em> <a href="http://www.opcfoundation.org/documents/10000-2/" class="ext">http://www.opcfoundation.org/documents/10000-2/</a></li>
+<li id="ref-uapart3"><em>OPC Unified Architecture - Part 3: Address Space Model</em> <a href="http://www.opcfoundation.org/documents/10000-3/" class="ext">http://www.opcfoundation.org/documents/10000-3/</a></li>
+<li id="ref-uapart4"><em>OPC Unified Architecture - Part 4: Services</em> <a href="http://www.opcfoundation.org/documents/10000-4/" class="ext">http://www.opcfoundation.org/documents/10000-4/</a></li>
+<li id="ref-uapart5"><em>OPC Unified Architecture - Part 5: Information Model</em> <a href="http://www.opcfoundation.org/documents/10000-5/" class="ext">http://www.opcfoundation.org/documents/10000-5/</a></li>
+<li id="ref-uapart6"><em>OPC Unified Architecture - Part 6: Mappings</em> <a href="http://www.opcfoundation.org/documents/10000-6/" class="ext">http://www.opcfoundation.org/documents/10000-6/</a></li>
+<li id="ref-uapart7"><em>OPC Unified Architecture - Part 7: Profiles</em> <a href="http://www.opcfoundation.org/documents/10000-7/" class="ext">http://www.opcfoundation.org/documents/10000-7/</a></li>
+<li id="ref-uapart8"><em>OPC Unified Architecture - Part 8: Data Access</em> <a href="http://www.opcfoundation.org/documents/10000-8/" class="ext">http://www.opcfoundation.org/documents/10000-8/</a></li>
+<li id="ref-uapart19"><em>OPC Unified Architecture - Part 19: Dictionary Reference</em> <a href="http://www.opcfoundation.org/documents/10000-19/" class="ext">http://www.opcfoundation.org/documents/10000-19/</a></li>
+<li id="ref-uapart100"><em>OPC Unified Architecture - Part 100: Devices</em> <a href="http://www.opcfoundation.org/documents/10000-100/" class="ext">http://www.opcfoundation.org/documents/10000-100/</a></li>
+<li id="ref-rfc5280"><em>Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile</em> <a href="https://datatracker.ietf.org/doc/html/rfc5280" class="ext">https://datatracker.ietf.org/doc/html/rfc5280</a></li>
+</ul>
+</section>
+</section>
+<section id="sec_3" class="terms">
+<h2><span class="label">3</span> Terms, definitions and abbreviations<a class="src" href="../../source/Sample/manifest.json" data-src="source/Sample/manifest.json" title="Generated - open source/Sample/manifest.json, which decides what this clause says">&#128221;</a></h2>
+<section id="sec_3-1" class="clause">
+<h3><span class="label">3.1</span> Overview<a class="src" href="../../source/Sample/manifest.json" data-src="source/Sample/manifest.json" data-line="35" title="Generated - open source/Sample/manifest.json, which decides what this clause says">&#128221;</a></h3>
+<p>It is assumed that basic concepts of OPC UA information modelling are understood in this document. This document will use these concepts to describe the OPC UA for Sample Applications Information Model. For the purposes of this document, the terms and definitions given in <a class="xref" href="#ref-uapart1" data-ref-type="bibr">OPC 10000-1</a>, <a class="xref" href="#ref-uapart2" data-ref-type="bibr">OPC 10000-2</a>, <a class="xref" href="#ref-uapart3" data-ref-type="bibr">OPC 10000-3</a>, <a class="xref" href="#ref-uapart4" data-ref-type="bibr">OPC 10000-4</a>, <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a>, <a class="xref" href="#ref-uapart6" data-ref-type="bibr">OPC 10000-6</a>, <a class="xref" href="#ref-uapart7" data-ref-type="bibr">OPC 10000-7</a>, <a class="xref" href="#ref-uapart8" data-ref-type="bibr">OPC 10000-8</a>, <a class="xref" href="#ref-uapart19" data-ref-type="bibr">OPC 10000-19</a>, <a class="xref" href="#ref-uapart100" data-ref-type="bibr">OPC 10000-100</a> and <a class="xref" href="#ref-rfc5280" data-ref-type="bibr">IETF RFC 5280</a> as well as the following apply.</p>
+<div class="callout note">
+<p class="role-label">NOTE</p>
+<p>Note that OPC UA terms and terms defined in this document are <em>italicized</em> in the document.</p>
+</div>
+</section>
+<section id="sec_3-2" class="clause">
+<h3><span class="label">3.2</span> Terms and definitions<a class="src" href="../../source/Sample/manifest.json" data-src="source/Sample/manifest.json" data-line="214" title="Generated - open source/Sample/manifest.json, which decides what this clause says">&#128221;</a></h3>
+<section class="term-sec">
+<h4><span class="label">3.2.1</span> <span class="preferred-term">FirstSampleTerm</span></h4>
+<p>[what it means in this document, as a noun phrase and without a leading article]</p>
+<div class="callout note term-note">
+<p class="role-label">Note 1 to entry:</p>
+<p>[Information or example to help explain the term].</p>
+</div>
+<div class="callout note term-note">
+<p class="role-label">Note 2 to entry:</p>
+<p>[More information or examples].</p>
+</div>
+<p class="term-source">[SOURCE: IETF RFC 5280]</p>
+</section>
+<section class="term-sec">
+<h4><span class="label">3.2.2</span> <span class="preferred-term">SecondSampleTerm</span></h4>
+<p>[what it means in this document, as a noun phrase and without a leading article]</p>
+</section>
+</section>
+<section id="sec_3-3" class="clause">
+<h3><span class="label">3.3</span> Abbreviations<a class="src" href="../../source/Sample/manifest.json" data-src="source/Sample/manifest.json" data-line="233" title="Generated - open source/Sample/manifest.json, which decides what this clause says">&#128221;</a></h3>
+<figure class="table-wrap">
+<table>
+<tbody>
+<tr><td>HMI</td><td>Human Machine Interface</td></tr>
+<tr><td>MES</td><td>Manufacturing Execution System</td></tr>
+<tr><td>PLC</td><td>Programmable Logic Controller</td></tr>
+<tr><td>UML</td><td>Unified Modelling Language</td></tr>
+<tr><td>URI</td><td>Uniform Resource Identifier</td></tr>
+<tr><td>XML</td><td>Extensible Markup Language</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+</section>
+<section id="sec_4" class="clause">
+<h2><span class="label">4</span> Editing Guidelines<a class="src" href="../../source/Sample/editor-guidelines.md" data-src="source/Sample/editor-guidelines.md" data-line="7-46" title="Open the source of this clause">&#128221;</a></h2>
+<section id="sec_4-1" class="clause">
+<h3><span class="label">4.1</span> Overview<a class="src" href="../../source/Sample/editor-guidelines.md" data-src="source/Sample/editor-guidelines.md" data-line="11-17" title="Open the source of this clause">&#128221;</a></h3>
+<p>Working groups have to choose between using Word as their primary tool or GitHub. The decision is made by the working group for each specification that they are responsible for. Some working groups may continue to use Word as their primary tool for older specifications but adopt GitHub as the basis for new work.</p>
+<p>The Word approach is more suitable for Working Groups with less technical SMEs (Subject Matter Experts) as members because it is single tool integrated into Teams which is the primary collaboration platform.</p>
+<p>The GitHub approach is more suited to Working Groups with programmers who are already familar with Git and GitHub and are confortable use command line tools as part of the editing process. The GitHub approach also makes it easier to leverage LLMs during the specification development process.</p>
+</section>
+<section id="sec_4-2" class="clause">
+<h3><span class="label">4.2</span> Word Documents<a class="src" href="../../source/Sample/editor-guidelines.md" data-src="source/Sample/editor-guidelines.md" data-line="19-23" title="Open the source of this clause">&#128221;</a></h3>
+<p>All Working Groups are required to provide a Word document version of their specification that complies with the IEC requirements. The tools provided by the OPC Foundation will generate this document automatically from a GitHub repo that follows the OPC Foundation document template.</p>
+<p>The auto-generated Word documents can also be distributed to reviewers, however, editors will have manually integrate feedback into the GitHub source files (possibily with LLM assistance).</p>
+</section>
+<section id="sec_4-3" class="clause">
+<h3><span class="label">4.3</span> Figures<a class="src" href="../../source/Sample/editor-guidelines.md" data-src="source/Sample/editor-guidelines.md" data-line="25-33" title="Open the source of this clause">&#128221;</a></h3>
+<p>All figures must be developed with a tool that allows the IEC to edit the diagrams. Providing static images exported from bespoke tools is not acceptable.</p>
+<p>Figures may be created as Visio or Powerpoint files. When using a Word document as the master, these files are embedded in the Word document as OLE objects. When using GitHub as the master, the OPC Foundation provides a tool that converts the Visio or Powerpoint files to SVG files.</p>
+<p>When using GitHub as the master, the recommended format is drawio because there are many good open source editors for this format. Files with the extension 'drawio.svg' can edited using drawio tools but are saved as SVG. Editors that produce formats other than drawio should not be used even if they support SVG export.</p>
+<p>In rare cases, figures will be pictures of real equipment or copies of figures from other sources that cannot be edited. These figures can be image files (PNG, JPG).</p>
+</section>
+<section id="sec_4-4" class="clause">
+<h3><span class="label">4.4</span> Headings<a class="src" href="../../source/Sample/editor-guidelines.md" data-src="source/Sample/editor-guidelines.md" data-line="35-42" title="Open the source of this clause">&#128221;</a></h3>
+<p>This guideline is applied for all OPC UA parts following the IEC guidelines:</p>
+<ul class="list-bullet">
+<li>The first letter is capitalized.</li>
+<li>For headers that consist of multiple words, all other words are all lower case with the exception of proper nouns, like terms or type names.</li>
+</ul>
+<p>This applies to section, table, and figure headers.</p>
+</section>
+<section id="sec_4-5" class="clause">
+<h3><span class="label">4.5</span> References<a class="src" href="../../source/Sample/editor-guidelines.md" data-src="source/Sample/editor-guidelines.md" data-line="44-46" title="Open the source of this clause">&#128221;</a></h3>
+<p>Forward HasSubtype References are not added to Type definitions.</p>
+</section>
+</section>
+<section id="sec_5" class="clause">
+<h2><span class="label">5</span> General information<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="56-58" title="Open the source of this clause">&#128221;</a></h2>
+<p>[Explain the domain to a reader who knows OPC UA but not this industry.]</p>
+</section>
+<section id="sec_6" class="clause">
+<h2><span class="label">6</span> Use cases<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="60-68" title="Open the source of this clause">&#128221;</a></h2>
+<section id="sec_6-1" class="clause">
+<h3><span class="label">6.1</span> [First use case]<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="62-64" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What a user wants to be able to do, and what the model has to carry for them to do it.]</p>
+</section>
+<section id="sec_6-2" class="clause">
+<h3><span class="label">6.2</span> [Second use case]<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="66-68" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What a user wants to be able to do, and what the model has to carry for them to do it.]</p>
+</section>
+</section>
+<section id="sec_7" class="clause">
+<h2><span class="label">7</span> Information Model overview<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="70-79" title="Open the source of this clause">&#128221;</a></h2>
+<p>[An overview of the model elements and how they relate to each other.]</p>
+<figure class="figure" id="fig_1">
+<img class="figure-image" src="figures/information-model-overview.drawio.svg" alt="Information Model overview">
+<figcaption><span class="label">Figure 1</span> Information Model overview<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="75-79" title="Open the source of this clause">&#128221;</a></figcaption>
+</figure>
+</section>
+<section id="sec_8" class="clause">
+<h2><span class="label">8</span> OPC UA ObjectTypes<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="7-347" title="Open the source of this clause">&#128221;</a></h2>
+<section id="sec_8-1" class="clause">
+<h3><span class="label">8.1</span> SomeType<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="29-135" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this type represents, and when a Server would expose one. One or two paragraphs.]</p>
+<p>The <em>SomeType</em> <em>ObjectType</em> is defined in <a class="xref" href="#tbl_1" data-ref-type="table">Table 1</a>.</p>
+<figure class="table-wrap" id="tbl_1">
+<figcaption><span class="label">Table 1</span> SomeType Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="35-40" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeType</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:BaseObjectType defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+<tr><td>0:HasComponent</td><td>Object</td><td>1:SomeAlarm</td><td></td><td>0:AlarmConditionType</td><td>O</td></tr>
+<tr><td>0:HasComponent</td><td>Object</td><td>1:SomeState</td><td></td><td>1:SomeStateMachineType</td><td>M</td></tr>
+<tr><td>0:HasProperty</td><td>Variable</td><td>1:SomeProperty1</td><td>0:String</td><td>0:PropertyType</td><td>M</td></tr>
+<tr><td>0:HasProperty</td><td>Variable</td><td>1:SomeProperty2</td><td>0:Int32</td><td>0:PropertyType</td><td>M</td></tr>
+<tr><td>0:HasComponent</td><td>Variable</td><td>1:SomeMeasurement</td><td>0:Number</td><td>1:SomeVariableType</td><td>O</td></tr>
+<tr><td>0:HasComponent</td><td>Variable</td><td>1:SomeNumericArray</td><td>0:Int32[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
+<tr><td>0:HasComponent</td><td>Variable</td><td>1:SomeStructureArray</td><td>1:SomeStructure[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
+<tr><td>0:HasComponent</td><td>Variable</td><td>1:SomeEnumeration</td><td>1:SomeEnumeration</td><td>0:BaseDataVariableType</td><td>O</td></tr>
+<tr><td>0:HasComponent</td><td>Method</td><td>1:SomeMethod</td><td></td><td></td><td>M</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Base</td></tr>
+<tr><td colspan="6">Some Measurements</td></tr>
+<tr><td colspan="6">Some Arrays</td></tr>
+</tbody>
+</table>
+</figure>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Editor Note</strong> - DESCRIBING NODES</th></tr>
+</thead>
+<tbody>
+<tr><td>Each of child node defined in the table should have text describing what it for and what semantics apply. In some cases, the nodes are defined completely in other sections so only a brief summary is needed here.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The <em>SomeProperty1</em> <em>Property</em> [describe its purpose].</p>
+<p>The <em>SomeProperty2</em> <em>Property</em> [describe its purpose].</p>
+<p>The <em>SomeMeasurement</em> <em>Variable</em> [describe its purpose].</p>
+<p>The <em>SomeNumericArray</em> <em>Variable</em> [describe its purpose].</p>
+<p>The <em>SomeStructureArray</em> <em>Variable</em> [describe its purpose].</p>
+<p>The <em>SomeMethod</em> <em>Method</em> [describe its purpose].</p>
+<p>The <em>SomeAlarm</em> <em>Alarm</em> [describe its purpose].</p>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Editor Note</strong> - SPECIFYING CONFORMANCE UNITS</th></tr>
+</thead>
+<tbody>
+<tr><td>The ConformanceUnits listed in the table are the primary ConformanceUnits used to test the capabilities provided by a Node. ConformanceUnits which indirectly require the Node are not listed.<br>For example, a ConformanceUnit testing a subtype of a ObjectType does not need to be listed since a supertype is automatically included if a subtype is included.<br>If there are no suitable ConformanceUnits then the Node may not be needed or there are missing ConformanceUnits.<br>The OPC Foundation tooling used to validate the specification during the release process automatically adds the ConformanceUnits listed to the Category element for the Node definition in the UANodeSet. Therefore, editors do not have to add these Category elements manually into the UANodeSet.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The components of the <em>SomeType</em> <em>ObjectType</em> have additional references which are defined in <a class="xref" href="#tbl_2" data-ref-type="table">Table 2</a>.</p>
+<figure class="table-wrap" id="tbl_2">
+<figcaption><span class="label">Table 2</span> SomeType Additional References<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="87-93" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>SourceBrowsePath</strong></th><th><strong>Reference Type</strong></th><th><strong>Is Forward</strong></th><th><strong>TargetBrowsePath</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>1:SomeProperty1</td><td>0:HasDictionaryEntry</td><td>True</td><td>3:0112/2///61987#ABN613#001</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:SomeMeasurement</td></tr>
+<tr><td>0:EngineeringUnits</td></tr>
+</tbody>
+</table>
+</td><td>0:HasQuantity</td><td>True</td><td><table class="plain">
+<tbody>
+<tr><td>0:Quantities</td></tr>
+<tr><td>1:Speed</td></tr>
+</tbody>
+</table>
+</td></tr>
+<tr><td>1:SomeMeasurement</td><td>0:HasCondition</td><td>True</td><td>1:SomeAlarm</td></tr>
+</tbody>
+</table>
+</figure>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Editor Note</strong> - SPECIFYING ADDITIONAL REFERENCES</th></tr>
+</thead>
+<tbody>
+<tr><td><a class="xref" href="#tbl_1" data-ref-type="table">Table 1</a> allows you to define ObjectTypes. You add InstanceDeclarations, which can be based on complex TypeDefinitions (such as AnalogItemType). The complex structure of those TypeDefinitions does not need to be further defined, as it is already done by their TypeDefinitions. However, if you want to add additional References, you can use a table format as shown in <a class="xref" href="#tbl_2" data-ref-type="table">Table 2</a>. This format allows you to add References from those InstanceDeclarations to any other Node.</td></tr>
+</tbody>
+</table>
+</figure>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Editor Note</strong> - SPECIFYING DICTIONARY REFERENCES</th></tr>
+</thead>
+<tbody>
+<tr><td><p>When making use of dictionary references (see <a class="xref" href="#ref-uapart19" data-ref-type="bibr">OPC 10000-19</a>) the following rules apply:</p>
+<ul class="list-bullet">
+<li>DictionaryEntries from a TypeDefinition shall be referenced directly (see <a class="xref" href="#tbl_1" data-ref-type="table">Table 1</a>);</li>
+<li>DictionaryEntries from InstanceDeclarations shall be referenced by using an Additional References table for the TypeDefinition (see <a class="xref" href="#tbl_2" data-ref-type="table">Table 2</a>).</li>
+</ul>
+<p>When using IRDIs or URIs:</p>
+<ul class="list-bullet">
+<li>use the well-defined namespace (see <a class="xref" href="#ref-uapart19" data-ref-type="bibr">OPC 10000-19</a>) and include this in Table 40. This template already contains as example the IRDI namespace;</li>
+<li>create an additional NodeSet file for this namespace containing only the DictionaryEntries your specification is referencing, no additional organizational structure;</li>
+<li>use the URI or IRDI as the BrowseName and add a prefixed for the NamespaceIndex (see examples above).</li>
+</ul>
+</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The components of the <em>SomeType</em> <em>ObjectType</em> have additional subcomponents  which are defined in <a class="xref" href="#tbl_3" data-ref-type="table">Table 3</a>.</p>
+<figure class="table-wrap" id="tbl_3">
+<figcaption><span class="label">Table 3</span> SomeType Additional Subcomponents<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="107-115" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>BrowsePath</strong></th><th><strong>Reference</strong></th><th><strong>NodeClass</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Others</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>1:SomeAlarm</td><td>0:HasComponent</td><td>Object</td><td>1:SomeParameters</td><td></td><td>0:BaseObjectType</td><td>M</td></tr>
+<tr><td>1:SomeMeasurement</td><td>0:HasProperty</td><td>Variable</td><td>0:AllowNulls</td><td>0:Boolean</td><td>0:PropertyType</td><td>O</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:SomeAlarm</td></tr>
+<tr><td>1:SomeParameters</td></tr>
+</tbody>
+</table>
+</td><td>0:HasComponent</td><td>Variable</td><td>1:MaxNumberOfPorts</td><td>0:Byte</td><td>0:BaseDataVariableType</td><td>M</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:SomeAlarm</td></tr>
+<tr><td>1:SomeParameters</td></tr>
+</tbody>
+</table>
+</td><td>0:HasComponent</td><td>Variable</td><td>1:LocationTag</td><td>0:String</td><td>0:BaseDataVariableType</td><td>M</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:SomeAlarm</td></tr>
+<tr><td>1:SomeParameters</td></tr>
+<tr><td>1:LocationTag</td></tr>
+</tbody>
+</table>
+</td><td>0:HasProperty</td><td>Variable</td><td>0:MaxStringLength</td><td>0:UInt32</td><td>0:PropertyType</td><td>Os</td></tr>
+</tbody>
+</table>
+</figure>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Editor Note</strong> - SPECIFYING ADDITIONAL SUBCOMPONENTS</th></tr>
+</thead>
+<tbody>
+<tr><td><a class="xref" href="#tbl_1" data-ref-type="table">Table 1</a> allows you to define ObjectTypes. You add InstanceDeclarations, which can be based on complex TypeDefinitions (such as AnalogItemType). The complex structure of those TypeDefinitions does not need to be further defined, as it is already done by their TypeDefinitions. However, if you want to add additional subcomponents, you can use a table format as shown in <a class="xref" href="#tbl_3" data-ref-type="table">Table 3</a>. This format allows you to add instances to those InstanceDeclarations.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The child Nodes of the <em>SomeType</em> <em>ObjectType</em> have additional Attribute values defined in <a class="xref" href="#tbl_4" data-ref-type="table">Table 4</a>.</p>
+<figure class="table-wrap" id="tbl_4">
+<figcaption><span class="label">Table 4</span> Attribute Values for Child Nodes<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="125-135" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>BrowsePath</strong></th><th><strong>Value Attribute</strong></th><th><strong>Description Attribute</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>1:SomeMeasurement</td><td>5.7</td><td>This is a description for SomeMeasurement.</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:SomeAlarm</td></tr>
+<tr><td>1:SomeParameters</td></tr>
+<tr><td>1:LocationTag</td></tr>
+</tbody>
+</table>
+</td><td>"Building 2"</td><td>This is a description for LocationTag.</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:SomeMeasurement</td></tr>
+<tr><td>0:EURange</td></tr>
+</tbody>
+</table>
+</td><td><p>High: 1000</p>
+<p>Low: 0</p>
+</td><td>This is the EURange for SomeMeasurement.</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:SomeMeasurement</td></tr>
+<tr><td>0:EngineeringUnits</td></tr>
+</tbody>
+</table>
+</td><td colspan="2"><p>NamespaceUri: urn:someunits.org:2026-08:definitions</p>
+<p>UnitId: 1234</p>
+<p>DisplayName: Fidgets</p>
+<p>Description: Number of Fidgets</p>
+</td></tr>
+<tr><td>1:SomeAlarm</td><td></td><td>This is a description for SomeAlarm.</td></tr>
+<tr><td>1:SomeNumericArray</td><td colspan="2"><p>0</p>
+<p>1</p>
+<p>2</p>
+</td></tr>
+<tr><td>1:SomeStructureArray</td><td colspan="2"><pre><code class="language-json">[
+  {
+    "SP1": 12.34,
+    "SP2": 25.25,
+    "SomeVector": { "X": 100, "Y": 200, "Z": 300 }
+  },
+  {
+    "SP1": 25.99,
+    "SP2": 90.15,
+    "SomeVector": { "X": 300, "Y": 200, "Z": 100 }
+  }
+]</code></pre>
+</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_8-2" class="clause">
+<h3><span class="label">8.2</span> SomeMethod<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="137-179" title="Open the source of this clause">&#128221;</a></h3>
+<p>[An overview of the Method]</p>
+<p><strong>Signature</strong></p>
+<pre><code>SomeMethod (
+  [in]  0:String InArg1,
+  [in]  0:Double InArg2,
+  [out] 0:UInt32 OutArg1,
+  [out] 0:Int32  SomeStatus);</code></pre>
+<figure class="table-wrap" id="tbl_5">
+<figcaption><span class="label">Table 5</span> SomeMethod Method Arguments<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="150-157" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Argument</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>InArg1</td><td>Some description of InArg1.</td></tr>
+<tr><td>InArg2</td><td>Some description of InArg2.</td></tr>
+<tr><td>OutArg1</td><td>Some description of OutArg2.</td></tr>
+<tr><td>SomeStatus</td><td>Some description of SomeStatus.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>[Additional discussion of the arguments and how they are used.]</p>
+<p><strong>Method Result Codes (defined in Call Service)</strong></p>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Result Code</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>Bad_UserAccessDenied</td><td>See <a class="xref" href="#ref-uapart4" data-ref-type="bibr">OPC 10000-4</a> for a general description.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The <em>SomeMethod</em> <em>Method</em> is defined in <a class="xref" href="#tbl_6" data-ref-type="table">Table 6</a>.</p>
+<figure class="table-wrap" id="tbl_6">
+<figcaption><span class="label">Table 6</span> SomeMethod Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="169-174" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeMethod</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>0:HasProperty</td><td>Variable</td><td>0:InputArguments</td><td>0:Argument[]</td><td>0:PropertyType</td><td>M</td></tr>
+<tr><td>0:HasProperty</td><td>Variable</td><td>0:OutputArguments</td><td>0:Argument[]</td><td>0:PropertyType</td><td>M</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_8-3" class="clause">
+<h3><span class="label">8.3</span> SomeInstance<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="181-197" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this instance represents and how it is used]</p>
+<p>Its representation in the AddressSpace is defined in <a class="xref" href="#tbl_7" data-ref-type="table">Table 7</a>.</p>
+<figure class="table-wrap" id="tbl_7">
+<figcaption><span class="label">Table 7</span> SomeInstance Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="187-192" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeInstance</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">0:OrganizedBy the 0:Objects object defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+<tr><td>0:HasTypeDefinition</td><td>ObjectType</td><td colspan="4">1:SomeType</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_8-4" class="clause">
+<h3><span class="label">8.4</span> SomeStateMachineType<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="199-253" title="Open the source of this clause">&#128221;</a></h3>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Editor Note</strong> - STATEMACHINE</th></tr>
+</thead>
+<tbody>
+<tr><td>This section gives an example of how a StateMachine is defined using the table formats used in the temple. This allows the validator to check the correctness of the StateMachine in the Spec with the NodeSet-File.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>[What this type represents, and when a Server would define one. One or two paragraphs.]</p>
+<p>The <em>SomeStateMachineType</em> <em>ObjectType</em> is defined in <a class="xref" href="#tbl_8" data-ref-type="table">Table 8</a>.</p>
+<figure class="table-wrap" id="tbl_8">
+<figcaption><span class="label">Table 8</span> SomeStateMachineType Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="209-214" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeStateMachineType</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:FiniteStateMachineType defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+<tr><td>0:HasComponent</td><td>Object</td><td>1:Idle</td><td></td><td colspan="2">0:InitialStateType</td></tr>
+<tr><td>0:HasComponent</td><td>Object</td><td>1:Working</td><td></td><td colspan="2">0:StateType</td></tr>
+<tr><td>0:HasComponent</td><td>Object</td><td>1:FromIdleToWorking</td><td></td><td colspan="2">0:TransitionType</td></tr>
+<tr><td>0:HasComponent</td><td>Object</td><td>1:FromWorkingToIdle</td><td></td><td colspan="2">0:TransitionType</td></tr>
+<tr><td>0:HasComponent</td><td>Method</td><td>1:Start</td><td></td><td></td><td>M</td></tr>
+<tr><td>0:HasComponent</td><td>Method</td><td>1:Stop</td><td></td><td></td><td>M</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Base</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The components of the <em>SomeStateMachineType</em> <em>ObjectType</em> have additional references which are defined in  <a class="xref" href="#tbl_9" data-ref-type="table">Table 9</a>.</p>
+<figure class="table-wrap" id="tbl_9">
+<figcaption><span class="label">Table 9</span> SomeStateMachineType Additional References<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="232-242" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>SourceBrowsePath</strong></th><th><strong>Reference Type</strong></th><th><strong>Is Forward</strong></th><th><strong>TargetBrowsePath</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>1:FromIdleToWorking</td><td>0:FromState</td><td>True</td><td>1:Idle</td></tr>
+<tr><td></td><td>0:ToState</td><td>True</td><td>1:Working</td></tr>
+<tr><td></td><td>0:HasCause</td><td>True</td><td>1:Start</td></tr>
+<tr><td>1:FromWorkingToIdle</td><td>0:FromState</td><td>True</td><td>1:Working</td></tr>
+<tr><td></td><td>0:ToState</td><td>True</td><td>1:Idle</td></tr>
+<tr><td></td><td>0:HasCause</td><td>True</td><td>1:Stop</td></tr>
+<tr><td></td><td>0:HasEffect</td><td>True</td><td>0:SystemEventType</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The component Variables of the <em>SomeStateMachineType</em> have additional <em>Attributes</em> defined in  <a class="xref" href="#tbl_10" data-ref-type="table">Table 10</a>.</p>
+<figure class="table-wrap" id="tbl_10">
+<figcaption><span class="label">Table 10</span> SomeStateMachineType Attribute Values for Child Nodes<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="246-253" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>BrowsePath</strong></th><th><strong>Value Attribute</strong></th></tr>
+</thead>
+<tbody>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:Idle</td></tr>
+<tr><td>0:StateNumber</td></tr>
+</tbody>
+</table>
+</td><td>1</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:Working</td></tr>
+<tr><td>0:StateNumber</td></tr>
+</tbody>
+</table>
+</td><td>2</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:FromIdleToWorking</td></tr>
+<tr><td>0:TransitionNumber</td></tr>
+</tbody>
+</table>
+</td><td>1</td></tr>
+<tr><td><table class="plain">
+<tbody>
+<tr><td>1:FromWorkingToIdle</td></tr>
+<tr><td>0:TransitionNumber</td></tr>
+</tbody>
+</table>
+</td><td>2</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_8-5" class="clause">
+<h3><span class="label">8.5</span> Start<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="255-287" title="Open the source of this clause">&#128221;</a></h3>
+<p>[An overview of the Method]</p>
+<p><strong>Signature</strong></p>
+<pre><code>Start ();</code></pre>
+<figure class="table-wrap" id="tbl_11">
+<figcaption><span class="label">Table 11</span> Start Method Arguments<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="264-267" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Argument</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</figure>
+<p>[Additional discussion of the arguments and how they are used.]</p>
+<p><strong>Method Result Codes (defined in Call Service)</strong></p>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Result Code</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>Bad_UserAccessDenied</td><td>See <a class="xref" href="#ref-uapart4" data-ref-type="bibr">OPC 10000-4</a> for a general description.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The <em>Start</em> <em>Method</em> is defined in <a class="xref" href="#tbl_12" data-ref-type="table">Table 12</a>.</p>
+<figure class="table-wrap" id="tbl_12">
+<figcaption><span class="label">Table 12</span> Start Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="279-284" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:Start</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_8-6" class="clause">
+<h3><span class="label">8.6</span> Stop<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="289-321" title="Open the source of this clause">&#128221;</a></h3>
+<p>[An overview of the Method]</p>
+<p><strong>Signature</strong></p>
+<pre><code>Stop ();</code></pre>
+<figure class="table-wrap" id="tbl_13">
+<figcaption><span class="label">Table 13</span> Stop Method Arguments<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="298-301" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Argument</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</figure>
+<p>[Additional discussion of the arguments and how they are used.]</p>
+<p><strong>Method Result Codes (defined in Call Service)</strong></p>
+<figure class="table-wrap">
+<table>
+<thead>
+<tr><th><strong>Result Code</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>Bad_UserAccessDenied</td><td>See <a class="xref" href="#ref-uapart4" data-ref-type="bibr">OPC 10000-4</a> for a general description.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>The <em>Stop</em> <em>Method</em> is defined in <a class="xref" href="#tbl_14" data-ref-type="table">Table 14</a>.</p>
+<figure class="table-wrap" id="tbl_14">
+<figcaption><span class="label">Table 14</span> Stop Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="313-318" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:Start</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_8-7" class="clause">
+<h3><span class="label">8.7</span> SomeEventType<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="323-347" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this type represents, and when a Server would define one. One or two paragraphs.]</p>
+<p>The <em>SomeEventType</em> <em>EventType</em> is defined in <a class="xref" href="#tbl_15" data-ref-type="table">Table 15</a>.</p>
+<figure class="table-wrap" id="tbl_15">
+<figcaption><span class="label">Table 15</span> SomeEventType Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="329-334" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeEventType</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:SystemEventType defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+<tr><td>0:HasProperty</td><td>Variable</td><td>1:SomeEventField</td><td>0:String</td><td>0:PropertyType</td><td>M</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Base</td></tr>
+</tbody>
+</table>
+</figure>
+<p>This <em>EventType</em> inherits all <em>Properties</em> of the <em>SystemEventType</em>.</p>
+<p>[Addition descriptions of additional properties.]</p>
+</section>
+</section>
+<section id="sec_9" class="clause">
+<h2><span class="label">9</span> OPC UA VariableTypes<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="349-374" title="Open the source of this clause">&#128221;</a></h2>
+<section id="sec_9-1" class="clause">
+<h3><span class="label">9.1</span> SomeVariableType<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="351-374" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this type represents, and when a Server would define one. One or two paragraphs.]</p>
+<p>The <em>SomeVariableType</em> <em>VariableType</em> is defined in <a class="xref" href="#tbl_16" data-ref-type="table">Table 16</a>.</p>
+<figure class="table-wrap" id="tbl_16">
+<figcaption><span class="label">Table 16</span> SomeVariableType Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="357-362" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeVariableType</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:AnalogItemType defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+<tr><td>0:HasProperty</td><td>Variable</td><td>1:SomeVar1</td><td>0:UtcTime</td><td>0:PropertyType</td><td>M</td></tr>
+<tr><td>0:HasProperty</td><td>Variable</td><td>1:SomeVar2</td><td>0:UtcTime</td><td>0:PropertyType</td><td>M</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Measurements</td></tr>
+</tbody>
+</table>
+</figure>
+<p>[Addition descriptions of additional properties.]</p>
+</section>
+</section>
+<section id="sec_10" class="clause">
+<h2><span class="label">10</span> OPC UA DataTypes<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="376-503" title="Open the source of this clause">&#128221;</a></h2>
+<section id="sec_10-1" class="clause">
+<h3><span class="label">10.1</span> SomeStructure<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="378-409" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this DataType represents and how it is used]</p>
+<p>The <em>SomeStructure</em> <em>DataType</em> is defined in <a class="xref" href="#tbl_17" data-ref-type="table">Table 17</a>.</p>
+<figure class="table-wrap" id="tbl_17">
+<figcaption><span class="label">Table 17</span> SomeStructure Structure<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="384-391" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Name</strong></th><th><strong>Type</strong></th><th><strong>Description</strong></th><th><strong>AllowSubtypes</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>SomeStructure</td><td>0:Structure</td><td colspan="2">Subtype of the 0:Structure defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+<tr><td>SP1</td><td>0:Double</td><td colspan="2">Setpoint 1</td></tr>
+<tr><td>SP2</td><td>0:Double</td><td colspan="2">Setpoint 2</td></tr>
+<tr><td>SomeVector</td><td>0:Vector</td><td></td><td>Yes</td></tr>
+</tbody>
+</table>
+</figure>
+<p>Its representation in the AddressSpace is defined in <a class="xref" href="#tbl_18" data-ref-type="table">Table 18</a>.</p>
+<figure class="table-wrap" id="tbl_18">
+<figcaption><span class="label">Table 18</span> SomeStructure Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="395-400" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeStructure</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:Structure defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Measurements</td></tr>
+<tr><td colspan="6">Some Arrays</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_10-2" class="clause">
+<h3><span class="label">10.2</span> SomeUnion<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="411-441" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this DataType represents and how it is used]</p>
+<p>The <em>SomeUnion</em> <em>DataType</em> is defined in <a class="xref" href="#tbl_19" data-ref-type="table">Table 19</a>.</p>
+<figure class="table-wrap" id="tbl_19">
+<figcaption><span class="label">Table 19</span> SomeUnion Structure<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="417-424" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Name</strong></th><th><strong>Type</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>SomeUnion</td><td>0:Union</td><td>Subtype of the 0:Union defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+<tr><td>Choice1</td><td>0:String</td><td>First choice.</td></tr>
+<tr><td>Choice2</td><td>1:SomeStructure</td><td>Second choice.</td></tr>
+<tr><td>Choice3</td><td>1:SomeEnumeration</td><td>Third choice.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>Its representation in the AddressSpace is defined in <a class="xref" href="#tbl_20" data-ref-type="table">Table 20</a>.</p>
+<figure class="table-wrap" id="tbl_20">
+<figcaption><span class="label">Table 20</span> SomeUnion Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="428-433" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeUnion</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:Union defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Measurements</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_10-3" class="clause">
+<h3><span class="label">10.3</span> SomeEnumeration<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="443-472" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this DataType represents and how it is used]</p>
+<p>The <em>SomeEnumeration</em> <em>DataType</em> is defined in <a class="xref" href="#tbl_21" data-ref-type="table">Table 21</a>.</p>
+<figure class="table-wrap" id="tbl_21">
+<figcaption><span class="label">Table 21</span> SomeEnumeration Values<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="449-455" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Name</strong></th><th><strong>Value</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>ValueName1</td><td>0</td><td>Description for ValueName1.</td></tr>
+<tr><td>ValueName2</td><td>1</td><td>Description for ValueName2.</td></tr>
+<tr><td>ValueName3</td><td>2</td><td>Description for ValueName3.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>Its representation in the AddressSpace is defined in <a class="xref" href="#tbl_22" data-ref-type="table">Table 22</a>.</p>
+<figure class="table-wrap" id="tbl_22">
+<figcaption><span class="label">Table 22</span> SomeEnumeration Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="459-464" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeEnumeration</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:Enumeration defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Measurements</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_10-4" class="clause">
+<h3><span class="label">10.4</span> SomeOptionSet<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="474-503" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this DataType represents and how it is used]</p>
+<p>The <em>SomeOptionSet</em> <em>DataType</em> is defined in <a class="xref" href="#tbl_23" data-ref-type="table">Table 23</a>.</p>
+<figure class="table-wrap" id="tbl_23">
+<figcaption><span class="label">Table 23</span> SomeOptionSet Values<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="480-486" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Name</strong></th><th><strong>Bit</strong></th><th><strong>Description</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>SomeOption1</td><td>0</td><td>This flag is SomeOption1.</td></tr>
+<tr><td>SomeOption2</td><td>1</td><td>This flag is SomeOption2.</td></tr>
+<tr><td>SomeOption3</td><td>2</td><td>This flag is SomeOption3.</td></tr>
+</tbody>
+</table>
+</figure>
+<p>Its representation in the AddressSpace is defined in <a class="xref" href="#tbl_24" data-ref-type="table">Table 24</a>.</p>
+<figure class="table-wrap" id="tbl_24">
+<figcaption><span class="label">Table 24</span> SomeOptionSet Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="490-495" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:SomeOptionSet</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:UInt32 defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Measurements</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+</section>
+<section id="sec_11" class="clause">
+<h2><span class="label">11</span> OPC UA ReferenceTypes<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="505" title="Open the source of this clause">&#128221;</a></h2>
+<section id="sec_11-1" class="clause">
+<h3><span class="label">11.1</span> HasSomeRelation<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="507" title="Open the source of this clause">&#128221;</a></h3>
+<p>[What this ReferenceType represents and how it is used]</p>
+<p>Its representation in the AddressSpace is defined in <a class="xref" href="#tbl_25" data-ref-type="table">Table 25</a>.</p>
+<figure class="table-wrap" id="tbl_25">
+<figcaption><span class="label">Table 25</span> HasSomeRelation Definition<a class="src" href="../../source/Sample/model.md" data-src="source/Sample/model.md" data-line="513-518" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th><strong>Attribute</strong></th><th colspan="5"><strong>Value</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td colspan="5">1:HasSomeRelation</td></tr>
+<tr><td>IsAbstract</td><td colspan="5">False</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th><strong>References</strong></th><th><strong>Node Class</strong></th><th><strong>BrowseName</strong></th><th><strong>DataType</strong></th><th><strong>TypeDefinition</strong></th><th><strong>Other</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Subtype of the 0:NonHierarchicalReferences defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="6"><strong>Conformance Units</strong></th></tr>
+</thead>
+<tbody>
+<tr><td colspan="6">Some Base</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+</section>
+<section id="sec_12" class="clause">
+<h2><span class="label">12</span> Profiles and Conformance Units<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="97-99" title="Generated - open source/Sample/spec.md, which decides what this clause says">&#128221;</a></h2>
+<section id="sec_12-1" class="clause">
+<h3><span class="label">12.1</span> Conformance Units<a class="src" href="../../source/Sample/profiles.json" data-src="source/Sample/profiles.json" data-line="21" title="Generated - open source/Sample/profiles.json, which decides what this clause says">&#128221;</a></h3>
+<p><a class="xref" href="#tbl_26" data-ref-type="table">Table 26</a> defines the Conformance Units for the OPC UA Information Model for Sample Applications.</p>
+<figure class="table-wrap" id="tbl_26">
+<figcaption><span class="label">Table 26</span> Conformance Units for Sample Applications<a class="src" href="../../source/Sample/profiles.json" data-src="source/Sample/profiles.json" data-line="21" title="Generated - open source/Sample/profiles.json, which decides what this clause says">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th>Category</th><th>Title</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Server</td><td>Some Base</td><td>[A description of the conformance unit]</td></tr>
+<tr><td>Server</td><td>Some Measurements</td><td>[A description of the conformance unit]</td></tr>
+<tr><td>Server</td><td>Some Arrays</td><td>[A description of the conformance unit]</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_12-2" class="clause">
+<h3><span class="label">12.2</span> Profiles<a class="src" href="../../source/Sample/profiles.json" data-src="source/Sample/profiles.json" data-line="42" title="Generated - open source/Sample/profiles.json, which decides what this clause says">&#128221;</a></h3>
+<section id="sec_12-2-1" class="clause">
+<h4><span class="label">12.2.1</span> Profile list<a class="src" href="../../source/Sample/profiles.json" data-src="source/Sample/profiles.json" data-line="42" title="Generated - open source/Sample/profiles.json, which decides what this clause says">&#128221;</a></h4>
+<p><a class="xref" href="#tbl_27" data-ref-type="table">Table 27</a> lists all Profiles defined in this document and defines their URIs.</p>
+<figure class="table-wrap" id="tbl_27">
+<figcaption><span class="label">Table 27</span> Profile URIs for Sample Applications<a class="src" href="../../source/Sample/profiles.json" data-src="source/Sample/profiles.json" data-line="42" title="Generated - open source/Sample/profiles.json, which decides what this clause says">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th>Profile</th><th>URI</th></tr>
+</thead>
+<tbody>
+<tr><td>Sample Base Server Facet</td><td><a class="ext" href="http://opcfoundation.org/UA-Profile/Sample/Server/SampleBaseServerFacet" rel="noopener noreferrer">http://opcfoundation.org/UA-Profile/Sample/Server/SampleBaseServerFacet</a></td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_12-2-2" class="clause">
+<h4><span class="label">12.2.2</span> Server Facets<a class="src" href="../../source/Sample/profiles.json" data-src="source/Sample/profiles.json" data-line="45" title="Generated - open source/Sample/profiles.json, which decides what this clause says">&#128221;</a></h4>
+<section id="sec_12-2-2-1" class="clause">
+<h5><span class="label">12.2.2.1</span> Overview</h5>
+<p>The following subclauses specify the Server Facets available for applications that implement the Sample Applications companion specification. Each subclause defines and describes a Facet or Profile.</p>
+</section>
+<section id="sec_12-2-2-2" class="clause">
+<h5><span class="label">12.2.2.2</span> Sample Base Server Facet<a class="src" href="../../source/Sample/profiles.json" data-src="source/Sample/profiles.json" data-line="44" title="Generated - open source/Sample/profiles.json, which decides what this clause says">&#128221;</a></h5>
+<p>This Facet defines support for base Sample server functionality.</p>
+<figure class="table-wrap" id="tbl_28">
+<figcaption><span class="label">Table 28</span> Sample Base Server Facet</figcaption>
+<table>
+<thead>
+<tr><th>Group</th><th>Conformance Unit / Profile Title</th><th>Mandatory / Optional</th></tr>
+</thead>
+<tbody>
+<tr><td>Sample</td><td>Some Base</td><td>M</td></tr>
+<tr><td>Sample</td><td>Some Measurements</td><td>O</td></tr>
+<tr><td>Sample</td><td>Some Arrays</td><td>O</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+</section>
+</section>
+</section>
+<section id="sec_13" class="clause">
+<h2><span class="label">13</span> Namespaces<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="101-103" title="Generated - open source/Sample/spec.md, which decides what this clause says">&#128221;</a></h2>
+<section id="sec_13-1" class="clause">
+<h3><span class="label">13.1</span> Namespace Metadata</h3>
+<p><a class="xref" href="#tbl_29" data-ref-type="table">Table 29</a> defines the namespace metadata for this document. The Object is used to provide version information for the namespace and an indication about static Nodes. Static Nodes are identical for all Attributes in all Servers, including the Value Attribute.</p>
+<p>The information is provided as Object of type <em>NamespaceMetadataType</em>. This Object is a component of the <em>Namespaces</em> Object that is part of the <em>Server</em> Object. The NamespaceMetadataType ObjectType and its Properties are defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a>.</p>
+<p>The version information is also provided as part of the <em>ModelTableEntry</em> in the UANodeSet XML file. The UANodeSet XML schema is defined in <a class="xref" href="#ref-uapart6" data-ref-type="bibr">OPC 10000-6</a>.</p>
+<figure class="table-wrap" id="tbl_29">
+<figcaption><span class="label">Table 29</span> NamespaceMetadata Object for this Document</figcaption>
+<table>
+<thead>
+<tr><th>Attribute</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>BrowseName</td><td>urn:opcua:opcfoundation.org.com:2026-08:sample</td></tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th>Property</th><th>DataType</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>NamespaceUri</td><td>String</td><td>urn:opcua:opcfoundation.org.com:2026-08:sample</td></tr>
+<tr><td>NamespaceVersion</td><td>String</td><td>1.0.1-alpha</td></tr>
+<tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-08-23</td></tr>
+<tr><td>IsNamespaceSubset</td><td>Boolean</td><td>False</td></tr>
+<tr><td>StaticNodeIdTypes</td><td>IdType []</td><td>0</td></tr>
+<tr><td>StaticNumericNodeIdRange</td><td>NumericRange []</td><td></td></tr>
+<tr><td>StaticStringNodeIdPattern</td><td>String</td><td></td></tr>
+</tbody>
+</table>
+</figure>
+<p>The <em>IsNamespaceSubset</em> Property is set to False as the UANodeSet XML file contains the complete Namespace. Servers only exposing a subset of the Namespace shall set this Property to True.</p>
+</section>
+<section id="sec_13-2" class="clause">
+<h3><span class="label">13.2</span> Handling of OPC UA Namespaces</h3>
+<p>Namespaces are used by OPC UA to create unique identifiers across different naming authorities. The Attributes <em>NodeId</em> and <em>BrowseName</em> are identifiers. A namespace is identified with a string, typically a URI, and is represented in the <em>NodeId</em> and <em>BrowseName</em> by an index into the Server's namespace table.</p>
+<p><a class="xref" href="#tbl_30" data-ref-type="table">Table 30</a> provides a list of mandatory and optional namespaces used in an Sample Applications Server.</p>
+<figure class="table-wrap" id="tbl_30">
+<figcaption><span class="label">Table 30</span> Namespaces used in an Sample Applications Server</figcaption>
+<table>
+<thead>
+<tr><th>NamespaceURI</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>http://opcfoundation.org/UA/</td><td>Namespace for <em>NodeIds</em> and <em>BrowseNames</em> defined in the OPC UA specification. This namespace shall have namespace index 0.</td></tr>
+<tr><td>urn:opcua:opcfoundation.org.com:2026-08:sample</td><td>Namespace for <em>NodeIds</em> and <em>BrowseNames</em> defined in this model.</td></tr>
+<tr><td>http://opcfoundation.org/UA/DI/</td><td>Namespace for <em>NodeIds</em> and <em>BrowseNames</em> defined in <a class="xref" href="#ref-uapart100" data-ref-type="bibr">OPC 10000-100</a>.</td></tr>
+<tr><td>http://opcfoundation.org/UA/Dictionary/IRDI</td><td>Namespace for <em>NodeIds</em> and <em>BrowseNames</em> defined in this IRDI dictionary model. Note that IRDI model is never available as a single NodeSet. The NodeIds are IRDIs which identify the target even if an IRDI NodeSet with the NodeId is not available.</td></tr>
+</tbody>
+</table>
+</figure>
+<p><a class="xref" href="#tbl_31" data-ref-type="table">Table 31</a> provides a list of namespaces and their indices used for <em>BrowseNames</em> in this document. A <em>BrowseName</em> written without a prefix is from the default namespace of this document.</p>
+<figure class="table-wrap" id="tbl_31">
+<figcaption><span class="label">Table 31</span> Namespaces used in this document</figcaption>
+<table>
+<thead>
+<tr><th>NamespaceURI</th><th>Namespace Index</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>http://opcfoundation.org/UA/</td><td>0</td><td>0:EngineeringUnits</td></tr>
+<tr><td>urn:opcua:opcfoundation.org.com:2026-08:sample</td><td>1</td><td></td></tr>
+<tr><td>http://opcfoundation.org/UA/DI/</td><td>2</td><td>2:DeviceRevision</td></tr>
+<tr><td>http://opcfoundation.org/UA/Dictionary/IRDI</td><td>3</td><td></td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+</section>
+<section id="sec_A" class="annex">
+<h2><span class="label">Annex A</span> Namespaces and Mappings<a class="src" href="../../source/Sample/spec.md" data-src="source/Sample/spec.md" data-line="105-107" title="Generated - open source/Sample/spec.md, which decides what this clause says">&#128221;</a></h2>
+<p class="annex-status">(normative)</p>
+<section id="sec_A-1" class="clause">
+<h3><span class="label">A.1</span> NodeSets and Supplementary Files</h3>
+<p>The OPC UA for Sample Applications <em>Information Model</em> is identified by the following URI:</p>
+<p><a class="ext" href="urn:opcua:opcfoundation.org.com:2026-08:sample" rel="noopener noreferrer">urn:opcua:opcfoundation.org.com:2026-08:sample</a></p>
+<p>Documentation for the <em>NamespaceUri</em> can be found <a class="ext" href="https://reference.opcfoundation.org/nodesets?u=urn:opcua:opcfoundation.org.com:2026-08:sample" rel="noopener noreferrer">here</a>.</p>
+<p>The NodeSet associated with this version of specification can be found here:</p>
+<p><a class="ext" href="https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;v=1.0.0&amp;i=1" rel="noopener noreferrer">https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;v=1.0.0&amp;i=1</a></p>
+<p>The NodeSet associated with the latest version of the specification can be found here:</p>
+<p><a class="ext" href="https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;i=1" rel="noopener noreferrer">https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;i=1</a></p>
+<p>Supplementary files for the OPC UA for Sample Applications Information Model can be found here:</p>
+<p><a class="ext" href="https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;v=1.0.0&amp;i=2" rel="noopener noreferrer">https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;v=1.0.0&amp;i=2</a></p>
+<p>The files associated with the latest version of the specification can be found here:</p>
+<p><a class="ext" href="https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;i=2" rel="noopener noreferrer">https://reference.opcfoundation.org/nodesets/?u=urn:opcua:opcfoundation.org.com:2026-08:sample&amp;i=2</a></p>
+</section>
+</section>
+</main>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/OPCF-Members/OPCUA-Specification-Template","ref":"f427927e8c9aa74dfb282105f0ad87b02654e69b","editor":"vscode"};</script>
+<script>
+(function () {
+  var cfg = window.__specSource;
+  if (!cfg) { return; }
+  var local = location.protocol === "file:";
+  var links = document.querySelectorAll("a.src");
+
+  function absolute(hop, path) {
+    var here = decodeURIComponent(location.pathname).replace(/[^\/]*$/, "");
+    var parts = (here + hop + "/" + path).split("/");
+    var out = [];
+    for (var i = 0; i < parts.length; i++) {
+      if (parts[i] === "" || parts[i] === ".") { continue; }
+      if (parts[i] === "..") { out.pop(); } else { out.push(parts[i]); }
+    }
+    // "D:/x/y" on Windows, "home/u/y" elsewhere - and the scheme's trailing slash
+    // supplies the root, so both read correctly as vscode://file/<this>.
+    return out.join("/");
+  }
+
+  function escape(path) {
+    return encodeURI(path).replace(/#/g, "%23").replace(/\?/g, "%3F");
+  }
+
+  for (var i = 0; i < links.length; i++) {
+    var a = links[i];
+    var path = a.getAttribute("data-src");
+    var lines = a.getAttribute("data-line");
+    if (!path) { continue; }
+
+    // Both branches are an upgrade on the href the page already carries, which is the
+    // file itself. Neither is reachable from every page, so neither replaces it.
+    if (local && typeof cfg.root === "string") {
+      var at = lines ? ":" + lines.split("-")[0] + ":1" : "";
+      a.href = (cfg.editor || "vscode") + "://file/" + escape(absolute(cfg.root, path)) + at;
+    } else if (cfg.origin && cfg.ref) {
+      // ?plain=1 is not optional. GitHub renders a .md file, and a rendering has no
+      // line anchors - the link would silently land at the top of the page.
+      var at2 = lines ? "#L" + lines.replace("-", "-L") : "";
+      a.href = cfg.origin + "/blob/" + cfg.ref + "/" + escape(path) + "?plain=1" + at2;
+    }
+  }
+})();
+</script>
+</body>
+</html>

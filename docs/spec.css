@@ -1,0 +1,459 @@
+/* Stylesheet for the HTML edition written by HtmlWriter.
+ *
+ * The job is to make a specification readable for review, not to have a look. Everything here
+ * is either legibility (measure, rhythm, contrast) or structure the reader has to be able to
+ * see: what is a number the document assigned, what is normative, and where one table ends and
+ * a table nested inside its cell begins.
+ */
+
+:root {
+  --text: #17191c;
+  --muted: #5c636b;
+  --rule: #d7dbe0;
+  --rule-strong: #aeb5bd;
+  --accent: #0b5fa5;
+  --surface: #f6f7f9;
+  --surface-strong: #eceff2;
+  --measure: 46rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e6e8eb;
+    --muted: #a0a7af;
+    --rule: #363b42;
+    --rule-strong: #4d545c;
+    --accent: #6cb2f0;
+    --surface: #1c1f23;
+    --surface-strong: #24282d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0 1.5rem 6rem;
+  color: var(--text);
+  background: Canvas;
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* The contents sits beside the text on a wide screen and above it on a narrow one. */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 3rem;
+  max-width: 76rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 62rem) {
+  body { grid-template-columns: 17rem minmax(0, 1fr); }
+  .doc-header { grid-column: 1 / -1; }
+  .toc { grid-column: 1; grid-row: 2; }
+  main { grid-column: 2; grid-row: 2; }
+
+  /* Contents folded away: the column goes with it, rather than leaving 17rem of nothing
+     beside the text. The document then sets its own width, which for a specification full of
+     wide node tables is the point of folding it away at all.
+
+     :has() is what makes this possible without a script — the layout responds to the state of
+     the <details> the reader just toggled. A browser without it keeps the column, which is
+     where the page started and is no worse than not offering the fold. */
+  body:has(.toc-panel:not([open])) { grid-template-columns: minmax(0, 1fr); }
+  body:has(.toc-panel:not([open])) .toc {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: static;
+    max-height: none;
+    padding-bottom: 0.5rem;
+  }
+  body:has(.toc-panel:not([open])) main { grid-column: 1 / -1; grid-row: 3; }
+}
+
+/* ------------------------------------------------------------------ header */
+
+.doc-header {
+  border-bottom: 2px solid var(--rule-strong);
+  padding: 2.5rem 0 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.doc-number {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.doc-header h1 { margin: 0.35rem 0; font-size: 1.9rem; line-height: 1.25; }
+.doc-facts { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+/* ------------------------------------------------------------------ contents */
+
+.toc {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  align-self: start;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 1rem 0 2rem;
+}
+
+.toc h2,
+.toc summary {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+/* The fold. The triangle is the browser's own ::marker, so the icon, the keyboard handling
+   and the state come from <details> rather than from a script this page would have to carry. */
+.toc summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  border-radius: 3px;
+}
+
+.toc summary::marker { color: var(--rule-strong); }
+.toc summary:hover { color: var(--accent); }
+.toc summary:hover::marker { color: var(--accent); }
+.toc summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.toc ul { list-style: none; margin: 0; padding-left: 0; }
+.toc ul ul { padding-left: 0.85rem; }
+.toc li { margin: 0.15rem 0; }
+.toc a { color: inherit; text-decoration: none; display: block; padding: 0.1rem 0; }
+.toc a:hover { color: var(--accent); text-decoration: underline; }
+.toc .label { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------- the site's front page
+
+   A repository that publishes several specifications lists them here. The list is the page —
+   it spans both columns rather than sitting in the contents sidebar, which is 17rem wide and
+   is for navigating within one document. */
+
+.spec-index {
+  grid-column: 1 / -1;
+  margin-bottom: 3rem;
+}
+
+.spec-index ul { list-style: none; margin: 0; padding-left: 0; }
+.spec-index li { margin: 0; }
+
+/* A group is a directory under source/ that only holds others: a label, because there is no
+   page to link it to. */
+.spec-index .group {
+  display: block;
+  margin: 1.75rem 0 0.25rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.spec-index ul ul {
+  padding-left: 1rem;
+  border-left: 1px solid var(--rule);
+}
+
+.spec-index a {
+  display: block;
+  padding: 0.85rem 0.5rem 0.85rem 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.spec-index a:hover { color: var(--accent); background: var(--surface); }
+
+.spec-index .label {
+  display: inline-block;
+  min-width: 7rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.spec-index a:hover .label { color: inherit; }
+
+.spec-index .facts {
+  display: block;
+  margin-top: 0.15rem;
+  padding-left: 7rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* The shared front matter — the Agreement of Use — under the list rather than above it: it is
+   what a reader reaches for second. */
+.site-pages {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 40rem) {
+  .spec-index .label { display: block; min-width: 0; }
+  .spec-index .facts { padding-left: 0; }
+}
+
+/* ------------------------------------------------------------------ headings */
+
+main { min-width: 0; }
+
+h2, h3, h4, h5, h6 { line-height: 1.3; margin: 2.25rem 0 0.75rem; scroll-margin-top: 1rem; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.05rem; }
+h5, h6 { font-size: 1rem; }
+
+/* A number the document assigned, not decoration: it is what a citation prints. */
+h2 .label, h3 .label, h4 .label, h5 .label, h6 .label {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.35em;
+}
+
+section { scroll-margin-top: 1rem; }
+
+.annex-status {
+  margin: -0.4rem 0 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+p { margin: 0 0 0.85rem; max-width: var(--measure); }
+
+.indent-1 { padding-left: 1.5rem; }
+.indent-2 { padding-left: 3rem; }
+.indent-3 { padding-left: 4.5rem; }
+
+/* ------------------------------------------------------------------ inlines */
+
+a { color: var(--accent); }
+a.xref { text-decoration: none; border-bottom: 1px solid currentColor; }
+a.xref:hover { text-decoration: none; border-bottom-width: 2px; }
+
+.std-ref { white-space: nowrap; }
+.small-caps { font-variant-caps: small-caps; }
+.term { font-style: italic; }
+
+code, pre, .align-numeric { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+code { font-size: 0.9em; }
+
+pre {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+pre code { font-size: inherit; }
+
+/* ------------------------------------------------------------------ callouts */
+
+.role-label {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+p.note, p.example, p.caution, p.warning, p.editorial-note {
+  border-left: 3px solid var(--rule-strong);
+  padding-left: 0.9rem;
+  color: var(--muted);
+}
+
+p.caution, p.warning { border-left-color: #c2410c; color: inherit; }
+p.editorial-note { border-left-color: var(--accent); }
+
+.callout {
+  border-left: 3px solid var(--rule-strong);
+  padding: 0.1rem 0 0.1rem 0.9rem;
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+}
+.callout > p.role-label { margin-bottom: 0.2rem; }
+.callout p:last-child { margin-bottom: 0; }
+
+/* ------------------------------------------------------------------ lists */
+
+ul, ol { max-width: var(--measure); padding-left: 1.5rem; }
+li { margin: 0.2rem 0; }
+
+.list-alpha { list-style-type: lower-alpha; }
+.list-alpha-upper { list-style-type: upper-alpha; }
+.list-roman { list-style-type: lower-roman; }
+.list-roman-upper { list-style-type: upper-roman; }
+.list-simple, .list-dash { list-style: none; padding-left: 1rem; }
+.list-dash > li::before { content: "— "; color: var(--muted); }
+
+dl { max-width: var(--measure); }
+dt { font-weight: 600; margin-top: 0.6rem; }
+dd { margin: 0.15rem 0 0 1.5rem; }
+
+/* ------------------------------------------------------------------ tables */
+
+.table-wrap, .figure { margin: 1.5rem 0 1.75rem; scroll-margin-top: 1rem; }
+
+figcaption {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+.figure figcaption { margin: 0.5rem 0 0; text-align: center; }
+figcaption .label { font-weight: 600; color: var(--text); }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+th, td {
+  border: 1px solid var(--rule-strong);
+  padding: 0.35rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th { background: var(--surface-strong); font-weight: 600; }
+tbody th { background: var(--surface); font-weight: 600; }
+
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-justify { text-align: justify; }
+
+td p, th p { max-width: none; margin-bottom: 0.4rem; }
+td p:last-child, th p:last-child { margin-bottom: 0; }
+
+/* A table inside a cell is why this rendering exists — markdown cannot express one. Inset it
+ * so the eye can tell the nested grid from the row that contains it. */
+td table, th table {
+  margin: 0.3rem 0;
+  width: auto;
+  min-width: 60%;
+  font-size: 0.95em;
+  background: var(--surface);
+}
+td table th, td table td { border-color: var(--rule); }
+
+/* A path is a list, not a grid: the elements of a BrowsePath sit one per row so each is legible
+ * on its own, and no rule is drawn around them - a border per element would read as a second
+ * table inside the cell rather than as the single value the column holds. */
+table.plain, td table.plain {
+  margin: 0;
+  width: auto;
+  min-width: 0;
+  background: none;
+}
+
+table.plain th, table.plain td,
+td table.plain th, td table.plain td {
+  border: 0;
+  padding: 0 0 0.1rem;
+}
+
+/* A JSON value written into a cell — an EnumValues list, most often. It is preformatted so its
+ * layout survives, set in the code face because it is a value rather than prose, and smaller than
+ * the table text so a long one does not overwhelm the row it belongs to. No frame: the cell is
+ * already drawn around it. */
+td > pre, th > pre {
+  margin: 0;
+  padding: 0.15rem 0.35rem;
+  border: 0;
+  background: var(--surface);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.table-wrap .table-foot {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+/* Wide tables scroll rather than forcing the page to. */
+.table-wrap { overflow-x: auto; }
+
+/* A node table is the widest thing a specification contains and the one worth the room: seven
+ * columns of BrowseNames, DataTypes and TypeDefinitions, which inside the 46rem measure the prose
+ * is set to would wrap every cell to three lines. So a table runs out to the right edge of the
+ * window rather than stopping at the text column - the contents panel on the left is the only
+ * thing bounding it.
+ *
+ * The margin is the distance from the page's right edge to the window's: the page is centred, so
+ * that is half of what the window has over it. The body's own 1.5rem padding is what remains
+ * between the table and the glass. min() keeps it at zero on a window narrower than the page,
+ * where there is nothing to run out into. */
+@media (min-width: 62rem) {
+  main .table-wrap {
+    margin-right: min(0px, calc((76rem - 100vw) / 2));
+  }
+}
+
+/* ------------------------------------------------------------------ figures */
+
+.figure-image { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.inline-image { vertical-align: middle; max-height: 1.4em; }
+
+.formula { margin: 1.25rem 0; text-align: center; }
+.formula-label { float: right; color: var(--muted); }
+
+/* ------------------------------------------------------------------ terms */
+
+.term-sec .preferred-term { font-weight: 600; }
+.admitted-term, .deprecated-term { margin: 0 0 0.2rem; color: var(--muted); font-size: 0.9rem; }
+.term-source { color: var(--muted); font-size: 0.85rem; }
+
+.ref-list { list-style: none; padding-left: 0; }
+.ref-list li { margin: 0.4rem 0; max-width: var(--measure); }
+.ref-list .label { font-weight: 600; }
+
+/* ------------------------------------------------------------- back to source
+
+   The link beside a heading or a caption that opens what was written to produce it.
+
+   Nothing here decides whether it is seen. The link is a character in the document with an
+   href that already works, so it renders wherever the document renders — including a preview
+   pane inside an editor, where an earlier version that was revealed on hover and hidden until
+   a script had run showed nothing at all and looked like a broken feature.
+
+   What is left is spacing. */
+
+.src {
+  margin-left: 0.4em;
+  font-size: 0.7em;
+  text-decoration: none;
+  /* Not part of the clause: selecting a heading to quote it should not take this with it. */
+  user-select: none;
+  /* It sits on the baseline of a heading set much larger than it is. */
+  vertical-align: 0.15em;
+}
+
+.src:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ------------------------------------------------------------------ print */
+
+@media print {
+  body { display: block; max-width: none; padding: 0; }
+  .toc { display: none; }
+  a { color: inherit; text-decoration: none; }
+  pre, table { break-inside: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  .src { display: none; }
+}

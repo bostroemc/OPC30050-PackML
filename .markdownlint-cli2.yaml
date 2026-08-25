@@ -1,0 +1,49 @@
+# Baseline markdown hygiene: what markdownlint already knows how to say, which is the part an
+# editor can flag live while you type.
+#
+# The OPC-specific rules — heading numbering, cross-reference form, nodetable directives, figure
+# policy — are not expressible here, and are not meant to be. `build` reports the ones about the
+# markdown, and `Opc.Ua.SpecificationValidator validate` reports the ones that compare the built
+# document against the NodeSets. This file is the third of the three, not a stand-in for the
+# other two.
+config:
+  # Line length: specification prose is written one paragraph per line so that a diff of a
+  # reworded sentence is one line, not a reflowed block. Hard wrapping would make every
+  # edit touch its whole paragraph.
+  MD013: false
+
+  # Duplicate headings are legitimate here: many ObjectType clauses carry the same
+  # subheadings, and the converter disambiguates by path rather than by text.
+  MD024:
+    siblings_only: true
+
+  # The document has exactly one H1 (the title), supplied by the manifest rather than the
+  # markdown, so the source legitimately starts at H2.
+  MD025: false
+  MD041: false
+
+  # Inline HTML is not permitted in the source. Node tables are directives and figures are
+  # mermaid; anything else that needs raw HTML is a construct the converter cannot carry
+  # into STS.
+  MD033:
+    allowed_elements: []
+
+  # Bare URLs are wrong in specification prose — a citation is text, not a link. Guideline 5
+  # forbids linking the online reference outside Annex A, which is generated anyway.
+  MD034: true
+
+  # Emphasis is semantic in these documents: *Term* marks a defined term and is load-bearing
+  # for the term index. Consistent style, asterisks.
+  MD049:
+    style: asterisk
+  MD050:
+    style: asterisk
+
+globs:
+  - "source/**/*.md"
+  - "docs/**/*.md"
+  - "*.md"
+
+ignores:
+  - "artifacts/**"
+  - "node_modules/**"

@@ -1,0 +1,280 @@
+{
+  "$comment": [
+    "The manifest for one specification. Rename this directory to your specification's short",
+    "name and fill this in; a repository publishes as many specifications as the working group",
+    "publishes together, and each is a directory under source/ with a manifest.json in it.",
+    "Nothing lists them - adding a specification is adding a directory.",
+    "",
+    "Everything here is either identity that no generator can derive, or content for a clause",
+    "the tool generates rather than the working group authoring it. See AUTHORING.md for which",
+    "clauses those are and why.",
+    "",
+    "Every <PLACEHOLDER> below must be replaced before the first build."
+  ],
+
+  "schemaVersion": 1,
+  "sourceOfTruth": "markdown",
+
+  "$comment_identity": [
+    "docNumber       the OPC document number, e.g. 'OPC 40700'. Names the STS and the Word",
+    "                edition: 'OPC 40700' -> artifacts/OPC-40700.xml.",
+    "partName        the part's own name, printed on the cover and in the running heads.",
+    "shortName       how a person refers to this part; --spec matches on it.",
+    "organization    who publishes it: 'OPC Foundation', or the Foundation and its partner for",
+    "                a joint work. Printed as Author in the Word document-control table and in",
+    "                the file's own properties, and written into the STS as the copyright",
+    "                holder - which is how it reaches a 'publish' that reads only the XML.",
+    "                Left empty, the cover prints '<organization>' as a visible prompt.",
+    "namespaceUri    must match the ModelUri of the NodeSet named under 'model' below.",
+    "gitHubTag       the UA-Nodeset release this model ships in. Written into the STS, which",
+    "                is what resolves a namespace URI to the files that release it. Leave it",
+    "                empty until the release exists - a wrong tag is worse than none.",
+    "mantisUrl       this specification's issue-tracking project. Substituted into the",
+    "                Agreement of Use wherever <mantisUrl> appears."
+  ],
+  "identity": {
+    "docNumber": "OPC 20020",
+    "partName": "",
+    "title": "OPC UA for Sample Applications",
+    "shortTitle": "Sample Applications",
+    "shortName": "Sample",
+    "organization": "OPC Foundation",
+    "capabilityIdentifier": "",
+    "namespaceUri": "urn:opcua:opcfoundation.org.com:2026-08:sample",
+    "version": "1.0.0",
+    "publicationDate": "2026-07-30",
+    "releaseType": "Draft",
+    "gitHubTag": "",
+    "mantisUrl": "https://mantis.opcfoundation.org",
+    "license": {
+      "spdxId": "LicenseRef-OPC-Specification-1.15",
+      "copyright": "Copyright (c) <YEAR>, OPC Federation AISBL",
+      "url": "https://opcfoundation.org/license/specifications/1.15/"
+    }
+  },
+
+  "$comment_model": [
+    "Relative to the repository, not to this file: model/ is shared by every specification here,",
+    "because a part borrows types from the siblings it is published with and NodeSets resolve by",
+    "ModelUri rather than by which directory they sit in.",
+    "",
+    "A specification that defines no model omits this block entirely; 'build' then reports",
+    "'model: none' and generates no node tables.",
+    "",
+    "generated=false: the NodeSet is authored elsewhere and copied in. Set it true and name the",
+    "generator when the working group generates its NodeSet from a model script - the build then",
+    "refuses a hand-edit."
+  ],
+  "model": {
+    "nodeset": "model/Opc.Ua.Sample.NodeSet.xml",
+    "generated": false
+  },
+
+  "$comment_markdown": [
+    "Beside this file. The prose, the figures and the Profiles are this specification's own, so",
+    "they are named relative to the manifest; the model and the outputs are the repository's and",
+    "are named relative to it.",
+    "",
+    "Any key other than 'main' and 'figures' names a clause broken out into its own file, asked",
+    "for with source=<key> on the heading in spec.md. 'objecttypes' below is the usual one: in a",
+    "specification with sixty types it is the only clause anyone is editing."
+  ],
+  "markdown": {
+    "main": "spec.md",
+    "editor-guidelines": "editor-guidelines.md",
+    "model": "model.md",
+    "figures": "figures"
+  },
+
+  "$comment_figureGenerators": [
+    "How a figure's source becomes the SVG the document embeds: the source's extension, or its",
+    "exact file name, to a script that renders it. 'update --write' runs each one from the",
+    "repository root as '<script> <source> <svg>'; report mode lists what it would run. Both",
+    ".ps1 and .sh are run, so the language is the author's choice.",
+    "",
+    "An empty script means the source needs no rendering because it already is the figure. That",
+    "is what a .drawio.svg is - the picture and its own editable diagram in one file - and it is",
+    "why a repository that draws in draw.io needs no figure tooling at all.",
+    "",
+    "tools/office-to-svg.ps1 ships with this template for a working group whose drawings are in",
+    "Visio or PowerPoint. That is a supported steady state, not a stage of a migration: the",
+    "Office file stays the source of truth, is edited in the application that drew it, and",
+    "'update --write' re-renders the SVG beside it. What it costs is checking - an exported SVG",
+    "carries no diagram to read, so nothing compares its shapes against the model. Moving to a",
+    "checkable figure later is one line here.",
+    "",
+    "Only 'update' runs these. A build reads the committed .svg and executes nothing, so what",
+    "happens to be installed on the machine that builds cannot change what gets published."
+  ],
+  "figureGenerators": {
+    ".drawio.svg": "",
+    ".pptx": { "win": "tools/office-to-svg.ps1", "default": "tools/office-to-svg.sh" },
+    ".vsdx": { "win": "tools/office-to-svg.ps1", "default": "tools/office-to-svg.sh" }
+  },
+
+  "profiles": "profiles.json",
+
+  "output": {
+    "sts": "artifacts/OPC-<NNNNN>.xml",
+    "documentationCsv": "artifacts/OPC-<NNNNN>-documentation.csv"
+  },
+
+  "$comment_normativeReferences": [
+    "Clause 2 is generated from this list, and every mention of a designation in running prose",
+    "becomes a citation of the matching entry - so 'OPC 10000-3' in a sentence links itself and",
+    "an author never writes the link. 'id' is what a [](#ref-<id>) citation names.",
+    "",
+    "The OPC 10000-N parts below are the set nearly every companion specification cites. Remove",
+    "the ones this document does not, and add the ones it does; an entry nothing cites is",
+    "harmless, but a citation with no entry is reported."
+  ],
+  "normativeReferences": [
+    {
+      "id": "uapart1",
+      "label": "OPC 10000-1",
+      "title": "OPC Unified Architecture - Part 1: Overview and Concepts",
+      "url": "http://www.opcfoundation.org/documents/10000-1/"
+    },
+    {
+      "id": "uapart2",
+      "label": "OPC 10000-2",
+      "title": "OPC Unified Architecture - Part 2: Security Model",
+      "url": "http://www.opcfoundation.org/documents/10000-2/"
+    },
+    {
+      "id": "uapart3",
+      "label": "OPC 10000-3",
+      "title": "OPC Unified Architecture - Part 3: Address Space Model",
+      "url": "http://www.opcfoundation.org/documents/10000-3/"
+    },
+    {
+      "id": "uapart4",
+      "label": "OPC 10000-4",
+      "title": "OPC Unified Architecture - Part 4: Services",
+      "url": "http://www.opcfoundation.org/documents/10000-4/"
+    },
+    {
+      "id": "uapart5",
+      "label": "OPC 10000-5",
+      "title": "OPC Unified Architecture - Part 5: Information Model",
+      "url": "http://www.opcfoundation.org/documents/10000-5/"
+    },
+    {
+      "id": "uapart6",
+      "label": "OPC 10000-6",
+      "title": "OPC Unified Architecture - Part 6: Mappings",
+      "url": "http://www.opcfoundation.org/documents/10000-6/"
+    },
+    {
+      "id": "uapart7",
+      "label": "OPC 10000-7",
+      "title": "OPC Unified Architecture - Part 7: Profiles",
+      "url": "http://www.opcfoundation.org/documents/10000-7/"
+    },
+    {
+      "id": "uapart8",
+      "label": "OPC 10000-8",
+      "title": "OPC Unified Architecture - Part 8: Data Access",
+      "url": "http://www.opcfoundation.org/documents/10000-8/"
+    },
+    {
+      "id": "uapart19",
+      "label": "OPC 10000-19",
+      "title": "OPC Unified Architecture - Part 19: Dictionary Reference",
+      "url": "http://www.opcfoundation.org/documents/10000-19/"
+    },
+    {
+      "id": "uapart100",
+      "label": "OPC 10000-100",
+      "title": "OPC Unified Architecture - Part 100: Devices",
+      "url": "http://www.opcfoundation.org/documents/10000-100/"
+    },
+    {
+      "id": "rfc5280",
+      "label": "IETF RFC 5280",
+      "title": "Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile",
+      "url": "https://datatracker.ietf.org/doc/html/rfc5280"
+    }
+  ],
+
+  "$comment_terms": [
+    "The Terms and definitions subclause, which appears only where spec.md asks for it with a",
+    "'{clause} kind: terms' directive. Sorted as written; keep it alphabetical.",
+    "",
+    "'source' prints as '[SOURCE: ...]' beneath the definition, and links the designation to its",
+    "normative-reference entry; write the designation only, without the brackets. Each entry in",
+    "'notes' prints as 'Note 1 to entry:', counted from the term - do not write the label, and do",
+    "not write 'NOTE', which is the label for a note on a clause.",
+    "Define only what this document uses in a sense a reader would not already have from the",
+    "normative references - a term copied from OPC 10000-1 is a term that can drift from it.",
+    "",
+    "A directive with no terms listed here is reported, so delete the directive rather than the",
+    "list if this document defines none."
+  ],
+  "terms": [
+    {
+      "term": "FirstSampleTerm",
+      "definition": "[what it means in this document, as a noun phrase and without a leading article]",
+      "notes": [
+        "[Information or example to help explain the term].",
+        "[More information or examples]."
+      ],
+      "source": "IETF RFC 5280"
+    },
+    {
+      "term": "SecondSampleTerm",
+      "definition": "[what it means in this document, as a noun phrase and without a leading article]"
+    }
+  ],
+
+  "$comment_abbreviations": [
+    "Clause 3.3. Sorted as written; keep it alphabetical."
+  ],
+  "abbreviations": [
+    ["HMI",  "Human Machine Interface"],
+    ["MES",  "Manufacturing Execution System"],
+    ["PLC",  "Programmable Logic Controller"],
+    ["UML",  "Unified Modelling Language"],
+    ["URI",  "Uniform Resource Identifier"],
+    ["XML",  "Extensible Markup Language"]
+  ],
+
+  "$comment_namespaces": [
+    "The document's own namespace prints without a prefix; every other namespace prints with",
+    "the index assigned here. These indices are the document's, not the NodeSet file's - the",
+    "two orderings differ and using the file's would silently mislabel every BrowseName in",
+    "every generated node table.",
+    "",
+    "'update' assigns an index to anything that needs one and reports what it did, so the way",
+    "to fill this in is to add the URI with \"index\": null and let it number them."
+  ],
+  "namespaces": {
+    "documentNamespaceIndex": 1,
+    "table": [
+      {
+        "uri": "http://opcfoundation.org/UA/",
+        "index": 0,
+        "example": "0:EngineeringUnits",
+        "definedBy": "uapart5",
+        "description": "Namespace for *NodeIds* and *BrowseNames* defined in the OPC UA specification. This namespace shall have namespace index 0."
+      },
+      {
+        "uri": "urn:opcua:opcfoundation.org.com:2026-08:sample",
+        "index": 1,
+        "description": "Namespace for *NodeIds* and *BrowseNames* defined in this model."
+      },
+      {
+        "uri": "http://opcfoundation.org/UA/DI/",
+        "index": 2,
+        "example": "2:DeviceRevision",
+        "definedBy": "uapart100",
+        "description": "Namespace for *NodeIds* and *BrowseNames* defined in OPC 10000-100."
+      },
+      {
+        "uri": "http://opcfoundation.org/UA/Dictionary/IRDI",
+        "index": 3,
+        "description": "Namespace for *NodeIds* and *BrowseNames* defined in this IRDI dictionary model. Note that IRDI model is never available as a single NodeSet. The NodeIds are IRDIs which identify the target even if an IRDI NodeSet with the NodeId is not available."
+      }
+    ]
+  }
+}

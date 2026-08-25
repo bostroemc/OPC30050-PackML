@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local build scratch. Everything under artifacts/ that CI publishes is committed;
+# these are intermediates that are not.
+_work/
+*.tmp
+
+# The map from the STS back to the markdown that produced it — line numbers, written by
+# `build` beside the STS the way a .pdb is written beside an assembly, and read by `publish`
+# to put a link to the source beside every clause.
+#
+# A handshake between two commands of one tool, and not an artifact: the published HTML
+# already carries everything a reader needs. Committing it would add a file that churns on
+# every line anyone inserts and that nothing outside this repository reads.
+*.stsmap.json
+
+# Visual Studio's local state. Its FileContentIndex holds files open, so git cannot
+# even read them to decide they should be ignored.
+.vs/

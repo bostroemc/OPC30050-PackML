@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "OPCFoundation.Opc.Ua.SpecificationPublisher": {
+      "version": "1.0.59",
+      "commands": [
+        "Opc.Ua.SpecificationPublisher"
+      ]
+    }
+  }
+}

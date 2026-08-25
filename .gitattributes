@@ -1,0 +1,23 @@
+# The converter writes LF unconditionally and the STS build is byte-reproducible by design.
+# Without normalisation the committed artifacts take whatever endings the machine that ran
+# the build happened to produce, and the next regeneration rewrites every line of a file to
+# change four of them — which defeats the reason the STS XML is committed at all.
+#
+# eol=lf also applies in the working tree, so a checkout on Windows cannot reintroduce CRLF
+# and make the next build look like a whole-file rewrite.
+* text=auto eol=lf
+
+# Binary formats git must never touch.
+*.docx binary
+*.pptx binary
+*.sldx binary
+*.vsd  binary
+*.vsdx binary
+*.xlsx binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.emf  binary
+*.pdf  binary
+*.zip  binary
