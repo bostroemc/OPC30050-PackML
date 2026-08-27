@@ -6,7 +6,15 @@
       "version": "1.0.59",
       "commands": [
         "Opc.Ua.SpecificationPublisher"
-      ]
+      ],
+      "rollForward": false
+    },
+    "opcfoundation.opc.ua.specificationvalidator": {
+      "version": "1.0.58",
+      "commands": [
+        "Opc.Ua.SpecificationValidator"
+      ],
+      "rollForward": false
     }
   }
 }

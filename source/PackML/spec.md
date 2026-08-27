@@ -16,10 +16,10 @@
 
 ## Scope {#sec-scope}
 
-This document specifies [WHAT THIS COMPANION SPECIFICATION COVERS].
+This standard is an extension of the overall OPC Unified Architecture standards and defines an information model that conforms to the PackML object model defined in ISA-TR88.00.02-2015 Machine and Unit States: An Implementation Example of ISA-88, and in the OMAC (Organization for Machine and Automation Control) PackML Unit/Machine Implementation Guide, referred to collectively as PackML. The PackML object model describes a standard way to monitor and control a wide variety of production equipment, following the models defined in the ANSI/ISA 88 standard. ISA-TR88.00.02 has been implemented by manufacturers and machine builders worldwide on various control platforms to increase speed to production, ease line integration and improve reliability. PackML defines standard state models for external control of a piece of equipment, a standard mode model for determining which state model to follow, standard tag names and tag values to command the equipment, determine the status of the equipment, and perform administration of the equipment. The PackML goal is to provide an easy to use and easy to test method of integration of equipment control, into a production line.
 
-<!-- One or two paragraphs. What the information model describes, what kind of system it
-     applies to, and what it is for. This is the only clause of the front matter you write. -->
+The modelling targets of this standard shall exist in an OPC UA *AddressSpace*. This standard does not consider the modelling targets that are identified in other standards or vendor specifications.
+
 
 **OPC Foundation**
 
@@ -44,14 +44,20 @@ OPC UA is a platform independent service-oriented architecture that integrates a
 
 <!-- 3.2 Terms and definitions - from terms in manifest.json. 
      If no terms, delete the directive below. -->
+
 ```{clause}
 kind: terms
 ```
 
 <!-- 3.3 Abbreviations - from abbreviations in manifest.json -->
 
-```{include editor-guidelines}
+
+```{include concept}
 ```
+
+```{include modelling-approach}
+```
+
 
 ## General information {#sec-general-information}
 
@@ -82,6 +88,7 @@ source: figures/information-model-overview.drawio.svg
      file, so nothing in the pipeline ever renders a diagram. Drag the shapes out of the OPC UA
      palette, source/figures/uashapes-library.drawio.xml, which you import once; the shapes and
      arrowheads are normative and are not drawn by hand. -->
+
 
 ```{include model}
 ```

@@ -22,4 +22,4 @@ the joint text and both logos are fetched instead.
 A failed fetch (no network, or no folder for the name below) is reported and does not stop the
 rest of `upgrade`; it is retried on the next `upgrade --write`.
 
-Partner organization:
+Partner organization: OMAC

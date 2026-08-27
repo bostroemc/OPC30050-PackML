@@ -33,16 +33,16 @@
     "                Agreement of Use wherever <mantisUrl> appears."
   ],
   "identity": {
-    "docNumber": "OPC 20020",
+    "docNumber": "OPC 30050",
     "partName": "",
-    "title": "OPC UA for Sample Applications",
-    "shortTitle": "Sample Applications",
-    "shortName": "Sample",
+    "title": "OPC UA for PackML",
+    "shortTitle": "PackML",
+    "shortName": "PackML",
     "organization": "OPC Foundation",
     "capabilityIdentifier": "",
-    "namespaceUri": "urn:opcua:opcfoundation.org.com:2026-08:sample",
-    "version": "1.0.0",
-    "publicationDate": "2026-07-30",
+    "namespaceUri": "http://opcfoundation.org/UA/PackML/",
+    "version": "2.0.0",
+    "publicationDate": "2026-08-25",
     "releaseType": "Draft",
     "gitHubTag": "",
     "mantisUrl": "https://mantis.opcfoundation.org",
@@ -66,7 +66,7 @@
     "refuses a hand-edit."
   ],
   "model": {
-    "nodeset": "model/Opc.Ua.Sample.NodeSet.xml",
+    "nodeset": "model/Opc.Ua.PackML.NodeSet2.xml",
     "generated": false
   },
 
@@ -81,7 +81,8 @@
   ],
   "markdown": {
     "main": "spec.md",
-    "editor-guidelines": "editor-guidelines.md",
+    "concept" : "concept.md",
+    "modelling-approach": "modelling-approach.md",
     "model": "model.md",
     "figures": "figures"
   },
@@ -115,8 +116,8 @@
   "profiles": "profiles.json",
 
   "output": {
-    "sts": "artifacts/OPC-<NNNNN>.xml",
-    "documentationCsv": "artifacts/OPC-<NNNNN>-documentation.csv"
+    "sts": "artifacts/OPC-30050.xml",
+    "documentationCsv": "artifacts/OPC-30050-documentation.csv"
   },
 
   "$comment_normativeReferences": [
@@ -194,6 +195,24 @@
       "label": "IETF RFC 5280",
       "title": "Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile",
       "url": "https://datatracker.ietf.org/doc/html/rfc5280"
+    },
+     {
+      "id": "tr88",
+      "label": "ISA-TR88.00.02-2022",
+      "title": "Machine and Unit States: An implementation example of ANSI/ISA-88.00.01",
+      "url": "https://www.isa.org/products/isa-tr88-00-02-2022-machine-and-unit-states-an-imp"
+    },
+      {
+      "id": "s88",
+      "label": "ANSI/ISA–88.01–1995",
+      "title": "ANSI/ISA–88.01–1995: Batch Control Part 1: Models and Terminology",
+      "url": "https://www.isa.org/store/products/product-detail/?productId=116649"
+    },
+    {
+      "id": "opc30000",
+      "label": "OPC 30000",
+      "title": "UA companion specification for IEC61131-3",
+      "url": "https://opcfoundation.org/developer-tools/specifications-unified-architecture/opc-unified-architecture-plcopen-information-model/"
     }
   ],
 
@@ -213,17 +232,30 @@
   ],
   "terms": [
     {
-      "term": "FirstSampleTerm",
-      "definition": "[what it means in this document, as a noun phrase and without a leading article]",
+      "term": "PackML<Term>",
+      "definition": "General",
       "notes": [
-        "[Information or example to help explain the term].",
-        "[More information or examples]."
-      ],
-      "source": "IETF RFC 5280"
+        "This standard adopts adding a PackML prefix to all PackML defined terms that are used in this standard that are also defined by OPC. The <Term> is the terminology defined by PackML. This allows the terminology used in PackML to be easily distinguished from terminology defined in OPC UA."
+      ]
     },
     {
-      "term": "SecondSampleTerm",
-      "definition": "[what it means in this document, as a noun phrase and without a leading article]"
+      "term": "PackMLUnit",
+      "definition": "a concept that defines a collection of associated modules that can carry out one or more major processing activities.",
+      "notes": [
+        "In PackML Unit and Machine are used to define the same thing and can at times be interchanged."
+      ]
+    },
+    {
+      "term": "PackMLTag",
+      "definition": "a concept that represents named data element that is used to command, read status, or provide administration of a unit."
+    },
+    {
+      "term": "PackMLStateModel",
+      "definition":"a concept that represents a state model of the operational state of a unit."
+    },
+    {
+      "term": "PackMLMode",
+      "definition":"a concept that represents the mode of operation of a unit, indicating which state model is currently active."
     }
   ],
 
@@ -231,8 +263,13 @@
     "Clause 3.3. Sorted as written; keep it alphabetical."
   ],
   "abbreviations": [
+    ["AC",  "Alarm and Condition"],
+    ["DA",  "Data Access"],
+    ["DCS",  "Distributed Control System"],
+    ["HA",  "Historical Access"],
     ["HMI",  "Human Machine Interface"],
     ["MES",  "Manufacturing Execution System"],
+    ["OCS",  "Open Control System"],
     ["PLC",  "Programmable Logic Controller"],
     ["UML",  "Unified Modelling Language"],
     ["URI",  "Uniform Resource Identifier"],
