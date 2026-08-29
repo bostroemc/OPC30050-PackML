@@ -59,7 +59,7 @@ kind: terms
 ```
 
 
-## General information {#sec-general-information}
+<!-- ## General information {#sec-general-information}
 
 [Explain the domain to a reader who knows OPC UA but not this industry.]
 
@@ -75,14 +75,14 @@ kind: terms
 
 ## Information Model overview {#sec-information-model-overview}
 
-[An overview of the model elements and how they relate to each other.]
+[An overview of the model elements and how they relate to each other.] -->
 
 <!-- a figure showing the relationships between the major elements -->
-```{figure}
+<!-- ```{figure}
 id: fig-information-model-overview
 caption: Information Model overview
 source: figures/information-model-overview.drawio.svg
-```
+``` -->
 
 <!-- Draw it in draw.io and save as .drawio.svg - the picture and its editable source in one
      file, so nothing in the pipeline ever renders a diagram. Drag the shapes out of the OPC UA

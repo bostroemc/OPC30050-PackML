@@ -1,0 +1,10 @@
+Macros
+
+a. Insert '| ' before current cursor position
+qai| <Esc>wwq
+
+b.  Insert ' |' after end of current line
+qb<Esc>$a |<Esc>q
+
+c. Remove paragraph tags <p> and </p> from line, insert empty line after
+qc<Esc>0 d ^ vit y 0 vat p $ a <Enter> <Esc> w q

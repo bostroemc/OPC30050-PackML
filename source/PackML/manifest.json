@@ -83,7 +83,7 @@
     "main": "spec.md",
     "concept" : "concept.md",
     "modelling-approach": "modelling-approach.md",
-    "model": "model.md",
+    "model": "model-packml.md",
     "figures": "figures"
   },
 

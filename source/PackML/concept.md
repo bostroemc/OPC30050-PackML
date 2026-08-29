@@ -249,6 +249,8 @@ There are two types of values in OPC UA that are qualified with *Namespaces*: *N
 
 An OPC UA companion specification for an industry specific vertical market describes an information model by defining *ObjectTypes*, *VariableTypes*, *DataTypes* and *ReferenceTypes* that represent the concepts used in the vertical market. <xref ref-type="table" rid="tbl_1_example-objecttype-definition">Table 1</xref> contains an example of an *ObjectType* definition.
 
+*Table - Example ObjectType Definition* {#tbl-example-objecttype-definition }
+
 | **Attribute**	| **Value** |  |  |  |  | 
 | --- | --- | --- | --- | --- | --- |
 | BrowseName | 	WidgetType |  |  |  |  | 
