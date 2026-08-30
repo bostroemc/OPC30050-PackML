@@ -113,7 +113,7 @@
     ".vsdx": { "win": "tools/office-to-svg.ps1", "default": "tools/office-to-svg.sh" }
   },
 
-  "profiles": "profiles.json",
+  "profiles": "profiles-packml.json",
 
   "output": {
     "sts": "artifacts/OPC-30050.xml",

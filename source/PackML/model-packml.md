@@ -968,7 +968,7 @@ Table 37 specifies the *AddressSpace* representation for the *Stop Method*. *Sto
 *Table - Stop Method AddressSpace Definition* {#tbl-stop-method-addressspace-definition}
 | Attribute	| Value | | | | |
 | --- | --- | --- | --- | --- | --- |
-| BrowseName | Stop | | | |
+| BrowseName | Stop | | | | |
 | References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
 | | | | | | |
 
@@ -999,7 +999,7 @@ Table 39 specifies the *AddressSpace* representation for the *Reset Method*. *Re
 *Table - Reset Method AddressSpace Definition* {#tbl-reset-method-addressspace-definition}
 | Attribute	| Value | | | | |
 | --- | --- | --- | --- | --- | --- |
-| BrowseName | Reset | | | |
+| BrowseName | Reset | | | | |
 | References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
 | | | | | | |
 
@@ -1026,10 +1026,347 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_40_tocomplete
 
 Table 41 specifies the *AddressSpace* representation for the *ToComplete Method*. *ToComplete* has no input or output parameters and has no referenced objects or variables.
 
-*Table - ToComplete Method AddressSpace Definition* {#tbl-reset-method-addressspace-definition}
+*Table - ToComplete Method AddressSpace Definition* {#tbl-tocomplete-method-addressspace-definition}
 | Attribute	| Value | | | | |
 | --- | --- | --- | --- | --- | --- |
-| BrowseName | ToComplete | | | |
+| BrowseName | ToComplete | | | | |
 | References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
 | | | | | | |
 
+
+#### Start Method {#sec-start-method}
+
+This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Starting* State and send parameters at the same time. Which is an extension to the <xref ref-type="other" rid="ref_isapart2">ISA-TR88.00.02-2015</xref> specification. The parameter is defined in <xref ref-type="table" rid="tbl_42_start-method-parameters">Table 42</xref>
+
+**Signature**
+```
+	Start(
+		[in] PackMLDescriptorDataType[] Parameter
+	); 
+```
+
+*Table - Start Method Parameters* {#tbl-start-method-parameters}
+| Argument	| Description |
+| --- | --- |
+| Parameter	| The array of parameter with Id, Name, Unit and Value can be used by the method. See 6.5.4 for the definition of the DataType. |
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_43_start-method-result-codes">Table 43</xref>.
+
+*Table - Start Method Result Codes* {#tbl-start-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+| Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
+| Bad_ArgumentsMissing	| See OPC 10000-4 – Services for the description of this result code (The Client did not specify all of the input arguments for the Method.) |
+| Bad_TooManyArguments	| See OPC 10000-4 – Services for the description of this result code (The Client specified more input arguments than defined for the Method.) |
+| Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
+| Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
+
+<xref ref-type="table" rid="tbl_44_start-method-addressspace-definition">Table 44</xref> specifies the *AddressSpace* representation for the *Start Method*. *Start* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_42_start-method-parameters">Table 42</xref>.
+
+*Table - Start Method AddressSpace Definition* {#tbl-start-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName	| Start | | | | |
+| References	| NodeClass	| BrowseName 	| DataType	| TypeDefinition	| ModellingRule |
+| HasProperty	| Variable	| InputArguments	| Argument[] 	| PropertyType	| Mandatory |
+
+
+#### Unhold Method {#sec-unhold-method}
+
+This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Unholding* state.
+
+
+**Signature**
+```
+	Unhold(
+	);
+```
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_45_unhold-method-result-codes">Table 45</xref>
+
+*Table - Unhold Method Result Codes* {#tbl-unhold-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+|  Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
+| | |
+
+<xref ref-type="table" rid="tbl_46_unhold-method-addressspace-definition">Table 46</xref> specifies the *AddressSpace* representation for the *Unhold Method*. *Unhold* has no input or output parameters and has no referenced objects or variables.
+
+*Table - Unhold Method AddressSpace Definition* {#tbl-unhold-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName | Unhold | | | | |
+| References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
+| | | | | | |
+
+
+#### Suspend Method {#sec-suspend-method}
+
+This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Suspending *state.
+
+**Signature**
+```
+	Suspend(
+	);
+```
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_47_suspend-method-result-codes">Table 47</xref>
+
+*Table - Suspend Method Result Codes* {#tbl-suspend-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+|  Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
+| | |
+
+<xref ref-type="table" rid="tbl_48_suspend-method-addressspace-definition">Table 48</xref> specifies the *AddressSpace* representation for the *Suspend Method*. *Suspend* has no input or output parameters and has no referenced objects or variables.
+
+*Table - Suspend Method AddressSpace Definition* {#tbl-suspend-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName | Suspend | | | | |
+| References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
+| | | | | | |
+
+
+#### Unsuspend Method {#sec-unsuspend-method}
+
+This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Unsuspending* state.
+
+**Signature**
+```
+	Unsuspend(
+	);
+```
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_49_unsuspend-method-result-codes">Table 49</xref> 
+
+*Table - Unsuspend Method Result Codes* {#tbl-unsuspend-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+|  Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
+| | |
+
+<xref ref-type="table" rid="tbl_50_unsuspend-method-addressspace-definition">Table 50</xref> specifies the *AddressSpace* representation for the *Unsuspend Method*. *Unsuspend* has no input or output parameters and has no referenced *Objects* or *Variables*.
+
+
+*Table - Unsuspend Method AddressSpace Definition* {#tbl-unsuspend-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName | Unsuspend | | | | |
+| References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
+| | | | | | |
+
+#### Hold Method {#sec-hold-method}
+
+This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Holding* state.
+
+**Signature**
+```
+	Hold(
+	);
+```
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_51_hold-method-result-codes">Table 51</xref>
+
+*Table - Hold Method Result Codes* {#tbl-hold-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+|  Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
+| | |
+
+<xref ref-type="table" rid="tbl_52_hold-method-addressspace-definition">Table 52</xref> specifies the *AddressSpace* representation for the *Hold Method*. *Hold* has no input or output parameters and has no referenced objects or variables.
+
+*Table - Hold Method AddressSpace Definition* {#tbl-hold-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName | Hold | | | | |
+| References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
+| | | | | | |
+
+
+#### RemoteCommand Method {#sec-remotecommand-method}
+
+This *Method* is used to issue a command to the UA *Server* that can then be passed on to any other internal system as illustrated in <xref ref-type="fig" rid="fig_19_remote-command-and-internal-systems">Figure 19</xref> or it can be used to pass information on to an upstream or downstream system as illustrated in <xref ref-type="fig" rid="fig_20_remote-command-line-and-upstreamdownstream-systems">Figure 20</xref>. In both cases, it is up to the UA *Server* and/or the underlying system to determine when the command is passed on. 
+
+```{figure}
+id: fig_19_remote-command-and-internal-systems
+caption: Remote Command and Internal systems
+source: figures/fig_19_remote-command-and-internal-systems.png
+```
+
+```{figure}
+id: fig_20_remote-command-line-and-upstreamdownstream-systems
+caption: Remote Command - Line and Upstream/Downstream systems
+source: figures/fig_20_remote-command-line-and-upstreamdownstream-systems.png
+```
+
+The *RemoteCommand* Method parameters are defined in<bold> </bold><xref ref-type="table" rid="tbl_53_remotecommand-method-parameters">Table 53</xref>
+
+**Signature**
+```
+	RemoteCommand(
+		[in] PackMLRemoteInterfaceDataType[] RemoteInterface
+	);
+```
+
+*Table - RemoteCommand Method Parameters* {#tbl-remotecommand-method-parameters}
+| Argument	| Description |
+| --- | --- |
+| RemoteInterface | This structure is an array of remote interface information which include Number, ControlCmdNumber, CmdValue and Parameter. Parameter itself is a structure formally defined in <xref ref-type="sec" rid="sec_6-5-4_packmldescriptordatatype">6.5.4</xref>. The PackMLRemoteInterfaceDataType is formally defined in <xref ref-type="sec" rid="sec_6-5-7_packmlremoteinterfacedatatype">6.5.7</xref> |
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_54_remotecommand-method-result-codes">Table 54</xref>.
+
+*Table - RemoteCommand Method Result Codes* {#tbl-remotecommand-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+| Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_ArgumentsMissing	| See OPC 10000-4 – Services for the description of this result code (The Client did not specify all of the input arguments for the Method.) |
+| Bad_TooManyArguments	| See OPC 10000-4 – Services for the description of this result code (The Client specified more input arguments than defined for the Method.) |
+| Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
+| Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
+
+<xref ref-type="table" rid="tbl_55_remotecommand-method-addressspace-definition">Table 55</xref> specifies the *AddressSpace* representation for the *RemoteCommand Method*. *RemoteCommand* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_53_remotecommand-method-parameters">Table 53</xref>.
+
+
+*Table - RemoteCommand Method AddressSpace Definition* {#tbl-remotecommand-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName	| RemoteCommand | | | | |
+| References	| NodeClass	| BrowseName 	| DataType	| TypeDefinition	| ModellingRule
+| HasProperty	| Variable	| InputArguments	| Argument[] 	| PropertyType	| Mandatory
+
+#### SetInterlock Method {#sec-setinterlock-method}
+
+This *Method* allows an OPC UA *Client* to set an interlock associated with this PackML system parameter. The parameters for the *SetInterlock* *Method* are defined in <xref ref-type="table" rid="tbl_56_setinterlock-method-parameters">Table 56</xref>.
+
+**Signature**
+```
+	SetInterlock(
+	 	 [in] Int32 InterlockId,
+	 	 [in] Boolean State
+	);
+```
+
+*Table - SetInterlock Method Parameters* {#tbl-setinterlock-method-parameters}
+| Argument	| Description |
+| --- | --- |
+| InterlockId	| ID of the target interlock to set or reset. The ID typically refer to the element in the Boolean Array in the MaterialInterlock tag. |
+| State	| The state that the targeted interlock should be set to. True is set to interlocked, false is not interlocked. |
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_57_setinterlock-method-result-codes">Table 57</xref>
+ 
+
+*Table - SetInterlock Method Result Codes* {#tbl-setinterlock-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+| Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_ArgumentsMissing	| See OPC 10000-4 – Services for the description of this result code (The Client did not specify all of the input arguments for the Method.) |
+| Bad_TooManyArguments	| See OPC 10000-4 – Services for the description of this result code (The Client specified more input arguments than defined for the Method.) |
+| Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
+| Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
+
+<xref ref-type="table" rid="tbl_58_setinterlock-method-addressspace-definition">Table 58</xref> specifies the *AddressSpace* representation for the *SetInterlock Method*. *SetInterlock* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_56_setinterlock-method-parameters">Table 56</xref>.
+
+
+*Table - SetInterlock Method AddressSpace Definition* {#tbl-setinterlock-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName	| SetInterlock | | | | |
+| References	| NodeClass	| BrowseName 	| DataType	| TypeDefinition	| ModellingRule
+| HasProperty	| Variable	| InputArguments	| Argument[] 	| PropertyType	| Mandatory
+
+#### SetParameter Method {#sec-setparameter-method}
+
+This *Method* allows an OPC UA *Client* to set the parameters that are by the machine.
+
+**Signature**
+```
+	SetParameter(
+		 [in] PackMLDescriptorDataType[] Parameter
+	);
+```
+
+*Table - SetParameter Method Parameters* {#tbl-setparameter-method-parameters}
+| Argument	| Description |
+| --- | --- |
+| Parameter	| The array of parameter that can be used by the method |
+
+*Method* result codes are defined in <xref ref-type="table" rid="tbl_60_setparameter-method-result-codes">Table 60</xref>
+
+*Table - SetParameter Method Result Codes* {#tbl-setparameter-method-result-codes}
+| Result Code	| Description |
+| --- | --- |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+| Bad_NotImplemented	| See OPC 10000-4 – Services for the description of this result code. (Requested operation is not implemented.) |
+| Bad_NodeIdUnknown	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that the specified Object is not valid) |
+| Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.). If a machine determines that it is not in a state that allows parameter changes this error is returned. |
+| Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
+
+<xref ref-type="table" rid="tbl_61_setparameter-method-addressspace-definition">Table 61</xref> specifies the *AddressSpace* representation for the *SetParameter Method*. *SetParameter* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_59_setparameter-method-parameters">Table 59</xref>.
+
+
+
+*Table - SetParameter Method AddressSpace Definition* {#tbl-setparameter-method-addressspace-definition}
+| Attribute	| Value | | | | |
+| --- | --- | --- | --- | --- | --- |
+| BrowseName	| SetParameter | | | | |
+| References	| NodeClass	| BrowseName 	| DataType	| TypeDefinition	| ModellingRule
+| HasProperty	| Variable	| InputArguments	| Argument[] 	| PropertyType	| Mandatory
+
+
+### Alarms {#sec-alarms}
+
+#### Overview {#sec-overview}
+
+The section defines alarms. Alarms in PackML are provided via a set of tags. Alarms in OPC UA are provided via events and a full alarming system. This is a preferred method for providing alarms, but it does require some additional overhead. To allow the PackML information model to be implemented in smaller devices it was decided to initially support the existing Tag based representation of Alarm information, and to add the OPC UA *Event* based definition of alarms in the next release. *Servers* shall be able to report alarms in both manners, and *Clients* can use the manner that is most appropriate for them. Some smaller device might find it easier to just access the tags for Alarm information, but display system or other HMIs would probably make use of the OPC UA *Event* based system for alarming.
+
+#### Alarm Tags {#sec-alarm-tags}
+
+##### Overview {#sec-overview}
+
+The following *VariableType* is used to report alarms in the PackML unit. In addition, the data is also available as a structured datatype, which is much like an event.
+
+##### PackMLAlarmDataType {#sec-packmlalarmdatatype}
+
+The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in <xref ref-type="table" rid="tbl_62_packmlalarmdatatype-structure">Table 62</xref>. 
+
+
+*Table - PackMLAlarmDataType Structure* {#tbl-packmlalarmdatatype-structure defines=PackMLAlarmDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLAlarmDataType	| Structure	 | |
+| ID	| Int32	| A unique number assigned to each type of alarm, stop or warning. |
+| Value	| Int32	| An alarm, stop or warning message number associated to the ID to allow for user specific detail or to break down the Alarm.ID to greater detail |
+| Message	| String	| The actual text of the alarm, stop or warning for those machines capable of providing string information |
+| Category	| Int32	| A user defined value which indicates what type of alarm, stop or warning has occurred. E.g. electrical, mechanical, process limit, … |
+| DateTime	| UtcTime	| The date and time that the alarm, stop or warning occurred |
+| AckDateTime	| UtcTime	| The date and time that the alarm, stop or warning was Acknowledged, |
+| Trigger	| Boolean	| This variable is true when the alarm is active  |
+
+
+#### Alarm Events {#sec-alarm-events}
+
+[note: This section will be defined in a future release]

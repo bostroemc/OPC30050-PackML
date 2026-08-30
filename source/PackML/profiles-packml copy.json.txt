@@ -1,0 +1,157 @@
+{
+  "$comment": [
+    "The Conformance Units and Profiles this document defines. The Profiles and Conformance",
+    "Units clause is generated from this file; nothing here is authored in spec.md.",
+    "",
+    "A unit's name appears in four places - this file, the Facet that requires it, the Category",
+    "element on every Node that implements it, and the profile database - so it is written once.",
+    "A Category the NodeSet carries that no unit here defines is reported, and so is a Facet",
+    "that requires a name nothing defines. Renaming a unit in one place and not the other is",
+    "the failure this arrangement exists to catch.",
+    "",
+    "'group' on a unit is what a Facet table prints beside it; 'category' is Server or Client.",
+    "'group' on a Profile is the subclause it is listed under, and the groups appear in the",
+    "order they first occur here. An include names a unit or another Profile: optional=false",
+    "prints M, optional=true prints O.",
+    "",
+    "Name a unit '<SHORTNAME> <TypeName> <Aspect>'. The prefix keeps units from two parts of",
+    "one family apart when they are read side by side in the profile database."
+  ],
+  "conformanceUnits": [
+    {
+      "name": "Some Base",
+      "group": "Sample",
+      "category": "Server",
+      "description": "[A description of the conformance unit]"
+    },
+    {
+      "name": "Some Measurements",
+      "group": "Sample",
+      "category": "Server",
+      "description": "[A description of the conformance unit]"
+    },
+    {
+      "name": "Some Arrays",
+      "group": "Sample",
+      "category": "Server",
+      "description": "[A description of the conformance unit]"
+    },
+    {
+      "name": "PackML Base Functionality",
+      "group": "PackML 1234",
+      "category": "Server",
+      "description": "The server supports the BaseObjectModel. This includes exposing all mandatory objects, variables and methods."
+    },
+    {
+      "name": "PackML Base TagID",
+      "group": "PackML",
+      "category": "Server",
+      "description": "The Server supports the TagID Property"
+    },
+    {
+      "name": "PackML Base Version",
+      "group": "PackML",
+      "category": "Server",
+      "description": "The Server supports the Version property and DataType"
+    },
+    {
+      "name": "PackML Base Admin",
+      "group": "PackML",
+      "category": "Server",
+      "description": "The Server support all of the mandatory items in the PackMLAdminObjectType"
+    }
+  ],
+
+{"category": "Server", "name": "PackML Base Functionality", "description": "The server supports the BaseObjectModel. This includes exposing all mandatory objects, variables and methods."},
+
+
+
+{"name": "PackML Base Functionality", "optional":	false},
+
+{"category": "Server", "name": "PackML Base Functionality", "description": "	The server supports the BaseObjectModel. This includes exposing all mandatory objects, variables and methods."},
+{"category": "Server", "name": "PackML Base TagID", "description": "	The Server supports the TagID Property"},
+{"category": "Server", "name": "PackML Base Version", "description": "	The Server supports the Version property and DataType"},
+{"category": "Server", "name": "PackML Base Admin", "description": "	The Server support all of the mandatory items in the PackMLAdminObjectType"},
+{"category": "Server", "name": "PackML Base Status", "description": "	The Server support all of the mandatory items in the PackMLStatusObjectType"},
+{"category": "Server", "name": "PackML State Information", "description": "	The server supports the BaseStateMachine. This include the list of AvailableStates and AvailableTransitions. It also includes all mandatory states and any method associated with the states. The certification will include a list of all states and transitions supported by the StateMachine.  This include the mandatory Sub-statemachines"},
+{"category": "Server", "name": "PackML State Abort", "description": "	The server supports the Abort Method"},
+{"category": "Server", "name": "PackML State Clear", "description": "	The server supports the Clear Method"},
+{"category": "Server", "name": "PackML State Stop", "description": "	The server supports the Stop Method"},
+{"category": "Server", "name": "PackML State Reset", "description": "	The server supports the Reset Method"},
+{"category": "Server", "name": "PackML State Complete", "description": "	The server supports the Complete Method"},
+{"category": "Server", "name": "PackML State Start", "description": "	The server supports the Start Method"},
+{"category": "Server", "name": "PackML State Unhold", "description": "	The server supports the Unhold Method"},
+{"category": "Server", "name": "PackML State Suspend", "description": "	The server supports the Suspend Method"},
+{"category": "Server", "name": "PackML State Hold", "description": "	The server supports the Hold Method"},
+{"category": "Server", "name": "PackML State Unsuspend", "description": "	The server supports the Unsuspend Method"},
+		
+{"category": "Server", "name": "PackML SetUnitMode", "description": "	The Server supports the SetUnitMode Method"},
+{"category": "Server", "name": "PackML Set Product", "description": "	The Server supports the SetProduct Method "},
+{"category": "Server", "name": "PackML Machine Speed", "description": "	The Server supports the SetMachSpeed Method"}, 
+{"category": "Server", "name": "PackML RemoteCommand", "description": "	The Server supports the RemoteCommand Method"},
+{"category": "Server", "name": "PackML SetInterlock", "description": "	The Server supports the SetInterlock Method"},
+	
+{"category": "Server", "name": "PackML Status UnitModeRequested", "description": "	The Server support the UnitModeChangeInProcess flag"},
+{"category": "Server", "name": "PackML Status UnitModeChangeInProcess", "description": "	The Server support the UnitModeChangeInProcess flag"},
+{"category": "Server", "name": "PackML Status State", "description": "	The Server supports the StateRequested and StateChangeInProcess flag"},
+{"category": "Server", "name": "PackML Status Interlock", "description": "	The Server includes support for at least one MaterialInterlock and the summary MaterialInterlocked flag."},
+{"category": "Server", "name": "PackML Status RemoteParameter", "description": "	The Server supports exposing of the configured RemoteParameter"},
+{"category": "Server", "name": "PackML Status Product", "description": "	The Server supports exposing of the configured product data"},
+{"category": "Server", "name": "PackML Admin Alarm", "description": "	The server supports the PackML Alarm instance including the Alarm extent."},
+{"category": "Server", "name": "PackML Admin Alarm History", "description": "	The server supports the PackML AlarmHistory including the Alarm history extent."},
+{"category": "Server", "name": "PackML Admin Warning", "description": "	The server supports the PackML warning instance including the warning extent."},
+{"category": "Server", "name": "PackML Admin Stop", "description": "	The server supports the PackML stop reason including the stop reason extent"},
+{"category": "Server", "name": "PackML Admin mode statistics", "description": "	The server supports the ModeCurrentTime and cumulative time statistics"},
+{"category": "Server", "name": "PackML Admin state Statistics", "description": "	The server supports the StateCurrentTime and cumulative time statistics"},
+{"category": "Server", "name": "PackML Admin", "description": " 	The server supports the prodrelated counts including ProdConsumedCount, ProdProcessedCount and ProdDefectiveCount."},
+{"category": "Server", "name": "PackML Admin ResetTime", "description": "	The server supports the PackML Time since reset"},
+{"category": "Server", "name": "PackML Admin machine speed.", "description": "	The server supports the PackML Machine Design Speed"},
+{"category": "Server", "name": "PackML Machine Speed", "description": "	The Server supports the CurMachSpeed information including units"}, 
+{"category": "Server", "name": "PackML Equipment Blocked", "description": "	The Server supports the EquipmentBlocked flag"},
+{"category": "Server", "name": "PackML Equipment Starved", "description": "	The Server supports the EquipmentStarved flag"},
+{"category": "Server", "name": "PackML ProdDefectiveCount", "description": "	The Server supports ProdDefectiveCount"},
+{"category": "Server", "name": "PackML ProdProcessedCount", "description": "	The Server supports ProdProcessedCount"},
+
+  "profiles": [
+    {
+      "name": "PackML Base Server Facet",
+      "group": "PackML Facets",
+      "uri": "http://opcfoundation.org/UA-Profile/PackML/Server/PackMLBaseServerFacet",
+      "description": "This Facet defines support for base Sample server functionality.",
+      "includes": [
+        {
+          "name": "PackML Base Functionality",
+          "optional": false
+        },
+        {
+          "name": "Some Measurements",
+          "optional": true
+        },
+        {
+          "name": "Some Arrays",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "name": "PackML Base Client Facet",
+      "group": "PackML Base",
+      "uri": "http://opcfoundation.org/UA-Profile/PackML/Client/PackMLBaseClientFacet",
+      "description": "This Facet defines support for base Sample server functionality.",
+      "includes": [
+        {
+          "name": "PackML Base Functionality",
+          "optional": true
+        },
+        {
+          "name": "Standard DataChange Subscription Server Facet",
+          "optional": false
+        },
+        {
+          "name": "Some Arrays",
+          "optional": true
+        }
+      ]
+    }
+  ]
+}
