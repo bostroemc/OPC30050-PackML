@@ -143,10 +143,32 @@
 <li><a href="#sec_8-2"><span class="label">8.2</span> Handling of OPC UA Namespaces</a></li>
 </ul>
 </li>
-<li><a href="#sec_A"><span class="label">Annex A</span> Recommended localized names</a></li>
-<li><a href="#sec_B"><span class="label">Annex B</span> Namespaces and Mappings</a>
+<li><a href="#sec_A"><span class="label">Annex A</span> Recommended localized names</a>
 <ul>
-<li><a href="#sec_B-1"><span class="label">B.1</span> NodeSets and Supplementary Files</a></li>
+<li><a href="#sec_A-1"><span class="label">A.1</span> Recommended state names for <em>StateMachine</em> <em>Variables</em></a>
+<ul>
+<li><a href="#sec_A-1-1"><span class="label">A.1.1</span> LocaleID "en"</a></li>
+<li><a href="#sec_A-1-2"><span class="label">A.1.2</span> LocaleID "de"</a></li>
+<li><a href="#sec_A-1-3"><span class="label">A.1.3</span> LocaleID "fr"</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec_B"><span class="label">Annex B</span> DataType</a>
+<ul>
+<li><a href="#sec_B-1"><span class="label">B.1</span> Mapping of elementary data types</a></li>
+<li><a href="#sec_B-2"><span class="label">B.2</span> Mapping of generic data types</a></li>
+<li><a href="#sec_B-3"><span class="label">B.3</span> Mapping of derived data types</a>
+<ul>
+<li><a href="#sec_B-3-1"><span class="label">B.3.1</span> Mapping of enumerated data types</a></li>
+<li><a href="#sec_B-3-2"><span class="label">B.3.2</span> Mapping of array data types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec_C"><span class="label">Annex C</span> Namespaces and Mappings</a>
+<ul>
+<li><a href="#sec_C-1"><span class="label">C.1</span> NodeSets and Supplementary Files</a></li>
 </ul>
 </li>
 </ul>
@@ -170,7 +192,7 @@
 <p>[INFORMATION ABOUT OTHER ORGANIZATION CONTRIBUTING TO THE SPECIFICATION]</p>
 </section>
 <section id="sec_2" class="refs">
-<h2><span class="label">2</span> Normative references<a class="src" href="../../source/PackML/manifest.json" data-src="source/PackML/manifest.json" data-line="133" title="Generated - open source/PackML/manifest.json, which decides what this clause says">&#128221;</a></h2>
+<h2><span class="label">2</span> Normative references<a class="src" href="../../source/PackML/manifest.json" data-src="source/PackML/manifest.json" data-line="135" title="Generated - open source/PackML/manifest.json, which decides what this clause says">&#128221;</a></h2>
 <p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments and errata) applies.</p>
 <section class="refs" id="normative-references">
 <h2></h2>
@@ -203,7 +225,7 @@
 </div>
 </section>
 <section id="sec_3-2" class="clause">
-<h3><span class="label">3.2</span> Terms and definitions<a class="src" href="../../source/PackML/manifest.json" data-src="source/PackML/manifest.json" data-line="234" title="Generated - open source/PackML/manifest.json, which decides what this clause says">&#128221;</a></h3>
+<h3><span class="label">3.2</span> Terms and definitions<a class="src" href="../../source/PackML/manifest.json" data-src="source/PackML/manifest.json" data-line="236" title="Generated - open source/PackML/manifest.json, which decides what this clause says">&#128221;</a></h3>
 <section class="term-sec">
 <h4><span class="label">3.2.1</span> <span class="preferred-term">PackML&lt;Term&gt;</span></h4>
 <p>General</p>
@@ -234,7 +256,7 @@
 </section>
 </section>
 <section id="sec_3-3" class="clause">
-<h3><span class="label">3.3</span> Abbreviations<a class="src" href="../../source/PackML/manifest.json" data-src="source/PackML/manifest.json" data-line="266" title="Generated - open source/PackML/manifest.json, which decides what this clause says">&#128221;</a></h3>
+<h3><span class="label">3.3</span> Abbreviations<a class="src" href="../../source/PackML/manifest.json" data-src="source/PackML/manifest.json" data-line="268" title="Generated - open source/PackML/manifest.json, which decides what this clause says">&#128221;</a></h3>
 <figure class="table-wrap">
 <table>
 <tbody>
@@ -2309,14 +2331,212 @@
 </section>
 </section>
 <section id="sec_A" class="annex">
-<h2><span class="label">Annex A</span> Recommended localized names<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="1" title="Open the source of this clause">&#128221;</a></h2>
+<h2><span class="label">Annex A</span> Recommended localized names<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="1-91" title="Open the source of this clause">&#128221;</a></h2>
 <p class="annex-status">(informative)</p>
+<section id="sec_A-1" class="clause">
+<h3><span class="label">A.1</span> Recommended state names for <em>StateMachine</em> <em>Variables</em><a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="3-91" title="Open the source of this clause">&#128221;</a></h3>
+<section id="sec_A-1-1" class="clause">
+<h4><span class="label">A.1.1</span> LocaleID "en"<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="6-32" title="Open the source of this clause">&#128221;</a></h4>
+<p>The recommended state display names for the LocaleId "en" and the State values for all <em>StateMachines</em> defined in this specification are listed in Table B.1</p>
+<figure class="table-wrap" id="tbl_70">
+<figcaption><span class="label">Table 70</span> Recommended display names for LocaleId "en"<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="11-32" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th>StateMachine</th><th>Browse Name</th><th>display name</th><th>State Value</th></tr>
+</thead>
+<tbody>
+<tr><td>PackMLBaseStateMachineType</td><td>Cleared</td><td>Cleared</td><td>18</td></tr>
+<tr><td></td><td>Aborting</td><td>Aborting</td><td>8</td></tr>
+<tr><td></td><td>Aborted</td><td>Aborted</td><td>9</td></tr>
+<tr><td>PackMLMachineStateMachineType</td><td>Running</td><td>Running</td><td>19</td></tr>
+<tr><td></td><td>Clearing</td><td>Clearing</td><td>1</td></tr>
+<tr><td></td><td>Stopping</td><td>Stopping</td><td>7</td></tr>
+<tr><td></td><td>Stopped</td><td>Stopped</td><td>2</td></tr>
+<tr><td>PackMLExecuteStateMachineType</td><td>Resetting</td><td>Resetting</td><td>15</td></tr>
+<tr><td></td><td>Idle</td><td>Idle</td><td>4</td></tr>
+<tr><td></td><td>Starting</td><td>Starting</td><td>3</td></tr>
+<tr><td></td><td>Unsuspending</td><td>Unsuspending</td><td>14</td></tr>
+<tr><td></td><td>Suspended</td><td>Suspended</td><td>5</td></tr>
+<tr><td></td><td>Suspending</td><td>Suspending</td><td>13</td></tr>
+<tr><td></td><td>Execute</td><td>Execute</td><td>6</td></tr>
+<tr><td></td><td>Holding</td><td>Holding</td><td>10</td></tr>
+<tr><td></td><td>Held</td><td>Held</td><td>11</td></tr>
+<tr><td></td><td>Unholding</td><td>Unholding</td><td>12</td></tr>
+<tr><td></td><td>Completing</td><td>Completing</td><td>16</td></tr>
+<tr><td></td><td>Complete</td><td>Complete</td><td>17</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_A-1-2" class="clause">
+<h4><span class="label">A.1.2</span> LocaleID "de"<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="36-62" title="Open the source of this clause">&#128221;</a></h4>
+<p>The recommended state display names for the LocaleId "de" are listed in Table B.2&lt;break /&gt;&lt;xref ref-type="other" rid="ref_382998185"&gt; &lt;/xref&gt;.</p>
+<figure class="table-wrap" id="tbl_71">
+<figcaption><span class="label">Table 71</span> Recommended display names for LocaleId "de"<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="41-62" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th>StateMachine</th><th>Browse Name</th><th>display name</th><th>State Value</th></tr>
+</thead>
+<tbody>
+<tr><td>PackMLBaseStateMachineType</td><td>Cleared</td><td>Geleert</td><td>18</td></tr>
+<tr><td></td><td>Aborting</td><td>Abbrechen</td><td>8</td></tr>
+<tr><td></td><td>Aborted</td><td>Abgebrochen</td><td>9</td></tr>
+<tr><td>PackMLMachineStateMachineType</td><td>Running</td><td>Im Betrieb</td><td>19</td></tr>
+<tr><td></td><td>Clearing</td><td>Leeren</td><td>1</td></tr>
+<tr><td></td><td>Stopping</td><td>Stoppen</td><td>7</td></tr>
+<tr><td></td><td>Stopped</td><td>Gestoppt</td><td>2</td></tr>
+<tr><td>PackMLExecuteStateMachineType</td><td>Resetting</td><td>Rücksetzen</td><td>15</td></tr>
+<tr><td></td><td>Idle</td><td>Leerlauf</td><td>4</td></tr>
+<tr><td></td><td>Starting</td><td>Anlaufen</td><td>3</td></tr>
+<tr><td></td><td>Unsuspending</td><td>Aus Bereitschaft anlaufen</td><td>14</td></tr>
+<tr><td></td><td>Suspended</td><td>In Bereitschaft</td><td>5</td></tr>
+<tr><td></td><td>Suspending</td><td>Aussetzend</td><td>13</td></tr>
+<tr><td></td><td>Execute</td><td>Ausführen</td><td>6</td></tr>
+<tr><td></td><td>Holding</td><td>Innehalten</td><td>10</td></tr>
+<tr><td></td><td>Held</td><td>Angehalten</td><td>11</td></tr>
+<tr><td></td><td>Unholding</td><td>Wiederanlaufen</td><td>12</td></tr>
+<tr><td></td><td>Completing</td><td>Fertigstellen</td><td>16</td></tr>
+<tr><td></td><td>Complete</td><td>Vollständig</td><td>17</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_A-1-3" class="clause">
+<h4><span class="label">A.1.3</span> LocaleID "fr"<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="65-91" title="Open the source of this clause">&#128221;</a></h4>
+<p>The recommended state display names for the LocaleId "fr" are listed in Table B.3</p>
+<figure class="table-wrap" id="tbl_72">
+<figcaption><span class="label">Table 72</span> Recommended display names for LocaleId "fr"<a class="src" href="../../source/PackML/annex-b.md" data-src="source/PackML/annex-b.md" data-line="70-91" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th>StateMachine</th><th>Browse Name</th><th>display name</th><th>State Value</th></tr>
+</thead>
+<tbody>
+<tr><td>PackMLBaseStateMachineType</td><td>Cleared</td><td>Nettoyé</td><td>18</td></tr>
+<tr><td></td><td>Aborting</td><td>Annulation</td><td>8</td></tr>
+<tr><td></td><td>Aborted</td><td>Annulé</td><td>9</td></tr>
+<tr><td>PackMLMachineStateMachineType</td><td>Running</td><td>En fonction</td><td>19</td></tr>
+<tr><td></td><td>Clearing</td><td>Nettoyage</td><td>1</td></tr>
+<tr><td></td><td>Stopping</td><td>En cours d'arrêt</td><td>7</td></tr>
+<tr><td></td><td>Stopped</td><td>Arrêté</td><td>2</td></tr>
+<tr><td>PackMLExecuteStateMachineType</td><td>Resetting</td><td>Réinitialisation</td><td>15</td></tr>
+<tr><td></td><td>Idle</td><td>Suspendu</td><td>4</td></tr>
+<tr><td></td><td>Starting</td><td>Démarrage</td><td>3</td></tr>
+<tr><td></td><td>Unsuspending</td><td>Repris</td><td>14</td></tr>
+<tr><td></td><td>Suspended</td><td>Suspendu</td><td>5</td></tr>
+<tr><td></td><td>Suspending</td><td>Suspendu (ing)</td><td>13</td></tr>
+<tr><td></td><td>Execute</td><td>Execute</td><td>6</td></tr>
+<tr><td></td><td>Holding</td><td>Tenu (ing)</td><td>10</td></tr>
+<tr><td></td><td>Held</td><td>Tenu</td><td>11</td></tr>
+<tr><td></td><td>Unholding</td><td>Libéré</td><td>12</td></tr>
+<tr><td></td><td>Completing</td><td>Achevé (ing)</td><td>16</td></tr>
+<tr><td></td><td>Complete</td><td>Achevé</td><td>17</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+</section>
 </section>
 <section id="sec_B" class="annex">
-<h2><span class="label">Annex B</span> Namespaces and Mappings<a class="src" href="../../source/PackML/spec.md" data-src="source/PackML/spec.md" data-line="113-115" title="Generated - open source/PackML/spec.md, which decides what this clause says">&#128221;</a></h2>
-<p class="annex-status">(normative)</p>
+<h2><span class="label">Annex B</span> DataType<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="1-100" title="Open the source of this clause">&#128221;</a></h2>
+<p class="annex-status">(informative)</p>
 <section id="sec_B-1" class="clause">
-<h3><span class="label">B.1</span> NodeSets and Supplementary Files</h3>
+<h3><span class="label">B.1</span> Mapping of elementary data types<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="4-34" title="Open the source of this clause">&#128221;</a></h3>
+<p>The mapping of IEC 61131-3 elementary data types to OPC UA data types is formally defined in <a class="xref" href="#ref-opc30000" data-ref-type="bibr">OPC 30000</a> (PLCOpen companion specification). &lt;xref ref-type="table" rid="tbl_71_mapping-iec-61131-3-elementary-data-types-to-opc-ua-built-in"&gt;Table 71&lt;/xref&gt; is copied from that specification as a reference, any differences with <a class="xref" href="#ref-opc30000" data-ref-type="bibr">OPC 30000</a> indicate that this specification is out of date.</p>
+<figure class="table-wrap" id="tbl_73">
+<figcaption><span class="label">Table 73</span> Mapping IEC 61131-3 elementary data types to OPC UA built in data types<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="9-34" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th>IEC 61131-3 elementary data types</th><th>OPC UA built in data types</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>BOOL</td><td>Boolean</td><td>A one bit value (true or false).</td></tr>
+<tr><td>SINT</td><td>SByte</td><td>An 8 bit signed integer value.</td></tr>
+<tr><td>USINT</td><td>Byte</td><td>An 8 bit unsigned integer value.</td></tr>
+<tr><td>INT</td><td>Int16</td><td>A 16 bit signed integer value.</td></tr>
+<tr><td>UINT</td><td>UInt16</td><td>A 16 bit unsigned integer value.</td></tr>
+<tr><td>DINT</td><td>Int32</td><td>A 32 bit signed integer value.</td></tr>
+<tr><td>UDINT</td><td>UInt32</td><td>A 32 bit unsigned integer value.</td></tr>
+<tr><td>LINT</td><td>Int64</td><td>A 64 bit signed integer value.</td></tr>
+<tr><td>ULINT</td><td>UInt64</td><td>A 64 bit unsigned integer value.</td></tr>
+<tr><td>BYTE</td><td>Byte</td><td>The PLC open specific OPC UA simple data type BYTE is derived from the built in data type Byte. It describes that the type is used as bit string of length 8.</td></tr>
+<tr><td>WORD</td><td>UInt16</td><td>The PLC open specific OPC UA simple data type WORD is derived from the built in data type UInt16. It describes that the type is used as bit string of length 16</td></tr>
+<tr><td>DWORD</td><td>UInt32</td><td>The PLC open specific OPC UA simple data type DWORD is derived from the built in data type UInt32. It describes that the type is used as bit string of length 32</td></tr>
+<tr><td>LWORD</td><td>UInt64</td><td>The PLC open specific OPC UA simple data type LWORD is derived from the built in data type UInt64. It describes that the type is used as bit string of length 64</td></tr>
+<tr><td>REAL</td><td>Float</td><td>OPC UA definition: An IEEE-754 single precision (32 bit) floating point value. IEC 61131-3 definition: Real (32 bit) with a range of values as defined in IEC 60559 for the basic single width floating-point format. Both standards are identical.</td></tr>
+<tr><td>LREAL</td><td>Double</td><td>OPC UA definition: An IEEE-754 double precision (64 bit) floating point value. IEC 61131-3 definition: Long real (64 bit) with a range of values as defined in IEC 60559 for the basic double width floating-point format. Both standards are identical.</td></tr>
+<tr><td>STRING</td><td>String</td><td>The PLC open specific OPC UA simple data type STRING is derived from the built in data type String. It describes that the type is used as a variable-length single-byte character string.</td></tr>
+<tr><td>CHAR</td><td>Byte</td><td>The PLC open specific OPC UA simple data type CHAR is derived from the built in data type Byte. It describes that the type is used as single-byte character</td></tr>
+<tr><td>WSTRING</td><td>String</td><td>OPC UA definition: A sequence of UTF8 characters. IEC 61131-3 definition: Variable-length double-byte character string</td></tr>
+<tr><td>WCHAR</td><td>UInt16</td><td>The PLC open specific OPC UA simple data type WCHAR is derived from the built in data type UInt16. It describes that the type is used as double-byte character.</td></tr>
+<tr><td>DT</td><td>DATE_AND_TIME</td><td>DateTime	OPC UA definition: A 64-bit signed integer which represents the number of 100 nanosecond intervals since January 1, 1601.  IEC 61131-3 definition: Date and time of day.</td></tr>
+<tr><td>DATE</td><td>DateTime</td><td>The PLC open specific OPC UA simple data type DATE is derived from the built in data type DateTime. It describes that the type is used as a date only.</td></tr>
+<tr><td>TOD TIME_OF_DAY</td><td>DateTime</td><td>The PLC open specific OPC UA simple data type TOD is derived from the built in data type DateTime. It describes that the type is used as time of day only.</td></tr>
+<tr><td>TIME</td><td>Double</td><td>The OPC UA simple data type Duration is derived from the built in data type Double. It describes that the type is used as interval of time in milliseconds.</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_B-2" class="clause">
+<h3><span class="label">B.2</span> Mapping of generic data types<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="38-54" title="Open the source of this clause">&#128221;</a></h3>
+<p>The mapping of IEC 61131-3 generic data types to OPC UA <em>DataTypes</em> is formally defined in <a class="xref" href="#ref-opc30000" data-ref-type="bibr">OPC 30000</a> (PLCOpen companion specification). &lt;xref ref-type="table" rid="tbl_72_mapping-iec-61131-3-generic-data-types-to-opc-ua-data-types"&gt;Table 72&lt;/xref&gt;. is copied from that specification as a reference, any differences with <a class="xref" href="#ref-opc30000" data-ref-type="bibr">OPC 30000</a> indicate that this specification is out of date. This mapping definition is defined for completeness but is normally not used in an OPC UA <em>AddressSpace</em>.</p>
+<figure class="table-wrap" id="tbl_74">
+<figcaption><span class="label">Table 74</span> Mapping IEC 61131-3 generic data types to OPC UA data types<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="42-54" title="Open the source of this clause">&#128221;</a></figcaption>
+<table>
+<thead>
+<tr><th>IEC 61131-3 generic data types</th><th>OPC UA data types</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>ANY</td><td>BaseDataType</td><td>This abstract OPC UA DataType defines a value that can have any valid OPC UA DataType.</td></tr>
+<tr><td>ANY_DERIVED</td><td>BaseDataType</td><td>""</td></tr>
+<tr><td>ANY_ELEMENTARY</td><td>BaseDataType</td><td>""</td></tr>
+<tr><td>ANY_MAGNITUDE</td><td>BaseDataType</td><td>""</td></tr>
+<tr><td>ANY_NUM</td><td>Number</td><td>This abstract OPC UA DataType defines a number value that can have any of the OPC UA Number subtypes.</td></tr>
+<tr><td>ANY_REAL</td><td>Number</td><td>""</td></tr>
+<tr><td>ANY_INT</td><td>Number</td><td>""</td></tr>
+<tr><td>ANY_BIT</td><td>Number</td><td>""</td></tr>
+<tr><td>ANY_STRING</td><td>String</td><td>This OPC UA Built-in DataType defines a Unicode character string that should exclude control characters that are not whitespaces (0x00 - 0x08, 0x0E-0x1F or 0x7F).</td></tr>
+<tr><td>ANY_DATE</td><td>DateTime</td><td>This OPC UA Built-in DataType defines a Gregorian calendar date. It is a 64-bit signed integer which represents the number of 100 nanosecond intervals since January 1, 1601.</td></tr>
+</tbody>
+</table>
+</figure>
+</section>
+<section id="sec_B-3" class="clause">
+<h3><span class="label">B.3</span> Mapping of derived data types<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="56-100" title="Open the source of this clause">&#128221;</a></h3>
+<section id="sec_B-3-1" class="clause">
+<h4><span class="label">B.3.1</span> Mapping of enumerated data types<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="58-78" title="Open the source of this clause">&#128221;</a></h4>
+<p>Both OPC UA and IEC 61131-3 allow the definition of enumerations on a data type or on a variable instance.</p>
+<p>In OPC UA the enumerated <em>DataTypes</em> are defined as subtypes of <em>Enumeration</em>. The data has an <em>EnumStrings Property</em> that contains the possible string values. The value is transferred as integer on the wire where the integer defines the index into the <em>EnumStrings</em> array. The index is zero based and has no gaps. Another option is to provide the possible string values in the <em>Property EnumValues</em>. This option is used if individual integer values are assigned to the string. The used option depends on the way the string enumeration is defined in the <em>Controller</em> program. If integer values are assigned to the string values the <em>Property EnumValues</em> is used to represent the enumeration values. If the integer value is zero based and has no gaps the <em>EnumStrings Property</em> should be used since the processing on the client side is more efficient.</p>
+<p>The definition on a variable instance is using the MultiStateDiscreteType Variable Type which defines also the <em>EnumStrings</em> or the <em>EnumValues Property</em> containing the enumeration values as string array.</p>
+<p>Example for an enumerated data type declaration in IEC 61131-3:</p>
+<pre><code>TYPE 
+  ANALOG_SIGNAL_TYPE : (SINGLE_ENDED, DIFFERENTIAL); 
+END_TYPE</code></pre>
+<p>Example for use of an enumeration in a <em>Ctrl Variable</em> instantiation in IEC 61131-3:</p>
+<pre><code>VAR 
+  Y : (Red, Yellow, Green); 
+END_VAR</code></pre>
+</section>
+<section id="sec_B-3-2" class="clause">
+<h4><span class="label">B.3.2</span> Mapping of array data types<a class="src" href="../../source/PackML/annex-c.md" data-src="source/PackML/annex-c.md" data-line="80-100" title="Open the source of this clause">&#128221;</a></h4>
+<p>OPC UA provides the information if a value is an array in the <em>Variable</em> <em>Attributes</em> <em>ValueRank</em> and <em>ArrayDimensions</em>. Every data type can be exposed as array. Arrays can have multiple dimensions. The dimension is defined through the <em>Attribute</em> <em>ValueRank</em>. Arrays can have variable or fixed lengths. The length of each dimension is defined by the <em>Attribute</em> <em>ArrayDimensions</em>. The array index starts with zero.</p>
+<p>IEC 61131-3 allows the declaration of array data types with one or multiple dimensions and an index range instead of a length.</p>
+<p>OPC UA has no standard concept for defining special array data types or exposing index ranges.</p>
+<p>Example for an array data type declaration in IEC 61131-3:</p>
+<pre><code>TYPE 
+  ANALOG_16_INPUT_DATA : ARRAY [1..16] OF INT ; 
+END_TYPE</code></pre>
+<p>Example for use of an array in a <em>Ctrl Variable</em> instantiation in IEC 61131-3:</p>
+<pre><code> VAR 
+  MyArray : ARRAY [1..16] OF INT; 
+END_VAR</code></pre>
+</section>
+</section>
+</section>
+<section id="sec_C" class="annex">
+<h2><span class="label">Annex C</span> Namespaces and Mappings<a class="src" href="../../source/PackML/spec.md" data-src="source/PackML/spec.md" data-line="113-115" title="Generated - open source/PackML/spec.md, which decides what this clause says">&#128221;</a></h2>
+<p class="annex-status">(normative)</p>
+<section id="sec_C-1" class="clause">
+<h3><span class="label">C.1</span> NodeSets and Supplementary Files</h3>
 <p>The OPC UA for PackML <em>Information Model</em> is identified by the following URI:</p>
 <p><a class="ext" href="http://opcfoundation.org/UA/PackML/" rel="noopener noreferrer">http://opcfoundation.org/UA/PackML/</a></p>
 <p>Documentation for the <em>NamespaceUri</em> can be found <a class="ext" href="https://reference.opcfoundation.org/nodesets?u=http://opcfoundation.org/UA/PackML/" rel="noopener noreferrer">here</a>.</p>
@@ -2331,7 +2551,7 @@
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"5b372efc9c5bb7fc6b2c969541a874ea2b64489d","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"b60f8b6aad265c4035151683cfa199b07ea59a0e","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;
