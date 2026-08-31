@@ -21,412 +21,493 @@
     {
       "category": "Server",
       "name": "PackML Base Functionality",
+      "group": "PackML Model",
       "description": "The server supports the BaseObjectModel. This includes exposing all mandatory objects, variables and methods."
     },
     {
       "category": "Server",
       "name": "PackML Base TagID",
+      "group": "PackML Model",
       "description": "The Server supports the TagID Property"
     },
     {
       "category": "Server",
       "name": "PackML Base Version",
+      "group": "PackML Model",
       "description": "The Server supports the Version property and DataType"
     },
     {
       "category": "Server",
       "name": "PackML Base Admin",
+      "group": "PackML Model",
       "description": "The Server support all of the mandatory items in the PackMLAdminObjectType"
     },
     {
       "category": "Server",
       "name": "PackML Base Status",
+      "group": "PackML Model",
       "description": "The Server support all of the mandatory items in the PackMLStatusObjectType"
     },
     {
       "category": "Server",
       "name": "PackML State Information",
+      "group": "PackML Model",
       "description": "The server supports the BaseStateMachine. This include the list of AvailableStates and AvailableTransitions. It also includes all mandatory states and any method associated with the states. The certification will include a list of all states and transitions supported by the StateMachine.  This include the mandatory Sub-statemachines"
     },
     {
       "category": "Server",
       "name": "PackML State Abort",
+      "group": "PackML Model",
       "description": "The server supports the Abort Method"
     },
     {
       "category": "Server",
       "name": "PackML State Clear",
+      "group": "PackML Model",
       "description": "The server supports the Clear Method"
     },
     {
       "category": "Server",
       "name": "PackML State Stop",
+      "group": "PackML Model",
       "description": "The server supports the Stop Method"
     },
     {
       "category": "Server",
       "name": "PackML State Reset",
+      "group": "PackML Model",
       "description": "The server supports the Reset Method"
     },
     {
       "category": "Server",
       "name": "PackML State Complete",
+      "group": "PackML Model",
       "description": "The server supports the Complete Method"
     },
     {
       "category": "Server",
       "name": "PackML State Start",
+      "group": "PackML Model",
       "description": "The server supports the Start Method"
     },
     {
       "category": "Server",
       "name": "PackML State Unhold",
+      "group": "PackML Model",
       "description": "The server supports the Unhold Method"
     },
     {
       "category": "Server",
       "name": "PackML State Suspend",
+      "group": "PackML Model",
       "description": "The server supports the Suspend Method"
     },
     {
       "category": "Server",
       "name": "PackML State Hold",
+      "group": "PackML Model",
       "description": "The server supports the Hold Method"
     },
     {
       "category": "Server",
       "name": "PackML State Unsuspend",
+      "group": "PackML Model",
       "description": "The server supports the Unsuspend Method"
     },
     {
       "category": "Server",
       "name": "PackML SetUnitMode",
+      "group": "PackML Model",
       "description": "The Server supports the SetUnitMode Method"
     },
     {
       "category": "Server",
       "name": "PackML Set Product",
+      "group": "PackML Model",
       "description": "The Server supports the SetProduct Method "
     },
     {
       "category": "Server",
       "name": "PackML Machine Speed",
+      "group": "PackML Model",
       "description": "The Server supports the SetMachSpeed Method"
     },
     {
       "category": "Server",
       "name": "PackML RemoteCommand",
+      "group": "PackML Model",
       "description": "The Server supports the RemoteCommand Method"
     },
     {
       "category": "Server",
       "name": "PackML SetInterlock",
+      "group": "PackML Model",
       "description": "The Server supports the SetInterlock Method"
     },
     {
       "category": "Server",
       "name": "PackML Status UnitModeRequested",
+      "group": "PackML Model",
       "description": "The Server support the UnitModeChangeInProcess flag"
     },
     {
       "category": "Server",
       "name": "PackML Status UnitModeChangeInProcess",
+      "group": "PackML Model",
       "description": "The Server support the UnitModeChangeInProcess flag"
     },
     {
       "category": "Server",
       "name": "PackML Status State",
+      "group": "PackML Model",
       "description": "The Server supports the StateRequested and StateChangeInProcess flag"
     },
     {
       "category": "Server",
       "name": "PackML Status Interlock",
+      "group": "PackML Model",
       "description": "The Server includes support for at least one MaterialInterlock and the summary MaterialInterlocked flag."
     },
     {
       "category": "Server",
       "name": "PackML Status RemoteParameter",
+      "group": "PackML Model",
       "description": "The Server supports exposing of the configured RemoteParameter"
     },
     {
       "category": "Server",
       "name": "PackML Status Product",
+      "group": "PackML Model",
       "description": "The Server supports exposing of the configured product data"
     },
     {
       "category": "Server",
       "name": "PackML Admin Alarm",
+      "group": "PackML Model",
       "description": "The server supports the PackML Alarm instance including the Alarm extent."
     },
     {
       "category": "Server",
       "name": "PackML Admin Alarm History",
+      "group": "PackML Model",
       "description": "The server supports the PackML AlarmHistory including the Alarm history extent."
     },
     {
       "category": "Server",
       "name": "PackML Admin Warning",
+      "group": "PackML Model",
       "description": "The server supports the PackML warning instance including the warning extent."
     },
     {
       "category": "Server",
       "name": "PackML Admin Stop",
+      "group": "PackML Model",
       "description": "The server supports the PackML stop reason including the stop reason extent"
     },
     {
       "category": "Server",
       "name": "PackML Admin mode statistics",
+      "group": "PackML Model",
       "description": "The server supports the ModeCurrentTime and cumulative time statistics"
     },
     {
       "category": "Server",
       "name": "PackML Admin state Statistics",
+      "group": "PackML Model",
       "description": "The server supports the StateCurrentTime and cumulative time statistics"
     },
     {
       "category": "Server",
       "name": "PackML Admin",
+      "group": "PackML Model",
       "description": "The server supports the prodrelated counts including ProdConsumedCount, ProdProcessedCount and ProdDefectiveCount."
     },
     {
       "category": "Server",
       "name": "PackML Admin ResetTime",
+      "group": "PackML Model",
       "description": "The server supports the PackML Time since reset"
     },
     {
       "category": "Server",
       "name": "PackML Admin machine speed.",
+      "group": "PackML Model",
       "description": "The server supports the PackML Machine Design Speed"
     },
     {
       "category": "Server",
       "name": "PackML Machine Speed",
+      "group": "PackML Model",
       "description": "The Server supports the CurMachSpeed information including units"
     },
     {
       "category": "Server",
       "name": "PackML Equipment Blocked",
+      "group": "PackML Model",
       "description": "The Server supports the EquipmentBlocked flag"
     },
     {
       "category": "Server",
       "name": "PackML Equipment Starved",
+      "group": "PackML Model",
       "description": "The Server supports the EquipmentStarved flag"
     },
     {
       "category": "Server",
       "name": "PackML ProdDefectiveCount",
+      "group": "PackML Model",
       "description": "The Server supports ProdDefectiveCount"
     },
     {
       "category": "Server",
       "name": "PackML ProdProcessedCount",
+      "group": "PackML Model",
       "description": "The Server supports ProdProcessedCount"
     },
     {
       "category": "Client",
       "name": "PackML Base Functionality Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the BaseObjectModel.   This includes exposing all mandatory objects, variables and methods."
     },
     {
       "category": "Client",
       "name": "PackML Base TagID Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the TagID Property"
     },
     {
       "category": "Client",
       "name": "PackML Base Version Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Version property and DataType"
     },
     {
       "category": "Client",
       "name": "PackML Base Admin Client",
+      "group": "PackML Model",
       "description": "TheClient makes use of all of the mandatory items in the PackMLAdminObjectType"
     },
     {
       "category": "Client",
       "name": "PackML Base Status Client",
+      "group": "PackML Model",
       "description": "The Client makes use of all of the mandatory items in the PackMLStatusObjectType"
     },
     {
       "category": "Client",
       "name": "PackML State Information Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the BaseStateMachine. This include the list of AvailableStates and AvailableTransitions.   It also includes all mandatory states and any method associated with the states. The certification will include a list of all states and transitions used  by the Client.  This include the mandatory Sub-statemachines"
     },
     {
       "category": "Client",
       "name": "PackML State Abort Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Abort Method"
     },
     {
       "category": "Client",
       "name": "PackML State Clear Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Clear Method"
     },
     {
       "category": "Client",
       "name": "PackML State Stop Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Stop Method"
     },
     {
       "category": "Client",
       "name": "PackML State Reset Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Reset Method"
     },
     {
       "category": "Client",
       "name": "PackML State Complete Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Complete Method"
     },
     {
       "category": "Client",
       "name": "PackML State Start Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Start Method"
     },
     {
       "category": "Client",
       "name": "PackML State Unhold Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Unhold Method"
     },
     {
       "category": "Client",
       "name": "PackML State Suspend Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Suspend Method"
     },
     {
       "category": "Client",
       "name": "PackML State Hold Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Hold Method"
     },
     {
       "category": "Client",
       "name": "PackML State Unsuspend Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the Unsuspend Method"
     },
     {
       "category": "Client",
       "name": "PackML SetUnitMode Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the SetUnitMode Method"
     },
     {
       "category": "Client",
       "name": "PackML Set Product Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the SetProduct Method "
     },
     {
       "category": "Client",
       "name": "PackML Machine Speed Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the SetMachSpeed Method"
     },
     {
       "category": "Client",
       "name": "PackML RemoteCommand Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the optional RemoteCommand Method"
     },
     {
       "category": "Client",
       "name": "PackML SetInterlock Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the optional SetInterlock Method"
     },
     {
       "category": "Client",
       "name": "PackML-Status UnitModeChangeInProcess Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the UnitModeChangeInProcess flag"
     },
     {
       "category": "Client",
       "name": "PackML-Status State Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the StateRequested and StateChangeInProcess flag"
     },
     {
       "category": "Client",
       "name": "PackML-Status Interlock Client",
+      "group": "PackML Model",
       "description": "The Client makes use of at least one MaterialInterlock and the summary MaterialInterlocked flag."
     },
     {
       "category": "Client",
       "name": "PackML-Status RemoteParameter Client",
+      "group": "PackML Model",
       "description": "The Client makes use of exposing of the configured RemoteParameter"
     },
     {
       "category": "Client",
       "name": "PackML Status Product Client",
+      "group": "PackML Model",
       "description": "The Client makes use of exposing of the configured product data"
     },
     {
       "category": "Client",
       "name": "PackML-Admin  Alarm Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the PackML Alarm instance including the Alarm extent."
     },
     {
       "category": "Client",
       "name": "PackML-Admin  Alarm History Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the PackML AlarmHistory including the Alarm history extent."
     },
     {
       "category": "Client",
       "name": "PackML-Admin  Warning Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the PackML warning instance including the warning extent."
     },
     {
       "category": "Client",
       "name": "PackML-Admin Stop Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the PackML stop reason including the stop reason extent"
     },
     {
       "category": "Client",
       "name": "PackML-Admin mode statistics Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the ModeCurrentTime and cumulative time statistics"
     },
     {
       "category": "Client",
       "name": "PackML-Admin state Statistics Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the StateCurrentTime and cumulative time statistics"
     },
     {
       "category": "Client",
       "name": "PackML-Admin Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the prodrelated counts including ProdConsumedCount, ProdProcessedCount and ProdDefectiveCount."
     },
     {
       "category": "Client",
       "name": "PackML-Admin ResetTime Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the PackML Time since reset"
     },
     {
       "category": "Client",
       "name": "PackML-Admin machine speed. Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the PackML Machine Design Speed"
     },
     {
       "category": "Client",
       "name": "PackML Machine Speed Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the CurMachSpeed information including units "
     },
     {
       "category": "Client",
       "name": "PackML Equipment Blocked Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the EquipmentBlocked flag"
     },
     {
       "category": "Client",
       "name": "PackML Equipment Starved Client",
+      "group": "PackML Model",
       "description": "The Client makes use of the EquipmentStarved flag"
     },
     {
       "category": "Client",
       "name": "PackML ProdDefectiveCount Client",
+      "group": "PackML Model",
       "description": "The Client makes use of ProdDefectiveCount"
     },
     {
       "category": "Client",
       "name": "PackML ProdProcessedCount Client",
+      "group": "PackML Model",
       "description": "The Client makes use of ProdProcessedCount"
     }
   ],
   "profiles": [
     {
-      "name": "PackML Base Server Facet",
+      "name": "PackML Base Functionality Server Facet",
       "group": "PackML Facets",
       "uri": "http://opcfoundation.org/UA-Profile/PackML/Server/PackMLBaseServerFacet",
       "description": "This Facet defines support for base Sample server functionality.",
@@ -485,10 +566,6 @@
         },
         {
           "name": "PackML State Unsuspend",
-          "optional": true
-        },
-        {
-          "name": "PackML StateModel extensions",
           "optional": true
         },
         {
@@ -602,7 +679,7 @@
       ]
     },
     {
-      "name": "PackML Base Client Facet",
+      "name": "PackML Base Functionality Client Facet",
       "group": "PackML Base",
       "uri": "http://opcfoundation.org/UA-Profile/PackML/Client/PackMLBaseClientFacet",
       "description": "This Facet defines support for base Sample server functionality.",
