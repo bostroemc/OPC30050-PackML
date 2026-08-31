@@ -23,3 +23,8 @@ First Second Third Fourth
         <p>This is some text.</p>
         <p>This is some text.</p>
         <p>This is some text.</p>
+
+
+Useful command examples:
+
+ OPCFoundation.Opc.Ua.SpecificationValidator  convert-validate '.\OPC 30050 - UA Companion Specification for Packml 1.01.docx' _work/reference/ --nodeset model/Opc.Ua.PackML.NodeSet2.xml --images                         
