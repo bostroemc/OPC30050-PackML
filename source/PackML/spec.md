@@ -101,9 +101,9 @@ source: figures/information-model-overview.drawio.svg
      Where the include sits decides the depth: this one is at the top of the document, so the
      part opens at ##. Under a ## heading it would open at ###. -->
 
-```{clause}
+<!-- ```{clause}
 kind: profiles
-```
+``` -->
 
 ```{clause}
 kind: namespaces
