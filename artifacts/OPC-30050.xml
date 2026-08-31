@@ -4843,16 +4843,958 @@
     </sec>
     <sec id="sec_7">
       <label>7</label>
-      <title>Namespaces</title>
+      <title>Profiles and Conformance Units</title>
       <sec id="sec_7-1">
         <label>7.1</label>
-        <title>Namespace Metadata</title>
+        <title>Conformance Units</title>
         <p>
-          <xref ref-type="table" rid="tbl_63">Table 63</xref> defines the namespace metadata for this document. The Object is used to provide version information for the namespace and an indication about static Nodes. Static Nodes are identical for all Attributes in all Servers, including the Value Attribute.</p>
-        <p>The information is provided as Object of type <italic>NamespaceMetadataType</italic>. This Object is a component of the <italic>Namespaces</italic> Object that is part of the <italic>Server</italic> Object. The NamespaceMetadataType ObjectType and its Properties are defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</p>
-        <p>The version information is also provided as part of the <italic>ModelTableEntry</italic> in the UANodeSet XML file. The UANodeSet XML schema is defined in <xref ref-type="bibr" rid="ref-uapart6">OPC 10000-6</xref>.</p>
+          <xref ref-type="table" rid="tbl_63">Table 63</xref> defines the Conformance Units for the OPC UA Information Model for PackML.</p>
         <table-wrap id="tbl_63">
           <label>Table 63</label>
+          <caption>
+            <p>Conformance Units for PackML</p>
+          </caption>
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Server</td>
+                <td>PackML Base Functionality</td>
+                <td>The server supports the BaseObjectModel. This includes exposing all mandatory objects, variables and methods.</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Base TagID</td>
+                <td>The Server supports the TagID Property</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Base Version</td>
+                <td>The Server supports the Version property and DataType</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Base Admin</td>
+                <td>The Server support all of the mandatory items in the PackMLAdminObjectType</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Base Status</td>
+                <td>The Server support all of the mandatory items in the PackMLStatusObjectType</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Information</td>
+                <td>The server supports the BaseStateMachine. This include the list of AvailableStates and AvailableTransitions. It also includes all mandatory states and any method associated with the states. The certification will include a list of all states and transitions supported by the StateMachine.  This include the mandatory Sub-statemachines</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Abort</td>
+                <td>The server supports the Abort Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Clear</td>
+                <td>The server supports the Clear Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Stop</td>
+                <td>The server supports the Stop Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Reset</td>
+                <td>The server supports the Reset Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Complete</td>
+                <td>The server supports the Complete Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Start</td>
+                <td>The server supports the Start Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Unhold</td>
+                <td>The server supports the Unhold Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Suspend</td>
+                <td>The server supports the Suspend Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Hold</td>
+                <td>The server supports the Hold Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML State Unsuspend</td>
+                <td>The server supports the Unsuspend Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML SetUnitMode</td>
+                <td>The Server supports the SetUnitMode Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Set Product</td>
+                <td>The Server supports the SetProduct Method </td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Machine Speed</td>
+                <td>The Server supports the SetMachSpeed Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML RemoteCommand</td>
+                <td>The Server supports the RemoteCommand Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML SetInterlock</td>
+                <td>The Server supports the SetInterlock Method</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Status UnitModeRequested</td>
+                <td>The Server support the UnitModeChangeInProcess flag</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Status UnitModeChangeInProcess</td>
+                <td>The Server support the UnitModeChangeInProcess flag</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Status State</td>
+                <td>The Server supports the StateRequested and StateChangeInProcess flag</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Status Interlock</td>
+                <td>The Server includes support for at least one MaterialInterlock and the summary MaterialInterlocked flag.</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Status RemoteParameter</td>
+                <td>The Server supports exposing of the configured RemoteParameter</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Status Product</td>
+                <td>The Server supports exposing of the configured product data</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin Alarm</td>
+                <td>The server supports the PackML Alarm instance including the Alarm extent.</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin Alarm History</td>
+                <td>The server supports the PackML AlarmHistory including the Alarm history extent.</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin Warning</td>
+                <td>The server supports the PackML warning instance including the warning extent.</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin Stop</td>
+                <td>The server supports the PackML stop reason including the stop reason extent</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin mode statistics</td>
+                <td>The server supports the ModeCurrentTime and cumulative time statistics</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin state Statistics</td>
+                <td>The server supports the StateCurrentTime and cumulative time statistics</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin</td>
+                <td>The server supports the prodrelated counts including ProdConsumedCount, ProdProcessedCount and ProdDefectiveCount.</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin ResetTime</td>
+                <td>The server supports the PackML Time since reset</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Admin machine speed.</td>
+                <td>The server supports the PackML Machine Design Speed</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Machine Speed</td>
+                <td>The Server supports the CurMachSpeed information including units</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Equipment Blocked</td>
+                <td>The Server supports the EquipmentBlocked flag</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML Equipment Starved</td>
+                <td>The Server supports the EquipmentStarved flag</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML ProdDefectiveCount</td>
+                <td>The Server supports ProdDefectiveCount</td>
+              </tr>
+              <tr>
+                <td>Server</td>
+                <td>PackML ProdProcessedCount</td>
+                <td>The Server supports ProdProcessedCount</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Base Functionality Client</td>
+                <td>The Client makes use of the BaseObjectModel.   This includes exposing all mandatory objects, variables and methods.</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Base TagID Client</td>
+                <td>The Client makes use of the TagID Property</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Base Version Client</td>
+                <td>The Client makes use of the Version property and DataType</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Base Admin Client</td>
+                <td>TheClient makes use of all of the mandatory items in the PackMLAdminObjectType</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Base Status Client</td>
+                <td>The Client makes use of all of the mandatory items in the PackMLStatusObjectType</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Information Client</td>
+                <td>The Client makes use of the BaseStateMachine. This include the list of AvailableStates and AvailableTransitions.   It also includes all mandatory states and any method associated with the states. The certification will include a list of all states and transitions used  by the Client.  This include the mandatory Sub-statemachines</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Abort Client</td>
+                <td>The Client makes use of the Abort Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Clear Client</td>
+                <td>The Client makes use of the Clear Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Stop Client</td>
+                <td>The Client makes use of the Stop Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Reset Client</td>
+                <td>The Client makes use of the Reset Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Complete Client</td>
+                <td>The Client makes use of the Complete Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Start Client</td>
+                <td>The Client makes use of the Start Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Unhold Client</td>
+                <td>The Client makes use of the Unhold Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Suspend Client</td>
+                <td>The Client makes use of the Suspend Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Hold Client</td>
+                <td>The Client makes use of the Hold Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML State Unsuspend Client</td>
+                <td>The Client makes use of the Unsuspend Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML SetUnitMode Client</td>
+                <td>The Client makes use of the SetUnitMode Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Set Product Client</td>
+                <td>The Client makes use of the SetProduct Method </td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Machine Speed Client</td>
+                <td>The Client makes use of the SetMachSpeed Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML RemoteCommand Client</td>
+                <td>The Client makes use of the optional RemoteCommand Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML SetInterlock Client</td>
+                <td>The Client makes use of the optional SetInterlock Method</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Status UnitModeChangeInProcess Client</td>
+                <td>The Client makes use of the UnitModeChangeInProcess flag</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Status State Client</td>
+                <td>The Client makes use of the StateRequested and StateChangeInProcess flag</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Status Interlock Client</td>
+                <td>The Client makes use of at least one MaterialInterlock and the summary MaterialInterlocked flag.</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Status RemoteParameter Client</td>
+                <td>The Client makes use of exposing of the configured RemoteParameter</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Status Product Client</td>
+                <td>The Client makes use of exposing of the configured product data</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin  Alarm Client</td>
+                <td>The Client makes use of the PackML Alarm instance including the Alarm extent.</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin  Alarm History Client</td>
+                <td>The Client makes use of the PackML AlarmHistory including the Alarm history extent.</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin  Warning Client</td>
+                <td>The Client makes use of the PackML warning instance including the warning extent.</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin Stop Client</td>
+                <td>The Client makes use of the PackML stop reason including the stop reason extent</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin mode statistics Client</td>
+                <td>The Client makes use of the ModeCurrentTime and cumulative time statistics</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin state Statistics Client</td>
+                <td>The Client makes use of the StateCurrentTime and cumulative time statistics</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin Client</td>
+                <td>The Client makes use of the prodrelated counts including ProdConsumedCount, ProdProcessedCount and ProdDefectiveCount.</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin ResetTime Client</td>
+                <td>The Client makes use of the PackML Time since reset</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML-Admin machine speed. Client</td>
+                <td>The Client makes use of the PackML Machine Design Speed</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Machine Speed Client</td>
+                <td>The Client makes use of the CurMachSpeed information including units </td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Equipment Blocked Client</td>
+                <td>The Client makes use of the EquipmentBlocked flag</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML Equipment Starved Client</td>
+                <td>The Client makes use of the EquipmentStarved flag</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML ProdDefectiveCount Client</td>
+                <td>The Client makes use of ProdDefectiveCount</td>
+              </tr>
+              <tr>
+                <td>Client</td>
+                <td>PackML ProdProcessedCount Client</td>
+                <td>The Client makes use of ProdProcessedCount</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+      </sec>
+      <sec id="sec_7-2">
+        <label>7.2</label>
+        <title>Profiles</title>
+        <sec id="sec_7-2-1">
+          <label>7.2.1</label>
+          <title>Profile list</title>
+          <p>
+            <xref ref-type="table" rid="tbl_64">Table 64</xref> lists all Profiles defined in this document and defines their URIs.</p>
+          <table-wrap id="tbl_64">
+            <label>Table 64</label>
+            <caption>
+              <p>Profile URIs for PackML</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Profile</th>
+                  <th>URI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackML Base Functionality Server Facet</td>
+                  <td>
+                    <ext-link ext-link-type="uri" xlink:href="http://opcfoundation.org/UA-Profile/PackML/Server/PackMLBaseServerFacet">http://opcfoundation.org/UA-Profile/PackML/Server/PackMLBaseServerFacet</ext-link>
+                  </td>
+                </tr>
+                <tr>
+                  <td>PackML Base Functionality Client Facet</td>
+                  <td>
+                    <ext-link ext-link-type="uri" xlink:href="http://opcfoundation.org/UA-Profile/PackML/Client/PackMLBaseClientFacet">http://opcfoundation.org/UA-Profile/PackML/Client/PackMLBaseClientFacet</ext-link>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_7-2-2">
+          <label>7.2.2</label>
+          <title>PackML Facets</title>
+          <sec id="sec_7-2-2-1">
+            <label>7.2.2.1</label>
+            <title>Overview</title>
+            <p>The following subclauses specify the PackML Facets available for applications that implement the PackML companion specification. Each subclause defines and describes a Facet or Profile.</p>
+          </sec>
+          <sec id="sec_7-2-2-2">
+            <label>7.2.2.2</label>
+            <title>PackML Base Functionality Server Facet</title>
+            <p>This Facet defines support for base Sample server functionality.</p>
+            <table-wrap id="tbl_65">
+              <label>Table 65</label>
+              <caption>
+                <p>PackML Base Functionality Server Facet</p>
+              </caption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Group</th>
+                    <th>Conformance Unit / Profile Title</th>
+                    <th>Mandatory / Optional</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Functionality</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Admin</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Status</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Information</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Abort</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Clear</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Stop</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Reset</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Complete</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Start</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Unhold</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Suspend</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Hold</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Unsuspend</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML SetUnitMode</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Set Product</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Machine Speed</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML RemoteCommand</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML SetInterlock</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Status UnitModeRequested</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Status UnitModeChangeInProcess</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Status State</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Status Interlock</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Status RemoteParameter</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Status Product</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin Alarm</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin Alarm History</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin Warning</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin Stop</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin mode statistics</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin state Statistics</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin ResetTime</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Admin machine speed.</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Machine Speed</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Equipment Blocked</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Equipment Starved</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML ProdDefectiveCount</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML ProdProcessedCount</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base TagID</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Version</td>
+                    <td>O</td>
+                  </tr>
+                </tbody>
+              </table>
+            </table-wrap>
+          </sec>
+        </sec>
+        <sec id="sec_7-2-3">
+          <label>7.2.3</label>
+          <title>PackML Base</title>
+          <sec id="sec_7-2-3-1">
+            <label>7.2.3.1</label>
+            <title>Overview</title>
+            <p>The following subclauses specify the PackML Base available for applications that implement the PackML companion specification. Each subclause defines and describes a Facet or Profile.</p>
+          </sec>
+          <sec id="sec_7-2-3-2">
+            <label>7.2.3.2</label>
+            <title>PackML Base Functionality Client Facet</title>
+            <p>This Facet defines support for base Sample server functionality.</p>
+            <table-wrap id="tbl_66">
+              <label>Table 66</label>
+              <caption>
+                <p>PackML Base Functionality Client Facet</p>
+              </caption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Group</th>
+                    <th>Conformance Unit / Profile Title</th>
+                    <th>Mandatory / Optional</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Functionality</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Functionality Client</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Version Client</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Status Client</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Information Client</td>
+                    <td>M</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base TagID Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Base Version Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Abort Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Clear Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Stop Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Reset Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Complete Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Start Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Unhold Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Suspend Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Hold Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML State Unsuspend Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML SetUnitMode Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Set Product Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Machine Speed Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML RemoteCommand Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML SetInterlock Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Status UnitModeChangeInProcess Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Status State Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Status Interlock Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Status RemoteParameter Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Status Product Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin  Alarm Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin  Alarm History Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin  Warning Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin Stop Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin mode statistics Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin state Statistics Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin ResetTime Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML-Admin machine speed. Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Machine Speed Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Equipment Blocked Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML Equipment Starved Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML ProdDefectiveCount Client</td>
+                    <td>O</td>
+                  </tr>
+                  <tr>
+                    <td>PackML Model</td>
+                    <td>PackML ProdProcessedCount Client</td>
+                    <td>O</td>
+                  </tr>
+                </tbody>
+              </table>
+            </table-wrap>
+          </sec>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec_8">
+      <label>8</label>
+      <title>Namespaces</title>
+      <sec id="sec_8-1">
+        <label>8.1</label>
+        <title>Namespace Metadata</title>
+        <p>
+          <xref ref-type="table" rid="tbl_67">Table 67</xref> defines the namespace metadata for this document. The Object is used to provide version information for the namespace and an indication about static Nodes. Static Nodes are identical for all Attributes in all Servers, including the Value Attribute.</p>
+        <p>The information is provided as Object of type <italic>NamespaceMetadataType</italic>. This Object is a component of the <italic>Namespaces</italic> Object that is part of the <italic>Server</italic> Object. The NamespaceMetadataType ObjectType and its Properties are defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</p>
+        <p>The version information is also provided as part of the <italic>ModelTableEntry</italic> in the UANodeSet XML file. The UANodeSet XML schema is defined in <xref ref-type="bibr" rid="ref-uapart6">OPC 10000-6</xref>.</p>
+        <table-wrap id="tbl_67">
+          <label>Table 67</label>
           <caption>
             <p>NamespaceMetadata Object for this Document</p>
           </caption>
@@ -4919,14 +5861,14 @@
         </table-wrap>
         <p>The <italic>IsNamespaceSubset</italic> Property is set to False as the UANodeSet XML file contains the complete Namespace. Servers only exposing a subset of the Namespace shall set this Property to True.</p>
       </sec>
-      <sec id="sec_7-2">
-        <label>7.2</label>
+      <sec id="sec_8-2">
+        <label>8.2</label>
         <title>Handling of OPC UA Namespaces</title>
         <p>Namespaces are used by OPC UA to create unique identifiers across different naming authorities. The Attributes <italic>NodeId</italic> and <italic>BrowseName</italic> are identifiers. A namespace is identified with a string, typically a URI, and is represented in the <italic>NodeId</italic> and <italic>BrowseName</italic> by an index into the Server's namespace table.</p>
         <p>
-          <xref ref-type="table" rid="tbl_64">Table 64</xref> provides a list of mandatory and optional namespaces used in an PackML Server.</p>
-        <table-wrap id="tbl_64">
-          <label>Table 64</label>
+          <xref ref-type="table" rid="tbl_68">Table 68</xref> provides a list of mandatory and optional namespaces used in an PackML Server.</p>
+        <table-wrap id="tbl_68">
+          <label>Table 68</label>
           <caption>
             <p>Namespaces used in an PackML Server</p>
           </caption>
@@ -4958,9 +5900,9 @@
           </table>
         </table-wrap>
         <p>
-          <xref ref-type="table" rid="tbl_65">Table 65</xref> provides a list of namespaces and their indices used for <italic>BrowseNames</italic> in this document. A <italic>BrowseName</italic> written without a prefix is from the default namespace of this document.</p>
-        <table-wrap id="tbl_65">
-          <label>Table 65</label>
+          <xref ref-type="table" rid="tbl_69">Table 69</xref> provides a list of namespaces and their indices used for <italic>BrowseNames</italic> in this document. A <italic>BrowseName</italic> written without a prefix is from the default namespace of this document.</p>
+        <table-wrap id="tbl_69">
+          <label>Table 69</label>
           <caption>
             <p>Namespaces used in this document</p>
           </caption>
