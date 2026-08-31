@@ -116,3 +116,10 @@ kind: annex-a
 
 ```{include annex-b}
 ```
+
+```{include annex-c}
+```
+
+```{include annex-d}
+```
+

@@ -85,7 +85,9 @@
     "modelling-approach": "modelling-approach.md",
     "model": "model-packml.md",
     "figures": "figures",
-    "annex-b": "annex-b.md"
+    "annex-b": "annex-b.md",
+    "annex-c": "annex-c.md",
+    "annex-d": "annex-d.md"
   },
 
   "$comment_figureGenerators": [
