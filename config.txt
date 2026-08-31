@@ -27,4 +27,14 @@ First Second Third Fourth
 
 Useful command examples:
 
- OPCFoundation.Opc.Ua.SpecificationValidator  convert-validate '.\OPC 30050 - UA Companion Specification for Packml 1.01.docx' _work/reference/ --nodeset model/Opc.Ua.PackML.NodeSet2.xml --images                         
+ OPCFoundation.Opc.Ua.SpecificationValidator  convert-validate '.\OPC 30050 - UA Companion Specification for Packml 1.01.docx' _work/reference/ --nodeset model/Opc.Ua.PackML.NodeSet2.xml --images                        
+
+
+
+  Remember to to pull changes into rebuild after the auto-build tools have run.
+
+  git pull
+
+  Otherwise, it should work to rebase the repo after a local commit:
+
+  git pull --rebase origin main

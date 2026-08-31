@@ -1,3 +1,42 @@
+# Overview
+
+This is a temporary repository to hold the markdown source for the JWG revising the OPC UA PackML companion specification: OPC 30050.
+
+Group members may contribute to the paper by submitting pull requests.  Known open points are listed in the Issues section.  If you are working on a particular issue, please indicate it in the comments so that we are not duplicating our efforts. 
+
+This repo is based on the official companion specification template supplied by OPC Foundation and, when properly implemented, will produced documentation meeting the OPC Foundation's rigorous standards.
+
+## Recommended tooling
+
+- Visual Studio Code: https://code.visualstudio.com/
+
+- See below for the official build tools supplied by OPC Foundation.
+
+
+## Pull requests
+
+See guide here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+
+Please try to keep changes relatively small or well-grouped (e.g. corrected spellings in section 6.2.)
+
+
+## Sample output
+
+The current Word document associated with the repo may be found in ./artifacts/OPC-30050.docx.  The document is automatically updated after each successful change (push) to the repository's main branch.
+
+
+## Markdown
+
+For a primer on basic Markdown syntax, see: https://www.markdownguide.org/basic-syntax/
+
+See AUTHORING.md for information on additional conventions required by the tooling.
+
+## Options
+
+If you prefer to work in Word, please send an edited Word document to me directly and I can manually incorporate your work into the repository.  Like standard pull requests, please feed me changes in reasonably small chunks.
+
+
+
 # OPC UA Companion Specification — working-group template
 
 The starting point for a working-group repository whose **source of truth is markdown plus a
