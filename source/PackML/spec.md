@@ -112,3 +112,6 @@ kind: namespaces
 ```{clause}
 kind: annex-a
 ```
+
+```{include annex-b}
+```

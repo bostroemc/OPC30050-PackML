@@ -751,7 +751,7 @@ This reference type is used to point to a StopReason. It is defined in <xref ref
 
 This section provides definition of the method used in this specification. These methods are referenced from more than one location or are part of more than one object in some cases. The functionality for the method is the same for all objects
 
-#### SetUnitMode Method {#sec-setunitmode-method}
+#### SetUnitMode Method {#sec-setunitmode-method type=PackMLBaseObjectType method=SetUnitMode}
 
 This *Method* allows an OPC UA *Client* to change the mode of the unit. *Parameters* are defined in <xref ref-type="table" rid="tbl_23_setunitmode-method-parameters">Table 23</xref>
 
@@ -793,7 +793,7 @@ Table 25 specifies the *AddressSpace* representation for the *SetUnitMode Method
 | HasProperty	| Variable	| InputArguments	| Argument[] 	| PropertyType	| Mandatory |
 
 
-#### SetMachSpeed Method {#sec-setmachspeed-method}
+#### SetMachSpeed Method {#sec-setmachspeed-method type=PackMLBaseObjectType method=SetUnitMode}
 
 This *Method* allows an OPC UA *Client* to change the speed of the machine or unit. *Parameters* are defined in <xref ref-type="table" rid="tbl_26_setmachspeed-method-parameters">Table 26</xref>
 

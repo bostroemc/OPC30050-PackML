@@ -1,0 +1,1 @@
+## Recommended localized names {#anx-namespace annex=informative}

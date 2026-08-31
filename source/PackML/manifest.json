@@ -84,7 +84,8 @@
     "concept" : "concept.md",
     "modelling-approach": "modelling-approach.md",
     "model": "model-packml.md",
-    "figures": "figures"
+    "figures": "figures",
+    "annex-b": "annex-b.md"
   },
 
   "$comment_figureGenerators": [
@@ -296,7 +297,7 @@
         "description": "Namespace for *NodeIds* and *BrowseNames* defined in the OPC UA specification. This namespace shall have namespace index 0."
       },
       {
-        "uri": "urn:opcua:opcfoundation.org.com:2026-08:sample",
+        "uri": "urn:opcua:opcfoundation.org.com:2026-08:PackML",
         "index": 1,
         "description": "Namespace for *NodeIds* and *BrowseNames* defined in this model."
       },

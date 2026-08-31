@@ -608,8 +608,168 @@
       "description": "This Facet defines support for base Sample server functionality.",
       "includes": [
         {
+          "name": "PackML Base Functionality",
+          "optional": false
+        },
+        {
           "name": "PackML Base Functionality Client",
           "optional": false
+        },
+        {
+          "name": "PackML Base Version Client",
+          "optional": false
+        },
+        {
+          "name": "PackML Base Status Client",
+          "optional": false
+        },
+        {
+          "name": "PackML State Information Client",
+          "optional": false
+        },
+        {
+          "name": "PackML Base TagID Client",
+          "optional": true
+        },
+        {
+          "name": "PackML Base Version Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Abort Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Clear Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Stop Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Reset Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Complete Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Start Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Unhold Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Suspend Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Hold Client",
+          "optional": true
+        },
+        {
+          "name": "PackML State Unsuspend Client",
+          "optional": true
+        },
+        {
+          "name": "PackML SetUnitMode Client",
+          "optional": true
+        },
+        {
+          "name": "PackML Set Product Client",
+          "optional": true
+        },
+        {
+          "name": "PackML Machine Speed Client",
+          "optional": true
+        },
+        {
+          "name": "PackML RemoteCommand Client",
+          "optional": true
+        },
+        {
+          "name": "PackML SetInterlock Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Status UnitModeChangeInProcess Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Status State Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Status Interlock Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Status RemoteParameter Client",
+          "optional": true
+        },
+        {
+          "name": "PackML Status Product Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin  Alarm Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin  Alarm History Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin  Warning Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin Stop Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin mode statistics Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin state Statistics Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin ResetTime Client",
+          "optional": true
+        },
+        {
+          "name": "PackML-Admin machine speed. Client",
+          "optional": true
+        },
+        {
+          "name": "PackML Machine Speed Client",
+          "optional": true
+        },
+        {
+          "name": "PackML Equipment Blocked Client",
+          "optional": true
+        },
+        {
+          "name": "PackML Equipment Starved Client",
+          "optional": true
+        },
+        {
+          "name": "PackML ProdDefectiveCount Client",
+          "optional": true
+        },
+        {
+          "name": "PackML ProdProcessedCount Client",
+          "optional": true
         }
       ]
     }
