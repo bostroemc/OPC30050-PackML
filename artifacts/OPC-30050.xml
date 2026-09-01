@@ -166,6 +166,26 @@
             <std-ref>OPC 10000-8</std-ref>, <italic>OPC Unified Architecture - Part 8: Data Access</italic></mixed-citation>
           <uri xlink:href="http://www.opcfoundation.org/documents/10000-8/">http://www.opcfoundation.org/documents/10000-8/</uri>
         </ref>
+        <ref id="ref-uapart9">
+          <mixed-citation>
+            <std-ref>OPC 10000-9</std-ref>, <italic>OPC Unified Architecture - Part 9: Alarms &amp; Conditions</italic></mixed-citation>
+          <uri xlink:href="http://www.opcfoundation.org/documents/10000-9/">http://www.opcfoundation.org/documents/10000-9/</uri>
+        </ref>
+        <ref id="ref-uapart10">
+          <mixed-citation>
+            <std-ref>OPC 10000-10</std-ref>, <italic>OPC Unified Architecture - Part 10: Programs</italic></mixed-citation>
+          <uri xlink:href="http://www.opcfoundation.org/documents/10000-10/">http://www.opcfoundation.org/documents/10000-10/</uri>
+        </ref>
+        <ref id="ref-uapart11">
+          <mixed-citation>
+            <std-ref>OPC 10000-11</std-ref>, <italic>OPC Unified Architecture - Part 11: Historical Access</italic></mixed-citation>
+          <uri xlink:href="http://www.opcfoundation.org/documents/10000-11/">http://www.opcfoundation.org/documents/10000-11/</uri>
+        </ref>
+        <ref id="ref-uapart13">
+          <mixed-citation>
+            <std-ref>OPC 10000-13</std-ref>, <italic>OPC Unified Architecture - Part 13: Aggregates</italic></mixed-citation>
+          <uri xlink:href="http://www.opcfoundation.org/documents/10000-13/">http://www.opcfoundation.org/documents/10000-13/</uri>
+        </ref>
         <ref id="ref-uapart19">
           <mixed-citation>
             <std-ref>OPC 10000-19</std-ref>, <italic>OPC Unified Architecture - Part 19: Dictionary Reference</italic></mixed-citation>
@@ -204,7 +224,7 @@
       <sec id="sec_3-1">
         <label>3.1</label>
         <title>Overview</title>
-        <p>It is assumed that basic concepts of OPC UA information modelling are understood in this document. This document will use these concepts to describe the OPC UA for PackML Information Model. For the purposes of this document, the terms and definitions given in <xref ref-type="bibr" rid="ref-uapart1">OPC 10000-1</xref>, <xref ref-type="bibr" rid="ref-uapart2">OPC 10000-2</xref>, <xref ref-type="bibr" rid="ref-uapart3">OPC 10000-3</xref>, <xref ref-type="bibr" rid="ref-uapart4">OPC 10000-4</xref>, <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>, <xref ref-type="bibr" rid="ref-uapart6">OPC 10000-6</xref>, <xref ref-type="bibr" rid="ref-uapart7">OPC 10000-7</xref>, <xref ref-type="bibr" rid="ref-uapart8">OPC 10000-8</xref>, <xref ref-type="bibr" rid="ref-uapart19">OPC 10000-19</xref>, <xref ref-type="bibr" rid="ref-uapart100">OPC 10000-100</xref>, <xref ref-type="bibr" rid="ref-rfc5280">IETF RFC 5280</xref>, <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>, <xref ref-type="bibr" rid="ref-s88">ANSI/ISA-88.01-1995</xref> and <xref ref-type="bibr" rid="ref-opc30000">OPC 30000</xref> as well as the following apply.</p>
+        <p>It is assumed that basic concepts of OPC UA information modelling are understood in this document. This document will use these concepts to describe the OPC UA for PackML Information Model. For the purposes of this document, the terms and definitions given in <xref ref-type="bibr" rid="ref-uapart1">OPC 10000-1</xref>, <xref ref-type="bibr" rid="ref-uapart2">OPC 10000-2</xref>, <xref ref-type="bibr" rid="ref-uapart3">OPC 10000-3</xref>, <xref ref-type="bibr" rid="ref-uapart4">OPC 10000-4</xref>, <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>, <xref ref-type="bibr" rid="ref-uapart6">OPC 10000-6</xref>, <xref ref-type="bibr" rid="ref-uapart7">OPC 10000-7</xref>, <xref ref-type="bibr" rid="ref-uapart8">OPC 10000-8</xref>, <xref ref-type="bibr" rid="ref-uapart9">OPC 10000-9</xref>, <xref ref-type="bibr" rid="ref-uapart10">OPC 10000-10</xref>, <xref ref-type="bibr" rid="ref-uapart11">OPC 10000-11</xref>, <xref ref-type="bibr" rid="ref-uapart13">OPC 10000-13</xref>, <xref ref-type="bibr" rid="ref-uapart19">OPC 10000-19</xref>, <xref ref-type="bibr" rid="ref-uapart100">OPC 10000-100</xref>, <xref ref-type="bibr" rid="ref-rfc5280">IETF RFC 5280</xref>, <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>, <xref ref-type="bibr" rid="ref-s88">ANSI/ISA-88.01-1995</xref> and <xref ref-type="bibr" rid="ref-opc30000">OPC 30000</xref> as well as the following apply.</p>
         <note>
           <label>NOTE</label>
           <p>Note that OPC UA terms and terms defined in this document are <italic>italicized</italic> in the document.</p>
@@ -306,8 +326,8 @@
       <sec id="sec_4-1">
         <label>4.1</label>
         <title>Overview</title>
-        <p>When the &lt;xref ref-type="other" rid="ref_isapart1"&gt;ANSI/ISA-88.01-1995: &lt;/xref&gt; standard was applied to applications across a plant, there was a need to align the terminologies, models and key definitions between different process types: continuous, batch, and discrete processes. Discrete processes involve machines found in the packaging, converting, and material handling applications. The operation of these machines is typically defined by the OEM, system integrator, end user, or is industry specific.</p>
-        <p>OMAC (Organization for Machine Automation and Control) created a task group with members from technology providers, OEMs, system integrators, and end users to generate the PackML guidelines as a method to show how the &lt;xref ref-type="other" rid="ref_isapart1"&gt;ANSI/ISA-88.01-1995: &lt;/xref&gt; concepts could be extended into packaging machinery and other types of machines typically used in assembly lines, filling lines, and other production lines.</p>
+        <p>When the <xref ref-type="bibr" rid="ref-s88">ANSI/ISA-88.01-1995</xref> standard was applied to applications across a plant, there was a need to align the terminologies, models and key definitions between different process types: continuous, batch, and discrete processes. Discrete processes involve machines found in the packaging, converting, and material handling applications. The operation of these machines is typically defined by the OEM, system integrator, end user, or is industry specific.</p>
+        <p>OMAC (Organization for Machine Automation and Control) created a task group with members from technology providers, OEMs, system integrators, and end users to generate the PackML guidelines as a method to show how the <xref ref-type="bibr" rid="ref-s88">ANSI/ISA-88.01-1995</xref> concepts could be extended into packaging machinery and other types of machines typically used in assembly lines, filling lines, and other production lines.</p>
         <p>The purpose of PackML is to:</p>
         <list list-type="bullet">
           <list-item>
@@ -335,7 +355,7 @@
             <p>Provide consistent tag structure for connection to plant MES and enterprise systems.</p>
           </list-item>
         </list>
-        <p>If automated machinery is modelled in an &lt;xref ref-type="other" rid="ref_isapart1"&gt;ANSI/ISA-88.01-1995: &lt;/xref&gt; physical hierarchy, the example mapping shown in &lt;xref ref-type="fig" rid="fig_1_automated-machines-using-the-isa-88-models"&gt;Figure 1&lt;/xref&gt; is possible, from &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt;. The example in this document will assume that a machine can represent the unit level in the ISA88 hierarchy.</p>
+        <p>If automated machinery is modelled in an <xref ref-type="bibr" rid="ref-s88">ANSI/ISA-88.01-1995</xref> physical hierarchy, the example mapping shown in <xref ref-type="fig" rid="fig_1">Figure 1</xref> is possible, from <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>. The example in this document will assume that a machine can represent the unit level in the ISA88 hierarchy.</p>
         <fig id="fig_1">
           <label>Figure 1</label>
           <caption>
@@ -387,7 +407,7 @@
         <sec id="sec_4-2-4">
           <label>4.2.4</label>
           <title>Standard Modes</title>
-          <p>A Unit can be in different modes, for example Producing, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in &lt;xref ref-type="fig" rid="fig_2_mode-management-of-states"&gt;Figure 2&lt;/xref&gt;. For example, the producing mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
+          <p>A Unit can be in different modes, for example Producing, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in <xref ref-type="fig" rid="fig_2">Figure 2</xref>. For example, the producing mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
           <p>The states that a unit can be in depends on the mode. In the producing mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.</p>
           <fig id="fig_2">
             <label>Figure 2</label>
@@ -401,7 +421,7 @@
         <sec id="sec_4-2-5">
           <label>4.2.5</label>
           <title>Standard States</title>
-          <p>PackML Interface State Model is used to visualize and control the state of a unit/machine. The PackML Interface State Model is a state model that represents the Unit/Machine State in a standardized manner. The interface description is based on a state model, a state description and related control commands. For additional information see &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt;.</p>
+          <p>PackML Interface State Model is used to visualize and control the state of a unit/machine. The PackML Interface State Model is a state model that represents the Unit/Machine State in a standardized manner. The interface description is based on a state model, a state description and related control commands. For additional information see <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>.</p>
         </sec>
         <sec id="sec_4-2-6">
           <label>4.2.6</label>
@@ -419,17 +439,17 @@
           <sec id="sec_4-2-7-2">
             <label>4.2.7.2</label>
             <title>Command Tags</title>
-            <p>Command tags allow interaction with the state machine and general functionality of the server.  Command tags include changing units, changing state machines. For additional detail see &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt;. In OPC UA command tags are generally mapped to <italic>Methods</italic>.</p>
+            <p>Command tags allow interaction with the state machine and general functionality of the server.  Command tags include changing units, changing state machines. For additional detail see <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>. In OPC UA command tags are generally mapped to <italic>Methods</italic>.</p>
           </sec>
           <sec id="sec_4-2-7-3">
             <label>4.2.7.3</label>
             <title>Status Tags</title>
-            <p>Status tags provide information about the state of the machine or device. This includes feedback from the commands issued and the general status. For additional detail see &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt;.</p>
+            <p>Status tags provide information about the state of the machine or device. This includes feedback from the commands issued and the general status. For additional detail see <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>.</p>
           </sec>
           <sec id="sec_4-2-7-4">
             <label>4.2.7.4</label>
             <title>Admin Tags</title>
-            <p>Admin tags provide information about alarming in the machines or device. This include Alarm history and some summary statistics about the machine or device.  For additional detail see &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt;.</p>
+            <p>Admin tags provide information about alarming in the machines or device. This include Alarm history and some summary statistics about the machine or device.  For additional detail see <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>.</p>
           </sec>
         </sec>
         <sec id="sec_4-2-8">
@@ -558,7 +578,7 @@
           <p>OPC UA is an open and royalty free set of standards designed as a universal communications protocol. While there are numerous communication solutions available, OPC UA has several advantages:</p>
           <list list-type="bullet">
             <list-item>
-              <p>A state of art security model (see &lt;xref ref-type="other" rid="ref_uapart2"&gt;<xref ref-type="bibr" rid="ref-uapart2">OPC 10000-2</xref>&lt;/xref&gt;).</p>
+              <p>A state of art security model (see <xref ref-type="bibr" rid="ref-uapart2">OPC 10000-2</xref>).</p>
             </list-item>
             <list-item>
               <p>A fault tolerant communication protocol.</p>
@@ -568,14 +588,14 @@
             </list-item>
           </list>
           <p>OPC UA has a broad scope which delivers for economies of scale for application developers. This means that a larger number of high quality applications at a reasonable cost are available. When combined with powerful semantic models such as PackML, OPC UA makes it easier for end users to access data via generic commercial application.</p>
-          <p>The OPC UA model is scalable from small devices to ERP systems. OPC UA devices process information locally and then provide that data in a consistent format to any application requesting data - ERP, MES, PMS, Maintenance Systems, HMI, Smartphone or a standard Browser, for examples. For a more complete overview see &lt;xref ref-type="other" rid="ref_uapart1"&gt;<xref ref-type="bibr" rid="ref-uapart1">OPC 10000-1</xref>&lt;/xref&gt;.</p>
+          <p>The OPC UA model is scalable from small devices to ERP systems. OPC UA devices process information locally and then provide that data in a consistent format to any application requesting data - ERP, MES, PMS, Maintenance Systems, HMI, Smartphone or a standard Browser, for examples. For a more complete overview see <xref ref-type="bibr" rid="ref-uapart1">OPC 10000-1</xref>.</p>
         </sec>
         <sec id="sec_4-3-3">
           <label>4.3.3</label>
           <title>Basics of OPC UA</title>
           <p>As an Open Standard, OPC UA is based on standard Internet technologies - TCP/IP, HTTPS, Ethernet, and XML.</p>
-          <p>As an Extensible Standard, OPC UA provides a set of services (see &lt;xref ref-type="other" rid="ref_uapart4"&gt;<xref ref-type="bibr" rid="ref-uapart4">OPC 10000-4</xref>&lt;/xref&gt;) and a basic information model framework. This framework provides an easy manner for creating and exposing vendor defined information in a standard way. More importantly all OPC UA <italic>Clients</italic> are expected to be able to discover and use vendor defined information. This means OPC UA users can benefit from the economies of scale that come with generic visualization and historian applications. This specification is an example of an OPC UA Information Model designed to meet the needs of developers and users.</p>
-          <p>OPC UA <italic>Clients</italic> can be any consumer of data from another device on the network to browser based thin clients and ERP systems. The full scope of OPC UA applications are shown in &lt;xref ref-type="fig" rid="fig_3_the-scope-of-opc-ua-within-an-enterprise"&gt;Figure 3&lt;/xref&gt;.</p>
+          <p>As an Extensible Standard, OPC UA provides a set of services (<xref ref-type="bibr" rid="ref-uapart4">OPC 10000-4</xref>) and a basic information model framework. This framework provides an easy manner for creating and exposing vendor defined information in a standard way. More importantly all OPC UA <italic>Clients</italic> are expected to be able to discover and use vendor defined information. This means OPC UA users can benefit from the economies of scale that come with generic visualization and historian applications. This specification is an example of an OPC UA Information Model designed to meet the needs of developers and users.</p>
+          <p>OPC UA <italic>Clients</italic> can be any consumer of data from another device on the network to browser based thin clients and ERP systems. The full scope of OPC UA applications are shown in <xref ref-type="fig" rid="fig_3">Figure 3</xref>.</p>
           <fig id="fig_3">
             <label>Figure 3</label>
             <caption>
@@ -591,7 +611,7 @@
           <sec id="sec_4-3-4-1">
             <label>4.3.4.1</label>
             <title>Concepts</title>
-            <p>OPC UA provides a framework that can be used to represent complex information as <italic>Objects</italic> in an address space which can be accessed with standard web services. These <italic>Objects</italic> consist of <italic>Nodes</italic> connected by <italic>References</italic>. Different classes of <italic>Nodes</italic> convey different semantics. For example, a <italic>Variable</italic> <italic>Node</italic> represents a value that can be read or written. The <italic>Variable</italic> <italic>Node</italic> has an associated <italic>DataType</italic> that can define the actual value, such as a string, float, structure etc. It can also describe the variable value as a variant. A <italic>Method</italic> <italic>Node</italic> represents a function that can be called. Every <italic>Node</italic> has a number of <italic>Attributes</italic> including a unique identifier called a <italic>NodeId</italic> and non-localized name called as <italic>BrowseName</italic>. An <italic>Object</italic> representing a 'Reservation' is shown in &lt;xref ref-type="fig" rid="fig_4_a-basic-object-in-an-opc-ua-address-space"&gt;Figure 4&lt;/xref&gt;.</p>
+            <p>OPC UA provides a framework that can be used to represent complex information as <italic>Objects</italic> in an address space which can be accessed with standard web services. These <italic>Objects</italic> consist of <italic>Nodes</italic> connected by <italic>References</italic>. Different classes of <italic>Nodes</italic> convey different semantics. For example, a <italic>Variable</italic> <italic>Node</italic> represents a value that can be read or written. The <italic>Variable</italic> <italic>Node</italic> has an associated <italic>DataType</italic> that can define the actual value, such as a string, float, structure etc. It can also describe the variable value as a variant. A <italic>Method</italic> <italic>Node</italic> represents a function that can be called. Every <italic>Node</italic> has a number of <italic>Attributes</italic> including a unique identifier called a <italic>NodeId</italic> and non-localized name called as <italic>BrowseName</italic>. An <italic>Object</italic> representing a 'Reservation' is shown in <xref ref-type="fig" rid="fig_4">Figure 4</xref>.</p>
             <fig id="fig_4">
               <label>Figure 4</label>
               <caption>
@@ -600,9 +620,9 @@
               <graphic xlink:href="fig_4_a-basic-object-in-an-opc-ua-address-space.png" alt="A Basic Object in an OPC UA Address Space" mimetype="image/png" />
             </fig>
             <p>
-              <italic>Object</italic> and <italic>Variable</italic> <italic>Nodes</italic> are called <italic>Instance</italic> <italic>Nodes</italic> and they always reference a <italic>TypeDefinition</italic> (<italic>ObjectType</italic> or <italic>VariableType</italic>) Node which describes their semantics and structure. &lt;xref ref-type="fig" rid="fig_5_the-relationship-between-type-definitions-and-instances"&gt;Figure 5&lt;/xref&gt; illustrates the relationship between an Instance and its Type Definition.</p>
-            <p>The <italic>Type</italic> <italic>Nodes</italic> are templates that define all of the children that can be present in an <italic>Instance</italic> of the <italic>Type</italic>. In the example in &lt;xref ref-type="fig" rid="fig_5_the-relationship-between-type-definitions-and-instances"&gt;Figure 5&lt;/xref&gt; the PersonType <italic>ObjectType</italic> defines two children: First Name and Last Name. All instances of PersonType are expected to have the same children with the same <italic>BrowseNames</italic>. Within a Type the <italic>BrowseNames</italic> uniquely identify the child. This means <italic>Client</italic> applications can be designed to search for children based on the BrowseNames from the Type instead of <italic>NodeIds</italic>. This eliminates the need for manual reconfiguration of systems if a <italic>Client</italic> uses <italic>Types</italic> that multiple devices implement.</p>
-            <p>OPC UA also supports the concept of sub typing. This allows a modeller to take an existing <italic>Type</italic> and extend it. There are rules regarding sub typing defined in &lt;xref ref-type="other" rid="ref_uapart3"&gt;<xref ref-type="bibr" rid="ref-uapart3">OPC 10000-3</xref>&lt;/xref&gt;, but in general they allow the extension of a given type or the restriction of a <italic>DataType</italic>. For example, the modeller may decide that the existing <italic>&lt;underline&gt;ObjectType&lt;/underline&gt;</italic> in some cases needs an additional variable. The modeller can create a Subtype of the object and add the variable. A <italic>Client</italic> that is expecting the parent type can treat the new <italic>Type</italic> as if it was of the parent Type. With regard to DataTypes, if a <italic>Variable</italic> is defined to have a numeric value, a sub type could restrict the value to a float.</p>
+              <italic>Object</italic> and <italic>Variable</italic> <italic>Nodes</italic> are called <italic>Instance</italic> <italic>Nodes</italic> and they always reference a <italic>TypeDefinition</italic> (<italic>ObjectType</italic> or <italic>VariableType</italic>) Node which describes their semantics and structure. <xref ref-type="fig" rid="fig_5">Figure 5</xref> illustrates the relationship between an Instance and its Type Definition.</p>
+            <p>The <italic>Type</italic> <italic>Nodes</italic> are templates that define all of the children that can be present in an <italic>Instance</italic> of the <italic>Type</italic>. In the example in <xref ref-type="fig" rid="fig_5">Figure 5</xref> the PersonType <italic>ObjectType</italic> defines two children: First Name and Last Name. All instances of PersonType are expected to have the same children with the same <italic>BrowseNames</italic>. Within a Type the <italic>BrowseNames</italic> uniquely identify the child. This means <italic>Client</italic> applications can be designed to search for children based on the BrowseNames from the Type instead of <italic>NodeIds</italic>. This eliminates the need for manual reconfiguration of systems if a <italic>Client</italic> uses <italic>Types</italic> that multiple devices implement.</p>
+            <p>OPC UA also supports the concept of sub typing. This allows a modeller to take an existing <italic>Type</italic> and extend it. There are rules regarding sub typing defined in <xref ref-type="bibr" rid="ref-uapart3">OPC 10000-3</xref>, but in general they allow the extension of a given type or the restriction of a <italic>DataType</italic>. For example, the modeller may decide that the existing <italic>&lt;underline&gt;ObjectType&lt;/underline&gt;</italic> in some cases needs an additional variable. The modeller can create a Subtype of the object and add the variable. A <italic>Client</italic> that is expecting the parent type can treat the new <italic>Type</italic> as if it was of the parent Type. With regard to DataTypes, if a <italic>Variable</italic> is defined to have a numeric value, a sub type could restrict the value to a float.</p>
             <fig id="fig_5">
               <label>Figure 5</label>
               <caption>
@@ -611,7 +631,7 @@
               <graphic xlink:href="fig_5_the-relationship-between-type-definitions-and-instances.png" alt="The Relationship between Type Definitions and Instances" mimetype="image/png" />
             </fig>
             <p>
-              <italic>References</italic> allow Nodes to be connected together in ways that describe their relationships. All <italic>References</italic> have a <italic>ReferenceType</italic> that specifies the semantics of the relationship. <italic>References</italic> can be hierarchical or non-hierarchical. <italic>Hierarchical</italic> <italic>References</italic> are used to create the structure of <italic>Objects</italic> and <italic>Variables</italic>. <italic>Non</italic>-<italic>Hierarchical</italic> are used to create arbitrary associations. Applications can define their own <italic>ReferenceType</italic> by creating Subtypes of the existing <italic>ReferenceType</italic>. Subtypes inherit the semantics of the parent but may add additional restrictions. &lt;xref ref-type="fig" rid="fig_6_examples-of-references-between-objects"&gt;Figure 6&lt;/xref&gt; depicts several references connecting different <italic>Objects</italic>.</p>
+              <italic>References</italic> allow Nodes to be connected together in ways that describe their relationships. All <italic>References</italic> have a <italic>ReferenceType</italic> that specifies the semantics of the relationship. <italic>References</italic> can be hierarchical or non-hierarchical. <italic>Hierarchical</italic> <italic>References</italic> are used to create the structure of <italic>Objects</italic> and <italic>Variables</italic>. <italic>Non</italic>-<italic>Hierarchical</italic> are used to create arbitrary associations. Applications can define their own <italic>ReferenceType</italic> by creating Subtypes of the existing <italic>ReferenceType</italic>. Subtypes inherit the semantics of the parent but may add additional restrictions. <xref ref-type="fig" rid="fig_6">Figure 6</xref> depicts several references connecting different <italic>Objects</italic>.</p>
             <fig id="fig_6">
               <label>Figure 6</label>
               <caption>
@@ -619,7 +639,7 @@
               </caption>
               <graphic xlink:href="fig_6_examples-of-references-between-objects.png" alt="Examples of References between Objects" mimetype="image/png" />
             </fig>
-            <p>The figures above use a notation that was developed for the OPC UA specification. The notation is summarized in &lt;xref ref-type="fig" rid="fig_7_the-opc-ua-information-model-notation"&gt;Figure 7&lt;/xref&gt;. UML representations can also be used; however, the OPC UA notation is less ambiguous because there is a direct mapping from the elements in the figures to Nodes in the address space of an OPC UA server.</p>
+            <p>The figures above use a notation that was developed for the OPC UA specification. The notation is summarized in <xref ref-type="fig" rid="fig_7">Figure 7</xref>. UML representations can also be used; however, the OPC UA notation is less ambiguous because there is a direct mapping from the elements in the figures to Nodes in the address space of an OPC UA server.</p>
             <fig id="fig_7">
               <label>Figure 7</label>
               <caption>
@@ -627,9 +647,9 @@
               </caption>
               <graphic xlink:href="fig_7_the-opc-ua-information-model-notation.png" alt="The OPC UA Information Model Notation" mimetype="image/png" />
             </fig>
-            <p>A complete description of the different types of <italic>Nodes</italic> and <italic>References</italic> can be found in &lt;xref ref-type="other" rid="ref_uapart3"&gt;<xref ref-type="bibr" rid="ref-uapart3">OPC 10000-3</xref>&lt;/xref&gt; and the base OPC UA Address space is described in &lt;xref ref-type="other" rid="ref_uapart5"&gt;<xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>&lt;/xref&gt;.</p>
-            <p>OPC UA specification defines a very wide range of functionality in its basic information model. It is not expected that all <italic>Clients</italic> or <italic>Servers</italic> support all functionality in the OPC UA specifications. OPC UA includes the concept of profiles, which segment the functionality into testable certifiable units. This allows the development of companion specification (such as OPC UA for ISA-95) that can describe the subset of functionality that is expected to be implemented. The profiles do not restrict functionality, but generate requirements for a minimum set of functionality (see &lt;xref ref-type="other" rid="ref_uapart7"&gt;<xref ref-type="bibr" rid="ref-uapart7">OPC 10000-7</xref>&lt;/xref&gt;).</p>
-            <p>The OPC Foundation also defines a set of information models that provide a basic set of functionality. The Data Access specification (see &lt;xref ref-type="other" rid="ref_uapart8"&gt;<xref ref-type="bibr" rid="ref-uapart8">OPC 10000-8</xref>&lt;/xref&gt;) provides a basic information model for typical data. The Alarm and Condition specification (see &lt;xref ref-type="other" rid="ref_uapart9"&gt;OPC 10000-9&lt;/xref&gt;) defines a standard information model for Alarms and Conditions. The Programs specification (see &lt;xref ref-type="other" rid="ref_uapart10"&gt;OPC 10000-10&lt;/xref&gt;) defines a standard information model for extending the functionality available via method calls and state machines. The Historical Access specification (see &lt;xref ref-type="other" rid="ref_uapart11"&gt;OPC 10000-11&lt;/xref&gt;) defines the information model associated with Historical Data and Historical Events. The aggregates specification (see &lt;xref ref-type="other" rid="ref_uapart13"&gt;OPC 10000-13&lt;/xref&gt;) defines a series of standard aggregate functions that allow a <italic>Client</italic> to request summary data. Examples of aggregates include averages, minimums, time in state, standard deviation, etc.</p>
+            <p>A complete description of the different types of <italic>Nodes</italic> and <italic>References</italic> can be found in <xref ref-type="bibr" rid="ref-uapart3">OPC 10000-3</xref> and the base OPC UA Address space is described in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</p>
+            <p>OPC UA specification defines a very wide range of functionality in its basic information model. It is not expected that all <italic>Clients</italic> or <italic>Servers</italic> support all functionality in the OPC UA specifications. OPC UA includes the concept of profiles, which segment the functionality into testable certifiable units. This allows the development of companion specification (such as OPC UA for ISA-95) that can describe the subset of functionality that is expected to be implemented. The profiles do not restrict functionality, but generate requirements for a minimum set of functionality (see <xref ref-type="bibr" rid="ref-uapart7">OPC 10000-7</xref>).</p>
+            <p>The OPC Foundation also defines a set of information models that provide a basic set of functionality. The Data Access specification (see <xref ref-type="bibr" rid="ref-uapart8">OPC 10000-8</xref>) provides a basic information model for typical data. The Alarm and Condition specification (see <xref ref-type="bibr" rid="ref-uapart9">OPC 10000-9</xref>) defines a standard information model for Alarms and Conditions. The Programs specification (see <xref ref-type="bibr" rid="ref-uapart10">OPC 10000-10</xref>) defines a standard information model for extending the functionality available via method calls and state machines. The Historical Access specification (see <xref ref-type="bibr" rid="ref-uapart11">OPC 10000-11</xref>) defines the information model associated with Historical Data and Historical Events. The aggregates specification (see <xref ref-type="bibr" rid="ref-uapart13">OPC 10000-13</xref>) defines a series of standard aggregate functions that allow a <italic>Client</italic> to request summary data. Examples of aggregates include averages, minimums, time in state, standard deviation, etc.</p>
           </sec>
           <sec id="sec_4-3-4-2">
             <label>4.3.4.2</label>
@@ -642,7 +662,7 @@
           <sec id="sec_4-3-4-3">
             <label>4.3.4.3</label>
             <title>Companion Specifications</title>
-            <p>An OPC UA companion specification for an industry specific vertical market describes an information model by defining <italic>ObjectTypes</italic>, <italic>VariableTypes</italic>, <italic>DataTypes</italic> and <italic>ReferenceTypes</italic> that represent the concepts used in the vertical market. &lt;xref ref-type="table" rid="tbl_1_example-objecttype-definition"&gt;Table 1&lt;/xref&gt; contains an example of an <italic>ObjectType</italic> definition.</p>
+            <p>An OPC UA companion specification for an industry specific vertical market describes an information model by defining <italic>ObjectTypes</italic>, <italic>VariableTypes</italic>, <italic>DataTypes</italic> and <italic>ReferenceTypes</italic> that represent the concepts used in the vertical market. <xref ref-type="table" rid="tbl_1">Table 1</xref> contains an example of an <italic>ObjectType</italic> definition.</p>
             <table-wrap id="tbl_1">
               <label>Table 1</label>
               <caption>
@@ -728,7 +748,7 @@
             <p>
               <italic>IsAbstract</italic> is a flag indicating whether instances of the <italic>ObjectType</italic> can be created.</p>
             <p>The bottom of the table lists the child nodes for the type. The <italic>Reference</italic> is the type of reference between the <italic>Object</italic> instance and the child Node. The <italic>NodeClass</italic> is the class of Node. The <italic>BrowseName</italic> is the non-localized name for the child. The <italic>DataType</italic> is the structure of the Value accessible via the <italic>Node</italic> (only used for <italic>Variable</italic> <italic>NodeClass</italic> <italic>Nodes</italic>) and the <italic>TypeDefinition</italic> is the <italic>ObjectType</italic> or <italic>VariableType</italic> for the child.</p>
-            <p>The <italic>ModellingRule</italic> indicates whether a child is <italic>Mandatory</italic> or <italic>Optional</italic>. It can also indicate cardinality. Note that the <italic>BrowseName</italic> is not defined if the cardinality is greater than 1. &lt;xref ref-type="fig" rid="fig_8_a-visual-representation-of-the-sample-objecttype"&gt;Figure 8&lt;/xref&gt; visually depicts the <italic>ObjectType</italic> defined in &lt;xref ref-type="table" rid="tbl_1_example-objecttype-definition"&gt;Table 1&lt;/xref&gt; along with two instances of the <italic>ObjectType</italic>.</p>
+            <p>The <italic>ModellingRule</italic> indicates whether a child is <italic>Mandatory</italic> or <italic>Optional</italic>. It can also indicate cardinality. Note that the <italic>BrowseName</italic> is not defined if the cardinality is greater than 1. <xref ref-type="fig" rid="fig_8">Figure 8</xref> visually depicts the <italic>ObjectType</italic> defined in <xref ref-type="table" rid="tbl_1">Table 1</xref> along with two instances of the <italic>ObjectType</italic>.</p>
             <fig id="fig_8">
               <label>Figure 8</label>
               <caption>
