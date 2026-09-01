@@ -11,10 +11,8 @@
     "",
     "Every <PLACEHOLDER> below must be replaced before the first build."
   ],
-
   "schemaVersion": 1,
   "sourceOfTruth": "markdown",
-
   "$comment_identity": [
     "docNumber       the OPC document number, e.g. 'OPC 40700'. Names the STS and the Word",
     "                edition: 'OPC 40700' -> artifacts/OPC-40700.xml.",
@@ -52,7 +50,6 @@
       "url": "https://opcfoundation.org/license/specifications/1.15/"
     }
   },
-
   "$comment_model": [
     "Relative to the repository, not to this file: model/ is shared by every specification here,",
     "because a part borrows types from the siblings it is published with and NodeSets resolve by",
@@ -69,7 +66,6 @@
     "nodeset": "model/Opc.Ua.PackML.NodeSet2.xml",
     "generated": false
   },
-
   "$comment_markdown": [
     "Beside this file. The prose, the figures and the Profiles are this specification's own, so",
     "they are named relative to the manifest; the model and the outputs are the repository's and",
@@ -81,7 +77,7 @@
   ],
   "markdown": {
     "main": "spec.md",
-    "concept" : "concept.md",
+    "concept": "concept.md",
     "modelling-approach": "modelling-approach.md",
     "model": "model-packml.md",
     "figures": "figures",
@@ -89,7 +85,6 @@
     "annex-c": "annex-c.md",
     "annex-d": "annex-d.md"
   },
-
   "$comment_figureGenerators": [
     "How a figure's source becomes the SVG the document embeds: the source's extension, or its",
     "exact file name, to a script that renders it. 'update --write' runs each one from the",
@@ -112,17 +107,20 @@
   ],
   "figureGenerators": {
     ".drawio.svg": "",
-    ".pptx": { "win": "tools/office-to-svg.ps1", "default": "tools/office-to-svg.sh" },
-    ".vsdx": { "win": "tools/office-to-svg.ps1", "default": "tools/office-to-svg.sh" }
+    ".pptx": {
+      "win": "tools/office-to-svg.ps1",
+      "default": "tools/office-to-svg.sh"
+    },
+    ".vsdx": {
+      "win": "tools/office-to-svg.ps1",
+      "default": "tools/office-to-svg.sh"
+    }
   },
-
   "profiles": "profiles-packml.json",
-
   "output": {
     "sts": "artifacts/OPC-30050.xml",
     "documentationCsv": "artifacts/OPC-30050-documentation.csv"
   },
-
   "$comment_normativeReferences": [
     "Clause 2 is generated from this list, and every mention of a designation in running prose",
     "becomes a citation of the matching entry - so 'OPC 10000-3' in a sentence links itself and",
@@ -182,6 +180,30 @@
       "url": "http://www.opcfoundation.org/documents/10000-8/"
     },
     {
+      "id": "uapart9",
+      "label": "OPC 10000-9",
+      "title": "OPC Unified Architecture - Part 9: Alarms & Conditions",
+      "url": "http://www.opcfoundation.org/documents/10000-9/"
+    },
+    {
+      "id": "uapart10",
+      "label": "OPC 10000-10",
+      "title": "OPC Unified Architecture - Part 10: Programs",
+      "url": "http://www.opcfoundation.org/documents/10000-10/"
+    },
+    {
+      "id": "uapart11",
+      "label": "OPC 10000-11",
+      "title": "OPC Unified Architecture - Part 11: Historical Access",
+      "url": "http://www.opcfoundation.org/documents/10000-11/"
+    },
+    {
+      "id": "uapart13",
+      "label": "OPC 10000-13",
+      "title": "OPC Unified Architecture - Part 13: Aggregates",
+      "url": "http://www.opcfoundation.org/documents/10000-13/"
+    },
+    {
       "id": "uapart19",
       "label": "OPC 10000-19",
       "title": "OPC Unified Architecture - Part 19: Dictionary Reference",
@@ -199,13 +221,13 @@
       "title": "Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile",
       "url": "https://datatracker.ietf.org/doc/html/rfc5280"
     },
-     {
+    {
       "id": "tr88",
       "label": "ISA-TR88.00.02-2022",
       "title": "Machine and Unit States: An implementation example of ANSI/ISA-88.00.01",
       "url": "https://www.isa.org/products/isa-tr88-00-02-2022-machine-and-unit-states-an-imp"
     },
-      {
+    {
       "id": "s88",
       "label": "ANSI/ISA–88.01–1995",
       "title": "ANSI/ISA–88.01–1995: Batch Control Part 1: Models and Terminology",
@@ -218,7 +240,6 @@
       "url": "https://opcfoundation.org/developer-tools/specifications-unified-architecture/opc-unified-architecture-plcopen-information-model/"
     }
   ],
-
   "$comment_terms": [
     "The Terms and definitions subclause, which appears only where spec.md asks for it with a",
     "'{clause} kind: terms' directive. Sorted as written; keep it alphabetical.",
@@ -254,31 +275,62 @@
     },
     {
       "term": "PackMLStateModel",
-      "definition":"a concept that represents a state model of the operational state of a unit."
+      "definition": "a concept that represents a state model of the operational state of a unit."
     },
     {
       "term": "PackMLMode",
-      "definition":"a concept that represents the mode of operation of a unit, indicating which state model is currently active."
+      "definition": "a concept that represents the mode of operation of a unit, indicating which state model is currently active."
     }
   ],
-
   "$comment_abbreviations": [
     "Clause 3.3. Sorted as written; keep it alphabetical."
   ],
   "abbreviations": [
-    ["AC",  "Alarm and Condition"],
-    ["DA",  "Data Access"],
-    ["DCS",  "Distributed Control System"],
-    ["HA",  "Historical Access"],
-    ["HMI",  "Human Machine Interface"],
-    ["MES",  "Manufacturing Execution System"],
-    ["OCS",  "Open Control System"],
-    ["PLC",  "Programmable Logic Controller"],
-    ["UML",  "Unified Modelling Language"],
-    ["URI",  "Uniform Resource Identifier"],
-    ["XML",  "Extensible Markup Language"]
+    [
+      "AC",
+      "Alarm and Condition"
+    ],
+    [
+      "DA",
+      "Data Access"
+    ],
+    [
+      "DCS",
+      "Distributed Control System"
+    ],
+    [
+      "HA",
+      "Historical Access"
+    ],
+    [
+      "HMI",
+      "Human Machine Interface"
+    ],
+    [
+      "MES",
+      "Manufacturing Execution System"
+    ],
+    [
+      "OCS",
+      "Open Control System"
+    ],
+    [
+      "PLC",
+      "Programmable Logic Controller"
+    ],
+    [
+      "UML",
+      "Unified Modelling Language"
+    ],
+    [
+      "URI",
+      "Uniform Resource Identifier"
+    ],
+    [
+      "XML",
+      "Extensible Markup Language"
+    ]
   ],
-
   "$comment_namespaces": [
     "The document's own namespace prints without a prefix; every other namespace prints with",
     "the index assigned here. These indices are the document's, not the NodeSet file's - the",
