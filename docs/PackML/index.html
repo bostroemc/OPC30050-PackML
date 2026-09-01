@@ -548,7 +548,7 @@
 <li>All StateMachines will end in "StateMachine", all States will end in "State", All Transitions will end in "Transition"</li>
 <li>All <em>DataTypes</em> that are structures include "DataType" as part of the name, this is to be able to differentiate them from any <em>VariableTypes</em> that will just end in Type.</li>
 <li>All enumerations will end in "Enum", to clearly identify that it is an enumeration.</li>
-<li>All base <em>DataTypes</em> (int32, float, …) used in the OPC UA server will be those defined in OPC UA, see &lt;xref ref-type="other" rid="ref_uapart6"&gt;<a class="xref" href="#ref-uapart6" data-ref-type="bibr">OPC 10000-6</a>&lt;/xref&gt; for more detail on the representation of the datatypes. This specification is typically implemented in a PLC, &lt;xref ref-type="sec" rid="annex_c_datatype-non-normative"&gt;Annex C&lt;/xref&gt; provides a non-normative copy of the DataType mapping described in PLC Open</li>
+<li>All base <em>DataTypes</em> (int32, float, …) used in the OPC UA server will be those defined in OPC UA, see <a class="xref" href="#ref-uapart6" data-ref-type="bibr">OPC 10000-6</a> for more detail on the representation of the datatypes. This specification is typically implemented in a PLC, <a class="xref" href="#sec_B" data-ref-type="sec">Annex B</a> provides a non-normative copy of the DataType mapping described in PLC Open</li>
 </ul>
 <figure class="figure" id="fig_9">
 <img class="figure-image" src="figures/fig_9_system-overview.png" alt="System Overview">
@@ -559,13 +559,13 @@
 </section>
 <section id="sec_6-2" class="clause">
 <h3><span class="label">6.2</span> Instance AddressSpace<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="32-53" title="Open the source of this clause">&#128221;</a></h3>
-<p>&lt;xref ref-type="fig" rid="fig_10_packml-object-instance-overview"&gt;Figure 10&lt;/xref&gt; provides an overview of the instance object model for PackML</p>
+<p><a class="xref" href="#fig_10" data-ref-type="fig">Figure 10</a> provides an overview of the instance object model for PackML</p>
 <figure class="figure" id="fig_10">
 <img class="figure-image" src="figures/fig_10_packml-object-instance-overview.png" alt="PackML Object Instance Overview">
 <figcaption><span class="label">Figure 10</span> PackML Object Instance Overview<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="36-40" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>The OPC UA Server shall have a PackMLObjects folder under the OPC defined <em>Objects</em> folder on a UA <em>Server</em>. This folder shall contain one or more instances of <em>PackMLBaseObjectType</em> (see &lt;xref ref-type="sec" rid="sec_6-3-2_packmlbaseobjecttype"&gt;6.3.2&lt;/xref&gt; for definition of <em>PackMLBaseObjectType</em>). A single OPC UA <em>Server</em> might contain a single instance of a PackML system or it might contain multiple PackML systems.</p>
-<p>The <em>PackMLObjects</em> node is formally defined in &lt;xref ref-type="table" rid="tbl_2_packmlobjects-definition"&gt;Table 2&lt;/xref&gt;.</p>
+<p>The OPC UA Server shall have a PackMLObjects folder under the OPC defined <em>Objects</em> folder on a UA <em>Server</em>. This folder shall contain one or more instances of <em>PackMLBaseObjectType</em> (see <a class="xref" href="#sec_6-3-2" data-ref-type="sec">6.3.2</a> for definition of <em>PackMLBaseObjectType</em>). A single OPC UA <em>Server</em> might contain a single instance of a PackML system or it might contain multiple PackML systems.</p>
+<p>The <em>PackMLObjects</em> node is formally defined in <a class="xref" href="#tbl_2" data-ref-type="table">Table 2</a>.</p>
 <figure class="table-wrap" id="tbl_2">
 <figcaption><span class="label">Table 2</span> PackMLObjects Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="46-53" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -585,7 +585,7 @@
 <h3><span class="label">6.3</span> Objects and ObjectTypes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="56-560" title="Open the source of this clause">&#128221;</a></h3>
 <section id="sec_6-3-1" class="clause">
 <h4><span class="label">6.3.1</span> Overview<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="58-60" title="Open the source of this clause">&#128221;</a></h4>
-<p>The PackML model when adapted to OPC UA results in a number of <em>StateMachines</em> (see section &lt;xref ref-type="sec" rid="sec_6-3-5_statemachines-overview"&gt;6.3.5&lt;/xref&gt; for a definition). Instances of these <em>StateMachines</em> may not expose all states and transitions at all times. The actual list of <em>AvailableStates</em> and <em>AvailableTransitions</em> are configured and each instance would be defined by either the end user or the machine builder. The PackML model also includes other meta data such as available mode, current mode, see section &lt;xref ref-type="sec" rid="sec_6-3-2_packmlbaseobjecttype"&gt;6.3.2&lt;/xref&gt; for a complete list</p>
+<p>The PackML model when adapted to OPC UA results in a number of <em>StateMachines</em> (see section <a class="xref" href="#sec_6-3-5" data-ref-type="sec">6.3.5</a> for a definition). Instances of these <em>StateMachines</em> may not expose all states and transitions at all times. The actual list of <em>AvailableStates</em> and <em>AvailableTransitions</em> are configured and each instance would be defined by either the end user or the machine builder. The PackML model also includes other meta data such as available mode, current mode, see section <a class="xref" href="#sec_6-3-2" data-ref-type="sec">6.3.2</a> for a complete list</p>
 </section>
 <section id="sec_6-3-2" class="clause">
 <h4><span class="label">6.3.2</span> PackMLBaseObjectType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="62-112" title="Open the source of this clause">&#128221;</a></h4>
@@ -594,7 +594,7 @@
 <img class="figure-image" src="figures/fig_11_packmlbaseobjecttype-overview.png" alt="PackMLBaseObjectType Overview">
 <figcaption><span class="label">Figure 11</span> PackMLBaseObjectType Overview<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="66-70" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_3_packmlbaseobjecttype-definition"&gt;Table 3&lt;/xref&gt; formally defines the <em>PackMLBaseObjectType</em>.</p>
+<p><a class="xref" href="#tbl_3" data-ref-type="table">Table 3</a> formally defines the <em>PackMLBaseObjectType</em>.</p>
 <figure class="table-wrap" id="tbl_3">
 <figcaption><span class="label">Table 3</span> PackMLBaseObjectType Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="74-92" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -622,23 +622,23 @@
 </figure>
 <p>TagID - provide an additional field in which an associated name (third party cross reference or other string) can be stored.  It can also be an additional name used to identify this PackML System.</p>
 <p><em>PackMLVersion</em> - provides the version of the supported OMAC PackML</p>
-<p><em>Admin</em> provides administrative functionality required for the PackML OPC UA server. It is defined in section &lt;xref ref-type="sec" rid="sec_6-3-4_packmladminobjecttype"&gt;6.3.4&lt;/xref&gt;. The administrative functionality exposed by this <em>Object</em> should be restricted to only users with administrative rights.</p>
-<p><em>Status</em> provides the status information required for a PackML OPC UA <em>Server</em>. It is defined in section &lt;xref ref-type="sec" rid="sec_6-3-3_packmlstatusobjecttype"&gt;6.3.3&lt;/xref&gt;.</p>
-<p><em>SetUnitMode</em> method allows an OPC UA <em>Client</em> to change the mode of the machine. The available modes are part of the supported Modes and a <em>Client</em> can pass any of the values listed. The <em>Method</em> may return an error if the requested mode is not allowed based on either the current mode of the machine or the state of the machine. For additional details see the definition of the <em>SetUnitMode</em> <em>Method</em> in &lt;xref ref-type="sec" rid="sec_6-7-2_setunitmode-method"&gt;6.7.2&lt;/xref&gt;</p>
+<p><em>Admin</em> provides administrative functionality required for the PackML OPC UA server. It is defined in section <a class="xref" href="#sec_6-3-4" data-ref-type="sec">6.3.4</a>. The administrative functionality exposed by this <em>Object</em> should be restricted to only users with administrative rights.</p>
+<p><em>Status</em> provides the status information required for a PackML OPC UA <em>Server</em>. It is defined in section <a class="xref" href="#sec_6-3-3" data-ref-type="sec">6.3.3</a>.</p>
+<p><em>SetUnitMode</em> method allows an OPC UA <em>Client</em> to change the mode of the machine. The available modes are part of the supported Modes and a <em>Client</em> can pass any of the values listed. The <em>Method</em> may return an error if the requested mode is not allowed based on either the current mode of the machine or the state of the machine. For additional details see the definition of the <em>SetUnitMode</em> <em>Method</em> in <a class="xref" href="#sec_6-7-2" data-ref-type="sec">6.7.2</a></p>
 <p><em>SetMachSpeed</em> <em>Method</em> allows a <em>Client</em> to change the machine speed.</p>
-<p><em>SetProduct</em> <em>Method</em> allows a <em>Client</em> to change the product(s) and the <em>ProcessVariables</em> and Ingredients. For additional details see the definition of <em>SetProduct</em> <em>Method</em> in &lt;xref ref-type="sec" rid="sec_6-7-4_setproduct-method"&gt;6.7.4&lt;/xref&gt;.</p>
-<p><em>SetParameter</em> <em>Method</em> allows a <em>Client</em> to set the parameters for the machine. For additional details see the definition of SetParameter <em>Method</em> in &lt;xref ref-type="sec" rid="sec_6-7-17_setparameter-method"&gt;6.7.17&lt;/xref&gt;.</p>
-<p><em>RemoteCommand</em> <em>Method</em> allows a <em>Client</em> to send a command to the UA <em>Server</em> that is to be passed to the PackML <em>Server</em> and or upstream or downstream <em>Servers</em>. Parameters sent to the Remote system are typically used in the EXECUTE and STARTING states for a production task. With the restriction that <em>RemoteCommand</em> Parameter Values are limited to REAL values. For additional details see the definition of the <em>RemoteCommand</em> <em>Method</em> in &lt;xref ref-type="sec" rid="sec_6-7-15_remotecommand-method"&gt;6.7.15&lt;/xref&gt;</p>
-<p>SetInterlock method allows a <em>Client</em> to set one of the interlocks associated with the system.  For additional details see the definition of the SetInterlock <em>Method</em> in &lt;xref ref-type="sec" rid="sec_6-7-16_setinterlock-method"&gt;6.7.16&lt;/xref&gt;</p>
+<p><em>SetProduct</em> <em>Method</em> allows a <em>Client</em> to change the product(s) and the <em>ProcessVariables</em> and Ingredients. For additional details see the definition of <em>SetProduct</em> <em>Method</em> in <a class="xref" href="#sec_6-7-4" data-ref-type="sec">6.7.4</a>.</p>
+<p><em>SetParameter</em> <em>Method</em> allows a <em>Client</em> to set the parameters for the machine. For additional details see the definition of SetParameter <em>Method</em> in <a class="xref" href="#sec_6-7-17" data-ref-type="sec">6.7.17</a>.</p>
+<p><em>RemoteCommand</em> <em>Method</em> allows a <em>Client</em> to send a command to the UA <em>Server</em> that is to be passed to the PackML <em>Server</em> and or upstream or downstream <em>Servers</em>. Parameters sent to the Remote system are typically used in the EXECUTE and STARTING states for a production task. With the restriction that <em>RemoteCommand</em> Parameter Values are limited to REAL values. For additional details see the definition of the <em>RemoteCommand</em> <em>Method</em> in <a class="xref" href="#sec_6-7-15" data-ref-type="sec">6.7.15</a></p>
+<p>SetInterlock method allows a <em>Client</em> to set one of the interlocks associated with the system.  For additional details see the definition of the SetInterlock <em>Method</em> in <a class="xref" href="#sec_6-7-16" data-ref-type="sec">6.7.16</a></p>
 </section>
 <section id="sec_6-3-3" class="clause">
 <h4><span class="label">6.3.3</span> PackMLStatusObjectType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="115-181" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLStatusObjectType</em> defines an <em>ObjectType</em> that is used to group all of the status information that is part of the PackML information model. It is illustrated in &lt;xref ref-type="fig" rid="fig_12_packmlstatusobjecttype-overview"&gt;Figure 12&lt;/xref&gt;</p>
+<p>The <em>PackMLStatusObjectType</em> defines an <em>ObjectType</em> that is used to group all of the status information that is part of the PackML information model. It is illustrated in <a class="xref" href="#fig_12" data-ref-type="fig">Figure 12</a></p>
 <figure class="figure" id="fig_12">
 <img class="figure-image" src="figures/fig_12_packmlstatusobjecttype-overview.png" alt="PackMLStatusObjectType Overview">
 <figcaption><span class="label">Figure 12</span> PackMLStatusObjectType Overview<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="119-123" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_4_packmlstatusobjecttype-definition"&gt;Table 4&lt;/xref&gt; formally defines the <em>PackMLStatusObjectType</em>.</p>
+<p><a class="xref" href="#tbl_4" data-ref-type="table">Table 4</a> formally defines the <em>PackMLStatusObjectType</em>.</p>
 <figure class="table-wrap" id="tbl_4">
 <figcaption><span class="label">Table 4</span> PackMLStatusObjectType Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="127-149" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -668,7 +668,7 @@
 </tbody>
 </table>
 </figure>
-<p>In OPC UA defined <em>StateMachines</em>, a mandatory <em>Variable</em> <em>CurrentState</em> provides the current state of the <em>StateMachine</em>, which is the current state of the PackML device. <em>CurrentState</em> is defined in &lt;xref ref-type="other" rid="ref_uapart5"&gt;<a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a>&lt;/xref&gt;.</p>
+<p>In OPC UA defined <em>StateMachines</em>, a mandatory <em>Variable</em> <em>CurrentState</em> provides the current state of the <em>StateMachine</em>, which is the current state of the PackML device. <em>CurrentState</em> is defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a>.</p>
 <p><em>UnitModeRequested</em> - If TRUE, indicates that a unit mode change was requested, reflects the status of the Command UnitModeRequested.</p>
 <p><em>UnitSupportedModes</em> - provides the <em>NodeId</em> of the enumeration <em>DataType</em> that describes the available modes for this PackML instance. A <em>Server</em> might have more than one of these instances; each instance might expose a different set of available modes and thus have a different enumeration.</p>
 <p><em>UnitModeCurrent</em> - is used to display the current mode of the instance of this type. The <em>DataType</em> is <em>Enumeration</em> which is abstract, but an instance shall be assigned a concrete enumeration, which corresponds to the enumeration listed in <em>UnitSupportedModes</em>.</p>
@@ -682,17 +682,17 @@
 <p><em>MaterialInterlocked</em> - a flag that indicates this machine is interlocked. It is a summary of the interlock variable that is associated with this machine.</p>
 <p><em>MaterialInterlock</em> - this is an array and describes the status of the materials that are ready for processing. It is comprised of a series of Boolean with 1 equaling readyor not low, 0 equaling not ready or low. Each bit represents a different user material.</p>
 <p><em>Parameter</em> - Current parameters used in the production job. This reflects the last parameter sent via the <em>SetParameter</em> <em>Method</em>.</p>
-<p><em>RemoteParameter</em> - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the <em>RemoteCommand</em> <em>Method</em> is provided this variable shall also be provided. For additional details see the <em>RemoteCommand</em> <em>Method</em> definition in &lt;xref ref-type="sec" rid="sec_6-7-15_remotecommand-method"&gt;6.7.15&lt;/xref&gt;.</p>
+<p><em>RemoteParameter</em> - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the <em>RemoteCommand</em> <em>Method</em> is provided this variable shall also be provided. For additional details see the <em>RemoteCommand</em> <em>Method</em> definition in <a class="xref" href="#sec_6-7-15" data-ref-type="sec">6.7.15</a>.</p>
 <p><em>Product</em> - provides a list of the products supported by this machine. The array is typically needed for machines that run multiple products. It defines the IDs of the products and process &amp;amp; process variables associated with the product. The product data can come from either a local HMI or remote systems and are used to process the product on the unit machine.</p>
 </section>
 <section id="sec_6-3-4" class="clause">
 <h4><span class="label">6.3.4</span> PackMLAdminObjectType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="184-265" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLAdminObjectType</em> defines an <em>ObjectType</em> that is used to group all of the Admin information that is part of the PackML information model. It is illustrated in &lt;xref ref-type="fig" rid="fig_13_packmladminobjecttype-overview"&gt;Figure 13&lt;/xref&gt;.</p>
+<p>The <em>PackMLAdminObjectType</em> defines an <em>ObjectType</em> that is used to group all of the Admin information that is part of the PackML information model. It is illustrated in <a class="xref" href="#fig_13" data-ref-type="fig">Figure 13</a>.</p>
 <figure class="figure" id="fig_13">
 <img class="figure-image" src="figures/fig_13_packmladminobjecttype-overview.png" alt="PackMLAdminObjectType Overview">
 <figcaption><span class="label">Figure 13</span> PackMLAdminObjectType Overview<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="188-192" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_5_packmladminobjecttype-definition"&gt;Table 5&lt;/xref&gt; formally defines the PackMLAdminObjectType.</p>
+<p><a class="xref" href="#tbl_5" data-ref-type="table">Table 5</a> formally defines the PackMLAdminObjectType.</p>
 <figure class="table-wrap" id="tbl_5">
 <figcaption><span class="label">Table 5</span> PackMLAdminObjectType Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="196-221" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -756,12 +756,12 @@
 </section>
 <section id="sec_6-3-5" class="clause">
 <h4><span class="label">6.3.5</span> StateMachines Overview<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="267-283" title="Open the source of this clause">&#128221;</a></h4>
-<p>The &lt;xref ref-type="fig" rid="fig_14_packml-statemachines-overview"&gt;Figure 14&lt;/xref&gt; provides an overview of the <em>StateMachines</em> that are part of the model.</p>
+<p><a class="xref" href="#fig_14" data-ref-type="fig">Figure 14</a> provides an overview of the <em>StateMachines</em> that are part of the model.</p>
 <figure class="figure" id="fig_14">
 <img class="figure-image" src="figures/fig_14_packml-statemachines-overview.png" alt="PackML StateMachines Overview">
 <figcaption><span class="label">Figure 14</span> PackML StateMachines Overview<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="271-275" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>A key point in PackML <em>StateMachines</em> is that all of the <em>StateMachines *defined in PackML shall require that the optional *AvailableTransitions</em> and <em>AvailableStates</em> component of the FiniteStateMachineType be provided on all instance of the <em>StateMachine</em>. This allows <em>Clients</em> to understand the available <em>States</em> and <em>Transitions</em> for the given instance of the <em>StateMachine</em>. A <em>StateMachine</em> may restrict the <em>States</em> and <em>Transition</em> that are currently available. The following figure provides an overview of the PackML States. The Stopped <em>State</em> is commonly the initial sub-state that will be the starting point for the <em>Cleared</em> parent state. The <em>Running</em> <em>State</em> commonly will use the <em>Resetting</em> <em>State</em> as the initial state, but not all instance of the <em>Running</em> <em>State</em> sub-state model will include <em>Resetting</em>, so no initial state is defined for the <em>Running</em> <em>State</em>. The proposed valid initial <em>States</em> for this model are the <em>Idle</em> or <em>Resetting</em> <em>States.</em> This is <em>Server</em> dependant. The initial state for the system is Aborted. Alternative it could be Cleared as parent state with the proposal of Stopped as initial sub state. &lt;xref ref-type="fig" rid="fig_15_packml-states"&gt;Figure 15 - PackML States&lt;/xref&gt; provide an overview of the states and transitions in the <em>StateMachine. *The model refers to the PackML state model Version 2015. The dashed lines for the Hold transitions are optional extensions of the state model</em></p>
+<p>A key point in PackML <em>StateMachines</em> is that all of the <em>StateMachines *defined in PackML shall require that the optional *AvailableTransitions</em> and <em>AvailableStates</em> component of the FiniteStateMachineType be provided on all instance of the <em>StateMachine</em>. This allows <em>Clients</em> to understand the available <em>States</em> and <em>Transitions</em> for the given instance of the <em>StateMachine</em>. A <em>StateMachine</em> may restrict the <em>States</em> and <em>Transition</em> that are currently available. The following figure provides an overview of the PackML States. The Stopped <em>State</em> is commonly the initial sub-state that will be the starting point for the <em>Cleared</em> parent state. The <em>Running</em> <em>State</em> commonly will use the <em>Resetting</em> <em>State</em> as the initial state, but not all instance of the <em>Running</em> <em>State</em> sub-state model will include <em>Resetting</em>, so no initial state is defined for the <em>Running</em> <em>State</em>. The proposed valid initial <em>States</em> for this model are the <em>Idle</em> or <em>Resetting</em> <em>States.</em> This is <em>Server</em> dependant. The initial state for the system is Aborted. Alternative it could be Cleared as parent state with the proposal of Stopped as initial sub state. <a class="xref" href="#fig_15" data-ref-type="fig">Figure 15</a> provide an overview of the states and transitions in the <em>StateMachine. *The model refers to the PackML state model Version 2015. The dashed lines for the Hold transitions are optional extensions of the state model</em></p>
 <figure class="figure" id="fig_15">
 <img class="figure-image" src="figures/fig_15_packml-states.png" alt="PackML States">
 <figcaption><span class="label">Figure 15</span> PackML States<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="279-283" title="Open the source of this clause">&#128221;</a></figcaption>
@@ -769,12 +769,12 @@
 </section>
 <section id="sec_6-3-6" class="clause">
 <h4><span class="label">6.3.6</span> PackMLBaseStateMachineType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="285-342" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLBaseStateMachineType</em> is the top level <em>StateMachine</em> for PackML. It is illustrated in &lt;xref ref-type="fig" rid="fig_16_packmlbasestatemachinetype-illustration"&gt;Figure 16&lt;/xref&gt;. The TR-88 specification does not define an initial <em>State</em> for this <em>StateMachine</em>, but typically the state machine uses either the <em>Aborted</em> or Stopped <em>State</em> as an initial <em>State</em>. &lt;xref ref-type="sec" rid="annex_b_informative-recommended-localized-names"&gt;Annex B&lt;/xref&gt; provide recommended display names for the various states.</p>
+<p>The <em>PackMLBaseStateMachineType</em> is the top level <em>StateMachine</em> for PackML. It is illustrated in <a class="xref" href="#fig_16" data-ref-type="fig">Figure 16</a>. The TR-88 specification does not define an initial <em>State</em> for this <em>StateMachine</em>, but typically the state machine uses either the <em>Aborted</em> or Stopped <em>State</em> as an initial <em>State</em>. <a class="xref" href="#sec_A" data-ref-type="sec">Annex A</a> provide recommended display names for the various states.</p>
 <figure class="figure" id="fig_16">
 <img class="figure-image" src="figures/fig_16_packmlbasestatemachinetype-illustration.png" alt="PackMLBaseStateMachineType illustration">
 <figcaption><span class="label">Figure 16</span> PackMLBaseStateMachineType illustration<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="289-293" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>The <em>PackMLBaseStateMachineType</em> defines the available states in a PackML system. The type is defined in &lt;xref ref-type="table" rid="tbl_6_packmlbasestatemachinetype-definition"&gt;Table 6&lt;/xref&gt;.* StateTypes* and <em>TransitionTypes</em> only exist in the type system, thus they do not have a modelling rule.</p>
+<p>The <em>PackMLBaseStateMachineType</em> defines the available states in a PackML system. The type is defined in <a class="xref" href="#tbl_6" data-ref-type="table">Table 6</a>.* StateTypes* and <em>TransitionTypes</em> only exist in the type system, thus they do not have a modelling rule.</p>
 <figure class="table-wrap" id="tbl_6">
 <figcaption><span class="label">Table 6</span> PackMLBaseStateMachineType Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="297-314" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -804,10 +804,10 @@
 <p><em>Aborting</em> - The ABORTING state can be entered at any time in response to the <em>Abort</em> command or on the occurrence of a machine fault. The aborting logic will bring the machine to a rapid safe stop. Operation of the emergency stop will cause the machine to be tripped by its safety system. It will also provide a signal to initiate the ABORT State. The value of this <em>StateType</em> is 8.</p>
 <p><em>Aborted</em> - This state maintains machine status information relevant to the Abort condition. The machine can only exit the ABORTED state after an explicit Clear command, subsequently to manual intervention to correct and reset the detected machine faults. The value of this <em>StateType</em> is 9.</p>
 <p><em>Cleared</em> - this state exposes the MachineState sub StateMachine and state associated with this substate machine. The value of this <em>StateType</em> is 19.</p>
-<p><em>MachineState</em> - A PackMLMachineStateMachineType defined in section &lt;xref ref-type="sec" rid="sec_6-3-7_packmlmachinestatemachinetype"&gt;6.3.7&lt;/xref&gt;.</p>
-<p><em>Abort</em> - a <em>Method</em> to trigger a change of state to <em>Aborting</em>. This will affect all sub-states in cleared state. Defined in &lt;xref ref-type="sec" rid="sec_6-7-5_abort-method"&gt;6.7.5&lt;/xref&gt;.</p>
-<p><em>Clear</em> - a <em>Method</em> to trigger a change of state to the <em>Cleared. *Defined in</em> <em>&lt;xref ref-type="sec" rid="sec_6-7-6_clear-method"&gt;</em>6.7.6<em>&lt;/xref&gt;</em>.*</p>
-<p>&lt;xref ref-type="table" rid="tbl_7_packmlbasestatemachinetype-additional-references"&gt;Table 7&lt;/xref&gt; defines the available <em>Transitions</em> in the PackMLBaseStateMachineType.</p>
+<p><em>MachineState</em> - A PackMLMachineStateMachineType defined in section <a class="xref" href="#sec_6-3-7" data-ref-type="sec">6.3.7</a>.</p>
+<p><em>Abort</em> - a <em>Method</em> to trigger a change of state to <em>Aborting</em>. This will affect all sub-states in cleared state. Defined in <a class="xref" href="#sec_6-7-5" data-ref-type="sec">6.7.5</a>.</p>
+<p><em>Clear</em> - a <em>Method</em> to trigger a change of state to the <em>Cleared. Defined in </em><a class="xref" href="#sec_6-7-6" data-ref-type="sec">6.7.6</a>.</p>
+<p><a class="xref" href="#tbl_7" data-ref-type="table">Table 7</a> defines the available <em>Transitions</em> in the PackMLBaseStateMachineType.</p>
 <figure class="table-wrap" id="tbl_7">
 <figcaption><span class="label">Table 7</span> PackMLBaseStateMachineType Additional References<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="332-342" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -829,13 +829,13 @@
 </section>
 <section id="sec_6-3-7" class="clause">
 <h4><span class="label">6.3.7</span> PackMLMachineStateMachineType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="345-411" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLMachineStateMachineType</em> defines the machine level state machine. It is illustrated in &lt;xref ref-type="fig" rid="fig_17_packmlmachinestatemachinetype-illustration"&gt;Figure 17&lt;/xref&gt;.</p>
-<p>The TR-88 specification does not define an initial <em>State</em> for this <em>StateMachine</em>, but typically the state machine uses <em>Stopped</em> <em>State</em> as an initial <em>State</em>. &lt;xref ref-type="sec" rid="annex_b_informative-recommended-localized-names"&gt;Annex B&lt;/xref&gt; provides recommended display names for the various states.</p>
+<p>The <em>PackMLMachineStateMachineType</em> defines the machine level state machine. It is illustrated in <a class="xref" href="#fig_17" data-ref-type="fig">Figure 17</a>.</p>
+<p>The TR-88 specification does not define an initial <em>State</em> for this <em>StateMachine</em>, but typically the state machine uses <em>Stopped</em> <em>State</em> as an initial <em>State</em>. <a class="xref" href="#sec_A" data-ref-type="sec">Annex A</a> provides recommended display names for the various states.</p>
 <figure class="figure" id="fig_17">
 <img class="figure-image" src="figures/fig_17_packmlmachinestatemachinetype-illustration.png" alt="PackMLMachineStateMachineType illustration">
 <figcaption><span class="label">Figure 17</span> PackMLMachineStateMachineType illustration<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="351-355" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_8_packmlmachinestatemachinetype-definition"&gt;Table 8&lt;/xref&gt; defines the <em>PackMLMachineStateMachineType</em>. <em>StateTypes</em> and <em>TransitionTypes</em> only exist in the type system, thus they do not have a modelling rule.</p>
+<p><a class="xref" href="#tbl_8" data-ref-type="table">Table 8</a> defines the <em>PackMLMachineStateMachineType</em>. <em>StateTypes</em> and <em>TransitionTypes</em> only exist in the type system, thus they do not have a modelling rule.</p>
 <figure class="table-wrap" id="tbl_8">
 <figcaption><span class="label">Table 8</span> PackMLMachineStateMachineType Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="360-379" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -869,9 +869,9 @@
 <p><em>Clearing</em> - Initiated by a state command to clear faults that may have occurred when ABORTING, and are present in the ABORTED state. The value of this StateType is 1.</p>
 <p><em>Running</em> - the <em>State</em> that allows the <em>ExecuteState</em> machine to become active, enabling sub-states provided by this <em>StateMachine.</em> The value of this StateType is 18.</p>
 <p><em>ExecuteState</em> - <em>StateMachine</em> that provides additional sub states.</p>
-<p><em>Stop</em> - A <em>Method</em> to trigger a change of state to <em>Stopping</em>. This will affect all sub-states in <em>Run</em> state. Defined in &lt;xref ref-type="sec" rid="sec_6-7-7_stop-method"&gt;6.7.7&lt;/xref&gt;</p>
-<p><em>Reset</em> - A <em>Method</em> to trigger a change of state to <em>Running, *enabling all of the sub-states of *Running</em> and the respective <em>Methods</em> that they expose. Defined in &lt;xref ref-type="sec" rid="sec_6-7-8_reset-method"&gt;6.7.8&lt;/xref&gt;</p>
-<p>The transitions are defined in &lt;xref ref-type="table" rid="tbl_9_packmlmachinestatemachinetype-additional-references"&gt;Table 9&lt;/xref&gt;.</p>
+<p><em>Stop</em> - A <em>Method</em> to trigger a change of state to <em>Stopping</em>. This will affect all sub-states in <em>Run</em> state. Defined in <a class="xref" href="#sec_6-7-7" data-ref-type="sec">6.7.7</a></p>
+<p><em>Reset</em> - A <em>Method</em> to trigger a change of state to <em>Running, *enabling all of the sub-states of *Running</em> and the respective <em>Methods</em> that they expose. Defined in <a class="xref" href="#sec_6-7-8" data-ref-type="sec">6.7.8</a></p>
+<p>The transitions are defined in <a class="xref" href="#tbl_9" data-ref-type="table">Table 9</a>.</p>
 <figure class="table-wrap" id="tbl_9">
 <figcaption><span class="label">Table 9</span> PackMLMachineStateMachineType Additional References<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="399-411" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -895,12 +895,12 @@
 </section>
 <section id="sec_6-3-8" class="clause">
 <h4><span class="label">6.3.8</span> PackMLExecuteStateMachineType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="414-560" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLExecuteStateMachineType</em> provides all of the base states defined in PackML. It is illustrated in &lt;xref ref-type="fig" rid="fig_18_packmlexecutestatemachinetype-illustration"&gt;Figure 18&lt;/xref&gt;. The TR-88 specification does not define an initial State for this StateMachine, but typically the state machine use either the <em>Idle</em> or <em>Resetting</em> <em>State</em> as an initial <em>State</em>. &lt;xref ref-type="sec" rid="annex_b_informative-recommended-localized-names"&gt;Annex B&lt;/xref&gt; provide recommended display names for the various states.</p>
+<p>The <em>PackMLExecuteStateMachineType</em> provides all of the base states defined in PackML. It is illustrated in <a class="xref" href="#fig_18" data-ref-type="fig">Figure 18</a>. The TR-88 specification does not define an initial State for this StateMachine, but typically the state machine use either the <em>Idle</em> or <em>Resetting</em> <em>State</em> as an initial <em>State</em>. <a class="xref" href="#sec_A" data-ref-type="sec">Annex A</a> provide recommended display names for the various states.</p>
 <figure class="figure" id="fig_18">
 <img class="figure-image" src="figures/fig_18_packmlexecutestatemachinetype-illustration.png" alt="PackMLExecuteStateMachineType illustration">
 <figcaption><span class="label">Figure 18</span> PackMLExecuteStateMachineType illustration<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="418-422" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>The <em>PackMLExecuteStateMachineType</em> is defined in &lt;xref ref-type="table" rid="tbl_10_packmlexecutestatemachinetype-definition"&gt;Table 10&lt;/xref&gt;. <em>StateTypes</em> and <em>TransitionTypes</em> only exist in the type system, thus they do not have a modelling rule.</p>
+<p>The <em>PackMLExecuteStateMachineType</em> is defined in <a class="xref" href="#tbl_10" data-ref-type="table">Table 10</a>. <em>StateTypes</em> and <em>TransitionTypes</em> only exist in the type system, thus they do not have a modelling rule.</p>
 <figure class="table-wrap" id="tbl_10">
 <figcaption><span class="label">Table 10</span> PackMLExecuteStateMachineType Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="427-473" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -969,7 +969,7 @@
 <p><em>Execute</em>: If the unit/machine is actively carrying out the behaviour or activity defined by the selected mode, then the machine is in <em>Execute</em> state. If the unit/machine is in production mode, for example, this means that the machine is producing product. The value of this <em>StateType</em> is 6.</p>
 <p><em>Completing</em>: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from <em>Execute</em> to <em>Completing</em>. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to <em>Complete</em> state. The value of this <em>StateType</em> is 16.</p>
 <p><em>Complete</em>: <em>Complete</em> indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a <em>Reset</em> command is issued (in which case it will transition to <em>Resetting</em>), or until the unit/machine is <em>Stopped</em> or <em>Aborted</em>. The value of this <em>StateType</em> is 17.</p>
-<p>The <em>Transitions</em> are described in &lt;xref ref-type="table" rid="tbl_11_packmlexecutestatemachinetype-additional-references"&gt;Table 11&lt;/xref&gt;. This <em>FiniteStateMachine</em> also supports six <em>Method</em>s, for transitioning between states. This <em>StateMachine</em> includes transition to Holding from Unholding, <em>Starting</em>, <em>Unsuspending</em>, <em>Suspended</em>, <em>Suspending</em>, all of which are extension to the &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt; specification.</p>
+<p>The <em>Transitions</em> are described in <a class="xref" href="#tbl_11" data-ref-type="table">Table 11</a>. This <em>FiniteStateMachine</em> also supports six <em>Method</em>s, for transitioning between states. This <em>StateMachine</em> includes transition to Holding from Unholding, <em>Starting</em>, <em>Unsuspending</em>, <em>Suspended</em>, <em>Suspending</em>, all of which are extension to the <a class="xref" href="#ref-tr88" data-ref-type="bibr">ISA-TR88.00.02-2022</a> specification.</p>
 <figure class="table-wrap" id="tbl_11">
 <figcaption><span class="label">Table 11</span> PackMLExecuteStateMachineType Additional References<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="505-557" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1045,7 +1045,7 @@
 </section>
 <section id="sec_6-5-2" class="clause">
 <h4><span class="label">6.5.2</span> ProductionMaintenanceModeEnum<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="574-590" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>ProductionMaintenanceModeEnum</em> describes the predefined modes. This is a default mode enumeration. A <em>Server</em> may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The <em>ProductionMaintenanceModeEnum</em> is defined in &lt;xref ref-type="table" rid="tbl_12_productionmaintenancemodeenum-values"&gt;Table 12&lt;/xref&gt;.</p>
+<p>The <em>ProductionMaintenanceModeEnum</em> describes the predefined modes. This is a default mode enumeration. A <em>Server</em> may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The <em>ProductionMaintenanceModeEnum</em> is defined in <a class="xref" href="#tbl_12" data-ref-type="table">Table 12</a>.</p>
 <figure class="table-wrap" id="tbl_12">
 <figcaption><span class="label">Table 12</span> ProductionMaintenanceModeEnum values<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="578-584" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1067,7 +1067,7 @@
 </section>
 <section id="sec_6-5-3" class="clause">
 <h4><span class="label">6.5.3</span> PackMLCountDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="593-605" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLCountDataType</em> is used to generate summary information about the system.  The information depending on the use might be related to produced product, defective materials or any other information that needs to be tracked. It is formally defined in &lt;xref ref-type="table" rid="tbl_13_packmlcountdatatype-structure"&gt;Table 13&lt;/xref&gt;</p>
+<p>The <em>PackMLCountDataType</em> is used to generate summary information about the system.  The information depending on the use might be related to produced product, defective materials or any other information that needs to be tracked. It is formally defined in <a class="xref" href="#tbl_13" data-ref-type="table">Table 13</a></p>
 <figure class="table-wrap" id="tbl_13">
 <figcaption><span class="label">Table 13</span> PackMLCountDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="597-605" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1087,7 +1087,7 @@
 </section>
 <section id="sec_6-5-4" class="clause">
 <h4><span class="label">6.5.4</span> PackMLDescriptorDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="608-619" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLDescriptorDataType</em> provides the PackML Parameter structure. The <em>PackMLDescriptorDataType</em> is formally defined in &lt;xref ref-type="table" rid="tbl_14_packmldescriptordatatype-structure"&gt;Table 14&lt;/xref&gt;</p>
+<p>The <em>PackMLDescriptorDataType</em> provides the PackML Parameter structure. The <em>PackMLDescriptorDataType</em> is formally defined in <a class="xref" href="#tbl_14" data-ref-type="table">Table 14</a></p>
 <figure class="table-wrap" id="tbl_14">
 <figcaption><span class="label">Table 14</span> PackMLDescriptorDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="612-619" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1106,7 +1106,7 @@
 </section>
 <section id="sec_6-5-5" class="clause">
 <h4><span class="label">6.5.5</span> PackMLIngredientsDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="622-633" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLIngredientsDataType</em> provides the PackML Parameter structure. The <em>PackMLIngredientsDataType</em> is formally defined in &lt;xref ref-type="table" rid="tbl_15_packmlingredientsdatatype-structure"&gt;Table 15&lt;/xref&gt;.</p>
+<p>The <em>PackMLIngredientsDataType</em> provides the PackML Parameter structure. The <em>PackMLIngredientsDataType</em> is formally defined in <a class="xref" href="#tbl_15" data-ref-type="table">Table 15</a>.</p>
 <figure class="table-wrap" id="tbl_15">
 <figcaption><span class="label">Table 15</span> PackMLIngredientsDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="628-633" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1123,7 +1123,7 @@
 </section>
 <section id="sec_6-5-6" class="clause">
 <h4><span class="label">6.5.6</span> PackMLProductDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="637-647" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLProductDataType</em> provides the PackML product information. The <em>PackMLProductDataType</em> is formally defined in &lt;xref ref-type="table" rid="tbl_16_packmlproductdatatype-structure"&gt;Table 16&lt;/xref&gt;.</p>
+<p>The <em>PackMLProductDataType</em> provides the PackML product information. The <em>PackMLProductDataType</em> is formally defined in <a class="xref" href="#tbl_16" data-ref-type="table">Table 16</a>.</p>
 <figure class="table-wrap" id="tbl_16">
 <figcaption><span class="label">Table 16</span> PackMLProductDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="641-647" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1141,7 +1141,7 @@
 </section>
 <section id="sec_6-5-7" class="clause">
 <h4><span class="label">6.5.7</span> PackMLRemoteInterfaceDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="650-662" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>PackMLRemoteInterfaceDataType</em> provides the PackML remote connection information. The <em>PackMLRemoteInterfaceDataType</em> is formally defined in &lt;xref ref-type="table" rid="tbl_17_packmlremoteinterfacedatatype-structure"&gt;Table 17&lt;/xref&gt;.</p>
+<p>The <em>PackMLRemoteInterfaceDataType</em> provides the PackML remote connection information. The <em>PackMLRemoteInterfaceDataType</em> is formally defined in <a class="xref" href="#tbl_17" data-ref-type="table">Table 17</a>.</p>
 <figure class="table-wrap" id="tbl_17">
 <figcaption><span class="label">Table 17</span> PackMLRemoteInterfaceDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="655-662" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1163,7 +1163,7 @@
 <h3><span class="label">6.6</span> ReferenceTypes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="665-745" title="Open the source of this clause">&#128221;</a></h3>
 <section id="sec_6-6-1" class="clause">
 <h4><span class="label">6.6.1</span> HasInterlock<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="667-680" title="Open the source of this clause">&#128221;</a></h4>
-<p>This reference type is used to point to an Interlock. It is defined in &lt;xref ref-type="table" rid="tbl_18_hasinterlock-reference-type"&gt;Table 18&lt;/xref&gt;</p>
+<p>This reference type is used to point to an Interlock. It is defined in <a class="xref" href="#tbl_18" data-ref-type="table">Table 18</a></p>
 <figure class="table-wrap" id="tbl_18">
 <figcaption><span class="label">Table 18</span> HasInterlock reference type<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="671-680" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1184,7 +1184,7 @@
 </section>
 <section id="sec_6-6-2" class="clause">
 <h4><span class="label">6.6.2</span> HasAlarm<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="683-696" title="Open the source of this clause">&#128221;</a></h4>
-<p>This reference type is used to point to an Alarm. It is defined in &lt;xref ref-type="table" rid="tbl_19_hasalarm-reference-type"&gt;Table 19&lt;/xref&gt;.</p>
+<p>This reference type is used to point to an Alarm. It is defined in <a class="xref" href="#tbl_19" data-ref-type="table">Table 19</a>.</p>
 <figure class="table-wrap" id="tbl_19">
 <figcaption><span class="label">Table 19</span> HasAlarm reference type<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="687-696" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1205,7 +1205,7 @@
 </section>
 <section id="sec_6-6-3" class="clause">
 <h4><span class="label">6.6.3</span> HasAlarmHistory<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="699-712" title="Open the source of this clause">&#128221;</a></h4>
-<p>This reference type is used to point to an Alarm History. It is defined in &lt;xref ref-type="table" rid="tbl_20_hasalarmhistory-reference-type"&gt;Table 20&lt;/xref&gt;</p>
+<p>This reference type is used to point to an Alarm History. It is defined in <a class="xref" href="#tbl_20" data-ref-type="table">Table 20</a></p>
 <figure class="table-wrap" id="tbl_20">
 <figcaption><span class="label">Table 20</span> HasAlarmHistory reference type<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="703-712" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1226,7 +1226,7 @@
 </section>
 <section id="sec_6-6-4" class="clause">
 <h4><span class="label">6.6.4</span> HasWarning<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="716-729" title="Open the source of this clause">&#128221;</a></h4>
-<p>This reference type is used to point to a Warning. It is defined in &lt;xref ref-type="table" rid="tbl_19_hasalarm-reference-type"&gt;Table 19&lt;/xref&gt;.</p>
+<p>This reference type is used to point to a Warning. It is defined in <a class="xref" href="#tbl_21" data-ref-type="table">Table 21</a>.</p>
 <figure class="table-wrap" id="tbl_21">
 <figcaption><span class="label">Table 21</span> HasWarning reference type<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="720-729" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1247,7 +1247,7 @@
 </section>
 <section id="sec_6-6-5" class="clause">
 <h4><span class="label">6.6.5</span> HasStopReason<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="732-745" title="Open the source of this clause">&#128221;</a></h4>
-<p>This reference type is used to point to a StopReason. It is defined in &lt;xref ref-type="table" rid="tbl_19_hasalarm-reference-type"&gt;Table 19&lt;/xref&gt;.</p>
+<p>This reference type is used to point to a StopReason. It is defined in <a class="xref" href="#tbl_22" data-ref-type="table">Table 22</a>.</p>
 <figure class="table-wrap" id="tbl_22">
 <figcaption><span class="label">Table 22</span> HasStopReason reference type<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="736-745" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1275,7 +1275,7 @@
 </section>
 <section id="sec_6-7-2" class="clause">
 <h4><span class="label">6.7.2</span> SetUnitMode Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="754-793" title="Open the source of this clause">&#128221;</a></h4>
-<p>This <em>Method</em> allows an OPC UA <em>Client</em> to change the mode of the unit. <em>Parameters</em> are defined in &lt;xref ref-type="table" rid="tbl_23_setunitmode-method-parameters"&gt;Table 23&lt;/xref&gt;</p>
+<p>This <em>Method</em> allows an OPC UA <em>Client</em> to change the mode of the unit. <em>Parameters</em> are defined in <a class="xref" href="#tbl_23" data-ref-type="table">Table 23</a></p>
 <p><strong>Signature</strong></p>
 <pre><code>	SetUnitMode(
 		[in] Int32 RequestedMode
@@ -1291,7 +1291,7 @@
 </tbody>
 </table>
 </figure>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_24_setunitmode-method-result-codes"&gt;Table 24&lt;/xref&gt;</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_24" data-ref-type="table">Table 24</a></p>
 <figure class="table-wrap" id="tbl_24">
 <figcaption><span class="label">Table 24</span> SetUnitMode Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="772-782" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1310,7 +1310,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 25 specifies the <em>AddressSpace</em> representation for the <em>SetUnitMode Method</em>. <em>SetUnitMode</em> includes an <em>InputArgument</em>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_23_setunitmode-method-parameters"&gt;Table 23&lt;/xref&gt;.</p>
+<p><a class="xref" href="#tbl_25" data-ref-type="table">Table 25</a> specifies the <em>AddressSpace</em> representation for the <em>SetUnitMode Method</em>. <em>SetUnitMode</em> includes an <em>InputArgument</em>, where the input argument details are provided in <a class="xref" href="#tbl_23" data-ref-type="table">Table 23</a>.</p>
 <figure class="table-wrap" id="tbl_25">
 <figcaption><span class="label">Table 25</span> SetUnitMode Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="788-793" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1327,7 +1327,7 @@
 </section>
 <section id="sec_6-7-3" class="clause">
 <h4><span class="label">6.7.3</span> SetMachSpeed Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="796-834" title="Open the source of this clause">&#128221;</a></h4>
-<p>This <em>Method</em> allows an OPC UA <em>Client</em> to change the speed of the machine or unit. <em>Parameters</em> are defined in &lt;xref ref-type="table" rid="tbl_26_setmachspeed-method-parameters"&gt;Table 26&lt;/xref&gt;</p>
+<p>This <em>Method</em> allows an OPC UA <em>Client</em> to change the speed of the machine or unit. <em>Parameters</em> are defined in <a class="xref" href="#tbl_26" data-ref-type="table">Table 26</a></p>
 <p><strong>Signature</strong></p>
 <pre><code>	SetMachSpeed(
 		[in] Float RequestedMachineSpeed
@@ -1344,7 +1344,7 @@
 </tbody>
 </table>
 </figure>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_27_setmachspeed-method-resultcodes"&gt;Table 27&lt;/xref&gt;</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_27" data-ref-type="table">Table 27</a></p>
 <figure class="table-wrap" id="tbl_27">
 <figcaption><span class="label">Table 27</span> SetMachSpeed Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="815-825" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1363,7 +1363,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 28 specifies the <em>AddressSpace</em> representation for the <em>SetMachSpeed Method</em>. <em>SetMachSpeed</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_26_setmachspeed-method-parameters"&gt;Table 26&lt;/xref&gt;.</p>
+<p><a class="xref" href="#tbl_28" data-ref-type="table">Table 28</a> specifies the <em>AddressSpace</em> representation for the <em>SetMachSpeed Method</em>. <em>SetMachSpeed</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in <a class="xref" href="#tbl_26" data-ref-type="table">Table 26</a>.</p>
 <figure class="table-wrap" id="tbl_28">
 <figcaption><span class="label">Table 28</span> SetMachSpeed Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="829-834" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1380,7 +1380,7 @@
 </section>
 <section id="sec_6-7-4" class="clause">
 <h4><span class="label">6.7.4</span> SetProduct Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="837-876" title="Open the source of this clause">&#128221;</a></h4>
-<p>This <em>Method</em> allows an OPC UA <em>Client</em> to change product associated with this PackML system. <em>Parameters</em> are defined in &lt;xref ref-type="table" rid="tbl_29_setproduct-method-parameters"&gt;Table 29&lt;/xref&gt;.</p>
+<p>This <em>Method</em> allows an OPC UA <em>Client</em> to change product associated with this PackML system. <em>Parameters</em> are defined in <a class="xref" href="#tbl_29" data-ref-type="table">Table 29</a>.</p>
 <p><strong>Signature</strong></p>
 <pre><code>SetProduct(
 		[in] PackMLProductDataType[] Product
@@ -1397,7 +1397,7 @@
 </tbody>
 </table>
 </figure>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_30_setproduct-method-result-codes"&gt;Table 30&lt;/xref&gt;</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_30" data-ref-type="table">Table 30</a></p>
 <figure class="table-wrap" id="tbl_30">
 <figcaption><span class="label">Table 30</span> SetProduct Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="857-867" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1416,7 +1416,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 31 specifies the <em>AddressSpace</em> representation for the <em>SetProduct Method</em>. <em>SetProduct</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_29_setproduct-method-parameters"&gt;Table 29&lt;/xref&gt;.</p>
+<p><a class="xref" href="#tbl_31" data-ref-type="table">Table 31</a> specifies the <em>AddressSpace</em> representation for the <em>SetProduct Method</em>. <em>SetProduct</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in <a class="xref" href="#tbl_29" data-ref-type="table">Table 29</a>.</p>
 <figure class="table-wrap" id="tbl_31">
 <figcaption><span class="label">Table 31</span> SetProduct Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="871-876" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1437,7 +1437,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Abort(
 		);</code></pre>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_32_abort-method-result-codes"&gt;Table 32&lt;/xref&gt;.</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_32" data-ref-type="table">Table 32</a>.</p>
 <figure class="table-wrap" id="tbl_32">
 <figcaption><span class="label">Table 32</span> Abort Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="891-898" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1453,7 +1453,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 33 specifies the <em>AddressSpace</em> representation for the <em>Abort Method</em>. <em>Abort</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_33" data-ref-type="table">Table 33</a> specifies the <em>AddressSpace</em> representation for the <em>Abort Method</em>. <em>Abort</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_33">
 <figcaption><span class="label">Table 33</span> Abort Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="903-908" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1474,7 +1474,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Clear(
 		);</code></pre>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_34_clear-method-result-codes"&gt;Table 34&lt;/xref&gt;.&lt;/p&gt;</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_34" data-ref-type="table">Table 34</a>.</p>
 <figure class="table-wrap" id="tbl_34">
 <figcaption><span class="label">Table 34</span> Clear Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="924-931" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1490,7 +1490,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 35 specifies the <em>AddressSpace</em> representation for the <em>Clear Method</em>. <em>Clear</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_35" data-ref-type="table">Table 35</a> specifies the <em>AddressSpace</em> representation for the <em>Clear Method</em>. <em>Clear</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_35">
 <figcaption><span class="label">Table 35</span> Clear Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="936-941" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1511,7 +1511,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Stop(
 		);</code></pre>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_36_stop-method-result-codes"&gt;Table 36&lt;/xref&gt;</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_36" data-ref-type="table">Table 36</a></p>
 <figure class="table-wrap" id="tbl_36">
 <figcaption><span class="label">Table 36</span> Stop Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="956-963" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1527,7 +1527,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 37 specifies the <em>AddressSpace</em> representation for the <em>Stop Method</em>. <em>Stop</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_37" data-ref-type="table">Table 37</a> specifies the <em>AddressSpace</em> representation for the <em>Stop Method</em>. <em>Stop</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_37">
 <figcaption><span class="label">Table 37</span> Stop Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="968-973" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1548,7 +1548,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Reset(
 		);</code></pre>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_38_reset-method-result-codes"&gt;Table 38&lt;/xref&gt;.</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_38" data-ref-type="table">Table 38</a>.</p>
 <figure class="table-wrap" id="tbl_38">
 <figcaption><span class="label">Table 38</span> Reset Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="988-995" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1564,7 +1564,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 39 specifies the <em>AddressSpace</em> representation for the <em>Reset Method</em>. <em>Reset</em> has no input or output parameters and has no referenced <em>Objects</em> or <em>Variables</em>.</p>
+<p><a class="xref" href="#tbl_39" data-ref-type="table">Table 39</a> specifies the <em>AddressSpace</em> representation for the <em>Reset Method</em>. <em>Reset</em> has no input or output parameters and has no referenced <em>Objects</em> or <em>Variables</em>.</p>
 <figure class="table-wrap" id="tbl_39">
 <figcaption><span class="label">Table 39</span> Reset Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="999-1004" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1585,7 +1585,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	ToComplete(
 		);</code></pre>
-<p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_40_tocomplete-method-result-codes"&gt;Table 40&lt;/xref&gt;.</p>
+<p>Method result codes are defined in <a class="xref" href="#tbl_40" data-ref-type="table">Table 40</a>.</p>
 <figure class="table-wrap" id="tbl_40">
 <figcaption><span class="label">Table 40</span> ToComplete Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1018-1025" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1601,7 +1601,7 @@
 </tbody>
 </table>
 </figure>
-<p>Table 41 specifies the <em>AddressSpace</em> representation for the <em>ToComplete Method</em>. <em>ToComplete</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_41" data-ref-type="table">Table 41</a> specifies the <em>AddressSpace</em> representation for the <em>ToComplete Method</em>. <em>ToComplete</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_41">
 <figcaption><span class="label">Table 41</span> ToComplete Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1029-1034" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1618,7 +1618,7 @@
 </section>
 <section id="sec_6-7-10" class="clause">
 <h4><span class="label">6.7.10</span> Start Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1037-1074" title="Open the source of this clause">&#128221;</a></h4>
-<p>This <em>Method</em> is used as part of the <em>PackMLExecuteStateMachineType</em>. It allows an OPC UA <em>Client</em> to change the state of this state machine to the <em>Starting</em> State and send parameters at the same time. Which is an extension to the &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt; specification. The parameter is defined in &lt;xref ref-type="table" rid="tbl_42_start-method-parameters"&gt;Table 42&lt;/xref&gt;</p>
+<p>This <em>Method</em> is used as part of the <em>PackMLExecuteStateMachineType</em>. It allows an OPC UA <em>Client</em> to change the state of this state machine to the <em>Starting</em> State and send parameters at the same time. Which is an extension to the <a class="xref" href="#ref-tr88" data-ref-type="bibr">ISA-TR88.00.02-2022</a> specification. The parameter is defined in <a class="xref" href="#tbl_42" data-ref-type="table">Table 42</a></p>
 <p><strong>Signature</strong></p>
 <pre><code>	Start(
 		[in] PackMLDescriptorDataType[] Parameter
@@ -1634,7 +1634,7 @@
 </tbody>
 </table>
 </figure>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_43_start-method-result-codes"&gt;Table 43&lt;/xref&gt;.</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_43" data-ref-type="table">Table 43</a>.</p>
 <figure class="table-wrap" id="tbl_43">
 <figcaption><span class="label">Table 43</span> Start Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1055-1065" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1653,7 +1653,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_44_start-method-addressspace-definition"&gt;Table 44&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>Start Method</em>. <em>Start</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_42_start-method-parameters"&gt;Table 42&lt;/xref&gt;.</p>
+<p><a class="xref" href="#tbl_44" data-ref-type="table">Table 44</a> specifies the <em>AddressSpace</em> representation for the <em>Start Method</em>. <em>Start</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in <a class="xref" href="#tbl_42" data-ref-type="table">Table 42</a>.</p>
 <figure class="table-wrap" id="tbl_44">
 <figcaption><span class="label">Table 44</span> Start Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1069-1074" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1674,7 +1674,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Unhold(
 	);</code></pre>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_45_unhold-method-result-codes"&gt;Table 45&lt;/xref&gt;</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_45" data-ref-type="table">Table 45</a></p>
 <figure class="table-wrap" id="tbl_45">
 <figcaption><span class="label">Table 45</span> Unhold Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1090-1097" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1690,7 +1690,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_46_unhold-method-addressspace-definition"&gt;Table 46&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>Unhold Method</em>. <em>Unhold</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_46" data-ref-type="table">Table 46</a> specifies the <em>AddressSpace</em> representation for the <em>Unhold Method</em>. <em>Unhold</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_46">
 <figcaption><span class="label">Table 46</span> Unhold Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1101-1106" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1711,7 +1711,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Suspend(
 	);</code></pre>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_47_suspend-method-result-codes"&gt;Table 47&lt;/xref&gt;</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_47" data-ref-type="table">Table 47</a></p>
 <figure class="table-wrap" id="tbl_47">
 <figcaption><span class="label">Table 47</span> Suspend Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1121-1128" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1727,7 +1727,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_48_suspend-method-addressspace-definition"&gt;Table 48&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>Suspend Method</em>. <em>Suspend</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_48" data-ref-type="table">Table 48</a> specifies the <em>AddressSpace</em> representation for the <em>Suspend Method</em>. <em>Suspend</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_48">
 <figcaption><span class="label">Table 48</span> Suspend Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1132-1137" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1748,7 +1748,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Unsuspend(
 	);</code></pre>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_49_unsuspend-method-result-codes"&gt;Table 49&lt;/xref&gt;</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_49" data-ref-type="table">Table 49</a></p>
 <figure class="table-wrap" id="tbl_49">
 <figcaption><span class="label">Table 49</span> Unsuspend Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1152-1159" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1764,7 +1764,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_50_unsuspend-method-addressspace-definition"&gt;Table 50&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>Unsuspend Method</em>. <em>Unsuspend</em> has no input or output parameters and has no referenced <em>Objects</em> or <em>Variables</em>.</p>
+<p><a class="xref" href="#tbl_50" data-ref-type="table">Table 50</a> specifies the <em>AddressSpace</em> representation for the <em>Unsuspend Method</em>. <em>Unsuspend</em> has no input or output parameters and has no referenced <em>Objects</em> or <em>Variables</em>.</p>
 <figure class="table-wrap" id="tbl_50">
 <figcaption><span class="label">Table 50</span> Unsuspend Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1164-1169" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1785,7 +1785,7 @@
 <p><strong>Signature</strong></p>
 <pre><code>	Hold(
 	);</code></pre>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_51_hold-method-result-codes"&gt;Table 51&lt;/xref&gt;</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_51" data-ref-type="table">Table 51</a></p>
 <figure class="table-wrap" id="tbl_51">
 <figcaption><span class="label">Table 51</span> Hold Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1183-1190" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1801,7 +1801,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_52_hold-method-addressspace-definition"&gt;Table 52&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>Hold Method</em>. <em>Hold</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_52" data-ref-type="table">Table 52</a> specifies the <em>AddressSpace</em> representation for the <em>Hold Method</em>. <em>Hold</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_52">
 <figcaption><span class="label">Table 52</span> Hold Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1194-1199" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1818,7 +1818,7 @@
 </section>
 <section id="sec_6-7-15" class="clause">
 <h4><span class="label">6.7.15</span> RemoteCommand Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1202-1255" title="Open the source of this clause">&#128221;</a></h4>
-<p>This <em>Method</em> is used to issue a command to the UA <em>Server</em> that can then be passed on to any other internal system as illustrated in &lt;xref ref-type="fig" rid="fig_19_remote-command-and-internal-systems"&gt;Figure 19&lt;/xref&gt; or it can be used to pass information on to an upstream or downstream system as illustrated in &lt;xref ref-type="fig" rid="fig_20_remote-command-line-and-upstreamdownstream-systems"&gt;Figure 20&lt;/xref&gt;. In both cases, it is up to the UA <em>Server</em> and/or the underlying system to determine when the command is passed on.</p>
+<p>This <em>Method</em> is used to issue a command to the UA <em>Server</em> that can then be passed on to any other internal system as illustrated in <a class="xref" href="#fig_19" data-ref-type="fig">Figure 19</a> or it can be used to pass information on to an upstream or downstream system as illustrated in <a class="xref" href="#fig_20" data-ref-type="fig">Figure 20</a>. In both cases, it is up to the UA <em>Server</em> and/or the underlying system to determine when the command is passed on.</p>
 <figure class="figure" id="fig_19">
 <img class="figure-image" src="figures/fig_19_remote-command-and-internal-systems.png" alt="Remote Command and Internal systems">
 <figcaption><span class="label">Figure 19</span> Remote Command and Internal systems<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1206-1210" title="Open the source of this clause">&#128221;</a></figcaption>
@@ -1827,7 +1827,7 @@
 <img class="figure-image" src="figures/fig_20_remote-command-line-and-upstreamdownstream-systems.png" alt="Remote Command - Line and Upstream/Downstream systems">
 <figcaption><span class="label">Figure 20</span> Remote Command - Line and Upstream/Downstream systems<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1212-1216" title="Open the source of this clause">&#128221;</a></figcaption>
 </figure>
-<p>The <em>RemoteCommand</em> Method parameters are defined in&lt;bold&gt; &lt;/bold&gt;&lt;xref ref-type="table" rid="tbl_53_remotecommand-method-parameters"&gt;Table 53&lt;/xref&gt;</p>
+<p>The <em>RemoteCommand</em> Method parameters are defined in <a class="xref" href="#tbl_53" data-ref-type="table">Table 53</a></p>
 <p><strong>Signature</strong></p>
 <pre><code>	RemoteCommand(
 		[in] PackMLRemoteInterfaceDataType[] RemoteInterface
@@ -1839,11 +1839,11 @@
 <tr><th>Argument</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>RemoteInterface</td><td>This structure is an array of remote interface information which include Number, ControlCmdNumber, CmdValue and Parameter. Parameter itself is a structure formally defined in &lt;xref ref-type="sec" rid="sec_6-5-4_packmldescriptordatatype"&gt;6.5.4&lt;/xref&gt;. The PackMLRemoteInterfaceDataType is formally defined in &lt;xref ref-type="sec" rid="sec_6-5-7_packmlremoteinterfacedatatype"&gt;6.5.7&lt;/xref&gt;</td></tr>
+<tr><td>RemoteInterface</td><td>This structure is an array of remote interface information which include Number, ControlCmdNumber, CmdValue and Parameter. Parameter itself is a structure formally defined in <a class="xref" href="#sec_6-5-4" data-ref-type="sec">6.5.4</a>. The PackMLRemoteInterfaceDataType is formally defined in <a class="xref" href="#sec_6-5-7" data-ref-type="sec">6.5.7</a></td></tr>
 </tbody>
 </table>
 </figure>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_54_remotecommand-method-result-codes"&gt;Table 54&lt;/xref&gt;.</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_54" data-ref-type="table">Table 54</a>.</p>
 <figure class="table-wrap" id="tbl_54">
 <figcaption><span class="label">Table 54</span> RemoteCommand Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1234-1245" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1863,7 +1863,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_55_remotecommand-method-addressspace-definition"&gt;Table 55&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>RemoteCommand Method</em>. <em>RemoteCommand</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_53_remotecommand-method-parameters"&gt;Table 53&lt;/xref&gt;.</p>
+<p><a class="xref" href="#tbl_55" data-ref-type="table">Table 55</a> specifies the <em>AddressSpace</em> representation for the <em>RemoteCommand Method</em>. <em>RemoteCommand</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in <a class="xref" href="#tbl_53" data-ref-type="table">Table 53</a>.</p>
 <figure class="table-wrap" id="tbl_55">
 <figcaption><span class="label">Table 55</span> RemoteCommand Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1250-1255" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1880,7 +1880,7 @@
 </section>
 <section id="sec_6-7-16" class="clause">
 <h4><span class="label">6.7.16</span> SetInterlock Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1257-1299" title="Open the source of this clause">&#128221;</a></h4>
-<p>This <em>Method</em> allows an OPC UA <em>Client</em> to set an interlock associated with this PackML system parameter. The parameters for the <em>SetInterlock</em> <em>Method</em> are defined in &lt;xref ref-type="table" rid="tbl_56_setinterlock-method-parameters"&gt;Table 56&lt;/xref&gt;.</p>
+<p>This <em>Method</em> allows an OPC UA <em>Client</em> to set an interlock associated with this PackML system parameter. The parameters for the <em>SetInterlock</em> <em>Method</em> are defined in <a class="xref" href="#tbl_56" data-ref-type="table">Table 56</a>.</p>
 <p><strong>Signature</strong></p>
 <pre><code>	SetInterlock(
 	 	 [in] Int32 InterlockId,
@@ -1898,7 +1898,7 @@
 </tbody>
 </table>
 </figure>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_57_setinterlock-method-result-codes"&gt;Table 57&lt;/xref&gt;</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_57" data-ref-type="table">Table 57</a></p>
 <figure class="table-wrap" id="tbl_57">
 <figcaption><span class="label">Table 57</span> SetInterlock Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1278-1289" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1918,7 +1918,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_58_setinterlock-method-addressspace-definition"&gt;Table 58&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>SetInterlock Method</em>. <em>SetInterlock</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_56_setinterlock-method-parameters"&gt;Table 56&lt;/xref&gt;.</p>
+<p><a class="xref" href="#tbl_58" data-ref-type="table">Table 58</a> specifies the <em>AddressSpace</em> representation for the <em>SetInterlock Method</em>. <em>SetInterlock</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in <a class="xref" href="#tbl_56" data-ref-type="table">Table 56</a>.</p>
 <figure class="table-wrap" id="tbl_58">
 <figcaption><span class="label">Table 58</span> SetInterlock Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1294-1299" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1951,7 +1951,7 @@
 </tbody>
 </table>
 </figure>
-<p><em>Method</em> result codes are defined in &lt;xref ref-type="table" rid="tbl_60_setparameter-method-result-codes"&gt;Table 60&lt;/xref&gt;</p>
+<p><em>Method</em> result codes are defined in <a class="xref" href="#tbl_60" data-ref-type="table">Table 60</a></p>
 <figure class="table-wrap" id="tbl_60">
 <figcaption><span class="label">Table 60</span> SetParameter Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1319-1326" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1967,7 +1967,7 @@
 </tbody>
 </table>
 </figure>
-<p>&lt;xref ref-type="table" rid="tbl_61_setparameter-method-addressspace-definition"&gt;Table 61&lt;/xref&gt; specifies the <em>AddressSpace</em> representation for the <em>SetParameter Method</em>. <em>SetParameter</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_59_setparameter-method-parameters"&gt;Table 59&lt;/xref&gt;.</p>
+<p><a class="xref" href="#tbl_61" data-ref-type="table">Table 61</a> specifies the <em>AddressSpace</em> representation for the <em>SetParameter Method</em>. <em>SetParameter</em> includes an array of <em>InputArguments</em>, where the input argument details are provided in <a class="xref" href="#tbl_59" data-ref-type="table">Table 59</a>.</p>
 <figure class="table-wrap" id="tbl_61">
 <figcaption><span class="label">Table 61</span> SetParameter Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1332-1337" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1997,7 +1997,7 @@
 </section>
 <section id="sec_6-8-2-2" class="clause">
 <h5><span class="label">6.8.2.2</span> PackMLAlarmDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1352-1367" title="Open the source of this clause">&#128221;</a></h5>
-<p>The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in &lt;xref ref-type="table" rid="tbl_62_packmlalarmdatatype-structure"&gt;Table 62&lt;/xref&gt;.</p>
+<p>The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in <a class="xref" href="#tbl_62" data-ref-type="table">Table 62</a>.</p>
 <figure class="table-wrap" id="tbl_62">
 <figcaption><span class="label">Table 62</span> PackMLAlarmDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1357-1367" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -2555,7 +2555,7 @@ END_VAR</code></pre>
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"25a67d19500dae99c37aa5b30ddea2b67d0e6059","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"ea0b9a4ffbe2216ac9076bcb952c0aba9823d62b","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;

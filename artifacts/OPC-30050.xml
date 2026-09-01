@@ -810,7 +810,7 @@
             <p>All enumerations will end in "Enum", to clearly identify that it is an enumeration.</p>
           </list-item>
           <list-item>
-            <p>All base <italic>DataTypes</italic> (int32, float, …) used in the OPC UA server will be those defined in OPC UA, see &lt;xref ref-type="other" rid="ref_uapart6"&gt;<xref ref-type="bibr" rid="ref-uapart6">OPC 10000-6</xref>&lt;/xref&gt; for more detail on the representation of the datatypes. This specification is typically implemented in a PLC, &lt;xref ref-type="sec" rid="annex_c_datatype-non-normative"&gt;Annex C&lt;/xref&gt; provides a non-normative copy of the DataType mapping described in PLC Open</p>
+            <p>All base <italic>DataTypes</italic> (int32, float, …) used in the OPC UA server will be those defined in OPC UA, see <xref ref-type="bibr" rid="ref-uapart6">OPC 10000-6</xref> for more detail on the representation of the datatypes. This specification is typically implemented in a PLC, <xref ref-type="sec" rid="sec_B">Annex B</xref> provides a non-normative copy of the DataType mapping described in PLC Open</p>
           </list-item>
         </list>
         <fig id="fig_9">
@@ -826,7 +826,8 @@
       <sec id="sec_6-2">
         <label>6.2</label>
         <title>Instance AddressSpace</title>
-        <p>&lt;xref ref-type="fig" rid="fig_10_packml-object-instance-overview"&gt;Figure 10&lt;/xref&gt; provides an overview of the instance object model for PackML</p>
+        <p>
+          <xref ref-type="fig" rid="fig_10">Figure 10</xref> provides an overview of the instance object model for PackML</p>
         <fig id="fig_10">
           <label>Figure 10</label>
           <caption>
@@ -834,8 +835,8 @@
           </caption>
           <graphic xlink:href="fig_10_packml-object-instance-overview.png" alt="PackML Object Instance Overview" mimetype="image/png" />
         </fig>
-        <p>The OPC UA Server shall have a PackMLObjects folder under the OPC defined <italic>Objects</italic> folder on a UA <italic>Server</italic>. This folder shall contain one or more instances of <italic>PackMLBaseObjectType</italic> (see &lt;xref ref-type="sec" rid="sec_6-3-2_packmlbaseobjecttype"&gt;6.3.2&lt;/xref&gt; for definition of <italic>PackMLBaseObjectType</italic>). A single OPC UA <italic>Server</italic> might contain a single instance of a PackML system or it might contain multiple PackML systems.</p>
-        <p>The <italic>PackMLObjects</italic> node is formally defined in &lt;xref ref-type="table" rid="tbl_2_packmlobjects-definition"&gt;Table 2&lt;/xref&gt;.</p>
+        <p>The OPC UA Server shall have a PackMLObjects folder under the OPC defined <italic>Objects</italic> folder on a UA <italic>Server</italic>. This folder shall contain one or more instances of <italic>PackMLBaseObjectType</italic> (see <xref ref-type="sec" rid="sec_6-3-2">6.3.2</xref> for definition of <italic>PackMLBaseObjectType</italic>). A single OPC UA <italic>Server</italic> might contain a single instance of a PackML system or it might contain multiple PackML systems.</p>
+        <p>The <italic>PackMLObjects</italic> node is formally defined in <xref ref-type="table" rid="tbl_2">Table 2</xref>.</p>
         <table-wrap id="tbl_2">
           <label>Table 2</label>
           <caption>
@@ -889,7 +890,7 @@
         <sec id="sec_6-3-1">
           <label>6.3.1</label>
           <title>Overview</title>
-          <p>The PackML model when adapted to OPC UA results in a number of <italic>StateMachines</italic> (see section &lt;xref ref-type="sec" rid="sec_6-3-5_statemachines-overview"&gt;6.3.5&lt;/xref&gt; for a definition). Instances of these <italic>StateMachines</italic> may not expose all states and transitions at all times. The actual list of <italic>AvailableStates</italic> and <italic>AvailableTransitions</italic> are configured and each instance would be defined by either the end user or the machine builder. The PackML model also includes other meta data such as available mode, current mode, see section &lt;xref ref-type="sec" rid="sec_6-3-2_packmlbaseobjecttype"&gt;6.3.2&lt;/xref&gt; for a complete list</p>
+          <p>The PackML model when adapted to OPC UA results in a number of <italic>StateMachines</italic> (see section <xref ref-type="sec" rid="sec_6-3-5">6.3.5</xref> for a definition). Instances of these <italic>StateMachines</italic> may not expose all states and transitions at all times. The actual list of <italic>AvailableStates</italic> and <italic>AvailableTransitions</italic> are configured and each instance would be defined by either the end user or the machine builder. The PackML model also includes other meta data such as available mode, current mode, see section <xref ref-type="sec" rid="sec_6-3-2">6.3.2</xref> for a complete list</p>
         </sec>
         <sec id="sec_6-3-2">
           <label>6.3.2</label>
@@ -902,7 +903,8 @@
             </caption>
             <graphic xlink:href="fig_11_packmlbaseobjecttype-overview.png" alt="PackMLBaseObjectType Overview" mimetype="image/png" />
           </fig>
-          <p>&lt;xref ref-type="table" rid="tbl_3_packmlbaseobjecttype-definition"&gt;Table 3&lt;/xref&gt; formally defines the <italic>PackMLBaseObjectType</italic>.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_3">Table 3</xref> formally defines the <italic>PackMLBaseObjectType</italic>.</p>
           <table-wrap id="tbl_3">
             <label>Table 3</label>
             <caption>
@@ -1033,25 +1035,25 @@
           <p>
             <italic>PackMLVersion</italic> - provides the version of the supported OMAC PackML</p>
           <p>
-            <italic>Admin</italic> provides administrative functionality required for the PackML OPC UA server. It is defined in section &lt;xref ref-type="sec" rid="sec_6-3-4_packmladminobjecttype"&gt;6.3.4&lt;/xref&gt;. The administrative functionality exposed by this <italic>Object</italic> should be restricted to only users with administrative rights.</p>
+            <italic>Admin</italic> provides administrative functionality required for the PackML OPC UA server. It is defined in section <xref ref-type="sec" rid="sec_6-3-4">6.3.4</xref>. The administrative functionality exposed by this <italic>Object</italic> should be restricted to only users with administrative rights.</p>
           <p>
-            <italic>Status</italic> provides the status information required for a PackML OPC UA <italic>Server</italic>. It is defined in section &lt;xref ref-type="sec" rid="sec_6-3-3_packmlstatusobjecttype"&gt;6.3.3&lt;/xref&gt;.</p>
+            <italic>Status</italic> provides the status information required for a PackML OPC UA <italic>Server</italic>. It is defined in section <xref ref-type="sec" rid="sec_6-3-3">6.3.3</xref>.</p>
           <p>
-            <italic>SetUnitMode</italic> method allows an OPC UA <italic>Client</italic> to change the mode of the machine. The available modes are part of the supported Modes and a <italic>Client</italic> can pass any of the values listed. The <italic>Method</italic> may return an error if the requested mode is not allowed based on either the current mode of the machine or the state of the machine. For additional details see the definition of the <italic>SetUnitMode</italic> <italic>Method</italic> in &lt;xref ref-type="sec" rid="sec_6-7-2_setunitmode-method"&gt;6.7.2&lt;/xref&gt;</p>
+            <italic>SetUnitMode</italic> method allows an OPC UA <italic>Client</italic> to change the mode of the machine. The available modes are part of the supported Modes and a <italic>Client</italic> can pass any of the values listed. The <italic>Method</italic> may return an error if the requested mode is not allowed based on either the current mode of the machine or the state of the machine. For additional details see the definition of the <italic>SetUnitMode</italic> <italic>Method</italic> in <xref ref-type="sec" rid="sec_6-7-2">6.7.2</xref></p>
           <p>
             <italic>SetMachSpeed</italic> <italic>Method</italic> allows a <italic>Client</italic> to change the machine speed.</p>
           <p>
-            <italic>SetProduct</italic> <italic>Method</italic> allows a <italic>Client</italic> to change the product(s) and the <italic>ProcessVariables</italic> and Ingredients. For additional details see the definition of <italic>SetProduct</italic> <italic>Method</italic> in &lt;xref ref-type="sec" rid="sec_6-7-4_setproduct-method"&gt;6.7.4&lt;/xref&gt;.</p>
+            <italic>SetProduct</italic> <italic>Method</italic> allows a <italic>Client</italic> to change the product(s) and the <italic>ProcessVariables</italic> and Ingredients. For additional details see the definition of <italic>SetProduct</italic> <italic>Method</italic> in <xref ref-type="sec" rid="sec_6-7-4">6.7.4</xref>.</p>
           <p>
-            <italic>SetParameter</italic> <italic>Method</italic> allows a <italic>Client</italic> to set the parameters for the machine. For additional details see the definition of SetParameter <italic>Method</italic> in &lt;xref ref-type="sec" rid="sec_6-7-17_setparameter-method"&gt;6.7.17&lt;/xref&gt;.</p>
+            <italic>SetParameter</italic> <italic>Method</italic> allows a <italic>Client</italic> to set the parameters for the machine. For additional details see the definition of SetParameter <italic>Method</italic> in <xref ref-type="sec" rid="sec_6-7-17">6.7.17</xref>.</p>
           <p>
-            <italic>RemoteCommand</italic> <italic>Method</italic> allows a <italic>Client</italic> to send a command to the UA <italic>Server</italic> that is to be passed to the PackML <italic>Server</italic> and or upstream or downstream <italic>Servers</italic>. Parameters sent to the Remote system are typically used in the EXECUTE and STARTING states for a production task. With the restriction that <italic>RemoteCommand</italic> Parameter Values are limited to REAL values. For additional details see the definition of the <italic>RemoteCommand</italic> <italic>Method</italic> in &lt;xref ref-type="sec" rid="sec_6-7-15_remotecommand-method"&gt;6.7.15&lt;/xref&gt;</p>
-          <p>SetInterlock method allows a <italic>Client</italic> to set one of the interlocks associated with the system.  For additional details see the definition of the SetInterlock <italic>Method</italic> in &lt;xref ref-type="sec" rid="sec_6-7-16_setinterlock-method"&gt;6.7.16&lt;/xref&gt;</p>
+            <italic>RemoteCommand</italic> <italic>Method</italic> allows a <italic>Client</italic> to send a command to the UA <italic>Server</italic> that is to be passed to the PackML <italic>Server</italic> and or upstream or downstream <italic>Servers</italic>. Parameters sent to the Remote system are typically used in the EXECUTE and STARTING states for a production task. With the restriction that <italic>RemoteCommand</italic> Parameter Values are limited to REAL values. For additional details see the definition of the <italic>RemoteCommand</italic> <italic>Method</italic> in <xref ref-type="sec" rid="sec_6-7-15">6.7.15</xref></p>
+          <p>SetInterlock method allows a <italic>Client</italic> to set one of the interlocks associated with the system.  For additional details see the definition of the SetInterlock <italic>Method</italic> in <xref ref-type="sec" rid="sec_6-7-16">6.7.16</xref></p>
         </sec>
         <sec id="sec_6-3-3">
           <label>6.3.3</label>
           <title>PackMLStatusObjectType</title>
-          <p>The <italic>PackMLStatusObjectType</italic> defines an <italic>ObjectType</italic> that is used to group all of the status information that is part of the PackML information model. It is illustrated in &lt;xref ref-type="fig" rid="fig_12_packmlstatusobjecttype-overview"&gt;Figure 12&lt;/xref&gt;</p>
+          <p>The <italic>PackMLStatusObjectType</italic> defines an <italic>ObjectType</italic> that is used to group all of the status information that is part of the PackML information model. It is illustrated in <xref ref-type="fig" rid="fig_12">Figure 12</xref></p>
           <fig id="fig_12">
             <label>Figure 12</label>
             <caption>
@@ -1059,7 +1061,8 @@
             </caption>
             <graphic xlink:href="fig_12_packmlstatusobjecttype-overview.png" alt="PackMLStatusObjectType Overview" mimetype="image/png" />
           </fig>
-          <p>&lt;xref ref-type="table" rid="tbl_4_packmlstatusobjecttype-definition"&gt;Table 4&lt;/xref&gt; formally defines the <italic>PackMLStatusObjectType</italic>.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_4">Table 4</xref> formally defines the <italic>PackMLStatusObjectType</italic>.</p>
           <table-wrap id="tbl_4">
             <label>Table 4</label>
             <caption>
@@ -1231,7 +1234,7 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>In OPC UA defined <italic>StateMachines</italic>, a mandatory <italic>Variable</italic> <italic>CurrentState</italic> provides the current state of the <italic>StateMachine</italic>, which is the current state of the PackML device. <italic>CurrentState</italic> is defined in &lt;xref ref-type="other" rid="ref_uapart5"&gt;<xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>&lt;/xref&gt;.</p>
+          <p>In OPC UA defined <italic>StateMachines</italic>, a mandatory <italic>Variable</italic> <italic>CurrentState</italic> provides the current state of the <italic>StateMachine</italic>, which is the current state of the PackML device. <italic>CurrentState</italic> is defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</p>
           <p>
             <italic>UnitModeRequested</italic> - If TRUE, indicates that a unit mode change was requested, reflects the status of the Command UnitModeRequested.</p>
           <p>
@@ -1259,14 +1262,14 @@
           <p>
             <italic>Parameter</italic> - Current parameters used in the production job. This reflects the last parameter sent via the <italic>SetParameter</italic> <italic>Method</italic>.</p>
           <p>
-            <italic>RemoteParameter</italic> - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the <italic>RemoteCommand</italic> <italic>Method</italic> is provided this variable shall also be provided. For additional details see the <italic>RemoteCommand</italic> <italic>Method</italic> definition in &lt;xref ref-type="sec" rid="sec_6-7-15_remotecommand-method"&gt;6.7.15&lt;/xref&gt;.</p>
+            <italic>RemoteParameter</italic> - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the <italic>RemoteCommand</italic> <italic>Method</italic> is provided this variable shall also be provided. For additional details see the <italic>RemoteCommand</italic> <italic>Method</italic> definition in <xref ref-type="sec" rid="sec_6-7-15">6.7.15</xref>.</p>
           <p>
             <italic>Product</italic> - provides a list of the products supported by this machine. The array is typically needed for machines that run multiple products. It defines the IDs of the products and process &amp;amp; process variables associated with the product. The product data can come from either a local HMI or remote systems and are used to process the product on the unit machine.</p>
         </sec>
         <sec id="sec_6-3-4">
           <label>6.3.4</label>
           <title>PackMLAdminObjectType</title>
-          <p>The <italic>PackMLAdminObjectType</italic> defines an <italic>ObjectType</italic> that is used to group all of the Admin information that is part of the PackML information model. It is illustrated in &lt;xref ref-type="fig" rid="fig_13_packmladminobjecttype-overview"&gt;Figure 13&lt;/xref&gt;.</p>
+          <p>The <italic>PackMLAdminObjectType</italic> defines an <italic>ObjectType</italic> that is used to group all of the Admin information that is part of the PackML information model. It is illustrated in <xref ref-type="fig" rid="fig_13">Figure 13</xref>.</p>
           <fig id="fig_13">
             <label>Figure 13</label>
             <caption>
@@ -1274,7 +1277,8 @@
             </caption>
             <graphic xlink:href="fig_13_packmladminobjecttype-overview.png" alt="PackMLAdminObjectType Overview" mimetype="image/png" />
           </fig>
-          <p>&lt;xref ref-type="table" rid="tbl_5_packmladminobjecttype-definition"&gt;Table 5&lt;/xref&gt; formally defines the PackMLAdminObjectType.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_5">Table 5</xref> formally defines the PackMLAdminObjectType.</p>
           <table-wrap id="tbl_5">
             <label>Table 5</label>
             <caption>
@@ -1536,7 +1540,8 @@
         <sec id="sec_6-3-5">
           <label>6.3.5</label>
           <title>StateMachines Overview</title>
-          <p>The &lt;xref ref-type="fig" rid="fig_14_packml-statemachines-overview"&gt;Figure 14&lt;/xref&gt; provides an overview of the <italic>StateMachines</italic> that are part of the model.</p>
+          <p>
+            <xref ref-type="fig" rid="fig_14">Figure 14</xref> provides an overview of the <italic>StateMachines</italic> that are part of the model.</p>
           <fig id="fig_14">
             <label>Figure 14</label>
             <caption>
@@ -1544,7 +1549,7 @@
             </caption>
             <graphic xlink:href="fig_14_packml-statemachines-overview.png" alt="PackML StateMachines Overview" mimetype="image/png" />
           </fig>
-          <p>A key point in PackML <italic>StateMachines</italic> is that all of the <italic>StateMachines *defined in PackML shall require that the optional *AvailableTransitions</italic> and <italic>AvailableStates</italic> component of the FiniteStateMachineType be provided on all instance of the <italic>StateMachine</italic>. This allows <italic>Clients</italic> to understand the available <italic>States</italic> and <italic>Transitions</italic> for the given instance of the <italic>StateMachine</italic>. A <italic>StateMachine</italic> may restrict the <italic>States</italic> and <italic>Transition</italic> that are currently available. The following figure provides an overview of the PackML States. The Stopped <italic>State</italic> is commonly the initial sub-state that will be the starting point for the <italic>Cleared</italic> parent state. The <italic>Running</italic> <italic>State</italic> commonly will use the <italic>Resetting</italic> <italic>State</italic> as the initial state, but not all instance of the <italic>Running</italic> <italic>State</italic> sub-state model will include <italic>Resetting</italic>, so no initial state is defined for the <italic>Running</italic> <italic>State</italic>. The proposed valid initial <italic>States</italic> for this model are the <italic>Idle</italic> or <italic>Resetting</italic> <italic>States.</italic> This is <italic>Server</italic> dependant. The initial state for the system is Aborted. Alternative it could be Cleared as parent state with the proposal of Stopped as initial sub state. &lt;xref ref-type="fig" rid="fig_15_packml-states"&gt;Figure 15 - PackML States&lt;/xref&gt; provide an overview of the states and transitions in the <italic>StateMachine. *The model refers to the PackML state model Version 2015. The dashed lines for the Hold transitions are optional extensions of the state model</italic></p>
+          <p>A key point in PackML <italic>StateMachines</italic> is that all of the <italic>StateMachines *defined in PackML shall require that the optional *AvailableTransitions</italic> and <italic>AvailableStates</italic> component of the FiniteStateMachineType be provided on all instance of the <italic>StateMachine</italic>. This allows <italic>Clients</italic> to understand the available <italic>States</italic> and <italic>Transitions</italic> for the given instance of the <italic>StateMachine</italic>. A <italic>StateMachine</italic> may restrict the <italic>States</italic> and <italic>Transition</italic> that are currently available. The following figure provides an overview of the PackML States. The Stopped <italic>State</italic> is commonly the initial sub-state that will be the starting point for the <italic>Cleared</italic> parent state. The <italic>Running</italic> <italic>State</italic> commonly will use the <italic>Resetting</italic> <italic>State</italic> as the initial state, but not all instance of the <italic>Running</italic> <italic>State</italic> sub-state model will include <italic>Resetting</italic>, so no initial state is defined for the <italic>Running</italic> <italic>State</italic>. The proposed valid initial <italic>States</italic> for this model are the <italic>Idle</italic> or <italic>Resetting</italic> <italic>States.</italic> This is <italic>Server</italic> dependant. The initial state for the system is Aborted. Alternative it could be Cleared as parent state with the proposal of Stopped as initial sub state. <xref ref-type="fig" rid="fig_15">Figure 15</xref> provide an overview of the states and transitions in the <italic>StateMachine. *The model refers to the PackML state model Version 2015. The dashed lines for the Hold transitions are optional extensions of the state model</italic></p>
           <fig id="fig_15">
             <label>Figure 15</label>
             <caption>
@@ -1556,7 +1561,7 @@
         <sec id="sec_6-3-6">
           <label>6.3.6</label>
           <title>PackMLBaseStateMachineType</title>
-          <p>The <italic>PackMLBaseStateMachineType</italic> is the top level <italic>StateMachine</italic> for PackML. It is illustrated in &lt;xref ref-type="fig" rid="fig_16_packmlbasestatemachinetype-illustration"&gt;Figure 16&lt;/xref&gt;. The TR-88 specification does not define an initial <italic>State</italic> for this <italic>StateMachine</italic>, but typically the state machine uses either the <italic>Aborted</italic> or Stopped <italic>State</italic> as an initial <italic>State</italic>. &lt;xref ref-type="sec" rid="annex_b_informative-recommended-localized-names"&gt;Annex B&lt;/xref&gt; provide recommended display names for the various states.</p>
+          <p>The <italic>PackMLBaseStateMachineType</italic> is the top level <italic>StateMachine</italic> for PackML. It is illustrated in <xref ref-type="fig" rid="fig_16">Figure 16</xref>. The TR-88 specification does not define an initial <italic>State</italic> for this <italic>StateMachine</italic>, but typically the state machine uses either the <italic>Aborted</italic> or Stopped <italic>State</italic> as an initial <italic>State</italic>. <xref ref-type="sec" rid="sec_A">Annex A</xref> provide recommended display names for the various states.</p>
           <fig id="fig_16">
             <label>Figure 16</label>
             <caption>
@@ -1564,7 +1569,7 @@
             </caption>
             <graphic xlink:href="fig_16_packmlbasestatemachinetype-illustration.png" alt="PackMLBaseStateMachineType illustration" mimetype="image/png" />
           </fig>
-          <p>The <italic>PackMLBaseStateMachineType</italic> defines the available states in a PackML system. The type is defined in &lt;xref ref-type="table" rid="tbl_6_packmlbasestatemachinetype-definition"&gt;Table 6&lt;/xref&gt;.* StateTypes* and <italic>TransitionTypes</italic> only exist in the type system, thus they do not have a modelling rule.</p>
+          <p>The <italic>PackMLBaseStateMachineType</italic> defines the available states in a PackML system. The type is defined in <xref ref-type="table" rid="tbl_6">Table 6</xref>.* StateTypes* and <italic>TransitionTypes</italic> only exist in the type system, thus they do not have a modelling rule.</p>
           <table-wrap id="tbl_6">
             <label>Table 6</label>
             <caption>
@@ -1690,12 +1695,13 @@
           <p>
             <italic>Cleared</italic> - this state exposes the MachineState sub StateMachine and state associated with this substate machine. The value of this <italic>StateType</italic> is 19.</p>
           <p>
-            <italic>MachineState</italic> - A PackMLMachineStateMachineType defined in section &lt;xref ref-type="sec" rid="sec_6-3-7_packmlmachinestatemachinetype"&gt;6.3.7&lt;/xref&gt;.</p>
+            <italic>MachineState</italic> - A PackMLMachineStateMachineType defined in section <xref ref-type="sec" rid="sec_6-3-7">6.3.7</xref>.</p>
           <p>
-            <italic>Abort</italic> - a <italic>Method</italic> to trigger a change of state to <italic>Aborting</italic>. This will affect all sub-states in cleared state. Defined in &lt;xref ref-type="sec" rid="sec_6-7-5_abort-method"&gt;6.7.5&lt;/xref&gt;.</p>
+            <italic>Abort</italic> - a <italic>Method</italic> to trigger a change of state to <italic>Aborting</italic>. This will affect all sub-states in cleared state. Defined in <xref ref-type="sec" rid="sec_6-7-5">6.7.5</xref>.</p>
           <p>
-            <italic>Clear</italic> - a <italic>Method</italic> to trigger a change of state to the <italic>Cleared. *Defined in</italic> <italic>&lt;xref ref-type="sec" rid="sec_6-7-6_clear-method"&gt;</italic>6.7.6<italic>&lt;/xref&gt;</italic>.*</p>
-          <p>&lt;xref ref-type="table" rid="tbl_7_packmlbasestatemachinetype-additional-references"&gt;Table 7&lt;/xref&gt; defines the available <italic>Transitions</italic> in the PackMLBaseStateMachineType.</p>
+            <italic>Clear</italic> - a <italic>Method</italic> to trigger a change of state to the <italic>Cleared. Defined in </italic><xref ref-type="sec" rid="sec_6-7-6">6.7.6</xref>.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_7">Table 7</xref> defines the available <italic>Transitions</italic> in the PackMLBaseStateMachineType.</p>
           <table-wrap id="tbl_7">
             <label>Table 7</label>
             <caption>
@@ -1766,8 +1772,8 @@
         <sec id="sec_6-3-7">
           <label>6.3.7</label>
           <title>PackMLMachineStateMachineType</title>
-          <p>The <italic>PackMLMachineStateMachineType</italic> defines the machine level state machine. It is illustrated in &lt;xref ref-type="fig" rid="fig_17_packmlmachinestatemachinetype-illustration"&gt;Figure 17&lt;/xref&gt;.</p>
-          <p>The TR-88 specification does not define an initial <italic>State</italic> for this <italic>StateMachine</italic>, but typically the state machine uses <italic>Stopped</italic> <italic>State</italic> as an initial <italic>State</italic>. &lt;xref ref-type="sec" rid="annex_b_informative-recommended-localized-names"&gt;Annex B&lt;/xref&gt; provides recommended display names for the various states.</p>
+          <p>The <italic>PackMLMachineStateMachineType</italic> defines the machine level state machine. It is illustrated in <xref ref-type="fig" rid="fig_17">Figure 17</xref>.</p>
+          <p>The TR-88 specification does not define an initial <italic>State</italic> for this <italic>StateMachine</italic>, but typically the state machine uses <italic>Stopped</italic> <italic>State</italic> as an initial <italic>State</italic>. <xref ref-type="sec" rid="sec_A">Annex A</xref> provides recommended display names for the various states.</p>
           <fig id="fig_17">
             <label>Figure 17</label>
             <caption>
@@ -1775,7 +1781,8 @@
             </caption>
             <graphic xlink:href="fig_17_packmlmachinestatemachinetype-illustration.png" alt="PackMLMachineStateMachineType illustration" mimetype="image/png" />
           </fig>
-          <p>&lt;xref ref-type="table" rid="tbl_8_packmlmachinestatemachinetype-definition"&gt;Table 8&lt;/xref&gt; defines the <italic>PackMLMachineStateMachineType</italic>. <italic>StateTypes</italic> and <italic>TransitionTypes</italic> only exist in the type system, thus they do not have a modelling rule.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_8">Table 8</xref> defines the <italic>PackMLMachineStateMachineType</italic>. <italic>StateTypes</italic> and <italic>TransitionTypes</italic> only exist in the type system, thus they do not have a modelling rule.</p>
           <table-wrap id="tbl_8">
             <label>Table 8</label>
             <caption>
@@ -1919,10 +1926,10 @@
           <p>
             <italic>ExecuteState</italic> - <italic>StateMachine</italic> that provides additional sub states.</p>
           <p>
-            <italic>Stop</italic> - A <italic>Method</italic> to trigger a change of state to <italic>Stopping</italic>. This will affect all sub-states in <italic>Run</italic> state. Defined in &lt;xref ref-type="sec" rid="sec_6-7-7_stop-method"&gt;6.7.7&lt;/xref&gt;</p>
+            <italic>Stop</italic> - A <italic>Method</italic> to trigger a change of state to <italic>Stopping</italic>. This will affect all sub-states in <italic>Run</italic> state. Defined in <xref ref-type="sec" rid="sec_6-7-7">6.7.7</xref></p>
           <p>
-            <italic>Reset</italic> - A <italic>Method</italic> to trigger a change of state to <italic>Running, *enabling all of the sub-states of *Running</italic> and the respective <italic>Methods</italic> that they expose. Defined in &lt;xref ref-type="sec" rid="sec_6-7-8_reset-method"&gt;6.7.8&lt;/xref&gt;</p>
-          <p>The transitions are defined in &lt;xref ref-type="table" rid="tbl_9_packmlmachinestatemachinetype-additional-references"&gt;Table 9&lt;/xref&gt;.</p>
+            <italic>Reset</italic> - A <italic>Method</italic> to trigger a change of state to <italic>Running, *enabling all of the sub-states of *Running</italic> and the respective <italic>Methods</italic> that they expose. Defined in <xref ref-type="sec" rid="sec_6-7-8">6.7.8</xref></p>
+          <p>The transitions are defined in <xref ref-type="table" rid="tbl_9">Table 9</xref>.</p>
           <table-wrap id="tbl_9">
             <label>Table 9</label>
             <caption>
@@ -2005,7 +2012,7 @@
         <sec id="sec_6-3-8">
           <label>6.3.8</label>
           <title>PackMLExecuteStateMachineType</title>
-          <p>The <italic>PackMLExecuteStateMachineType</italic> provides all of the base states defined in PackML. It is illustrated in &lt;xref ref-type="fig" rid="fig_18_packmlexecutestatemachinetype-illustration"&gt;Figure 18&lt;/xref&gt;. The TR-88 specification does not define an initial State for this StateMachine, but typically the state machine use either the <italic>Idle</italic> or <italic>Resetting</italic> <italic>State</italic> as an initial <italic>State</italic>. &lt;xref ref-type="sec" rid="annex_b_informative-recommended-localized-names"&gt;Annex B&lt;/xref&gt; provide recommended display names for the various states.</p>
+          <p>The <italic>PackMLExecuteStateMachineType</italic> provides all of the base states defined in PackML. It is illustrated in <xref ref-type="fig" rid="fig_18">Figure 18</xref>. The TR-88 specification does not define an initial State for this StateMachine, but typically the state machine use either the <italic>Idle</italic> or <italic>Resetting</italic> <italic>State</italic> as an initial <italic>State</italic>. <xref ref-type="sec" rid="sec_A">Annex A</xref> provide recommended display names for the various states.</p>
           <fig id="fig_18">
             <label>Figure 18</label>
             <caption>
@@ -2013,7 +2020,7 @@
             </caption>
             <graphic xlink:href="fig_18_packmlexecutestatemachinetype-illustration.png" alt="PackMLExecuteStateMachineType illustration" mimetype="image/png" />
           </fig>
-          <p>The <italic>PackMLExecuteStateMachineType</italic> is defined in &lt;xref ref-type="table" rid="tbl_10_packmlexecutestatemachinetype-definition"&gt;Table 10&lt;/xref&gt;. <italic>StateTypes</italic> and <italic>TransitionTypes</italic> only exist in the type system, thus they do not have a modelling rule.</p>
+          <p>The <italic>PackMLExecuteStateMachineType</italic> is defined in <xref ref-type="table" rid="tbl_10">Table 10</xref>. <italic>StateTypes</italic> and <italic>TransitionTypes</italic> only exist in the type system, thus they do not have a modelling rule.</p>
           <table-wrap id="tbl_10">
             <label>Table 10</label>
             <caption>
@@ -2364,7 +2371,7 @@
             <italic>Completing</italic>: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from <italic>Execute</italic> to <italic>Completing</italic>. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to <italic>Complete</italic> state. The value of this <italic>StateType</italic> is 16.</p>
           <p>
             <italic>Complete</italic>: <italic>Complete</italic> indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a <italic>Reset</italic> command is issued (in which case it will transition to <italic>Resetting</italic>), or until the unit/machine is <italic>Stopped</italic> or <italic>Aborted</italic>. The value of this <italic>StateType</italic> is 17.</p>
-          <p>The <italic>Transitions</italic> are described in &lt;xref ref-type="table" rid="tbl_11_packmlexecutestatemachinetype-additional-references"&gt;Table 11&lt;/xref&gt;. This <italic>FiniteStateMachine</italic> also supports six <italic>Method</italic>s, for transitioning between states. This <italic>StateMachine</italic> includes transition to Holding from Unholding, <italic>Starting</italic>, <italic>Unsuspending</italic>, <italic>Suspended</italic>, <italic>Suspending</italic>, all of which are extension to the &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt; specification.</p>
+          <p>The <italic>Transitions</italic> are described in <xref ref-type="table" rid="tbl_11">Table 11</xref>. This <italic>FiniteStateMachine</italic> also supports six <italic>Method</italic>s, for transitioning between states. This <italic>StateMachine</italic> includes transition to Holding from Unholding, <italic>Starting</italic>, <italic>Unsuspending</italic>, <italic>Suspended</italic>, <italic>Suspending</italic>, all of which are extension to the <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref> specification.</p>
           <table-wrap id="tbl_11">
             <label>Table 11</label>
             <caption>
@@ -2702,7 +2709,7 @@
         <sec id="sec_6-5-2">
           <label>6.5.2</label>
           <title>ProductionMaintenanceModeEnum</title>
-          <p>The <italic>ProductionMaintenanceModeEnum</italic> describes the predefined modes. This is a default mode enumeration. A <italic>Server</italic> may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The <italic>ProductionMaintenanceModeEnum</italic> is defined in &lt;xref ref-type="table" rid="tbl_12_productionmaintenancemodeenum-values"&gt;Table 12&lt;/xref&gt;.</p>
+          <p>The <italic>ProductionMaintenanceModeEnum</italic> describes the predefined modes. This is a default mode enumeration. A <italic>Server</italic> may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The <italic>ProductionMaintenanceModeEnum</italic> is defined in <xref ref-type="table" rid="tbl_12">Table 12</xref>.</p>
           <table-wrap id="tbl_12">
             <label>Table 12</label>
             <caption>
@@ -2748,7 +2755,7 @@
         <sec id="sec_6-5-3">
           <label>6.5.3</label>
           <title>PackMLCountDataType</title>
-          <p>The <italic>PackMLCountDataType</italic> is used to generate summary information about the system.  The information depending on the use might be related to produced product, defective materials or any other information that needs to be tracked. It is formally defined in &lt;xref ref-type="table" rid="tbl_13_packmlcountdatatype-structure"&gt;Table 13&lt;/xref&gt;</p>
+          <p>The <italic>PackMLCountDataType</italic> is used to generate summary information about the system.  The information depending on the use might be related to produced product, defective materials or any other information that needs to be tracked. It is formally defined in <xref ref-type="table" rid="tbl_13">Table 13</xref></p>
           <table-wrap id="tbl_13">
             <label>Table 13</label>
             <caption>
@@ -2799,7 +2806,7 @@
         <sec id="sec_6-5-4">
           <label>6.5.4</label>
           <title>PackMLDescriptorDataType</title>
-          <p>The <italic>PackMLDescriptorDataType</italic> provides the PackML Parameter structure. The <italic>PackMLDescriptorDataType</italic> is formally defined in &lt;xref ref-type="table" rid="tbl_14_packmldescriptordatatype-structure"&gt;Table 14&lt;/xref&gt;</p>
+          <p>The <italic>PackMLDescriptorDataType</italic> provides the PackML Parameter structure. The <italic>PackMLDescriptorDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_14">Table 14</xref></p>
           <table-wrap id="tbl_14">
             <label>Table 14</label>
             <caption>
@@ -2845,7 +2852,7 @@
         <sec id="sec_6-5-5">
           <label>6.5.5</label>
           <title>PackMLIngredientsDataType</title>
-          <p>The <italic>PackMLIngredientsDataType</italic> provides the PackML Parameter structure. The <italic>PackMLIngredientsDataType</italic> is formally defined in &lt;xref ref-type="table" rid="tbl_15_packmlingredientsdatatype-structure"&gt;Table 15&lt;/xref&gt;.</p>
+          <p>The <italic>PackMLIngredientsDataType</italic> provides the PackML Parameter structure. The <italic>PackMLIngredientsDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_15">Table 15</xref>.</p>
           <table-wrap id="tbl_15">
             <label>Table 15</label>
             <caption>
@@ -2881,7 +2888,7 @@
         <sec id="sec_6-5-6">
           <label>6.5.6</label>
           <title>PackMLProductDataType</title>
-          <p>The <italic>PackMLProductDataType</italic> provides the PackML product information. The <italic>PackMLProductDataType</italic> is formally defined in &lt;xref ref-type="table" rid="tbl_16_packmlproductdatatype-structure"&gt;Table 16&lt;/xref&gt;.</p>
+          <p>The <italic>PackMLProductDataType</italic> provides the PackML product information. The <italic>PackMLProductDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_16">Table 16</xref>.</p>
           <table-wrap id="tbl_16">
             <label>Table 16</label>
             <caption>
@@ -2922,7 +2929,7 @@
         <sec id="sec_6-5-7">
           <label>6.5.7</label>
           <title>PackMLRemoteInterfaceDataType</title>
-          <p>The <italic>PackMLRemoteInterfaceDataType</italic> provides the PackML remote connection information. The <italic>PackMLRemoteInterfaceDataType</italic> is formally defined in &lt;xref ref-type="table" rid="tbl_17_packmlremoteinterfacedatatype-structure"&gt;Table 17&lt;/xref&gt;.</p>
+          <p>The <italic>PackMLRemoteInterfaceDataType</italic> provides the PackML remote connection information. The <italic>PackMLRemoteInterfaceDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_17">Table 17</xref>.</p>
           <table-wrap id="tbl_17">
             <label>Table 17</label>
             <caption>
@@ -2973,7 +2980,7 @@
         <sec id="sec_6-6-1">
           <label>6.6.1</label>
           <title>HasInterlock</title>
-          <p>This reference type is used to point to an Interlock. It is defined in &lt;xref ref-type="table" rid="tbl_18_hasinterlock-reference-type"&gt;Table 18&lt;/xref&gt;</p>
+          <p>This reference type is used to point to an Interlock. It is defined in <xref ref-type="table" rid="tbl_18">Table 18</xref></p>
           <table-wrap id="tbl_18">
             <label>Table 18</label>
             <caption>
@@ -3022,7 +3029,7 @@
         <sec id="sec_6-6-2">
           <label>6.6.2</label>
           <title>HasAlarm</title>
-          <p>This reference type is used to point to an Alarm. It is defined in &lt;xref ref-type="table" rid="tbl_19_hasalarm-reference-type"&gt;Table 19&lt;/xref&gt;.</p>
+          <p>This reference type is used to point to an Alarm. It is defined in <xref ref-type="table" rid="tbl_19">Table 19</xref>.</p>
           <table-wrap id="tbl_19">
             <label>Table 19</label>
             <caption>
@@ -3071,7 +3078,7 @@
         <sec id="sec_6-6-3">
           <label>6.6.3</label>
           <title>HasAlarmHistory</title>
-          <p>This reference type is used to point to an Alarm History. It is defined in &lt;xref ref-type="table" rid="tbl_20_hasalarmhistory-reference-type"&gt;Table 20&lt;/xref&gt;</p>
+          <p>This reference type is used to point to an Alarm History. It is defined in <xref ref-type="table" rid="tbl_20">Table 20</xref></p>
           <table-wrap id="tbl_20">
             <label>Table 20</label>
             <caption>
@@ -3120,7 +3127,7 @@
         <sec id="sec_6-6-4">
           <label>6.6.4</label>
           <title>HasWarning</title>
-          <p>This reference type is used to point to a Warning. It is defined in &lt;xref ref-type="table" rid="tbl_19_hasalarm-reference-type"&gt;Table 19&lt;/xref&gt;.</p>
+          <p>This reference type is used to point to a Warning. It is defined in <xref ref-type="table" rid="tbl_21">Table 21</xref>.</p>
           <table-wrap id="tbl_21">
             <label>Table 21</label>
             <caption>
@@ -3169,7 +3176,7 @@
         <sec id="sec_6-6-5">
           <label>6.6.5</label>
           <title>HasStopReason</title>
-          <p>This reference type is used to point to a StopReason. It is defined in &lt;xref ref-type="table" rid="tbl_19_hasalarm-reference-type"&gt;Table 19&lt;/xref&gt;.</p>
+          <p>This reference type is used to point to a StopReason. It is defined in <xref ref-type="table" rid="tbl_22">Table 22</xref>.</p>
           <table-wrap id="tbl_22">
             <label>Table 22</label>
             <caption>
@@ -3227,7 +3234,7 @@
         <sec id="sec_6-7-2">
           <label>6.7.2</label>
           <title>SetUnitMode Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the mode of the unit. <italic>Parameters</italic> are defined in &lt;xref ref-type="table" rid="tbl_23_setunitmode-method-parameters"&gt;Table 23&lt;/xref&gt;</p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the mode of the unit. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_23">Table 23</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
@@ -3254,7 +3261,7 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_24_setunitmode-method-result-codes"&gt;Table 24&lt;/xref&gt;</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_24">Table 24</xref></p>
           <table-wrap id="tbl_24">
             <label>Table 24</label>
             <caption>
@@ -3303,7 +3310,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 25 specifies the <italic>AddressSpace</italic> representation for the <italic>SetUnitMode Method</italic>. <italic>SetUnitMode</italic> includes an <italic>InputArgument</italic>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_23_setunitmode-method-parameters"&gt;Table 23&lt;/xref&gt;.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_25">Table 25</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetUnitMode Method</italic>. <italic>SetUnitMode</italic> includes an <italic>InputArgument</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_23">Table 23</xref>.</p>
           <table-wrap id="tbl_25">
             <label>Table 25</label>
             <caption>
@@ -3344,7 +3352,7 @@
         <sec id="sec_6-7-3">
           <label>6.7.3</label>
           <title>SetMachSpeed Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the speed of the machine or unit. <italic>Parameters</italic> are defined in &lt;xref ref-type="table" rid="tbl_26_setmachspeed-method-parameters"&gt;Table 26&lt;/xref&gt;</p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the speed of the machine or unit. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_26">Table 26</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
@@ -3374,7 +3382,7 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_27_setmachspeed-method-resultcodes"&gt;Table 27&lt;/xref&gt;</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_27">Table 27</xref></p>
           <table-wrap id="tbl_27">
             <label>Table 27</label>
             <caption>
@@ -3423,7 +3431,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 28 specifies the <italic>AddressSpace</italic> representation for the <italic>SetMachSpeed Method</italic>. <italic>SetMachSpeed</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_26_setmachspeed-method-parameters"&gt;Table 26&lt;/xref&gt;.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_28">Table 28</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetMachSpeed Method</italic>. <italic>SetMachSpeed</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_26">Table 26</xref>.</p>
           <table-wrap id="tbl_28">
             <label>Table 28</label>
             <caption>
@@ -3464,7 +3473,7 @@
         <sec id="sec_6-7-4">
           <label>6.7.4</label>
           <title>SetProduct Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change product associated with this PackML system. <italic>Parameters</italic> are defined in &lt;xref ref-type="table" rid="tbl_29_setproduct-method-parameters"&gt;Table 29&lt;/xref&gt;.</p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change product associated with this PackML system. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_29">Table 29</xref>.</p>
           <p>
             <bold>Signature</bold>
           </p>
@@ -3494,7 +3503,7 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_30_setproduct-method-result-codes"&gt;Table 30&lt;/xref&gt;</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_30">Table 30</xref></p>
           <table-wrap id="tbl_30">
             <label>Table 30</label>
             <caption>
@@ -3543,7 +3552,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 31 specifies the <italic>AddressSpace</italic> representation for the <italic>SetProduct Method</italic>. <italic>SetProduct</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_29_setproduct-method-parameters"&gt;Table 29&lt;/xref&gt;.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_31">Table 31</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetProduct Method</italic>. <italic>SetProduct</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_29">Table 29</xref>.</p>
           <table-wrap id="tbl_31">
             <label>Table 31</label>
             <caption>
@@ -3590,7 +3600,7 @@
           </p>
           <code preserve-space="preserve">	Abort(
 		);</code>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_32_abort-method-result-codes"&gt;Table 32&lt;/xref&gt;.</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_32">Table 32</xref>.</p>
           <table-wrap id="tbl_32">
             <label>Table 32</label>
             <caption>
@@ -3626,7 +3636,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 33 specifies the <italic>AddressSpace</italic> representation for the <italic>Abort Method</italic>. <italic>Abort</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_33">Table 33</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Abort Method</italic>. <italic>Abort</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_33">
             <label>Table 33</label>
             <caption>
@@ -3668,7 +3679,7 @@
           </p>
           <code preserve-space="preserve">	Clear(
 		);</code>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_34_clear-method-result-codes"&gt;Table 34&lt;/xref&gt;.&lt;/p&gt;</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_34">Table 34</xref>.</p>
           <table-wrap id="tbl_34">
             <label>Table 34</label>
             <caption>
@@ -3704,7 +3715,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 35 specifies the <italic>AddressSpace</italic> representation for the <italic>Clear Method</italic>. <italic>Clear</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_35">Table 35</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Clear Method</italic>. <italic>Clear</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_35">
             <label>Table 35</label>
             <caption>
@@ -3746,7 +3758,7 @@
           </p>
           <code preserve-space="preserve">	Stop(
 		);</code>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_36_stop-method-result-codes"&gt;Table 36&lt;/xref&gt;</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_36">Table 36</xref></p>
           <table-wrap id="tbl_36">
             <label>Table 36</label>
             <caption>
@@ -3782,7 +3794,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 37 specifies the <italic>AddressSpace</italic> representation for the <italic>Stop Method</italic>. <italic>Stop</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_37">Table 37</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Stop Method</italic>. <italic>Stop</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_37">
             <label>Table 37</label>
             <caption>
@@ -3824,7 +3837,7 @@
           </p>
           <code preserve-space="preserve">	Reset(
 		);</code>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_38_reset-method-result-codes"&gt;Table 38&lt;/xref&gt;.</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_38">Table 38</xref>.</p>
           <table-wrap id="tbl_38">
             <label>Table 38</label>
             <caption>
@@ -3860,7 +3873,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 39 specifies the <italic>AddressSpace</italic> representation for the <italic>Reset Method</italic>. <italic>Reset</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_39">Table 39</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Reset Method</italic>. <italic>Reset</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
           <table-wrap id="tbl_39">
             <label>Table 39</label>
             <caption>
@@ -3902,7 +3916,7 @@
           </p>
           <code preserve-space="preserve">	ToComplete(
 		);</code>
-          <p>Method result codes are defined in &lt;xref ref-type="table" rid="tbl_40_tocomplete-method-result-codes"&gt;Table 40&lt;/xref&gt;.</p>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_40">Table 40</xref>.</p>
           <table-wrap id="tbl_40">
             <label>Table 40</label>
             <caption>
@@ -3938,7 +3952,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Table 41 specifies the <italic>AddressSpace</italic> representation for the <italic>ToComplete Method</italic>. <italic>ToComplete</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_41">Table 41</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>ToComplete Method</italic>. <italic>ToComplete</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_41">
             <label>Table 41</label>
             <caption>
@@ -3974,7 +3989,7 @@
         <sec id="sec_6-7-10">
           <label>6.7.10</label>
           <title>Start Method</title>
-          <p>This <italic>Method</italic> is used as part of the <italic>PackMLExecuteStateMachineType</italic>. It allows an OPC UA <italic>Client</italic> to change the state of this state machine to the <italic>Starting</italic> State and send parameters at the same time. Which is an extension to the &lt;xref ref-type="other" rid="ref_isapart2"&gt;ISA-TR88.00.02-2015&lt;/xref&gt; specification. The parameter is defined in &lt;xref ref-type="table" rid="tbl_42_start-method-parameters"&gt;Table 42&lt;/xref&gt;</p>
+          <p>This <italic>Method</italic> is used as part of the <italic>PackMLExecuteStateMachineType</italic>. It allows an OPC UA <italic>Client</italic> to change the state of this state machine to the <italic>Starting</italic> State and send parameters at the same time. Which is an extension to the <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref> specification. The parameter is defined in <xref ref-type="table" rid="tbl_42">Table 42</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
@@ -4002,7 +4017,7 @@
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_43_start-method-result-codes"&gt;Table 43&lt;/xref&gt;.</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_43">Table 43</xref>.</p>
           <table-wrap id="tbl_43">
             <label>Table 43</label>
             <caption>
@@ -4051,7 +4066,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_44_start-method-addressspace-definition"&gt;Table 44&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>Start Method</italic>. <italic>Start</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_42_start-method-parameters"&gt;Table 42&lt;/xref&gt;.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_44">Table 44</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Start Method</italic>. <italic>Start</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_42">Table 42</xref>.</p>
           <table-wrap id="tbl_44">
             <label>Table 44</label>
             <caption>
@@ -4099,7 +4115,7 @@
           <code preserve-space="preserve">	Unhold(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_45_unhold-method-result-codes"&gt;Table 45&lt;/xref&gt;</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_45">Table 45</xref></p>
           <table-wrap id="tbl_45">
             <label>Table 45</label>
             <caption>
@@ -4135,7 +4151,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_46_unhold-method-addressspace-definition"&gt;Table 46&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>Unhold Method</italic>. <italic>Unhold</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_46">Table 46</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Unhold Method</italic>. <italic>Unhold</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_46">
             <label>Table 46</label>
             <caption>
@@ -4178,7 +4195,7 @@
           <code preserve-space="preserve">	Suspend(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_47_suspend-method-result-codes"&gt;Table 47&lt;/xref&gt;</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_47">Table 47</xref></p>
           <table-wrap id="tbl_47">
             <label>Table 47</label>
             <caption>
@@ -4214,7 +4231,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_48_suspend-method-addressspace-definition"&gt;Table 48&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>Suspend Method</italic>. <italic>Suspend</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_48">Table 48</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Suspend Method</italic>. <italic>Suspend</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_48">
             <label>Table 48</label>
             <caption>
@@ -4257,7 +4275,7 @@
           <code preserve-space="preserve">	Unsuspend(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_49_unsuspend-method-result-codes"&gt;Table 49&lt;/xref&gt;</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_49">Table 49</xref></p>
           <table-wrap id="tbl_49">
             <label>Table 49</label>
             <caption>
@@ -4293,7 +4311,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_50_unsuspend-method-addressspace-definition"&gt;Table 50&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>Unsuspend Method</italic>. <italic>Unsuspend</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_50">Table 50</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Unsuspend Method</italic>. <italic>Unsuspend</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
           <table-wrap id="tbl_50">
             <label>Table 50</label>
             <caption>
@@ -4336,7 +4355,7 @@
           <code preserve-space="preserve">	Hold(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_51_hold-method-result-codes"&gt;Table 51&lt;/xref&gt;</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_51">Table 51</xref></p>
           <table-wrap id="tbl_51">
             <label>Table 51</label>
             <caption>
@@ -4372,7 +4391,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_52_hold-method-addressspace-definition"&gt;Table 52&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>Hold Method</italic>. <italic>Hold</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_52">Table 52</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Hold Method</italic>. <italic>Hold</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_52">
             <label>Table 52</label>
             <caption>
@@ -4408,7 +4428,7 @@
         <sec id="sec_6-7-15">
           <label>6.7.15</label>
           <title>RemoteCommand Method</title>
-          <p>This <italic>Method</italic> is used to issue a command to the UA <italic>Server</italic> that can then be passed on to any other internal system as illustrated in &lt;xref ref-type="fig" rid="fig_19_remote-command-and-internal-systems"&gt;Figure 19&lt;/xref&gt; or it can be used to pass information on to an upstream or downstream system as illustrated in &lt;xref ref-type="fig" rid="fig_20_remote-command-line-and-upstreamdownstream-systems"&gt;Figure 20&lt;/xref&gt;. In both cases, it is up to the UA <italic>Server</italic> and/or the underlying system to determine when the command is passed on.</p>
+          <p>This <italic>Method</italic> is used to issue a command to the UA <italic>Server</italic> that can then be passed on to any other internal system as illustrated in <xref ref-type="fig" rid="fig_19">Figure 19</xref> or it can be used to pass information on to an upstream or downstream system as illustrated in <xref ref-type="fig" rid="fig_20">Figure 20</xref>. In both cases, it is up to the UA <italic>Server</italic> and/or the underlying system to determine when the command is passed on.</p>
           <fig id="fig_19">
             <label>Figure 19</label>
             <caption>
@@ -4423,7 +4443,7 @@
             </caption>
             <graphic xlink:href="fig_20_remote-command-line-and-upstreamdownstream-systems.png" alt="Remote Command - Line and Upstream/Downstream systems" mimetype="image/png" />
           </fig>
-          <p>The <italic>RemoteCommand</italic> Method parameters are defined in&lt;bold&gt; &lt;/bold&gt;&lt;xref ref-type="table" rid="tbl_53_remotecommand-method-parameters"&gt;Table 53&lt;/xref&gt;</p>
+          <p>The <italic>RemoteCommand</italic> Method parameters are defined in <xref ref-type="table" rid="tbl_53">Table 53</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
@@ -4445,13 +4465,13 @@
               <tbody>
                 <tr>
                   <td>RemoteInterface</td>
-                  <td>This structure is an array of remote interface information which include Number, ControlCmdNumber, CmdValue and Parameter. Parameter itself is a structure formally defined in &lt;xref ref-type="sec" rid="sec_6-5-4_packmldescriptordatatype"&gt;6.5.4&lt;/xref&gt;. The PackMLRemoteInterfaceDataType is formally defined in &lt;xref ref-type="sec" rid="sec_6-5-7_packmlremoteinterfacedatatype"&gt;6.5.7&lt;/xref&gt;</td>
+                  <td>This structure is an array of remote interface information which include Number, ControlCmdNumber, CmdValue and Parameter. Parameter itself is a structure formally defined in <xref ref-type="sec" rid="sec_6-5-4">6.5.4</xref>. The PackMLRemoteInterfaceDataType is formally defined in <xref ref-type="sec" rid="sec_6-5-7">6.5.7</xref></td>
                 </tr>
               </tbody>
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_54_remotecommand-method-result-codes"&gt;Table 54&lt;/xref&gt;.</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_54">Table 54</xref>.</p>
           <table-wrap id="tbl_54">
             <label>Table 54</label>
             <caption>
@@ -4504,7 +4524,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_55_remotecommand-method-addressspace-definition"&gt;Table 55&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>RemoteCommand Method</italic>. <italic>RemoteCommand</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_53_remotecommand-method-parameters"&gt;Table 53&lt;/xref&gt;.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_55">Table 55</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>RemoteCommand Method</italic>. <italic>RemoteCommand</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_53">Table 53</xref>.</p>
           <table-wrap id="tbl_55">
             <label>Table 55</label>
             <caption>
@@ -4545,7 +4566,7 @@
         <sec id="sec_6-7-16">
           <label>6.7.16</label>
           <title>SetInterlock Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to set an interlock associated with this PackML system parameter. The parameters for the <italic>SetInterlock</italic> <italic>Method</italic> are defined in &lt;xref ref-type="table" rid="tbl_56_setinterlock-method-parameters"&gt;Table 56&lt;/xref&gt;.</p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to set an interlock associated with this PackML system parameter. The parameters for the <italic>SetInterlock</italic> <italic>Method</italic> are defined in <xref ref-type="table" rid="tbl_56">Table 56</xref>.</p>
           <p>
             <bold>Signature</bold>
           </p>
@@ -4578,7 +4599,7 @@
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_57_setinterlock-method-result-codes"&gt;Table 57&lt;/xref&gt;</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_57">Table 57</xref></p>
           <table-wrap id="tbl_57">
             <label>Table 57</label>
             <caption>
@@ -4631,7 +4652,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_58_setinterlock-method-addressspace-definition"&gt;Table 58&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>SetInterlock Method</italic>. <italic>SetInterlock</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_56_setinterlock-method-parameters"&gt;Table 56&lt;/xref&gt;.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_58">Table 58</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetInterlock Method</italic>. <italic>SetInterlock</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_56">Table 56</xref>.</p>
           <table-wrap id="tbl_58">
             <label>Table 58</label>
             <caption>
@@ -4700,7 +4722,7 @@
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in &lt;xref ref-type="table" rid="tbl_60_setparameter-method-result-codes"&gt;Table 60&lt;/xref&gt;</p>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_60">Table 60</xref></p>
           <table-wrap id="tbl_60">
             <label>Table 60</label>
             <caption>
@@ -4737,7 +4759,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>&lt;xref ref-type="table" rid="tbl_61_setparameter-method-addressspace-definition"&gt;Table 61&lt;/xref&gt; specifies the <italic>AddressSpace</italic> representation for the <italic>SetParameter Method</italic>. <italic>SetParameter</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in &lt;xref ref-type="table" rid="tbl_59_setparameter-method-parameters"&gt;Table 59&lt;/xref&gt;.</p>
+          <p>
+            <xref ref-type="table" rid="tbl_61">Table 61</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetParameter Method</italic>. <italic>SetParameter</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_59">Table 59</xref>.</p>
           <table-wrap id="tbl_61">
             <label>Table 61</label>
             <caption>
@@ -4795,7 +4818,7 @@
           <sec id="sec_6-8-2-2">
             <label>6.8.2.2</label>
             <title>PackMLAlarmDataType</title>
-            <p>The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in &lt;xref ref-type="table" rid="tbl_62_packmlalarmdatatype-structure"&gt;Table 62&lt;/xref&gt;.</p>
+            <p>The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in <xref ref-type="table" rid="tbl_62">Table 62</xref>.</p>
             <table-wrap id="tbl_62">
               <label>Table 62</label>
               <caption>
