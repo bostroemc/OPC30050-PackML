@@ -17,7 +17,7 @@ The following conventions apply to *ObjectType*, *VariableType* and *DataType* n
 - All StateMachines will end in "StateMachine", all States will end in "State", All Transitions will end in "Transition"
 - All *DataTypes* that are structures include "DataType" as part of the name, this is to be able to differentiate them from any *VariableTypes* that will just end in Type.
 - All enumerations will end in "Enum", to clearly identify that it is an enumeration.
-- All base *DataTypes* (int32, float, …) used in the OPC UA server will be those defined in OPC UA, see <xref ref-type="other" rid="ref_uapart6">OPC 10000-6</xref> for more detail on the representation of the datatypes. This specification is typically implemented in a PLC, <xref ref-type="sec" rid="annex_c_datatype-non-normative">Annex C</xref> provides a non-normative copy of the DataType mapping described in PLC Open
+- All base *DataTypes* (int32, float, …) used in the OPC UA server will be those defined in OPC UA, see [OPC 10000-6](#ref-uapart6) for more detail on the representation of the datatypes. This specification is typically implemented in a PLC, [](#anx-informative-datatype) provides a non-normative copy of the DataType mapping described in PLC Open
 
 ```{figure}
 id: fig_9_system-overview
@@ -31,17 +31,17 @@ Figure 9 also illustrates another typical example in which units perform peer-to
 
 ### Instance AddressSpace {#sec-general}
 
-<xref ref-type="fig" rid="fig_10_packml-object-instance-overview">Figure 10</xref> provides an overview of the instance object model for PackML
+[](#fig-packml-object-instance-overview) provides an overview of the instance object model for PackML
 
 ```{figure}
-id: fig_10_packml-object-instance-overview
+id: fig-packml-object-instance-overview
 caption: PackML Object Instance Overview
 source: figures/fig_10_packml-object-instance-overview.png
 ```
 
-The OPC UA Server shall have a PackMLObjects folder under the OPC defined *Objects* folder on a UA *Server*. This folder shall contain one or more instances of *PackMLBaseObjectType* (see <xref ref-type="sec" rid="sec_6-3-2_packmlbaseobjecttype">6.3.2</xref> for definition of *PackMLBaseObjectType*). A single OPC UA *Server* might contain a single instance of a PackML system or it might contain multiple PackML systems.
+The OPC UA Server shall have a PackMLObjects folder under the OPC defined *Objects* folder on a UA *Server*. This folder shall contain one or more instances of *PackMLBaseObjectType* (see [](#sec-packmlbaseobjecttype) for definition of *PackMLBaseObjectType*). A single OPC UA *Server* might contain a single instance of a PackML system or it might contain multiple PackML systems.
 
-The *PackMLObjects* node is formally defined in <xref ref-type="table" rid="tbl_2_packmlobjects-definition">Table 2</xref>.
+The *PackMLObjects* node is formally defined in [](#tbl-packmlobjects-definition).
 
 *Table - PackMLObjects Definition* {#tbl-packmlobjects-definition defines=PackMLObjects}
 
@@ -57,7 +57,7 @@ The *PackMLObjects* node is formally defined in <xref ref-type="table" rid="tbl_
 
 #### Overview {#sec-overview}
 
-The PackML model when adapted to OPC UA results in a number of *StateMachines* (see section <xref ref-type="sec" rid="sec_6-3-5_statemachines-overview">6.3.5</xref> for a definition). Instances of these *StateMachines* may not expose all states and transitions at all times. The actual list of *AvailableStates* and *AvailableTransitions* are configured and each instance would be defined by either the end user or the machine builder. The PackML model also includes other meta data such as available mode, current mode, see section <xref ref-type="sec" rid="sec_6-3-2_packmlbaseobjecttype">6.3.2</xref> for a complete list 
+The PackML model when adapted to OPC UA results in a number of *StateMachines* (see section [](#sec-statemachines-overview) for a definition). Instances of these *StateMachines* may not expose all states and transitions at all times. The actual list of *AvailableStates* and *AvailableTransitions* are configured and each instance would be defined by either the end user or the machine builder. The PackML model also includes other meta data such as available mode, current mode, see section [](#sec-packmlbaseobjecttype) for a complete list 
 
 #### PackMLBaseObjectType {#sec-packmlbaseobjecttype}
 
@@ -69,7 +69,7 @@ caption: PackMLBaseObjectType Overview
 source: figures/fig_11_packmlbaseobjecttype-overview.png
 ```
 
-<xref ref-type="table" rid="tbl_3_packmlbaseobjecttype-definition">Table 3</xref> formally defines the *PackMLBaseObjectType*.
+[](#tbl-packmlbaseobjecttype-definition) formally defines the *PackMLBaseObjectType*.
 
 *Table - PackMLBaseObjectType Definition* {#tbl-packmlbaseobjecttype-definition defines=PackMLBaseObjectType}
 
@@ -95,34 +95,34 @@ TagID - provide an additional field in which an associated name (third party cro
 
 *PackMLVersion* - provides the version of the supported OMAC PackML
 
-*Admin* provides administrative functionality required for the PackML OPC UA server. It is defined in section <xref ref-type="sec" rid="sec_6-3-4_packmladminobjecttype">6.3.4</xref>. The administrative functionality exposed by this *Object* should be restricted to only users with administrative rights.
+*Admin* provides administrative functionality required for the PackML OPC UA server. It is defined in section [](#sec-packmladminobjecttype). The administrative functionality exposed by this *Object* should be restricted to only users with administrative rights.
             
-*Status* provides the status information required for a PackML OPC UA *Server*. It is defined in section <xref ref-type="sec" rid="sec_6-3-3_packmlstatusobjecttype">6.3.3</xref>.
+*Status* provides the status information required for a PackML OPC UA *Server*. It is defined in section [](#sec-packmlstatusobjecttype).
 
-*SetUnitMode* method allows an OPC UA *Client* to change the mode of the machine. The available modes are part of the supported Modes and a *Client* can pass any of the values listed. The *Method* may return an error if the requested mode is not allowed based on either the current mode of the machine or the state of the machine. For additional details see the definition of the *SetUnitMode* *Method* in <xref ref-type="sec" rid="sec_6-7-2_setunitmode-method">6.7.2</xref>
+*SetUnitMode* method allows an OPC UA *Client* to change the mode of the machine. The available modes are part of the supported Modes and a *Client* can pass any of the values listed. The *Method* may return an error if the requested mode is not allowed based on either the current mode of the machine or the state of the machine. For additional details see the definition of the *SetUnitMode* *Method* in [](#sec-setunitmode-method)
 
 *SetMachSpeed* *Method* allows a *Client* to change the machine speed.
             
-*SetProduct* *Method* allows a *Client* to change the product(s) and the *ProcessVariables* and Ingredients. For additional details see the definition of *SetProduct* *Method* in <xref ref-type="sec" rid="sec_6-7-4_setproduct-method">6.7.4</xref>.
+*SetProduct* *Method* allows a *Client* to change the product(s) and the *ProcessVariables* and Ingredients. For additional details see the definition of *SetProduct* *Method* in [](#sec-setproduct-method).
 
-*SetParameter* *Method* allows a *Client* to set the parameters for the machine. For additional details see the definition of SetParameter *Method* in <xref ref-type="sec" rid="sec_6-7-17_setparameter-method">6.7.17</xref>.
+*SetParameter* *Method* allows a *Client* to set the parameters for the machine. For additional details see the definition of SetParameter *Method* in [](#sec-setparameter-method).
 
-*RemoteCommand* *Method* allows a *Client* to send a command to the UA *Server* that is to be passed to the PackML *Server* and or upstream or downstream *Servers*. Parameters sent to the Remote system are typically used in the EXECUTE and STARTING states for a production task. With the restriction that *RemoteCommand* Parameter Values are limited to REAL values. For additional details see the definition of the *RemoteCommand* *Method* in <xref ref-type="sec" rid="sec_6-7-15_remotecommand-method">6.7.15</xref>
+*RemoteCommand* *Method* allows a *Client* to send a command to the UA *Server* that is to be passed to the PackML *Server* and or upstream or downstream *Servers*. Parameters sent to the Remote system are typically used in the EXECUTE and STARTING states for a production task. With the restriction that *RemoteCommand* Parameter Values are limited to REAL values. For additional details see the definition of the *RemoteCommand* *Method* in [](#sec-remotecommand-method)
 
-SetInterlock method allows a *Client* to set one of the interlocks associated with the system.  For additional details see the definition of the SetInterlock *Method* in <xref ref-type="sec" rid="sec_6-7-16_setinterlock-method">6.7.16</xref>
+SetInterlock method allows a *Client* to set one of the interlocks associated with the system.  For additional details see the definition of the SetInterlock *Method* in [](#sec-setinterlock-method)
 
 
 #### PackMLStatusObjectType {#sec-packmlstatusobjecttype}
 
-The *PackMLStatusObjectType* defines an *ObjectType* that is used to group all of the status information that is part of the PackML information model. It is illustrated in <xref ref-type="fig" rid="fig_12_packmlstatusobjecttype-overview">Figure 12</xref> 
+The *PackMLStatusObjectType* defines an *ObjectType* that is used to group all of the status information that is part of the PackML information model. It is illustrated in [](#fig-packmlstatusobjecttype-overview) 
 
 ```{figure}
-id: fig_12_packmlstatusobjecttype-overview
+id: fig-packmlstatusobjecttype-overview
 caption: PackMLStatusObjectType Overview
 source: figures/fig_12_packmlstatusobjecttype-overview.png
 ```
 
-<xref ref-type="table" rid="tbl_4_packmlstatusobjecttype-definition">Table 4</xref> formally defines the *PackMLStatusObjectType*.
+[](#tbl-packmlstatusobjecttype-definition) formally defines the *PackMLStatusObjectType*.
 
 *Table - PackMLStatusObjectType Definition* {#tbl-packmlstatusobjecttype-definition defines=PackMLStatusObjectType}
 
@@ -148,7 +148,7 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | HasComponent	| Variable	| RemoteParameter	| PackMLRemoteInterfaceDataType[]	| BaseDataVariableType	| Optional	| R| 
 | HasComponent	| Variable	| Product	| PackMLProductDataType[]	| BaseDataVariableType	| Optional	| R| 
 
-In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in <xref ref-type="other" rid="ref_uapart5">OPC 10000-5</xref>.
+In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in [OPC 10000-5](#ref-uapart5).
             
     *UnitModeRequested* - If TRUE, indicates that a unit mode change was requested, reflects the status of the Command UnitModeRequested.
             
@@ -176,22 +176,22 @@ In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provide
 
     *Parameter* - Current parameters used in the production job. This reflects the last parameter sent via the *SetParameter* *Method*.
 
-    *RemoteParameter* - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the *RemoteCommand* *Method* is provided this variable shall also be provided. For additional details see the *RemoteCommand* *Method* definition in <xref ref-type="sec" rid="sec_6-7-15_remotecommand-method">6.7.15</xref>.
+    *RemoteParameter* - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the *RemoteCommand* *Method* is provided this variable shall also be provided. For additional details see the *RemoteCommand* *Method* definition in [](#sec-remotecommand-method).
 
     *Product* - provides a list of the products supported by this machine. The array is typically needed for machines that run multiple products. It defines the IDs of the products and process &amp; process variables associated with the product. The product data can come from either a local HMI or remote systems and are used to process the product on the unit machine.
 
  
 #### PackMLAdminObjectType {#sec-packmladminobjecttype}
 
-The *PackMLAdminObjectType* defines an *ObjectType* that is used to group all of the Admin information that is part of the PackML information model. It is illustrated in <xref ref-type="fig" rid="fig_13_packmladminobjecttype-overview">Figure 13</xref>.
+The *PackMLAdminObjectType* defines an *ObjectType* that is used to group all of the Admin information that is part of the PackML information model. It is illustrated in [](#fig-packmladminobjecttype-overview).
 
 ```{figure}
-id: fig_13_packmladminobjecttype-overview
+id: fig-packmladminobjecttype-overview
 caption: PackMLAdminObjectType Overview
 source: figures/fig_13_packmladminobjecttype-overview.png
 ```
 
-<xref ref-type="table" rid="tbl_5_packmladminobjecttype-definition">Table 5</xref> formally defines the PackMLAdminObjectType.
+[](#tbl-packmladminobjecttype-definition) formally defines the PackMLAdminObjectType.
 
 *Table - PackMLAdminObjectType Definition* {#tbl-packmladminobjecttype-definition defines=PackMLAdminObjectType}
 
@@ -266,33 +266,33 @@ Warning - Array of warning information Events. Warnings are general events that 
 
 #### StateMachines Overview {#sec-statemachines-overview}
 
-The <xref ref-type="fig" rid="fig_14_packml-statemachines-overview">Figure 14</xref> provides an overview of the *StateMachines* that are part of the model.
+[](#fig-packml-statemachines-overview) provides an overview of the *StateMachines* that are part of the model.
 
 ```{figure}
-id: fig_14_packml-statemachines-overview
+id: fig-packml-statemachines-overview
 caption: PackML StateMachines Overview
 source: figures/fig_14_packml-statemachines-overview.png
 ```
 
-A key point in PackML *StateMachines* is that all of the *StateMachines *defined in PackML shall require that the optional *AvailableTransitions* and *AvailableStates* component of the FiniteStateMachineType be provided on all instance of the *StateMachine*. This allows *Clients* to understand the available *States* and *Transitions* for the given instance of the *StateMachine*. A *StateMachine* may restrict the *States* and *Transition* that are currently available. The following figure provides an overview of the PackML States. The Stopped *State* is commonly the initial sub-state that will be the starting point for the *Cleared* parent state. The *Running* *State* commonly will use the *Resetting* *State* as the initial state, but not all instance of the *Running* *State* sub-state model will include *Resetting*, so no initial state is defined for the *Running* *State*. The proposed valid initial *States* for this model are the *Idle* or *Resetting* *States.* This is *Server* dependant. The initial state for the system is Aborted. Alternative it could be Cleared as parent state with the proposal of Stopped as initial sub state. <xref ref-type="fig" rid="fig_15_packml-states">Figure 15 - PackML States</xref> provide an overview of the states and transitions in the *StateMachine. *The model refers to the PackML state model Version 2015. The dashed lines for the Hold transitions are optional extensions of the state model
+A key point in PackML *StateMachines* is that all of the *StateMachines *defined in PackML shall require that the optional *AvailableTransitions* and *AvailableStates* component of the FiniteStateMachineType be provided on all instance of the *StateMachine*. This allows *Clients* to understand the available *States* and *Transitions* for the given instance of the *StateMachine*. A *StateMachine* may restrict the *States* and *Transition* that are currently available. The following figure provides an overview of the PackML States. The Stopped *State* is commonly the initial sub-state that will be the starting point for the *Cleared* parent state. The *Running* *State* commonly will use the *Resetting* *State* as the initial state, but not all instance of the *Running* *State* sub-state model will include *Resetting*, so no initial state is defined for the *Running* *State*. The proposed valid initial *States* for this model are the *Idle* or *Resetting* *States.* This is *Server* dependant. The initial state for the system is Aborted. Alternative it could be Cleared as parent state with the proposal of Stopped as initial sub state. [](#fig-packml-states) provide an overview of the states and transitions in the *StateMachine. *The model refers to the PackML state model Version 2015. The dashed lines for the Hold transitions are optional extensions of the state model
 
 ```{figure}
-id: fig_15_packml-states
+id: fig-packml-states
 caption: PackML States
 source: figures/fig_15_packml-states.png
 ```
 
 #### PackMLBaseStateMachineType {#sec-packmlbasestatemachinetype}
 
-The *PackMLBaseStateMachineType* is the top level *StateMachine* for PackML. It is illustrated in <xref ref-type="fig" rid="fig_16_packmlbasestatemachinetype-illustration">Figure 16</xref>. The TR-88 specification does not define an initial *State* for this *StateMachine*, but typically the state machine uses either the *Aborted* or Stopped *State* as an initial *State*. <xref ref-type="sec" rid="annex_b_informative-recommended-localized-names">Annex B</xref> provide recommended display names for the various states.
+The *PackMLBaseStateMachineType* is the top level *StateMachine* for PackML. It is illustrated in [](#fig-packmlbasestatemachinetype-illustration). The TR-88 specification does not define an initial *State* for this *StateMachine*, but typically the state machine uses either the *Aborted* or Stopped *State* as an initial *State*. [](#anx-informative-recommended-localized-names) provide recommended display names for the various states.
 
 ```{figure}
-id: fig_16_packmlbasestatemachinetype-illustration
+id: fig-packmlbasestatemachinetype-illustration
 caption: PackMLBaseStateMachineType illustration
 source: figures/fig_16_packmlbasestatemachinetype-illustration.png
 ```
 
-The *PackMLBaseStateMachineType* defines the available states in a PackML system. The type is defined in <xref ref-type="table" rid="tbl_6_packmlbasestatemachinetype-definition">Table 6</xref>.* StateTypes* and *TransitionTypes* only exist in the type system, thus they do not have a modelling rule.
+The *PackMLBaseStateMachineType* defines the available states in a PackML system. The type is defined in [](#tbl-packmlbasestatemachinetype-definition).* StateTypes* and *TransitionTypes* only exist in the type system, thus they do not have a modelling rule.
 
 *Table - PackMLBaseStateMachineType Definition* {#tbl-packmlbasestatemachinetype-definition defines=PackMLBaseStateMachineType}
 | Attribute	| Value | | | | |
@@ -321,13 +321,13 @@ The *AvailableTransitions* and *AvailableStates* are optional variables in the *
 
 *Cleared* - this state exposes the MachineState sub StateMachine and state associated with this substate machine. The value of this *StateType* is 19.
 
-*MachineState* - A PackMLMachineStateMachineType defined in section <xref ref-type="sec" rid="sec_6-3-7_packmlmachinestatemachinetype">6.3.7</xref>.
+*MachineState* - A PackMLMachineStateMachineType defined in section [](#sec-packmlmachinestatemachinetype).
 
-*Abort* - a *Method* to trigger a change of state to *Aborting*. This will affect all sub-states in cleared state. Defined in <xref ref-type="sec" rid="sec_6-7-5_abort-method">6.7.5</xref>.
+*Abort* - a *Method* to trigger a change of state to *Aborting*. This will affect all sub-states in cleared state. Defined in [](#sec-abort-method).
 
-*Clear* - a *Method* to trigger a change of state to the *Cleared. *Defined in* *<xref ref-type="sec" rid="sec_6-7-6_clear-method">*6.7.6*</xref>*.*
+*Clear* - a *Method* to trigger a change of state to the *Cleared. Defined in [](#sec-clear-method).
  
-<xref ref-type="table" rid="tbl_7_packmlbasestatemachinetype-additional-references">Table 7</xref> defines the available *Transitions* in the PackMLBaseStateMachineType.
+[](#tbl-packmlbasestatemachinetype-additional-references) defines the available *Transitions* in the PackMLBaseStateMachineType.
 
 *Table - PackMLBaseStateMachineType Additional References* {#tbl-packmlbasestatemachinetype-additional-references}
 | Source Path	| Reference Type	| Is Forward	| Target Path |
@@ -344,17 +344,17 @@ The *AvailableTransitions* and *AvailableStates* are optional variables in the *
 
 #### PackMLMachineStateMachineType {#sec-packmlmachinestatemachinetype}
 
-The *PackMLMachineStateMachineType* defines the machine level state machine. It is illustrated in <xref ref-type="fig" rid="fig_17_packmlmachinestatemachinetype-illustration">Figure 17</xref>.
+The *PackMLMachineStateMachineType* defines the machine level state machine. It is illustrated in [](#fig-packmlmachinestatemachinetype-illustration).
 
-The TR-88 specification does not define an initial *State* for this *StateMachine*, but typically the state machine uses *Stopped* *State* as an initial *State*. <xref ref-type="sec" rid="annex_b_informative-recommended-localized-names">Annex B</xref> provides recommended display names for the various states.
+The TR-88 specification does not define an initial *State* for this *StateMachine*, but typically the state machine uses *Stopped* *State* as an initial *State*. [](#anx-informative-recommended-localized-names) provides recommended display names for the various states.
 
 ```{figure}
-id: fig_17_packmlmachinestatemachinetype-illustration 
+id: fig-packmlmachinestatemachinetype-illustration 
 caption: PackMLMachineStateMachineType illustration 
 source: figures/fig_17_packmlmachinestatemachinetype-illustration.png
 ```
 
-<xref ref-type="table" rid="tbl_8_packmlmachinestatemachinetype-definition">Table 8</xref> defines the *PackMLMachineStateMachineType*. *StateTypes* and *TransitionTypes* only exist in the type system, thus they do not have a modelling rule.
+[](#tbl-packmlmachinestatemachinetype-definition) defines the *PackMLMachineStateMachineType*. *StateTypes* and *TransitionTypes* only exist in the type system, thus they do not have a modelling rule.
 
 
 *Table - PackMLMachineStateMachineType Definition* {#tbl-packmlmachinestatemachinetype-definition defines=PackMLMachineStateMachineType}
@@ -390,11 +390,11 @@ The *AvailableTransitions* and *AvailableStates* are optional variables in the *
 
 *ExecuteState* - *StateMachine* that provides additional sub states.
 
-*Stop* - A *Method* to trigger a change of state to *Stopping*. This will affect all sub-states in *Run* state. Defined in <xref ref-type="sec" rid="sec_6-7-7_stop-method">6.7.7</xref>
+*Stop* - A *Method* to trigger a change of state to *Stopping*. This will affect all sub-states in *Run* state. Defined in [](#sec-stop-method)
 
-*Reset* - A *Method* to trigger a change of state to *Running, *enabling all of the sub-states of *Running* and the respective *Methods* that they expose. Defined in <xref ref-type="sec" rid="sec_6-7-8_reset-method">6.7.8</xref>
+*Reset* - A *Method* to trigger a change of state to *Running, *enabling all of the sub-states of *Running* and the respective *Methods* that they expose. Defined in [](#sec-reset-method)
 
-The transitions are defined in <xref ref-type="table" rid="tbl_9_packmlmachinestatemachinetype-additional-references">Table 9</xref>.
+The transitions are defined in [](#tbl-packmlmachinestatemachinetype-additional-references).
 
 *Table - PackMLMachineStateMachineType Additional References* {#tbl-packmlmachinestatemachinetype-additional-references}
 | Source Path	| Reference Type	| Is Forward	| Target Path |
@@ -413,15 +413,15 @@ The transitions are defined in <xref ref-type="table" rid="tbl_9_packmlmachinest
  
 #### PackMLExecuteStateMachineType {#sec-packmlexecutestatemachinetype}
 
-The *PackMLExecuteStateMachineType* provides all of the base states defined in PackML. It is illustrated in <xref ref-type="fig" rid="fig_18_packmlexecutestatemachinetype-illustration">Figure 18</xref>. The TR-88 specification does not define an initial State for this StateMachine, but typically the state machine use either the *Idle* or *Resetting* *State* as an initial *State*. <xref ref-type="sec" rid="annex_b_informative-recommended-localized-names">Annex B</xref> provide recommended display names for the various states.
+The *PackMLExecuteStateMachineType* provides all of the base states defined in PackML. It is illustrated in [](#fig-packmlexecutestatemachinetype-illustration). The TR-88 specification does not define an initial State for this StateMachine, but typically the state machine use either the *Idle* or *Resetting* *State* as an initial *State*. [](#anx-informative-recommended-localized-names) provide recommended display names for the various states.
 
 ```{figure}
-id: fig_18_packmlexecutestatemachinetype-illustration 
+id: fig-packmlexecutestatemachinetype-illustration 
 caption: PackMLExecuteStateMachineType illustration 
 source: figures/fig_18_packmlexecutestatemachinetype-illustration.png
 ```
 
-The *PackMLExecuteStateMachineType* is defined in <xref ref-type="table" rid="tbl_10_packmlexecutestatemachinetype-definition">Table 10</xref>. *StateTypes* and *TransitionTypes* only exist in the type system, thus they do not have a modelling rule.
+The *PackMLExecuteStateMachineType* is defined in [](#tbl-packmlexecutestatemachinetype-definition). *StateTypes* and *TransitionTypes* only exist in the type system, thus they do not have a modelling rule.
 
 
 *Table - PackMLExecuteStateMachineType Definition* {#tbl-packmlexecutestatemachinetype-definition defines=PackMLExecuteStateMachineType}
@@ -500,7 +500,7 @@ This *FiniteStateMachine* supports multiple *Active* states. It also supports 19
 
 *Complete*: *Complete* indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a *Reset* command is issued (in which case it will transition to *Resetting*), or until the unit/machine is *Stopped* or *Aborted*. The value of this *StateType* is 17.
 
-The *Transitions* are described in <xref ref-type="table" rid="tbl_11_packmlexecutestatemachinetype-additional-references">Table 11</xref>. This *FiniteStateMachine* also supports six *Method*s, for transitioning between states. This *StateMachine* includes transition to Holding from Unholding, *Starting*, *Unsuspending*, *Suspended*, *Suspending*, all of which are extension to the <xref ref-type="other" rid="ref_isapart2">ISA-TR88.00.02-2015</xref> specification.
+The *Transitions* are described in [](#tbl-packmlexecutestatemachinetype-additional-references). This *FiniteStateMachine* also supports six *Method*s, for transitioning between states. This *StateMachine* includes transition to Holding from Unholding, *Starting*, *Unsuspending*, *Suspended*, *Suspending*, all of which are extension to the [ISA-TR88.00.02-2022](#ref-tr88) specification.
 
 *Table - PackMLExecuteStateMachineType Additional References* {#tbl-packmlexecutestatemachinetype-additional-references}
 | Source Path	| Reference Type	| Is Forward	| Target Path |
@@ -573,7 +573,7 @@ This section defines any enumeration or structure that are defined as part of th
 
 #### ProductionMaintenanceModeEnum {#sec-productionmaintenancemodeenum}
 
-The *ProductionMaintenanceModeEnum* describes the predefined modes. This is a default mode enumeration. A *Server* may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The *ProductionMaintenanceModeEnum* is defined in <xref ref-type="table" rid="tbl_12_productionmaintenancemodeenum-values">Table 12</xref>.
+The *ProductionMaintenanceModeEnum* describes the predefined modes. This is a default mode enumeration. A *Server* may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The *ProductionMaintenanceModeEnum* is defined in [](#tbl-productionmaintenancemodeenum-values).
 
 *Table - ProductionMaintenanceModeEnum values* {#tbl-productionmaintenancemodeenum-values defines=ProductionMaintenanceModeEnum}
 | Name	| Value	| Description |
@@ -592,7 +592,7 @@ where the following definition apply:
 
 #### PackMLCountDataType {#sec-packmlcountdatatype}
 
-The *PackMLCountDataType* is used to generate summary information about the system.  The information depending on the use might be related to produced product, defective materials or any other information that needs to be tracked. It is formally defined in <xref ref-type="table" rid="tbl_13_packmlcountdatatype-structure">Table 13</xref>
+The *PackMLCountDataType* is used to generate summary information about the system.  The information depending on the use might be related to produced product, defective materials or any other information that needs to be tracked. It is formally defined in [](#tbl-packmlcountdatatype-structure)
 
 *Table - PackMLCountDataType Structure* {#tbl-packmlcountdatatype-structure defines=PackMLCountDataType}
 | Name	| Type	| Description |
@@ -607,7 +607,7 @@ The *PackMLCountDataType* is used to generate summary information about the syst
 
 #### PackMLDescriptorDataType {#sec-packmldescriptordatatype}
 
-The *PackMLDescriptorDataType* provides the PackML Parameter structure. The *PackMLDescriptorDataType* is formally defined in <xref ref-type="table" rid="tbl_14_packmldescriptordatatype-structure">Table 14</xref>
+The *PackMLDescriptorDataType* provides the PackML Parameter structure. The *PackMLDescriptorDataType* is formally defined in [](#tbl-packmldescriptordatatype-structure)
 
 *Table - PackMLDescriptorDataType Structure* {#tbl-packmldescriptordatatype-structure defines=PackMLDescriptorDataType}
 | Name	| Type	| Description |
@@ -621,7 +621,7 @@ The *PackMLDescriptorDataType* provides the PackML Parameter structure. The *Pac
 
 #### PackMLIngredientsDataType {#sec-packmlingredientsdatatype}
 
-The *PackMLIngredientsDataType* provides the PackML Parameter structure. The *PackMLIngredientsDataType* is formally defined in <xref ref-type="table" rid="tbl_15_packmlingredientsdatatype-structure">Table 15</xref>.
+The *PackMLIngredientsDataType* provides the PackML Parameter structure. The *PackMLIngredientsDataType* is formally defined in [](#tbl-packmlingredientsdatatype-structure).
 
 
 
@@ -636,7 +636,7 @@ The *PackMLIngredientsDataType* provides the PackML Parameter structure. The *Pa
 
 #### PackMLProductDataType {#sec-packmlproductdatatype}
 
-The *PackMLProductDataType* provides the PackML product information. The *PackMLProductDataType* is formally defined in <xref ref-type="table" rid="tbl_16_packmlproductdatatype-structure">Table 16</xref>. 
+The *PackMLProductDataType* provides the PackML product information. The *PackMLProductDataType* is formally defined in [](#tbl-packmlproductdatatype-structure). 
 
 *Table - PackMLProductDataType Structure* {#tbl-packmlproductdatatype-structure defines=PackMLProductDataType}
 | Name	| Type	| Description |
@@ -649,7 +649,7 @@ The *PackMLProductDataType* provides the PackML product information. The *PackML
 
 #### PackMLRemoteInterfaceDataType {#sec-packmlremoteinterfacedatatype}
 
-The *PackMLRemoteInterfaceDataType* provides the PackML remote connection information. The *PackMLRemoteInterfaceDataType* is formally defined in <xref ref-type="table" rid="tbl_17_packmlremoteinterfacedatatype-structure">Table 17</xref>.
+The *PackMLRemoteInterfaceDataType* provides the PackML remote connection information. The *PackMLRemoteInterfaceDataType* is formally defined in [](#tbl-packmlremoteinterfacedatatype-structure).
 
 
 *Table - PackMLRemoteInterfaceDataType Structure* {#tbl-packmlremoteinterfacedatatype-structure defines=PackMLRemoteInterfaceDataType}
@@ -666,7 +666,7 @@ The *PackMLRemoteInterfaceDataType* provides the PackML remote connection inform
 
 #### HasInterlock {#sec-hasinterlock}
 
-This reference type is used to point to an Interlock. It is defined in <xref ref-type="table" rid="tbl_18_hasinterlock-reference-type">Table 18</xref>
+This reference type is used to point to an Interlock. It is defined in [](#tbl-hasinterlock-reference-type)
 
 *Table - HasInterlock reference type* {#tbl-hasinterlock-reference-type defines=HasInterlock}
 | Attributes	| Value | | |
@@ -682,7 +682,7 @@ This reference type is used to point to an Interlock. It is defined in <xref ref
 
 #### HasAlarm {#sec-hasalarm}
 
-This reference type is used to point to an Alarm. It is defined in <xref ref-type="table" rid="tbl_19_hasalarm-reference-type">Table 19</xref>.
+This reference type is used to point to an Alarm. It is defined in [](#tbl-hasalarm-reference-type).
 
 *Table - HasAlarm reference type* {#tbl-hasalarm-reference-type defines=HasAlarm}
 | Attributes	| Value | | |
@@ -698,7 +698,7 @@ This reference type is used to point to an Alarm. It is defined in <xref ref-typ
 
 #### HasAlarmHistory {#sec-hasalarmhistory}
           
-This reference type is used to point to an Alarm History. It is defined in <xref ref-type="table" rid="tbl_20_hasalarmhistory-reference-type">Table 20</xref>
+This reference type is used to point to an Alarm History. It is defined in [](#tbl-hasalarmhistory-reference-type)
 
 *Table - HasAlarmHistory reference type* {#tbl-hasalarmhistory-reference-type defines=HasAlarmHistory}
 | Attributes	| Value | | |
@@ -715,7 +715,7 @@ This reference type is used to point to an Alarm History. It is defined in <xref
 
 #### HasWarning {#sec-haswarning}
 
-This reference type is used to point to a Warning. It is defined in <xref ref-type="table" rid="tbl_19_hasalarm-reference-type">Table 19</xref>.
+This reference type is used to point to a Warning. It is defined in [](#tbl-haswarning-reference-type).
 
 *Table - HasWarning reference type* {#tbl-haswarning-reference-type defines=HasWarning}
 | Attributes	| Value | | |
@@ -731,7 +731,7 @@ This reference type is used to point to a Warning. It is defined in <xref ref-ty
 
 #### HasStopReason {#sec-hasstopreason}
 
-This reference type is used to point to a StopReason. It is defined in <xref ref-type="table" rid="tbl_19_hasalarm-reference-type">Table 19</xref>.
+This reference type is used to point to a StopReason. It is defined in [](#tbl-hasstopreason-reference-type).
 
 *Table - HasStopReason reference type* {#tbl-hasstopreason-reference-type defines=HasStopReason}
 | Attributes	| Value | | |
@@ -753,7 +753,7 @@ This section provides definition of the method used in this specification. These
 
 #### SetUnitMode Method {#sec-setunitmode-method type=PackMLBaseObjectType method=SetUnitMode}
 
-This *Method* allows an OPC UA *Client* to change the mode of the unit. *Parameters* are defined in <xref ref-type="table" rid="tbl_23_setunitmode-method-parameters">Table 23</xref>
+This *Method* allows an OPC UA *Client* to change the mode of the unit. *Parameters* are defined in [](#tbl-setunitmode-method-parameters)
 
 **Signature**
 ```
@@ -767,7 +767,7 @@ This *Method* allows an OPC UA *Client* to change the mode of the unit. *Paramet
 | --- | --- |
 | RequestedMode	| The requested mode from the list of available modes in the enumeration from NodeID “UnitSupportedModes” in PackMLStatusObjectType |
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_24_setunitmode-method-result-codes">Table 24</xref>
+Method result codes are defined in [](#tbl-setunitmode-method-result-codes)
 
 *Table - SetUnitMode Method Result Codes* {#tbl-setunitmode-method-result-codes}
 | Result Code	| Description |
@@ -782,7 +782,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_24_setunitmod
 | Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
 
 
-Table 25 specifies the *AddressSpace* representation for the *SetUnitMode Method*. *SetUnitMode* includes an *InputArgument*, where the input argument details are provided in <xref ref-type="table" rid="tbl_23_setunitmode-method-parameters">Table 23</xref>.
+[](#tbl-setunitmode-method-addressspace-definition) specifies the *AddressSpace* representation for the *SetUnitMode Method*. *SetUnitMode* includes an *InputArgument*, where the input argument details are provided in [](#tbl-setunitmode-method-parameters).
 
 
 *Table - SetUnitMode Method AddressSpace Definition* {#tbl-setunitmode-method-addressspace-definition}
@@ -795,7 +795,7 @@ Table 25 specifies the *AddressSpace* representation for the *SetUnitMode Method
 
 #### SetMachSpeed Method {#sec-setmachspeed-method type=PackMLBaseObjectType method=SetUnitMode}
 
-This *Method* allows an OPC UA *Client* to change the speed of the machine or unit. *Parameters* are defined in <xref ref-type="table" rid="tbl_26_setmachspeed-method-parameters">Table 26</xref>
+This *Method* allows an OPC UA *Client* to change the speed of the machine or unit. *Parameters* are defined in [](#tbl-setmachspeed-method-parameters)
 
 **Signature**
 ```
@@ -810,7 +810,7 @@ This *Method* allows an OPC UA *Client* to change the speed of the machine or un
 | RequestedMachineSpeed	| The target machine speed |
 | | |
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_27_setmachspeed-method-resultcodes">Table 27</xref>
+Method result codes are defined in [](#tbl-setmachspeed-method-resultcodes)
 
 *Table - SetMachSpeed Method Result Codes* {#tbl-setmachspeed-method-resultcodes}
 | Result Code	| Description |
@@ -824,7 +824,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_27_setmachspe
 | Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
 | Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
 
-Table 28 specifies the *AddressSpace* representation for the *SetMachSpeed Method*. *SetMachSpeed* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_26_setmachspeed-method-parameters">Table 26</xref>.
+[](#tbl-setmachspeed-method-addressspace-definition) specifies the *AddressSpace* representation for the *SetMachSpeed Method*. *SetMachSpeed* includes an array of *InputArguments*, where the input argument details are provided in [](#tbl-setmachspeed-method-parameters).
 
 *Table - SetMachSpeed Method AddressSpace Definition* {#tbl-setmachspeed-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -836,7 +836,7 @@ Table 28 specifies the *AddressSpace* representation for the *SetMachSpeed Metho
 
 #### SetProduct Method {#sec-setproduct-method}
 
-This *Method* allows an OPC UA *Client* to change product associated with this PackML system. *Parameters* are defined in <xref ref-type="table" rid="tbl_29_setproduct-method-parameters">Table 29</xref>.
+This *Method* allows an OPC UA *Client* to change product associated with this PackML system. *Parameters* are defined in [](#tbl-setproduct-method-parameters).
 
 **Signature**
 ```
@@ -852,7 +852,7 @@ SetProduct(
 | | |
 
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_30_setproduct-method-result-codes">Table 30</xref>
+Method result codes are defined in [](#tbl-setproduct-method-result-codes)
 
 *Table - SetProduct Method Result Codes* {#tbl-setproduct-method-result-codes}
 | Result Code	| Description |
@@ -866,7 +866,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_30_setproduct
 | Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
 | Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
 
-Table 31 specifies the *AddressSpace* representation for the *SetProduct Method*. *SetProduct* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_29_setproduct-method-parameters">Table 29</xref>.
+[](#tbl-setproduct-method-addressspace-definition) specifies the *AddressSpace* representation for the *SetProduct Method*. *SetProduct* includes an array of *InputArguments*, where the input argument details are provided in [](#tbl-setproduct-method-parameters).
 
 *Table - SetProduct Method AddressSpace Definition* {#tbl-setproduct-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -886,7 +886,7 @@ This *Method* is used as part of the *PackMLBaseStateMachineType*. It allows an 
 		);
 ```
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_32_abort-method-result-codes">Table 32</xref>.
+Method result codes are defined in [](#tbl-abort-method-result-codes).
 
 *Table - Abort Method Result Codes* {#tbl-abort-method-result-codes}
 | Result Code	| Description |
@@ -898,7 +898,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_32_abort-meth
 | | |
 
 
-Table 33 specifies the *AddressSpace* representation for the *Abort Method*. *Abort* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-abort-method-addressspace-definition) specifies the *AddressSpace* representation for the *Abort Method*. *Abort* has no input or output parameters and has no referenced objects or variables.
 
 *Table - Abort Method AddressSpace Definition* {#tbl-abort-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -918,7 +918,7 @@ This *Method* is used as part of the *PackMLBaseStateMachineType*. It allows an 
 		);
 ```
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_34_clear-method-result-codes">Table 34</xref>.</p>
+Method result codes are defined in [](#tbl-clear-method-result-codes).
 
 
 *Table - Clear Method Result Codes* {#tbl-clear-method-result-codes}
@@ -931,7 +931,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_34_clear-meth
 | | |
 
 
-Table 35 specifies the *AddressSpace* representation for the *Clear Method*. *Clear* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-clear-method-addressspace-definition) specifies the *AddressSpace* representation for the *Clear Method*. *Clear* has no input or output parameters and has no referenced objects or variables.
 
 *Table - Clear Method AddressSpace Definition* {#tbl-clear-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -951,7 +951,7 @@ This *Method* is used as part of the *PackMLMachineStateMachineType*. It allows 
 		);
 ```
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_36_stop-method-result-codes">Table 36</xref>
+Method result codes are defined in [](#tbl-stop-method-result-codes)
 
 *Table - Stop Method Result Codes* {#tbl-stop-method-result-codes}
 | Result Code	| Description |
@@ -963,7 +963,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_36_stop-metho
 | | |
 
 
-Table 37 specifies the *AddressSpace* representation for the *Stop Method*. *Stop* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-stop-method-addressspace-definition) specifies the *AddressSpace* representation for the *Stop Method*. *Stop* has no input or output parameters and has no referenced objects or variables.
 
 *Table - Stop Method AddressSpace Definition* {#tbl-stop-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -983,7 +983,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 		);
 ```
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_38_reset-method-result-codes">Table 38</xref>.
+Method result codes are defined in [](#tbl-reset-method-result-codes).
 
 *Table - Reset Method Result Codes* {#tbl-reset-method-result-codes}
 | Result Code	| Description |
@@ -994,7 +994,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_38_reset-meth
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
 | | |
 
-Table 39 specifies the *AddressSpace* representation for the *Reset Method*. *Reset* has no input or output parameters and has no referenced *Objects* or *Variables*.
+[](#tbl-reset-method-addressspace-definition) specifies the *AddressSpace* representation for the *Reset Method*. *Reset* has no input or output parameters and has no referenced *Objects* or *Variables*.
 
 *Table - Reset Method AddressSpace Definition* {#tbl-reset-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -1013,7 +1013,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 		);
 ```
 
-Method result codes are defined in <xref ref-type="table" rid="tbl_40_tocomplete-method-result-codes">Table 40</xref>.
+Method result codes are defined in [](#tbl-tocomplete-method-result-codes).
 
 *Table - ToComplete Method Result Codes* {#tbl-tocomplete-method-result-codes}
 | Result Code	| Description |
@@ -1024,7 +1024,7 @@ Method result codes are defined in <xref ref-type="table" rid="tbl_40_tocomplete
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
 | | |
 
-Table 41 specifies the *AddressSpace* representation for the *ToComplete Method*. *ToComplete* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-tocomplete-method-addressspace-definition) specifies the *AddressSpace* representation for the *ToComplete Method*. *ToComplete* has no input or output parameters and has no referenced objects or variables.
 
 *Table - ToComplete Method AddressSpace Definition* {#tbl-tocomplete-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -1036,7 +1036,7 @@ Table 41 specifies the *AddressSpace* representation for the *ToComplete Method*
 
 #### Start Method {#sec-start-method}
 
-This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Starting* State and send parameters at the same time. Which is an extension to the <xref ref-type="other" rid="ref_isapart2">ISA-TR88.00.02-2015</xref> specification. The parameter is defined in <xref ref-type="table" rid="tbl_42_start-method-parameters">Table 42</xref>
+This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Starting* State and send parameters at the same time. Which is an extension to the [ISA-TR88.00.02-2022](#ref-tr88) specification. The parameter is defined in [](#tbl-start-method-parameters)
 
 **Signature**
 ```
@@ -1050,7 +1050,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 | --- | --- |
 | Parameter	| The array of parameter with Id, Name, Unit and Value can be used by the method. See 6.5.4 for the definition of the DataType. |
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_43_start-method-result-codes">Table 43</xref>.
+*Method* result codes are defined in [](#tbl-start-method-result-codes).
 
 *Table - Start Method Result Codes* {#tbl-start-method-result-codes}
 | Result Code	| Description |
@@ -1064,7 +1064,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 | Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
 | Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
 
-<xref ref-type="table" rid="tbl_44_start-method-addressspace-definition">Table 44</xref> specifies the *AddressSpace* representation for the *Start Method*. *Start* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_42_start-method-parameters">Table 42</xref>.
+[](#tbl-start-method-addressspace-definition) specifies the *AddressSpace* representation for the *Start Method*. *Start* includes an array of *InputArguments*, where the input argument details are provided in [](#tbl-start-method-parameters).
 
 *Table - Start Method AddressSpace Definition* {#tbl-start-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -1085,7 +1085,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 	);
 ```
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_45_unhold-method-result-codes">Table 45</xref>
+*Method* result codes are defined in [](#tbl-unhold-method-result-codes)
 
 *Table - Unhold Method Result Codes* {#tbl-unhold-method-result-codes}
 | Result Code	| Description |
@@ -1096,7 +1096,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
 | | |
 
-<xref ref-type="table" rid="tbl_46_unhold-method-addressspace-definition">Table 46</xref> specifies the *AddressSpace* representation for the *Unhold Method*. *Unhold* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-unhold-method-addressspace-definition) specifies the *AddressSpace* representation for the *Unhold Method*. *Unhold* has no input or output parameters and has no referenced objects or variables.
 
 *Table - Unhold Method AddressSpace Definition* {#tbl-unhold-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -1116,7 +1116,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 	);
 ```
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_47_suspend-method-result-codes">Table 47</xref>
+*Method* result codes are defined in [](#tbl-suspend-method-result-codes)
 
 *Table - Suspend Method Result Codes* {#tbl-suspend-method-result-codes}
 | Result Code	| Description |
@@ -1127,7 +1127,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
 | | |
 
-<xref ref-type="table" rid="tbl_48_suspend-method-addressspace-definition">Table 48</xref> specifies the *AddressSpace* representation for the *Suspend Method*. *Suspend* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-suspend-method-addressspace-definition) specifies the *AddressSpace* representation for the *Suspend Method*. *Suspend* has no input or output parameters and has no referenced objects or variables.
 
 *Table - Suspend Method AddressSpace Definition* {#tbl-suspend-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -1147,7 +1147,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 	);
 ```
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_49_unsuspend-method-result-codes">Table 49</xref> 
+*Method* result codes are defined in [](#tbl-unsuspend-method-result-codes) 
 
 *Table - Unsuspend Method Result Codes* {#tbl-unsuspend-method-result-codes}
 | Result Code	| Description |
@@ -1158,7 +1158,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
 | | |
 
-<xref ref-type="table" rid="tbl_50_unsuspend-method-addressspace-definition">Table 50</xref> specifies the *AddressSpace* representation for the *Unsuspend Method*. *Unsuspend* has no input or output parameters and has no referenced *Objects* or *Variables*.
+[](#tbl-unsuspend-method-addressspace-definition) specifies the *AddressSpace* representation for the *Unsuspend Method*. *Unsuspend* has no input or output parameters and has no referenced *Objects* or *Variables*.
 
 
 *Table - Unsuspend Method AddressSpace Definition* {#tbl-unsuspend-method-addressspace-definition}
@@ -1178,7 +1178,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 	);
 ```
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_51_hold-method-result-codes">Table 51</xref>
+*Method* result codes are defined in [](#tbl-hold-method-result-codes)
 
 *Table - Hold Method Result Codes* {#tbl-hold-method-result-codes}
 | Result Code	| Description |
@@ -1189,7 +1189,7 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
 | | |
 
-<xref ref-type="table" rid="tbl_52_hold-method-addressspace-definition">Table 52</xref> specifies the *AddressSpace* representation for the *Hold Method*. *Hold* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-hold-method-addressspace-definition) specifies the *AddressSpace* representation for the *Hold Method*. *Hold* has no input or output parameters and has no referenced objects or variables.
 
 *Table - Hold Method AddressSpace Definition* {#tbl-hold-method-addressspace-definition}
 | Attribute	| Value | | | | |
@@ -1201,21 +1201,21 @@ This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows 
 
 #### RemoteCommand Method {#sec-remotecommand-method}
 
-This *Method* is used to issue a command to the UA *Server* that can then be passed on to any other internal system as illustrated in <xref ref-type="fig" rid="fig_19_remote-command-and-internal-systems">Figure 19</xref> or it can be used to pass information on to an upstream or downstream system as illustrated in <xref ref-type="fig" rid="fig_20_remote-command-line-and-upstreamdownstream-systems">Figure 20</xref>. In both cases, it is up to the UA *Server* and/or the underlying system to determine when the command is passed on. 
+This *Method* is used to issue a command to the UA *Server* that can then be passed on to any other internal system as illustrated in [](#fig-remote-command-and-internal-systems) or it can be used to pass information on to an upstream or downstream system as illustrated in [](#fig-remote-command-line-and-upstreamdownstream-systems). In both cases, it is up to the UA *Server* and/or the underlying system to determine when the command is passed on. 
 
 ```{figure}
-id: fig_19_remote-command-and-internal-systems
+id: fig-remote-command-and-internal-systems
 caption: Remote Command and Internal systems
 source: figures/fig_19_remote-command-and-internal-systems.png
 ```
 
 ```{figure}
-id: fig_20_remote-command-line-and-upstreamdownstream-systems
+id: fig-remote-command-line-and-upstreamdownstream-systems
 caption: Remote Command - Line and Upstream/Downstream systems
 source: figures/fig_20_remote-command-line-and-upstreamdownstream-systems.png
 ```
 
-The *RemoteCommand* Method parameters are defined in<bold> </bold><xref ref-type="table" rid="tbl_53_remotecommand-method-parameters">Table 53</xref>
+The *RemoteCommand* Method parameters are defined in [](#tbl-remotecommand-method-parameters)
 
 **Signature**
 ```
@@ -1227,9 +1227,9 @@ The *RemoteCommand* Method parameters are defined in<bold> </bold><xref ref-type
 *Table - RemoteCommand Method Parameters* {#tbl-remotecommand-method-parameters}
 | Argument	| Description |
 | --- | --- |
-| RemoteInterface | This structure is an array of remote interface information which include Number, ControlCmdNumber, CmdValue and Parameter. Parameter itself is a structure formally defined in <xref ref-type="sec" rid="sec_6-5-4_packmldescriptordatatype">6.5.4</xref>. The PackMLRemoteInterfaceDataType is formally defined in <xref ref-type="sec" rid="sec_6-5-7_packmlremoteinterfacedatatype">6.5.7</xref> |
+| RemoteInterface | This structure is an array of remote interface information which include Number, ControlCmdNumber, CmdValue and Parameter. Parameter itself is a structure formally defined in [](#sec-packmldescriptordatatype). The PackMLRemoteInterfaceDataType is formally defined in [](#sec-packmlremoteinterfacedatatype) |
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_54_remotecommand-method-result-codes">Table 54</xref>.
+*Method* result codes are defined in [](#tbl-remotecommand-method-result-codes).
 
 *Table - RemoteCommand Method Result Codes* {#tbl-remotecommand-method-result-codes}
 | Result Code	| Description |
@@ -1244,7 +1244,7 @@ The *RemoteCommand* Method parameters are defined in<bold> </bold><xref ref-type
 | Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
 | Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
 
-<xref ref-type="table" rid="tbl_55_remotecommand-method-addressspace-definition">Table 55</xref> specifies the *AddressSpace* representation for the *RemoteCommand Method*. *RemoteCommand* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_53_remotecommand-method-parameters">Table 53</xref>.
+[](#tbl-remotecommand-method-addressspace-definition) specifies the *AddressSpace* representation for the *RemoteCommand Method*. *RemoteCommand* includes an array of *InputArguments*, where the input argument details are provided in [](#tbl-remotecommand-method-parameters).
 
 
 *Table - RemoteCommand Method AddressSpace Definition* {#tbl-remotecommand-method-addressspace-definition}
@@ -1256,7 +1256,7 @@ The *RemoteCommand* Method parameters are defined in<bold> </bold><xref ref-type
 
 #### SetInterlock Method {#sec-setinterlock-method}
 
-This *Method* allows an OPC UA *Client* to set an interlock associated with this PackML system parameter. The parameters for the *SetInterlock* *Method* are defined in <xref ref-type="table" rid="tbl_56_setinterlock-method-parameters">Table 56</xref>.
+This *Method* allows an OPC UA *Client* to set an interlock associated with this PackML system parameter. The parameters for the *SetInterlock* *Method* are defined in [](#tbl-setinterlock-method-parameters).
 
 **Signature**
 ```
@@ -1272,7 +1272,7 @@ This *Method* allows an OPC UA *Client* to set an interlock associated with this
 | InterlockId	| ID of the target interlock to set or reset. The ID typically refer to the element in the Boolean Array in the MaterialInterlock tag. |
 | State	| The state that the targeted interlock should be set to. True is set to interlocked, false is not interlocked. |
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_57_setinterlock-method-result-codes">Table 57</xref>
+*Method* result codes are defined in [](#tbl-setinterlock-method-result-codes)
  
 
 *Table - SetInterlock Method Result Codes* {#tbl-setinterlock-method-result-codes}
@@ -1288,7 +1288,7 @@ This *Method* allows an OPC UA *Client* to set an interlock associated with this
 | Bad_InvalidArgument	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate in the operation level results that one or more of the input arguments are invalid. The inputArgumentResults contain the specific status code for each invalid argument.) |
 | Bad_TypeMismatch	| See OPC 10000-4 – Services for the description of this result code. (Used to indicate that an input argument does not have the correct data type.) |
 
-<xref ref-type="table" rid="tbl_58_setinterlock-method-addressspace-definition">Table 58</xref> specifies the *AddressSpace* representation for the *SetInterlock Method*. *SetInterlock* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_56_setinterlock-method-parameters">Table 56</xref>.
+[](#tbl-setinterlock-method-addressspace-definition) specifies the *AddressSpace* representation for the *SetInterlock Method*. *SetInterlock* includes an array of *InputArguments*, where the input argument details are provided in [](#tbl-setinterlock-method-parameters).
 
 
 *Table - SetInterlock Method AddressSpace Definition* {#tbl-setinterlock-method-addressspace-definition}
@@ -1314,7 +1314,7 @@ This *Method* allows an OPC UA *Client* to set the parameters that are by the ma
 | --- | --- |
 | Parameter	| The array of parameter that can be used by the method |
 
-*Method* result codes are defined in <xref ref-type="table" rid="tbl_60_setparameter-method-result-codes">Table 60</xref>
+*Method* result codes are defined in [](#tbl-setparameter-method-result-codes)
 
 *Table - SetParameter Method Result Codes* {#tbl-setparameter-method-result-codes}
 | Result Code	| Description |
@@ -1325,7 +1325,7 @@ This *Method* allows an OPC UA *Client* to set the parameters that are by the ma
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.). If a machine determines that it is not in a state that allows parameter changes this error is returned. |
 | Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
 
-<xref ref-type="table" rid="tbl_61_setparameter-method-addressspace-definition">Table 61</xref> specifies the *AddressSpace* representation for the *SetParameter Method*. *SetParameter* includes an array of *InputArguments*, where the input argument details are provided in <xref ref-type="table" rid="tbl_59_setparameter-method-parameters">Table 59</xref>.
+[](#tbl-setparameter-method-addressspace-definition) specifies the *AddressSpace* representation for the *SetParameter Method*. *SetParameter* includes an array of *InputArguments*, where the input argument details are provided in [](#tbl-setparameter-method-parameters).
 
 
 
@@ -1351,7 +1351,7 @@ The following *VariableType* is used to report alarms in the PackML unit. In add
 
 ##### PackMLAlarmDataType {#sec-packmlalarmdatatype}
 
-The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in <xref ref-type="table" rid="tbl_62_packmlalarmdatatype-structure">Table 62</xref>. 
+The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in [](#tbl-packmlalarmdatatype-structure). 
 
 
 *Table - PackMLAlarmDataType Structure* {#tbl-packmlalarmdatatype-structure defines=PackMLAlarmDataType}
