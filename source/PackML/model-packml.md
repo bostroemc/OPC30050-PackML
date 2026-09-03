@@ -202,13 +202,13 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | Reference	| Node Class	| BrowseName 	| DataType	| TypeDefinition	| ModelingRule	| RW |
 | Subtype of the BaseObjectType from OPC 10000-5. |  |  |  |  |  |  |
 | HasComponent	| Variable	| Parameter	| PackMLDescriptorDataType[]	| BaseDataVariableType 	| Optional	| R |
-| HasAlarm	| Variable	| Alarm	| PackMLAlarmDataType[]	| BaseDataVariableType	| Optional	| R |
+| HasAlarm	| Variable	| Alarm	| PackMLEventDataType[]	| BaseDataVariableType	| Optional	| R |
 | HasComponent	| Variable	| AlarmExtent	| Int32	| BaseDataVariableType	| Optional	| R |
-| HasAlarmHistory	| Variable	| AlarmHistory	| PackMLAlarmDataType[]	| BaseDataVariableType	| Optional 	| R |
+| HasAlarmHistory	| Variable	| AlarmHistory	| PackMLEventDataType[]	| BaseDataVariableType	| Optional 	| R |
 | HasComponent	| Variable	| AlarmHistoryExtent	| Int32	| BaseDataVariableType	| Optional	| R |
-| HasWarning	| Variable	| Warning	| PackMLAlarmDataType[]	| BaseDataVariableType	| Optional 	| R |
+| HasWarning	| Variable	| Warning	| PackMLEventDataType[]	| BaseDataVariableType	| Optional 	| R |
 | HasComponent	| Variable	| WarningExtent	| Int32	| BaseDataVariableType	| Optional	| R |
-| HasStopReason	| Variable	| StopReason	| PackMLAlarmDataType	| BaseDataVariableType	| Optional 	| R |
+| HasStopReason	| Variable	| StopReason	| PackMLEventDataType	| BaseDataVariableType	| Optional 	| R |
 | HasComponent	| Variable	| StopReasonExtent	| Int32	| BaseDataVariableType	| Optional	| R |
 | HasComponent	| Variable	| ModeCurrentTime	| Int32[]	| BaseDataVariableType	| Optional	| R |
 | HasComponent	| Variable	| ModeCumulativeTime	| Int32[]	| BaseDataVariableType	| Optional	| R |
@@ -1349,15 +1349,15 @@ The section defines alarms. Alarms in PackML are provided via a set of tags. Ala
 
 The following *VariableType* is used to report alarms in the PackML unit. In addition, the data is also available as a structured datatype, which is much like an event.
 
-##### PackMLAlarmDataType {#sec-packmlalarmdatatype}
+##### PackMLEventDataType {#sec-packmleventdatatype}
 
-The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in [](#tbl-packmlalarmdatatype-structure). 
+The PackMLEventDataType provides the PackML tag alarm structure. It is formally defined in [](#tbl-packmleventdatatype-structure). 
 
 
-*Table - PackMLAlarmDataType Structure* {#tbl-packmlalarmdatatype-structure defines=PackMLAlarmDataType}
+*Table - PackMLEventDataType Structure* {#tbl-packmleventdatatype-structure defines=PackMLEventDataType}
 | Name	| Type	| Description |
 | --- | --- | --- |
-| PackMLAlarmDataType	| Structure	 | |
+| PackMLEventDataType	| Structure	 | |
 | ID	| Int32	| A unique number assigned to each type of alarm, stop or warning. |
 | Value	| Int32	| An alarm, stop or warning message number associated to the ID to allow for user specific detail or to break down the Alarm.ID to greater detail |
 | Message	| String	| The actual text of the alarm, stop or warning for those machines capable of providing string information |
