@@ -573,19 +573,19 @@ This section defines any enumeration or structure that are defined as part of th
 
 #### ProductionMaintenanceModeEnum {#sec-productionmaintenancemodeenum}
 
-The *ProductionMaintenanceModeEnum* describes the predefined modes. This is a default mode enumeration. A *Server* may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The *ProductionMaintenanceModeEnum* is defined in [](#tbl-productionmaintenancemodeenum-values).
+*ProductionMaintenanceModeEnum* describes the predefined modes. This is a default mode enumeration. A *Server* may define additional enumerations that describe the modes it supports, but any such enumeration must include "Production" as enumeration 1 and if Maintenance or Manual are included, they must be 2 and 3 respectively. Any additional modes must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. *ProductionMaintenanceModeEnum* is defined in [](#tbl-productionmaintenancemodeenum-values).
 
 *Table - ProductionMaintenanceModeEnum values* {#tbl-productionmaintenancemodeenum-values defines=ProductionMaintenanceModeEnum}
 | Name	| Value	| Description |
 | --- | --- | --- |
-| Invalid	| 0	| This is an invalid mode |
-| Produce	| 1	| Machine is in production mode |
+| Invalid	| 0	| Not used |
+| Production	| 1	| Machine is in production mode |
 | Maintenance	| 2	| Machine is in maintenance mode |
 | Manual	| 3	| Machine is in manual mode |
 
 
-where the following definition apply:
--Produce corresponds to the PackML Production Mode which is routine production.
+where the following definitions apply:
+-Production corresponds to the PackML Production Mode which is routine production.
 -Maintenance corresponds to the PackML Maintenance Mode which is the ability to run a machine independent of other machine in a production line.
 -Manual corresponds to the PackML Manual Mode which provides direct control of the individual machine elements.
 

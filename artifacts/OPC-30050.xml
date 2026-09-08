@@ -2709,7 +2709,8 @@
         <sec id="sec_6-5-2">
           <label>6.5.2</label>
           <title>ProductionMaintenanceModeEnum</title>
-          <p>The <italic>ProductionMaintenanceModeEnum</italic> describes the predefined modes. This is a default mode enumeration. A <italic>Server</italic> may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The <italic>ProductionMaintenanceModeEnum</italic> is defined in <xref ref-type="table" rid="tbl_12">Table 12</xref>.</p>
+          <p>
+            <italic>ProductionMaintenanceModeEnum</italic> describes the predefined modes. This is a default mode enumeration. A <italic>Server</italic> may define additional enumerations that describe the modes it supports, but any such enumeration must include "Production" as enumeration 1 and if Maintenance or Manual are included, they must be 2 and 3 respectively. Any additional modes must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. <italic>ProductionMaintenanceModeEnum</italic> is defined in <xref ref-type="table" rid="tbl_12">Table 12</xref>.</p>
           <table-wrap id="tbl_12">
             <label>Table 12</label>
             <caption>
@@ -2727,10 +2728,10 @@
                 <tr>
                   <td>Invalid</td>
                   <td>0</td>
-                  <td>This is an invalid mode</td>
+                  <td>Not used</td>
                 </tr>
                 <tr>
-                  <td>Produce</td>
+                  <td>Production</td>
                   <td>1</td>
                   <td>Machine is in production mode</td>
                 </tr>
@@ -2747,8 +2748,8 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>where the following definition apply:</p>
-          <p>-Produce corresponds to the PackML Production Mode which is routine production.</p>
+          <p>where the following definitions apply:</p>
+          <p>-Production corresponds to the PackML Production Mode which is routine production.</p>
           <p>-Maintenance corresponds to the PackML Maintenance Mode which is the ability to run a machine independent of other machine in a production line.</p>
           <p>-Manual corresponds to the PackML Manual Mode which provides direct control of the individual machine elements.</p>
         </sec>
@@ -5872,12 +5873,12 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>1.01</td>
+                <td>2.0.1-alpha</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
                 <td>DateTime</td>
-                <td>2020-10-08</td>
+                <td>2026-09-08</td>
               </tr>
               <tr>
                 <td>IsNamespaceSubset</td>
