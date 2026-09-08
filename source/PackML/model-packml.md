@@ -669,7 +669,7 @@ The *PackMLRemoteInterfaceDataType* provides the PackML remote connection inform
 | Name	| Type	| Description |
 | --- | --- | --- |
 | PackMLParameterRealDataType	| Structure	 | |
-| ID	| Int32	| A unique number assigned to the parameter. |
+| ID	| Int32	| A unique number assigned to the parameter |
 | Name	| String	| The name of the parameter  |
 | Unit	| EUInformation	| OPC UA engineering unit information |
 | Value	| Float	| This is the numeric value of the parameter |
@@ -687,24 +687,24 @@ The *PackMLRemoteInterfaceDataType* provides the PackML remote connection inform
 | Unit	| EUInformation	| OPC UA engineering unit information |
 | Value	| String | This is the string value of the parameter |
 
-#### PackMLParameterLrealDataType {#sec-PackMLParameterLrealDataType}
+#### PackMLParameterLRealDataType {#sec-packmlparameterlrealdatatype}
 
-*PackMLParameterLrealDataType* provides the PackML PARAMETER_LREAL structure where member Value has IEC data type LREAL. *PackMLParameterLrealDataType* is formally defined in [](#tbl-PackMLParameterLrealDataType-structure).
+*PackMLParameterLRealDataType* provides the PackML PARAMETER_LREAL structure where member Value has IEC data type LREAL. *PackMLParameterLRealDataType* is formally defined in [](#tbl-packmlparameterlrealdatatype-structure).
 
-*Table - PackMLParameterLrealDataType Structure* {#tbl-PackMLParameterLrealDataType-structure defines=PackMLParameterLrealDataType}
+*Table - PackMLParameterLRealDataType Structure* {#tbl-packmlparameterlrealdatatype-structure defines=PackMLParameterLRealDataType}
 | Name	| Type	| Description |
 | --- | --- | --- |
-| PackMLParameterLrealDataType	| Structure	 | |
+| PackMLParameterLRealDataType	| Structure	 | |
 | ID	| Int32	| A unique number assigned to the parameter. |
 | Name	| String	| The name of the parameter  |
 | Unit	| EUInformation	| OPC UA engineering unit information |
 | Value	| Double	| This is the numeric value of the parameter |
 
-#### PackMLParameterDintDataType {#sec-packmlparameterdintdatatype}
+#### PackMLParameterDIntDataType {#sec-packmlparameterdintdatatype}
 
-*PackMLParameterDintDataType* provides the PackML PARAMETER_DINT structure where member Value has IEC data type DINT. *PackMLParameterDintDataType* is formally defined in [](#tbl-packmlparameterdintdatatype-structure).
+*PackMLParameterDIntDataType* provides the PackML PARAMETER_DINT structure where member Value has IEC data type DINT. *PackMLParameterDIntDataType* is formally defined in [](#tbl-packmlparameterdintdatatype-structure).
 
-*Table - PackMLParameterDintDataType Structure* {#tbl-packmlparameterdintdatatype-structure defines=PackMLParameterDintDataType}
+*Table - PackMLParameterDIntDataType Structure* {#tbl-packmlparameterdintdatatype-structure defines=PackMLParameterDIntDataType}
 | Name	| Type	| Description |
 | --- | --- | --- |
 | PackMLParameterDintDataType	| Structure	 | |
