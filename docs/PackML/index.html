@@ -1045,7 +1045,7 @@
 </section>
 <section id="sec_6-5-2" class="clause">
 <h4><span class="label">6.5.2</span> ProductionMaintenanceModeEnum<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="574-590" title="Open the source of this clause">&#128221;</a></h4>
-<p>The <em>ProductionMaintenanceModeEnum</em> describes the predefined modes. This is a default mode enumeration. A <em>Server</em> may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The <em>ProductionMaintenanceModeEnum</em> is defined in <a class="xref" href="#tbl_12" data-ref-type="table">Table 12</a>.</p>
+<p><em>ProductionMaintenanceModeEnum</em> describes the predefined modes. This is a default mode enumeration. A <em>Server</em> may define additional enumerations that describe the modes it supports, but any such enumeration must include "Production" as enumeration 1 and if Maintenance or Manual are included, they must be 2 and 3 respectively. Any additional modes must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. <em>ProductionMaintenanceModeEnum</em> is defined in <a class="xref" href="#tbl_12" data-ref-type="table">Table 12</a>.</p>
 <figure class="table-wrap" id="tbl_12">
 <figcaption><span class="label">Table 12</span> ProductionMaintenanceModeEnum values<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="578-584" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
@@ -1053,15 +1053,15 @@
 <tr><th>Name</th><th>Value</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Invalid</td><td>0</td><td>This is an invalid mode</td></tr>
-<tr><td>Produce</td><td>1</td><td>Machine is in production mode</td></tr>
+<tr><td>Invalid</td><td>0</td><td>Not used</td></tr>
+<tr><td>Production</td><td>1</td><td>Machine is in production mode</td></tr>
 <tr><td>Maintenance</td><td>2</td><td>Machine is in maintenance mode</td></tr>
 <tr><td>Manual</td><td>3</td><td>Machine is in manual mode</td></tr>
 </tbody>
 </table>
 </figure>
-<p>where the following definition apply:</p>
-<p>-Produce corresponds to the PackML Production Mode which is routine production.</p>
+<p>where the following definitions apply:</p>
+<p>-Production corresponds to the PackML Production Mode which is routine production.</p>
 <p>-Maintenance corresponds to the PackML Maintenance Mode which is the ability to run a machine independent of other machine in a production line.</p>
 <p>-Manual corresponds to the PackML Manual Mode which provides direct control of the individual machine elements.</p>
 </section>
@@ -2288,8 +2288,8 @@
 </thead>
 <tbody>
 <tr><td>NamespaceUri</td><td>String</td><td>http://opcfoundation.org/UA/PackML/</td></tr>
-<tr><td>NamespaceVersion</td><td>String</td><td>1.01</td></tr>
-<tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2020-10-08</td></tr>
+<tr><td>NamespaceVersion</td><td>String</td><td>2.0.1-alpha</td></tr>
+<tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-09-08</td></tr>
 <tr><td>IsNamespaceSubset</td><td>Boolean</td><td>False</td></tr>
 <tr><td>StaticNodeIdTypes</td><td>IdType []</td><td></td></tr>
 <tr><td>StaticNumericNodeIdRange</td><td>NumericRange []</td><td></td></tr>
@@ -2555,7 +2555,7 @@ END_VAR</code></pre>
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"ea0b9a4ffbe2216ac9076bcb952c0aba9823d62b","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"4d77858e5251199bf453cfafd5b947ecb43ce391","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;
