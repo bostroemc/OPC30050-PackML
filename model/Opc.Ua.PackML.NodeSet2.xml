@@ -6,7 +6,7 @@
     <Uri>http://opcfoundation.org/UA/PackML/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="1.01" PublicationDate="2020-10-08T11:08:00Z" ModelVersion="1.01">
+    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.2" PublicationDate="2026-09-08T17:44:55.9718055Z" ModelVersion="2.0.2-alpha">
       <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.07" PublicationDate="2026-07-30T00:00:00Z" />
     </Model>
   </Models>
@@ -53,16 +53,15 @@
   </UAReferenceType>
   <UADataType NodeId="ns=1;i=11" BrowseName="1:ProductionMaintenanceModeEnum">
     <DisplayName>ProductionMaintenanceModeEnum</DisplayName>
-    <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.5.2</Documentation>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=29</Reference>
       <Reference ReferenceType="i=46">ns=1;i=194</Reference>
     </References>
     <Definition Name="1:ProductionMaintenanceModeEnum">
       <Field Name="Invalid" Value="0">
-        <Description>This is an invalid mode</Description>
+        <Description>Not used</Description>
       </Field>
-      <Field Name="Produce" Value="1">
+      <Field Name="Production" Value="1">
         <Description>Machine is in production mode</Description>
       </Field>
       <Field Name="Maintenance" Value="2">
@@ -149,15 +148,14 @@
       </uax:ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UADataType NodeId="ns=1;i=15" BrowseName="1:PackMLAlarmDataType">
-    <DisplayName>PackMLAlarmDataType</DisplayName>
-    <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.8.2/#6.8.2.2</Documentation>
+  <UADataType NodeId="ns=1;i=15" BrowseName="1:PackMLEventDataType">
+    <DisplayName>PackMLEventDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
       <Reference ReferenceType="i=38">ns=1;i=74</Reference>
       <Reference ReferenceType="i=38">ns=1;i=76</Reference>
     </References>
-    <Definition Name="1:PackMLAlarmDataType">
+    <Definition Name="1:PackMLEventDataType">
       <Field Name="ID" DataType="i=6">
         <Description>A unique number assigned to each type of alarm, stop or warning.</Description>
       </Field>
@@ -1521,7 +1519,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:DateTime>2020-10-08T11:08:00Z</uax:DateTime>
+      <uax:DateTime>2026-09-08T17:44:55.9718055Z</uax:DateTime>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=356" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=117" DataType="i=12">
@@ -1541,7 +1539,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>1.01</uax:String>
+      <uax:String>2.0.2</uax:String>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=358" BrowseName="StaticNodeIdTypes" ParentNodeId="ns=1;i=117" DataType="i=256" ValueRank="1" ArrayDimensions="0">
@@ -1572,7 +1570,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>1.01</uax:String>
+      <uax:String>2.0.2-alpha</uax:String>
     </Value>
   </UAVariable>
   <UAObject NodeId="ns=1;i=27" BrowseName="1:Resetting">
