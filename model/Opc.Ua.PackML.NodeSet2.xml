@@ -6,7 +6,7 @@
     <Uri>http://opcfoundation.org/UA/PackML/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.2" PublicationDate="2026-09-08T17:44:55.9718055Z" ModelVersion="2.0.2-alpha">
+    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.3" PublicationDate="2026-09-08T18:04:24.0230572Z" ModelVersion="2.0.3-alpha">
       <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.07" PublicationDate="2026-07-30T00:00:00Z" />
     </Model>
   </Models>
@@ -384,6 +384,194 @@
       <Reference ReferenceType="i=39">ns=1;i=188</Reference>
     </References>
   </UAObject>
+  <UADataType NodeId="ns=1;i=405" BrowseName="1:PackMLParameterRealDataType">
+    <DisplayName>PackMLParameterRealDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLParameterRealDataType">
+      <Field Name="ID" DataType="i=6">
+        <Description>A unique number assigned to the parameter</Description>
+      </Field>
+      <Field Name="Name" DataType="i=12">
+        <Description>The name of the parameter</Description>
+      </Field>
+      <Field Name="Unit" DataType="i=887">
+        <Description>OPC UA engineering unit information</Description>
+      </Field>
+      <Field Name="Value" DataType="i=10">
+        <Description>The numeric value of the parameter</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=408" BrowseName="1:PackMLParameterStringDataType">
+    <DisplayName>PackMLParameterStringDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLParameterStringDataType">
+      <Field Name="ID" DataType="i=6">
+        <Description>A unique number assigned to the parameter</Description>
+      </Field>
+      <Field Name="Name" DataType="i=12">
+        <Description>The name of the parameter</Description>
+      </Field>
+      <Field Name="Unit" DataType="i=887">
+        <Description>OPC UA engineering unit information</Description>
+      </Field>
+      <Field Name="Value" DataType="i=12">
+        <Description>String value of the parameter</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=411" BrowseName="1:PackMLParameterLRealDataType">
+    <DisplayName>PackMLParameterLRealDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLParameterLRealDataType">
+      <Field Name="ID" DataType="i=6">
+        <Description>A unique number assigned to the parameter</Description>
+      </Field>
+      <Field Name="Name" DataType="i=12">
+        <Description>The name of the parameter</Description>
+      </Field>
+      <Field Name="Unit" DataType="i=887">
+        <Description>OPC UA engineering unit information</Description>
+      </Field>
+      <Field Name="Value" DataType="i=11">
+        <Description>Numeric value of the parameter</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=414" BrowseName="1:PackMLParameterDIntDataType">
+    <DisplayName>PackMLParameterDIntDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLParameterDIntDataType">
+      <Field Name="ID" DataType="i=6">
+        <Description>A unique number assigned to the parameter</Description>
+      </Field>
+      <Field Name="Name" DataType="i=12">
+        <Description>The name of the parameter</Description>
+      </Field>
+      <Field Name="Unit" DataType="i=887">
+        <Description>OPC UA engineering unit information</Description>
+      </Field>
+      <Field Name="Value" DataType="i=6">
+        <Description>The numeric value fo the parameter</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=417" BrowseName="1:PackMLRecipeDataType">
+    <DisplayName>PackMLRecipeDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLRecipeDataType">
+      <Field Name="ID" DataType="i=6">
+        <Description>A unique number assigned to the recipe</Description>
+      </Field>
+      <Field Name="Name" DataType="i=12">
+        <Description>The name of the recipe</Description>
+      </Field>
+      <Field Name="Unit" DataType="i=887">
+        <Description>OPC UA engineering unit information</Description>
+      </Field>
+      <Field Name="PrimaryQty" DataType="i=10">
+        <Description>Primary quantity value of the recipe</Description>
+      </Field>
+      <Field Name="ProcessVariables" DataType="ns=1;i=426">
+        <Description>Recipe process variables</Description>
+      </Field>
+      <Field Name="Ingredients" DataType="ns=1;i=17">
+        <Description>Recipe ingredients</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=420" BrowseName="1:PackMLCumulativeTimesDataType">
+    <DisplayName>PackMLCumulativeTimesDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLCumulativeTimesDataType">
+      <Field Name="AccTimeSinceReset" DataType="i=6">
+        <Description>Accumulated time since last reset</Description>
+      </Field>
+      <Field Name="ModeStateTimes" DataType="ns=1;i=423" ValueRank="1">
+        <Description>Structured array of mode and state time values for each cumulative time tracker</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=423" BrowseName="1:PackMLModeStateTimesDataType">
+    <DisplayName>PackMLModeStateTimesDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLModeStateTimesDataType">
+      <Field Name="Mode" DataType="i=6">
+        <Description>Mode time values  for each mode</Description>
+      </Field>
+      <Field Name="State" DataType="i=6" ValueRank="1" ArrayDimensions="18">
+        <Description>State time values for each state in each mode</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=426" BrowseName="1:PackMLProcessVariablesDataType">
+    <DisplayName>PackMLProcessVariablesDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLProcessVariablesDataType">
+      <Field Name="Parameter_REAL" DataType="ns=1;i=405" ValueRank="1">
+        <Description>Structured array of recipe process Variable information for values with Float data type </Description>
+      </Field>
+      <Field Name="Parameter_STRING" DataType="ns=1;i=408" ValueRank="1">
+        <Description>Structured array of recipe process Variable information for values with String data type</Description>
+      </Field>
+      <Field Name="Parameter_LREAL" DataType="ns=1;i=411" ValueRank="1">
+        <Description>Structured array of recipe process Variable information for values with Double data type </Description>
+      </Field>
+      <Field Name="Parameter_DINT" DataType="ns=1;i=414" ValueRank="1">
+        <Description> Structured array of recipe process Variable information for values with Int32 data type </Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=429" BrowseName="1:PackMLIngredientsDataType">
+    <DisplayName>PackMLIngredientsDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLIngredientsDataType">
+      <Field Name="Parameter_REAL" DataType="ns=1;i=405" ValueRank="1">
+        <Description>Structured array of ingredient information for values with Float data type</Description>
+      </Field>
+      <Field Name="Parameter_STRING" DataType="ns=1;i=408" ValueRank="1">
+        <Description>Structured array of ingredient information for values with String data type </Description>
+      </Field>
+      <Field Name="Parameter_LREAL" DataType="ns=1;i=411" ValueRank="1">
+        <Description>Structured array of ingredient information for values with Double data type</Description>
+      </Field>
+      <Field Name="Parameter_DINT" DataType="ns=1;i=414" ValueRank="1">
+        <Description>Structured array of ingredient information for values with Int32 data type</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=432" BrowseName="1:PackMLEquipmentInterlockDataType">
+    <DisplayName>PackMLEquipmentInterlockDataType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:PackMLEquipmentInterlockDataType">
+      <Field Name="Blocked" DataType="i=1">
+        <Description>Indicator for unit/machine blocked</Description>
+      </Field>
+      <Field Name="Starved" DataType="i=1">
+        <Description>Indicator for unit/machine starved</Description>
+      </Field>
+    </Definition>
+  </UADataType>
   <UAObjectType NodeId="ns=1;i=5" BrowseName="1:PackMLAdminObjectType">
     <DisplayName>PackMLAdminObjectType</DisplayName>
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.3.4</Documentation>
@@ -1519,7 +1707,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:DateTime>2026-09-08T17:44:55.9718055Z</uax:DateTime>
+      <uax:DateTime>2026-09-08T18:04:24.0230572Z</uax:DateTime>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=356" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=117" DataType="i=12">
@@ -1539,7 +1727,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.2</uax:String>
+      <uax:String>2.0.3</uax:String>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=358" BrowseName="StaticNodeIdTypes" ParentNodeId="ns=1;i=117" DataType="i=256" ValueRank="1" ArrayDimensions="0">
@@ -1570,7 +1758,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.2-alpha</uax:String>
+      <uax:String>2.0.3-alpha</uax:String>
     </Value>
   </UAVariable>
   <UAObject NodeId="ns=1;i=27" BrowseName="1:Resetting">
@@ -2779,4 +2967,144 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=103</Reference>
     </References>
   </UAVariable>
+  <UAObject NodeId="ns=1;i=406" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=405</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=407" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=405</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=409" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=408</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=410" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=408</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=412" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=411</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=413" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=411</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=415" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=414</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=416" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=414</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=419" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=417</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=418" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=417</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=421" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=420</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=422" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=420</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=424" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=423</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=425" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=423</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=427" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=426</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=428" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=426</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=430" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=429</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=431" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=429</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=433" BrowseName="Default Binary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=432</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=434" BrowseName="Default XML">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=432</Reference>
+    </References>
+  </UAObject>
 </UANodeSet>

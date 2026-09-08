@@ -661,6 +661,133 @@ The *PackMLRemoteInterfaceDataType* provides the PackML remote connection inform
 | CmdValue	| Int32	| This is the command value associated with the ControlCmdNumber above. The command value may be the speed requested, state change, etc. <br><br>Example:For an upstream machine designated as #2 a control command number of 5 may be related to the speed setting value for the machine. A value of 400 can be used to modify the remote machine setpoint. <br><br>Command.RemoteInterface[1].Number = 2 <br><br>Command.RemoteInterface[1] <br><br>ControlCmdNumber = 5 <br><br>Command.RemoteInterface[1].CmdValue = 400 |
 | Parameter	| PackMLDescriptorDataType[]	| The parameter tags associated to commanded remote interface are typically used for command parameters that are given to the unit machine from remote machines. The parameters are typically needed for coordinating the unit machine or production with other machines. The parameter value may be anything from machine limit parameters to temperatures and counter presets. The parameters are typically limited to machine parameters as product and process parameters are described in later tags. |
 
+#### PackMLParameterRealDataType {#sec-packmlparameterrealdatatype}
+
+*PackMLParameterRealDataType* provides the PackML PARAMETER_REAL structure where member Value has IEC data type REAL. *PackMLParameterRealDataType* is formally defined in [](#tbl-packmlparameterrealdatatype-structure).
+
+*Table - PackMLParameterRealDataType Structure* {#tbl-packmlparameterrealdatatype-structure defines=PackMLParameterRealDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLParameterRealDataType	| Structure	 | |
+| ID	| Int32	| A unique number assigned to the parameter |
+| Name	| String	| The name of the parameter  |
+| Unit	| EUInformation	| OPC UA engineering unit information |
+| Value	| Float	| This is the numeric value of the parameter |
+
+#### PackMLParameterStringDataType {#sec-packmlparameterstringdatatype}
+
+*PackMLParameterStringDataType* provides the PackML PARAMETER_STRING structure where member Value has IEC data type STRING. *PackMLParameterStringDataType* is formally defined in [](#tbl-packmlparameterstringdatatype-structure).
+
+*Table - PackMLParameterStringDataType Structure* {#tbl-packmlparameterstringdatatype-structure defines=PackMLParameterStringDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLParameterStringDataType	| Structure	 | |
+| ID	| Int32	| A unique number assigned to the parameter. |
+| Name	| String	| The name of the parameter  |
+| Unit	| EUInformation	| OPC UA engineering unit information |
+| Value	| String | This is the string value of the parameter |
+
+#### PackMLParameterLRealDataType {#sec-packmlparameterlrealdatatype}
+
+*PackMLParameterLRealDataType* provides the PackML PARAMETER_LREAL structure where member Value has IEC data type LREAL. *PackMLParameterLRealDataType* is formally defined in [](#tbl-packmlparameterlrealdatatype-structure).
+
+*Table - PackMLParameterLRealDataType Structure* {#tbl-packmlparameterlrealdatatype-structure defines=PackMLParameterLRealDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLParameterLRealDataType	| Structure	 | |
+| ID	| Int32	| A unique number assigned to the parameter. |
+| Name	| String	| The name of the parameter  |
+| Unit	| EUInformation	| OPC UA engineering unit information |
+| Value	| Double	| This is the numeric value of the parameter |
+
+#### PackMLParameterDIntDataType {#sec-packmlparameterdintdatatype}
+
+*PackMLParameterDIntDataType* provides the PackML PARAMETER_DINT structure where member Value has IEC data type DINT. *PackMLParameterDIntDataType* is formally defined in [](#tbl-packmlparameterdintdatatype-structure).
+
+*Table - PackMLParameterDIntDataType Structure* {#tbl-packmlparameterdintdatatype-structure defines=PackMLParameterDIntDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLParameterDintDataType	| Structure	 | |
+| ID	| Int32	| A unique number assigned to the parameter. |
+| Name	| String	| The name of the parameter  |
+| Unit	| EUInformation	| OPC UA engineering unit information |
+| Value	| Int32	| This is the numeric value of the parameter |
+
+#### PackMLRecipeDataType {#sec-packmlrecipedatatype}
+
+*PackMLRecipeDataType* provides the PackML RECIPE structure used to describe the product that the machine is making or can make. *PackMLRecipeDataType* is formally defined in [](#tbl-packmlrecipedatatype-structure).
+
+*Table - PackMLRecipeDataType Structure* {#tbl-packmlrecipedatatype-structure defines=PackMLRecipeDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLRecipeDataType	| Structure	 | |
+| ID	| Int32	| A unique number assigned to the recipe |
+| Name	| String	| The name of the recipe  |
+| Unit	| EUInformation	| OPC UA engineering unit information |
+| PrimaryQty	| Float	| Primary quantity value of the recipe |
+| ProcessVariables	| PackMLProcessVariablesDataType	| Recipe process variables |
+| Ingredients	| PackMLIngredients	| Recipe ingredients |
+
+#### PackMLCumulativeTimesDataType {#sec-packmlcumulativetimesdatatype}
+
+*PackMLCumulativeTimesDataType* provides the PackML CUMULATIVE_TIMES structure used to track the total amount of cumulative time a machine unit has spent in each Mode and State.This data type is used inside the PMLa structure as an array. The user is able to decide the extent of the array depending on the strategy for resetting times. *PackMLCumulativeTimesDataType* is formally defined in [](#tbl-packmlcumulativetimesdatatype-structure).
+
+*Table - PackMLCumulativeTimesDataType Structure* {#tbl-packmlcumulativetimesdatatype-structure defines=PackMLCumulativeTimesDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLCumulativeTimesDataType	| Structure	 | |
+| AccTimeSinceRecet	| Int32	| Accumulated time since last reset  |
+| ModeStateTimes	| PackMLModeStateTimesDataType[]	| Structured array of mode and state time values for each cumulative time tracker  |
+
+#### PackMLModeStateTimesDataType {#sec-packmlmodestatetimesdatatype}
+
+*PackMLModeStateTimesDataType* provides the PackML MODESTATE_TIMES structure used to track the total amount of cumulative time a machine unit has spent in each mode and state. *PackMLModeStateTimesDataType* is formally defined in [](#tbl-packmlmodestatetimesdatatype-structure).
+
+*Table - PackMLModeStateTimesDataType Structure* {#tbl-packmlmodestatetimesdatatype-structure defines=PackMLModeStateTimesDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLModeStateTimesDataType	| Structure	 | |
+| Mode	| Int32	|  Mode time values for each mode  |
+| State	| Int32[]	|  State time values for each state in each mode  |
+
+#### PackMLProcessVariablesDataType {#sec-packmlprocessvariablesdatatype}
+
+*PackMLProcessVariablesDataType* provides the PackML PROCESS_VARIABLES structure used to describe the key process variables for a given recipe, such as speed or time setpoints. *PackMLProcessVariablesDataType* is formally defined in [](#tbl-packmlmodeprocessvariablesdatatype-structure).
+
+*Table - PackMLProcessVariablesDataType Structure* {#tbl-packmlmodeprocessvariablesdatatype-structure defines=PackMLProcessVariablesDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLProcessVariablesDataType	| Structure	 | |
+| Parameter_REAL | PackMLParameterRealDataType[]	| Structured array of recipe process Variable information for values with Float data type  |
+| Parameter_STRING | PackMLParameterStringDataType[]	| Structured array of recipe process Variable information for values with String data type   |
+| Parameter_LREAL | PackMLParameterLrealDataType[]	|  Structured array of recipe process Variable information for values with Double data type  |
+| Parameter_DINT | PackMLParameterDintDataType[]	|  Structured array of recipe process Variable information for values with Int32 data type  |
+
+#### PackMLIngredientsDataType {#sec-packmlingredientsdatatype}
+
+*PackMLIngredientsDataType* provides the PackML INGREDENTS structure used to describe the raw materials that are needed for a given recipe. *PackMLProcessVariablesDataType* is formally defined in [](#tbl-packmlingredientsdatatype-structure).
+
+*Table - PackMLIngredientsDataType Structure* {#tbl-packmlingredientsdatatype-structure defines=PackMLIngredientsDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLIngredientsDataType	| Structure	 | |
+| Parameter_REAL | PackMLParameterRealDataType[]	|  Structured array of ingredient information for values with Float data type   |
+| Parameter_STRING | PackMLParameterStringDataType[]	|  Structured array of ingredient information for values with String data type  |
+| Parameter_LREAL | PackMLParameterLrealDataType[]	|  Structured array of ingredient information for values with Double data type  |
+| Parameter_DINT | PackMLParameterDintDataType[]	|  Structured array of ingredient information for values with Int32 data type  |
+
+#### PackMLEquipmentInterlockDataType {#sec-packmlequipmentinterlockdatatype}
+
+*PackMLEquipmentInterlockDataType* provides the PackML EQUIPMENT_INTERLOCK structure used to provide an indicator of Blocked or Starved conditions at the machine unit when integrated into a complete production line.  *PackMLEquipmentInterlockDataType* is formally defined in [](#tbl-packmlequipmentinterlockdatatype-structure).
+
+*Table - PackMLEquipmentInterlockDataType Structure* {#tbl-packmlequipmentinterlockdatatype-structure defines=PackMLEquipmentInterlockDataType}
+| Name	| Type	| Description |
+| --- | --- | --- |
+| PackMLEquipmentInterlockDataType	| Structure	 | |
+| Blocked | Boolean	|  Indicator for unit/machine blocked |
+| Starved | Boolean	|  Indicator for unit/machine starved |
+
+
 
 ### ReferenceTypes {#sec-referencetypes}
 
