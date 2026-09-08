@@ -55,7 +55,7 @@ template sets up.
 
 ## Start here
 
-**1. Fork this repository
+**1. Fork this repository**
 
 **2. Install the tools.** Two are published: the **publisher**, which is what this repository is
 built with, and the **validator**, which converts a Word specification into this format and checks
