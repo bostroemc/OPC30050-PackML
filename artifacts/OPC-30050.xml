@@ -2853,7 +2853,7 @@
         <sec id="sec_6-5-5">
           <label>6.5.5</label>
           <title>PackMLIngredientsDataType</title>
-          <p>The <italic>PackMLIngredientsDataType</italic> provides the PackML Parameter structure. The <italic>PackMLIngredientsDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_15">Table 15</xref>.</p>
+          <p>The <italic>PackMLIngredientsDataType</italic> provides the PackML Parameter structure. The <italic>PackMLIngredientsDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_26">Table 26</xref>.</p>
           <table-wrap id="tbl_15">
             <label>Table 15</label>
             <caption>
@@ -2974,6 +2974,456 @@
             </table>
           </table-wrap>
         </sec>
+        <sec id="sec_6-5-8">
+          <label>6.5.8</label>
+          <title>PackMLParameterRealDataType</title>
+          <p>
+            <italic>PackMLParameterRealDataType</italic> provides the PackML PARAMETER_REAL structure where member Value has IEC data type REAL. <italic>PackMLParameterRealDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_18">Table 18</xref>.</p>
+          <table-wrap id="tbl_18">
+            <label>Table 18</label>
+            <caption>
+              <p>PackMLParameterRealDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLParameterRealDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td>Int32</td>
+                  <td>A unique number assigned to the parameter</td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>String</td>
+                  <td>The name of the parameter</td>
+                </tr>
+                <tr>
+                  <td>Unit</td>
+                  <td>EUInformation</td>
+                  <td>OPC UA engineering unit information</td>
+                </tr>
+                <tr>
+                  <td>Value</td>
+                  <td>Float</td>
+                  <td>This is the numeric value of the parameter</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-9">
+          <label>6.5.9</label>
+          <title>PackMLParameterStringDataType</title>
+          <p>
+            <italic>PackMLParameterStringDataType</italic> provides the PackML PARAMETER_STRING structure where member Value has IEC data type STRING. <italic>PackMLParameterStringDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_19">Table 19</xref>.</p>
+          <table-wrap id="tbl_19">
+            <label>Table 19</label>
+            <caption>
+              <p>PackMLParameterStringDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLParameterStringDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td>Int32</td>
+                  <td>A unique number assigned to the parameter.</td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>String</td>
+                  <td>The name of the parameter</td>
+                </tr>
+                <tr>
+                  <td>Unit</td>
+                  <td>EUInformation</td>
+                  <td>OPC UA engineering unit information</td>
+                </tr>
+                <tr>
+                  <td>Value</td>
+                  <td>String</td>
+                  <td>This is the string value of the parameter</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-10">
+          <label>6.5.10</label>
+          <title>PackMLParameterLRealDataType</title>
+          <p>
+            <italic>PackMLParameterLRealDataType</italic> provides the PackML PARAMETER_LREAL structure where member Value has IEC data type LREAL. <italic>PackMLParameterLRealDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_20">Table 20</xref>.</p>
+          <table-wrap id="tbl_20">
+            <label>Table 20</label>
+            <caption>
+              <p>PackMLParameterLRealDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLParameterLRealDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td>Int32</td>
+                  <td>A unique number assigned to the parameter.</td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>String</td>
+                  <td>The name of the parameter</td>
+                </tr>
+                <tr>
+                  <td>Unit</td>
+                  <td>EUInformation</td>
+                  <td>OPC UA engineering unit information</td>
+                </tr>
+                <tr>
+                  <td>Value</td>
+                  <td>Double</td>
+                  <td>This is the numeric value of the parameter</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-11">
+          <label>6.5.11</label>
+          <title>PackMLParameterDIntDataType</title>
+          <p>
+            <italic>PackMLParameterDIntDataType</italic> provides the PackML PARAMETER_DINT structure where member Value has IEC data type DINT. <italic>PackMLParameterDIntDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_21">Table 21</xref>.</p>
+          <table-wrap id="tbl_21">
+            <label>Table 21</label>
+            <caption>
+              <p>PackMLParameterDIntDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLParameterDintDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td>Int32</td>
+                  <td>A unique number assigned to the parameter.</td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>String</td>
+                  <td>The name of the parameter</td>
+                </tr>
+                <tr>
+                  <td>Unit</td>
+                  <td>EUInformation</td>
+                  <td>OPC UA engineering unit information</td>
+                </tr>
+                <tr>
+                  <td>Value</td>
+                  <td>Int32</td>
+                  <td>This is the numeric value of the parameter</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-12">
+          <label>6.5.12</label>
+          <title>PackMLRecipeDataType</title>
+          <p>
+            <italic>PackMLRecipeDataType</italic> provides the PackML RECIPE structure used to describe the product that the machine is making or can make. <italic>PackMLRecipeDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_22">Table 22</xref>.</p>
+          <table-wrap id="tbl_22">
+            <label>Table 22</label>
+            <caption>
+              <p>PackMLRecipeDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLRecipeDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>ID</td>
+                  <td>Int32</td>
+                  <td>A unique number assigned to the recipe</td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>String</td>
+                  <td>The name of the recipe</td>
+                </tr>
+                <tr>
+                  <td>Unit</td>
+                  <td>EUInformation</td>
+                  <td>OPC UA engineering unit information</td>
+                </tr>
+                <tr>
+                  <td>PrimaryQty</td>
+                  <td>Float</td>
+                  <td>Primary quantity value of the recipe</td>
+                </tr>
+                <tr>
+                  <td>ProcessVariables</td>
+                  <td>PackMLProcessVariablesDataType</td>
+                  <td>Recipe process variables</td>
+                </tr>
+                <tr>
+                  <td>Ingredients</td>
+                  <td>PackMLIngredients</td>
+                  <td>Recipe ingredients</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-13">
+          <label>6.5.13</label>
+          <title>PackMLCumulativeTimesDataType</title>
+          <p>
+            <italic>PackMLCumulativeTimesDataType</italic> provides the PackML CUMULATIVE_TIMES structure used to track the total amount of cumulative time a machine unit has spent in each Mode and State.This data type is used inside the PMLa structure as an array. The user is able to decide the extent of the array depending on the strategy for resetting times. <italic>PackMLCumulativeTimesDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_23">Table 23</xref>.</p>
+          <table-wrap id="tbl_23">
+            <label>Table 23</label>
+            <caption>
+              <p>PackMLCumulativeTimesDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLCumulativeTimesDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>AccTimeSinceRecet</td>
+                  <td>Int32</td>
+                  <td>Accumulated time since last reset</td>
+                </tr>
+                <tr>
+                  <td>ModeStateTimes</td>
+                  <td>PackMLModeStateTimesDataType[]</td>
+                  <td>Structured array of mode and state time values for each cumulative time tracker</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-14">
+          <label>6.5.14</label>
+          <title>PackMLModeStateTimesDataType</title>
+          <p>
+            <italic>PackMLModeStateTimesDataType</italic> provides the PackML MODESTATE_TIMES structure used to track the total amount of cumulative time a machine unit has spent in each mode and state. <italic>PackMLModeStateTimesDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_24">Table 24</xref>.</p>
+          <table-wrap id="tbl_24">
+            <label>Table 24</label>
+            <caption>
+              <p>PackMLModeStateTimesDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLModeStateTimesDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>Mode</td>
+                  <td>Int32</td>
+                  <td>Mode time values for each mode</td>
+                </tr>
+                <tr>
+                  <td>State</td>
+                  <td>Int32[]</td>
+                  <td>State time values for each state in each mode</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-15">
+          <label>6.5.15</label>
+          <title>PackMLProcessVariablesDataType</title>
+          <p>
+            <italic>PackMLProcessVariablesDataType</italic> provides the PackML PROCESS_VARIABLES structure used to describe the key process variables for a given recipe, such as speed or time setpoints. <italic>PackMLProcessVariablesDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_25">Table 25</xref>.</p>
+          <table-wrap id="tbl_25">
+            <label>Table 25</label>
+            <caption>
+              <p>PackMLProcessVariablesDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLProcessVariablesDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>Parameter_REAL</td>
+                  <td>PackMLParameterRealDataType[]</td>
+                  <td>Structured array of recipe process Variable information for values with Float data type</td>
+                </tr>
+                <tr>
+                  <td>Parameter_STRING</td>
+                  <td>PackMLParameterStringDataType[]</td>
+                  <td>Structured array of recipe process Variable information for values with String data type</td>
+                </tr>
+                <tr>
+                  <td>Parameter_LREAL</td>
+                  <td>PackMLParameterLrealDataType[]</td>
+                  <td>Structured array of recipe process Variable information for values with Double data type</td>
+                </tr>
+                <tr>
+                  <td>Parameter_DINT</td>
+                  <td>PackMLParameterDintDataType[]</td>
+                  <td>Structured array of recipe process Variable information for values with Int32 data type</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-16">
+          <label>6.5.16</label>
+          <title>PackMLIngredientsDataType</title>
+          <p>
+            <italic>PackMLIngredientsDataType</italic> provides the PackML INGREDENTS structure used to describe the raw materials that are needed for a given recipe. <italic>PackMLProcessVariablesDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_26">Table 26</xref>.</p>
+          <table-wrap id="tbl_26">
+            <label>Table 26</label>
+            <caption>
+              <p>PackMLIngredientsDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLIngredientsDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>Parameter_REAL</td>
+                  <td>PackMLParameterRealDataType[]</td>
+                  <td>Structured array of ingredient information for values with Float data type</td>
+                </tr>
+                <tr>
+                  <td>Parameter_STRING</td>
+                  <td>PackMLParameterStringDataType[]</td>
+                  <td>Structured array of ingredient information for values with String data type</td>
+                </tr>
+                <tr>
+                  <td>Parameter_LREAL</td>
+                  <td>PackMLParameterLrealDataType[]</td>
+                  <td>Structured array of ingredient information for values with Double data type</td>
+                </tr>
+                <tr>
+                  <td>Parameter_DINT</td>
+                  <td>PackMLParameterDintDataType[]</td>
+                  <td>Structured array of ingredient information for values with Int32 data type</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec_6-5-17">
+          <label>6.5.17</label>
+          <title>PackMLEquipmentInterlockDataType</title>
+          <p>
+            <italic>PackMLEquipmentInterlockDataType</italic> provides the PackML EQUIPMENT_INTERLOCK structure used to provide an indicator of Blocked or Starved conditions at the machine unit when integrated into a complete production line.  <italic>PackMLEquipmentInterlockDataType</italic> is formally defined in <xref ref-type="table" rid="tbl_27">Table 27</xref>.</p>
+          <table-wrap id="tbl_27">
+            <label>Table 27</label>
+            <caption>
+              <p>PackMLEquipmentInterlockDataType Structure</p>
+            </caption>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PackMLEquipmentInterlockDataType</td>
+                  <td colspan="2">Structure</td>
+                </tr>
+                <tr>
+                  <td>Blocked</td>
+                  <td>Boolean</td>
+                  <td>Indicator for unit/machine blocked</td>
+                </tr>
+                <tr>
+                  <td>Starved</td>
+                  <td>Boolean</td>
+                  <td>Indicator for unit/machine starved</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
       </sec>
       <sec id="sec_6-6">
         <label>6.6</label>
@@ -2981,9 +3431,9 @@
         <sec id="sec_6-6-1">
           <label>6.6.1</label>
           <title>HasInterlock</title>
-          <p>This reference type is used to point to an Interlock. It is defined in <xref ref-type="table" rid="tbl_18">Table 18</xref></p>
-          <table-wrap id="tbl_18">
-            <label>Table 18</label>
+          <p>This reference type is used to point to an Interlock. It is defined in <xref ref-type="table" rid="tbl_28">Table 28</xref></p>
+          <table-wrap id="tbl_28">
+            <label>Table 28</label>
             <caption>
               <p>HasInterlock reference type</p>
             </caption>
@@ -3030,9 +3480,9 @@
         <sec id="sec_6-6-2">
           <label>6.6.2</label>
           <title>HasAlarm</title>
-          <p>This reference type is used to point to an Alarm. It is defined in <xref ref-type="table" rid="tbl_19">Table 19</xref>.</p>
-          <table-wrap id="tbl_19">
-            <label>Table 19</label>
+          <p>This reference type is used to point to an Alarm. It is defined in <xref ref-type="table" rid="tbl_29">Table 29</xref>.</p>
+          <table-wrap id="tbl_29">
+            <label>Table 29</label>
             <caption>
               <p>HasAlarm reference type</p>
             </caption>
@@ -3079,9 +3529,9 @@
         <sec id="sec_6-6-3">
           <label>6.6.3</label>
           <title>HasAlarmHistory</title>
-          <p>This reference type is used to point to an Alarm History. It is defined in <xref ref-type="table" rid="tbl_20">Table 20</xref></p>
-          <table-wrap id="tbl_20">
-            <label>Table 20</label>
+          <p>This reference type is used to point to an Alarm History. It is defined in <xref ref-type="table" rid="tbl_30">Table 30</xref></p>
+          <table-wrap id="tbl_30">
+            <label>Table 30</label>
             <caption>
               <p>HasAlarmHistory reference type</p>
             </caption>
@@ -3128,9 +3578,9 @@
         <sec id="sec_6-6-4">
           <label>6.6.4</label>
           <title>HasWarning</title>
-          <p>This reference type is used to point to a Warning. It is defined in <xref ref-type="table" rid="tbl_21">Table 21</xref>.</p>
-          <table-wrap id="tbl_21">
-            <label>Table 21</label>
+          <p>This reference type is used to point to a Warning. It is defined in <xref ref-type="table" rid="tbl_31">Table 31</xref>.</p>
+          <table-wrap id="tbl_31">
+            <label>Table 31</label>
             <caption>
               <p>HasWarning reference type</p>
             </caption>
@@ -3177,9 +3627,9 @@
         <sec id="sec_6-6-5">
           <label>6.6.5</label>
           <title>HasStopReason</title>
-          <p>This reference type is used to point to a StopReason. It is defined in <xref ref-type="table" rid="tbl_22">Table 22</xref>.</p>
-          <table-wrap id="tbl_22">
-            <label>Table 22</label>
+          <p>This reference type is used to point to a StopReason. It is defined in <xref ref-type="table" rid="tbl_32">Table 32</xref>.</p>
+          <table-wrap id="tbl_32">
+            <label>Table 32</label>
             <caption>
               <p>HasStopReason reference type</p>
             </caption>
@@ -3235,15 +3685,15 @@
         <sec id="sec_6-7-2">
           <label>6.7.2</label>
           <title>SetUnitMode Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the mode of the unit. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_23">Table 23</xref></p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the mode of the unit. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_33">Table 33</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
           <code preserve-space="preserve">	SetUnitMode(
 		[in] Int32 RequestedMode
 		);</code>
-          <table-wrap id="tbl_23">
-            <label>Table 23</label>
+          <table-wrap id="tbl_33">
+            <label>Table 33</label>
             <caption>
               <p>SetUnitMode Method Parameters</p>
             </caption>
@@ -3262,9 +3712,9 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_24">Table 24</xref></p>
-          <table-wrap id="tbl_24">
-            <label>Table 24</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_34">Table 34</xref></p>
+          <table-wrap id="tbl_34">
+            <label>Table 34</label>
             <caption>
               <p>SetUnitMode Method Result Codes</p>
             </caption>
@@ -3312,9 +3762,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_25">Table 25</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetUnitMode Method</italic>. <italic>SetUnitMode</italic> includes an <italic>InputArgument</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_23">Table 23</xref>.</p>
-          <table-wrap id="tbl_25">
-            <label>Table 25</label>
+            <xref ref-type="table" rid="tbl_35">Table 35</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetUnitMode Method</italic>. <italic>SetUnitMode</italic> includes an <italic>InputArgument</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_33">Table 33</xref>.</p>
+          <table-wrap id="tbl_35">
+            <label>Table 35</label>
             <caption>
               <p>SetUnitMode Method AddressSpace Definition</p>
             </caption>
@@ -3353,15 +3803,15 @@
         <sec id="sec_6-7-3">
           <label>6.7.3</label>
           <title>SetMachSpeed Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the speed of the machine or unit. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_26">Table 26</xref></p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change the speed of the machine or unit. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_36">Table 36</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
           <code preserve-space="preserve">	SetMachSpeed(
 		[in] Float RequestedMachineSpeed
 		);</code>
-          <table-wrap id="tbl_26">
-            <label>Table 26</label>
+          <table-wrap id="tbl_36">
+            <label>Table 36</label>
             <caption>
               <p>SetMachSpeed Method Parameters</p>
             </caption>
@@ -3383,9 +3833,9 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_27">Table 27</xref></p>
-          <table-wrap id="tbl_27">
-            <label>Table 27</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_37">Table 37</xref></p>
+          <table-wrap id="tbl_37">
+            <label>Table 37</label>
             <caption>
               <p>SetMachSpeed Method Result Codes</p>
             </caption>
@@ -3433,9 +3883,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_28">Table 28</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetMachSpeed Method</italic>. <italic>SetMachSpeed</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_26">Table 26</xref>.</p>
-          <table-wrap id="tbl_28">
-            <label>Table 28</label>
+            <xref ref-type="table" rid="tbl_38">Table 38</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetMachSpeed Method</italic>. <italic>SetMachSpeed</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_36">Table 36</xref>.</p>
+          <table-wrap id="tbl_38">
+            <label>Table 38</label>
             <caption>
               <p>SetMachSpeed Method AddressSpace Definition</p>
             </caption>
@@ -3474,15 +3924,15 @@
         <sec id="sec_6-7-4">
           <label>6.7.4</label>
           <title>SetProduct Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change product associated with this PackML system. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_29">Table 29</xref>.</p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to change product associated with this PackML system. <italic>Parameters</italic> are defined in <xref ref-type="table" rid="tbl_39">Table 39</xref>.</p>
           <p>
             <bold>Signature</bold>
           </p>
           <code preserve-space="preserve">SetProduct(
 		[in] PackMLProductDataType[] Product
 	);</code>
-          <table-wrap id="tbl_29">
-            <label>Table 29</label>
+          <table-wrap id="tbl_39">
+            <label>Table 39</label>
             <caption>
               <p>SetProduct Method Parameters</p>
             </caption>
@@ -3504,9 +3954,9 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_30">Table 30</xref></p>
-          <table-wrap id="tbl_30">
-            <label>Table 30</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_40">Table 40</xref></p>
+          <table-wrap id="tbl_40">
+            <label>Table 40</label>
             <caption>
               <p>SetProduct Method Result Codes</p>
             </caption>
@@ -3554,9 +4004,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_31">Table 31</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetProduct Method</italic>. <italic>SetProduct</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_29">Table 29</xref>.</p>
-          <table-wrap id="tbl_31">
-            <label>Table 31</label>
+            <xref ref-type="table" rid="tbl_41">Table 41</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetProduct Method</italic>. <italic>SetProduct</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_39">Table 39</xref>.</p>
+          <table-wrap id="tbl_41">
+            <label>Table 41</label>
             <caption>
               <p>SetProduct Method AddressSpace Definition</p>
             </caption>
@@ -3601,9 +4051,9 @@
           </p>
           <code preserve-space="preserve">	Abort(
 		);</code>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_32">Table 32</xref>.</p>
-          <table-wrap id="tbl_32">
-            <label>Table 32</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_42">Table 42</xref>.</p>
+          <table-wrap id="tbl_42">
+            <label>Table 42</label>
             <caption>
               <p>Abort Method Result Codes</p>
             </caption>
@@ -3638,9 +4088,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_33">Table 33</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Abort Method</italic>. <italic>Abort</italic> has no input or output parameters and has no referenced objects or variables.</p>
-          <table-wrap id="tbl_33">
-            <label>Table 33</label>
+            <xref ref-type="table" rid="tbl_43">Table 43</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Abort Method</italic>. <italic>Abort</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <table-wrap id="tbl_43">
+            <label>Table 43</label>
             <caption>
               <p>Abort Method AddressSpace Definition</p>
             </caption>
@@ -3680,9 +4130,9 @@
           </p>
           <code preserve-space="preserve">	Clear(
 		);</code>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_34">Table 34</xref>.</p>
-          <table-wrap id="tbl_34">
-            <label>Table 34</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_44">Table 44</xref>.</p>
+          <table-wrap id="tbl_44">
+            <label>Table 44</label>
             <caption>
               <p>Clear Method Result Codes</p>
             </caption>
@@ -3717,9 +4167,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_35">Table 35</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Clear Method</italic>. <italic>Clear</italic> has no input or output parameters and has no referenced objects or variables.</p>
-          <table-wrap id="tbl_35">
-            <label>Table 35</label>
+            <xref ref-type="table" rid="tbl_45">Table 45</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Clear Method</italic>. <italic>Clear</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <table-wrap id="tbl_45">
+            <label>Table 45</label>
             <caption>
               <p>Clear Method AddressSpace Definition</p>
             </caption>
@@ -3759,9 +4209,9 @@
           </p>
           <code preserve-space="preserve">	Stop(
 		);</code>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_36">Table 36</xref></p>
-          <table-wrap id="tbl_36">
-            <label>Table 36</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_46">Table 46</xref></p>
+          <table-wrap id="tbl_46">
+            <label>Table 46</label>
             <caption>
               <p>Stop Method Result Codes</p>
             </caption>
@@ -3796,9 +4246,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_37">Table 37</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Stop Method</italic>. <italic>Stop</italic> has no input or output parameters and has no referenced objects or variables.</p>
-          <table-wrap id="tbl_37">
-            <label>Table 37</label>
+            <xref ref-type="table" rid="tbl_47">Table 47</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Stop Method</italic>. <italic>Stop</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <table-wrap id="tbl_47">
+            <label>Table 47</label>
             <caption>
               <p>Stop Method AddressSpace Definition</p>
             </caption>
@@ -3838,9 +4288,9 @@
           </p>
           <code preserve-space="preserve">	Reset(
 		);</code>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_38">Table 38</xref>.</p>
-          <table-wrap id="tbl_38">
-            <label>Table 38</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_48">Table 48</xref>.</p>
+          <table-wrap id="tbl_48">
+            <label>Table 48</label>
             <caption>
               <p>Reset Method Result Codes</p>
             </caption>
@@ -3875,9 +4325,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_39">Table 39</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Reset Method</italic>. <italic>Reset</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
-          <table-wrap id="tbl_39">
-            <label>Table 39</label>
+            <xref ref-type="table" rid="tbl_49">Table 49</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Reset Method</italic>. <italic>Reset</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
+          <table-wrap id="tbl_49">
+            <label>Table 49</label>
             <caption>
               <p>Reset Method AddressSpace Definition</p>
             </caption>
@@ -3917,9 +4367,9 @@
           </p>
           <code preserve-space="preserve">	ToComplete(
 		);</code>
-          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_40">Table 40</xref>.</p>
-          <table-wrap id="tbl_40">
-            <label>Table 40</label>
+          <p>Method result codes are defined in <xref ref-type="table" rid="tbl_50">Table 50</xref>.</p>
+          <table-wrap id="tbl_50">
+            <label>Table 50</label>
             <caption>
               <p>ToComplete Method Result Codes</p>
             </caption>
@@ -3954,9 +4404,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_41">Table 41</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>ToComplete Method</italic>. <italic>ToComplete</italic> has no input or output parameters and has no referenced objects or variables.</p>
-          <table-wrap id="tbl_41">
-            <label>Table 41</label>
+            <xref ref-type="table" rid="tbl_51">Table 51</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>ToComplete Method</italic>. <italic>ToComplete</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <table-wrap id="tbl_51">
+            <label>Table 51</label>
             <caption>
               <p>ToComplete Method AddressSpace Definition</p>
             </caption>
@@ -3990,15 +4440,15 @@
         <sec id="sec_6-7-10">
           <label>6.7.10</label>
           <title>Start Method</title>
-          <p>This <italic>Method</italic> is used as part of the <italic>PackMLExecuteStateMachineType</italic>. It allows an OPC UA <italic>Client</italic> to change the state of this state machine to the <italic>Starting</italic> State and send parameters at the same time. Which is an extension to the <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref> specification. The parameter is defined in <xref ref-type="table" rid="tbl_42">Table 42</xref></p>
+          <p>This <italic>Method</italic> is used as part of the <italic>PackMLExecuteStateMachineType</italic>. It allows an OPC UA <italic>Client</italic> to change the state of this state machine to the <italic>Starting</italic> State and send parameters at the same time. Which is an extension to the <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref> specification. The parameter is defined in <xref ref-type="table" rid="tbl_52">Table 52</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
           <code preserve-space="preserve">	Start(
 		[in] PackMLDescriptorDataType[] Parameter
 	); </code>
-          <table-wrap id="tbl_42">
-            <label>Table 42</label>
+          <table-wrap id="tbl_52">
+            <label>Table 52</label>
             <caption>
               <p>Start Method Parameters</p>
             </caption>
@@ -4018,9 +4468,9 @@
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_43">Table 43</xref>.</p>
-          <table-wrap id="tbl_43">
-            <label>Table 43</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_53">Table 53</xref>.</p>
+          <table-wrap id="tbl_53">
+            <label>Table 53</label>
             <caption>
               <p>Start Method Result Codes</p>
             </caption>
@@ -4068,9 +4518,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_44">Table 44</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Start Method</italic>. <italic>Start</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_42">Table 42</xref>.</p>
-          <table-wrap id="tbl_44">
-            <label>Table 44</label>
+            <xref ref-type="table" rid="tbl_54">Table 54</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Start Method</italic>. <italic>Start</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_52">Table 52</xref>.</p>
+          <table-wrap id="tbl_54">
+            <label>Table 54</label>
             <caption>
               <p>Start Method AddressSpace Definition</p>
             </caption>
@@ -4116,9 +4566,9 @@
           <code preserve-space="preserve">	Unhold(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_45">Table 45</xref></p>
-          <table-wrap id="tbl_45">
-            <label>Table 45</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_55">Table 55</xref></p>
+          <table-wrap id="tbl_55">
+            <label>Table 55</label>
             <caption>
               <p>Unhold Method Result Codes</p>
             </caption>
@@ -4153,9 +4603,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_46">Table 46</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Unhold Method</italic>. <italic>Unhold</italic> has no input or output parameters and has no referenced objects or variables.</p>
-          <table-wrap id="tbl_46">
-            <label>Table 46</label>
+            <xref ref-type="table" rid="tbl_56">Table 56</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Unhold Method</italic>. <italic>Unhold</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <table-wrap id="tbl_56">
+            <label>Table 56</label>
             <caption>
               <p>Unhold Method AddressSpace Definition</p>
             </caption>
@@ -4196,9 +4646,9 @@
           <code preserve-space="preserve">	Suspend(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_47">Table 47</xref></p>
-          <table-wrap id="tbl_47">
-            <label>Table 47</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_57">Table 57</xref></p>
+          <table-wrap id="tbl_57">
+            <label>Table 57</label>
             <caption>
               <p>Suspend Method Result Codes</p>
             </caption>
@@ -4233,9 +4683,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_48">Table 48</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Suspend Method</italic>. <italic>Suspend</italic> has no input or output parameters and has no referenced objects or variables.</p>
-          <table-wrap id="tbl_48">
-            <label>Table 48</label>
+            <xref ref-type="table" rid="tbl_58">Table 58</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Suspend Method</italic>. <italic>Suspend</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <table-wrap id="tbl_58">
+            <label>Table 58</label>
             <caption>
               <p>Suspend Method AddressSpace Definition</p>
             </caption>
@@ -4276,9 +4726,9 @@
           <code preserve-space="preserve">	Unsuspend(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_49">Table 49</xref></p>
-          <table-wrap id="tbl_49">
-            <label>Table 49</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_59">Table 59</xref></p>
+          <table-wrap id="tbl_59">
+            <label>Table 59</label>
             <caption>
               <p>Unsuspend Method Result Codes</p>
             </caption>
@@ -4313,9 +4763,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_50">Table 50</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Unsuspend Method</italic>. <italic>Unsuspend</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
-          <table-wrap id="tbl_50">
-            <label>Table 50</label>
+            <xref ref-type="table" rid="tbl_60">Table 60</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Unsuspend Method</italic>. <italic>Unsuspend</italic> has no input or output parameters and has no referenced <italic>Objects</italic> or <italic>Variables</italic>.</p>
+          <table-wrap id="tbl_60">
+            <label>Table 60</label>
             <caption>
               <p>Unsuspend Method AddressSpace Definition</p>
             </caption>
@@ -4356,9 +4806,9 @@
           <code preserve-space="preserve">	Hold(
 	);</code>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_51">Table 51</xref></p>
-          <table-wrap id="tbl_51">
-            <label>Table 51</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_61">Table 61</xref></p>
+          <table-wrap id="tbl_61">
+            <label>Table 61</label>
             <caption>
               <p>Hold Method Result Codes</p>
             </caption>
@@ -4393,9 +4843,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_52">Table 52</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Hold Method</italic>. <italic>Hold</italic> has no input or output parameters and has no referenced objects or variables.</p>
-          <table-wrap id="tbl_52">
-            <label>Table 52</label>
+            <xref ref-type="table" rid="tbl_62">Table 62</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Hold Method</italic>. <italic>Hold</italic> has no input or output parameters and has no referenced objects or variables.</p>
+          <table-wrap id="tbl_62">
+            <label>Table 62</label>
             <caption>
               <p>Hold Method AddressSpace Definition</p>
             </caption>
@@ -4444,15 +4894,15 @@
             </caption>
             <graphic xlink:href="fig_20_remote-command-line-and-upstreamdownstream-systems.png" alt="Remote Command - Line and Upstream/Downstream systems" mimetype="image/png" />
           </fig>
-          <p>The <italic>RemoteCommand</italic> Method parameters are defined in <xref ref-type="table" rid="tbl_53">Table 53</xref></p>
+          <p>The <italic>RemoteCommand</italic> Method parameters are defined in <xref ref-type="table" rid="tbl_63">Table 63</xref></p>
           <p>
             <bold>Signature</bold>
           </p>
           <code preserve-space="preserve">	RemoteCommand(
 		[in] PackMLRemoteInterfaceDataType[] RemoteInterface
 	);</code>
-          <table-wrap id="tbl_53">
-            <label>Table 53</label>
+          <table-wrap id="tbl_63">
+            <label>Table 63</label>
             <caption>
               <p>RemoteCommand Method Parameters</p>
             </caption>
@@ -4472,9 +4922,9 @@
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_54">Table 54</xref>.</p>
-          <table-wrap id="tbl_54">
-            <label>Table 54</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_64">Table 64</xref>.</p>
+          <table-wrap id="tbl_64">
+            <label>Table 64</label>
             <caption>
               <p>RemoteCommand Method Result Codes</p>
             </caption>
@@ -4526,9 +4976,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_55">Table 55</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>RemoteCommand Method</italic>. <italic>RemoteCommand</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_53">Table 53</xref>.</p>
-          <table-wrap id="tbl_55">
-            <label>Table 55</label>
+            <xref ref-type="table" rid="tbl_65">Table 65</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>RemoteCommand Method</italic>. <italic>RemoteCommand</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_63">Table 63</xref>.</p>
+          <table-wrap id="tbl_65">
+            <label>Table 65</label>
             <caption>
               <p>RemoteCommand Method AddressSpace Definition</p>
             </caption>
@@ -4567,7 +5017,7 @@
         <sec id="sec_6-7-16">
           <label>6.7.16</label>
           <title>SetInterlock Method</title>
-          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to set an interlock associated with this PackML system parameter. The parameters for the <italic>SetInterlock</italic> <italic>Method</italic> are defined in <xref ref-type="table" rid="tbl_56">Table 56</xref>.</p>
+          <p>This <italic>Method</italic> allows an OPC UA <italic>Client</italic> to set an interlock associated with this PackML system parameter. The parameters for the <italic>SetInterlock</italic> <italic>Method</italic> are defined in <xref ref-type="table" rid="tbl_66">Table 66</xref>.</p>
           <p>
             <bold>Signature</bold>
           </p>
@@ -4575,8 +5025,8 @@
 	 	 [in] Int32 InterlockId,
 	 	 [in] Boolean State
 	);</code>
-          <table-wrap id="tbl_56">
-            <label>Table 56</label>
+          <table-wrap id="tbl_66">
+            <label>Table 66</label>
             <caption>
               <p>SetInterlock Method Parameters</p>
             </caption>
@@ -4600,9 +5050,9 @@
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_57">Table 57</xref></p>
-          <table-wrap id="tbl_57">
-            <label>Table 57</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_67">Table 67</xref></p>
+          <table-wrap id="tbl_67">
+            <label>Table 67</label>
             <caption>
               <p>SetInterlock Method Result Codes</p>
             </caption>
@@ -4654,9 +5104,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_58">Table 58</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetInterlock Method</italic>. <italic>SetInterlock</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_56">Table 56</xref>.</p>
-          <table-wrap id="tbl_58">
-            <label>Table 58</label>
+            <xref ref-type="table" rid="tbl_68">Table 68</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetInterlock Method</italic>. <italic>SetInterlock</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_66">Table 66</xref>.</p>
+          <table-wrap id="tbl_68">
+            <label>Table 68</label>
             <caption>
               <p>SetInterlock Method AddressSpace Definition</p>
             </caption>
@@ -4702,8 +5152,8 @@
           <code preserve-space="preserve">	SetParameter(
 		 [in] PackMLDescriptorDataType[] Parameter
 	);</code>
-          <table-wrap id="tbl_59">
-            <label>Table 59</label>
+          <table-wrap id="tbl_69">
+            <label>Table 69</label>
             <caption>
               <p>SetParameter Method Parameters</p>
             </caption>
@@ -4723,9 +5173,9 @@
             </table>
           </table-wrap>
           <p>
-            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_60">Table 60</xref></p>
-          <table-wrap id="tbl_60">
-            <label>Table 60</label>
+            <italic>Method</italic> result codes are defined in <xref ref-type="table" rid="tbl_70">Table 70</xref></p>
+          <table-wrap id="tbl_70">
+            <label>Table 70</label>
             <caption>
               <p>SetParameter Method Result Codes</p>
             </caption>
@@ -4761,9 +5211,9 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_61">Table 61</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetParameter Method</italic>. <italic>SetParameter</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_59">Table 59</xref>.</p>
-          <table-wrap id="tbl_61">
-            <label>Table 61</label>
+            <xref ref-type="table" rid="tbl_71">Table 71</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>SetParameter Method</italic>. <italic>SetParameter</italic> includes an array of <italic>InputArguments</italic>, where the input argument details are provided in <xref ref-type="table" rid="tbl_69">Table 69</xref>.</p>
+          <table-wrap id="tbl_71">
+            <label>Table 71</label>
             <caption>
               <p>SetParameter Method AddressSpace Definition</p>
             </caption>
@@ -4819,9 +5269,9 @@
           <sec id="sec_6-8-2-2">
             <label>6.8.2.2</label>
             <title>PackMLEventDataType</title>
-            <p>The PackMLEventDataType provides the PackML tag alarm structure. It is formally defined in <xref ref-type="table" rid="tbl_62">Table 62</xref>.</p>
-            <table-wrap id="tbl_62">
-              <label>Table 62</label>
+            <p>The PackMLEventDataType provides the PackML tag alarm structure. It is formally defined in <xref ref-type="table" rid="tbl_72">Table 72</xref>.</p>
+            <table-wrap id="tbl_72">
+              <label>Table 72</label>
               <caption>
                 <p>PackMLEventDataType Structure</p>
               </caption>
@@ -4892,9 +5342,9 @@
         <label>7.1</label>
         <title>Conformance Units</title>
         <p>
-          <xref ref-type="table" rid="tbl_63">Table 63</xref> defines the Conformance Units for the OPC UA Information Model for PackML.</p>
-        <table-wrap id="tbl_63">
-          <label>Table 63</label>
+          <xref ref-type="table" rid="tbl_73">Table 73</xref> defines the Conformance Units for the OPC UA Information Model for PackML.</p>
+        <table-wrap id="tbl_73">
+          <label>Table 73</label>
           <caption>
             <p>Conformance Units for PackML</p>
           </caption>
@@ -5323,9 +5773,9 @@
           <label>7.2.1</label>
           <title>Profile list</title>
           <p>
-            <xref ref-type="table" rid="tbl_64">Table 64</xref> lists all Profiles defined in this document and defines their URIs.</p>
-          <table-wrap id="tbl_64">
-            <label>Table 64</label>
+            <xref ref-type="table" rid="tbl_74">Table 74</xref> lists all Profiles defined in this document and defines their URIs.</p>
+          <table-wrap id="tbl_74">
+            <label>Table 74</label>
             <caption>
               <p>Profile URIs for PackML</p>
             </caption>
@@ -5365,8 +5815,8 @@
             <label>7.2.2.2</label>
             <title>PackML Base Functionality Server Facet</title>
             <p>This Facet defines support for base Sample server functionality.</p>
-            <table-wrap id="tbl_65">
-              <label>Table 65</label>
+            <table-wrap id="tbl_75">
+              <label>Table 75</label>
               <caption>
                 <p>PackML Base Functionality Server Facet</p>
               </caption>
@@ -5601,8 +6051,8 @@
             <label>7.2.3.2</label>
             <title>PackML Base Functionality Client Facet</title>
             <p>This Facet defines support for base Sample server functionality.</p>
-            <table-wrap id="tbl_66">
-              <label>Table 66</label>
+            <table-wrap id="tbl_76">
+              <label>Table 76</label>
               <caption>
                 <p>PackML Base Functionality Client Facet</p>
               </caption>
@@ -5834,11 +6284,11 @@
         <label>8.1</label>
         <title>Namespace Metadata</title>
         <p>
-          <xref ref-type="table" rid="tbl_67">Table 67</xref> defines the namespace metadata for this document. The Object is used to provide version information for the namespace and an indication about static Nodes. Static Nodes are identical for all Attributes in all Servers, including the Value Attribute.</p>
+          <xref ref-type="table" rid="tbl_77">Table 77</xref> defines the namespace metadata for this document. The Object is used to provide version information for the namespace and an indication about static Nodes. Static Nodes are identical for all Attributes in all Servers, including the Value Attribute.</p>
         <p>The information is provided as Object of type <italic>NamespaceMetadataType</italic>. This Object is a component of the <italic>Namespaces</italic> Object that is part of the <italic>Server</italic> Object. The NamespaceMetadataType ObjectType and its Properties are defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</p>
         <p>The version information is also provided as part of the <italic>ModelTableEntry</italic> in the UANodeSet XML file. The UANodeSet XML schema is defined in <xref ref-type="bibr" rid="ref-uapart6">OPC 10000-6</xref>.</p>
-        <table-wrap id="tbl_67">
-          <label>Table 67</label>
+        <table-wrap id="tbl_77">
+          <label>Table 77</label>
           <caption>
             <p>NamespaceMetadata Object for this Document</p>
           </caption>
@@ -5873,7 +6323,7 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.2</td>
+                <td>2.0.3</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
@@ -5910,9 +6360,9 @@
         <title>Handling of OPC UA Namespaces</title>
         <p>Namespaces are used by OPC UA to create unique identifiers across different naming authorities. The Attributes <italic>NodeId</italic> and <italic>BrowseName</italic> are identifiers. A namespace is identified with a string, typically a URI, and is represented in the <italic>NodeId</italic> and <italic>BrowseName</italic> by an index into the Server's namespace table.</p>
         <p>
-          <xref ref-type="table" rid="tbl_68">Table 68</xref> provides a list of mandatory and optional namespaces used in an PackML Server.</p>
-        <table-wrap id="tbl_68">
-          <label>Table 68</label>
+          <xref ref-type="table" rid="tbl_78">Table 78</xref> provides a list of mandatory and optional namespaces used in an PackML Server.</p>
+        <table-wrap id="tbl_78">
+          <label>Table 78</label>
           <caption>
             <p>Namespaces used in an PackML Server</p>
           </caption>
@@ -5944,9 +6394,9 @@
           </table>
         </table-wrap>
         <p>
-          <xref ref-type="table" rid="tbl_69">Table 69</xref> provides a list of namespaces and their indices used for <italic>BrowseNames</italic> in this document. A <italic>BrowseName</italic> written without a prefix is from the default namespace of this document.</p>
-        <table-wrap id="tbl_69">
-          <label>Table 69</label>
+          <xref ref-type="table" rid="tbl_79">Table 79</xref> provides a list of namespaces and their indices used for <italic>BrowseNames</italic> in this document. A <italic>BrowseName</italic> written without a prefix is from the default namespace of this document.</p>
+        <table-wrap id="tbl_79">
+          <label>Table 79</label>
           <caption>
             <p>Namespaces used in this document</p>
           </caption>
@@ -5996,8 +6446,8 @@
           <label>A.1.1</label>
           <title>LocaleID "en"</title>
           <p>The recommended state display names for the LocaleId "en" and the State values for all <italic>StateMachines</italic> defined in this specification are listed in Table B.1</p>
-          <table-wrap id="tbl_70">
-            <label>Table 70</label>
+          <table-wrap id="tbl_80">
+            <label>Table 80</label>
             <caption>
               <p>Recommended display names for LocaleId "en"</p>
             </caption>
@@ -6133,8 +6583,8 @@
           <label>A.1.2</label>
           <title>LocaleID "de"</title>
           <p>The recommended state display names for the LocaleId "de" are listed in Table B.2&lt;break /&gt;&lt;xref ref-type="other" rid="ref_382998185"&gt; &lt;/xref&gt;.</p>
-          <table-wrap id="tbl_71">
-            <label>Table 71</label>
+          <table-wrap id="tbl_81">
+            <label>Table 81</label>
             <caption>
               <p>Recommended display names for LocaleId "de"</p>
             </caption>
@@ -6270,8 +6720,8 @@
           <label>A.1.3</label>
           <title>LocaleID "fr"</title>
           <p>The recommended state display names for the LocaleId "fr" are listed in Table B.3</p>
-          <table-wrap id="tbl_72">
-            <label>Table 72</label>
+          <table-wrap id="tbl_82">
+            <label>Table 82</label>
             <caption>
               <p>Recommended display names for LocaleId "fr"</p>
             </caption>
@@ -6412,8 +6862,8 @@
         <label>B.1</label>
         <title>Mapping of elementary data types</title>
         <p>The mapping of IEC 61131-3 elementary data types to OPC UA data types is formally defined in <xref ref-type="bibr" rid="ref-opc30000">OPC 30000</xref> (PLCOpen companion specification). &lt;xref ref-type="table" rid="tbl_71_mapping-iec-61131-3-elementary-data-types-to-opc-ua-built-in"&gt;Table 71&lt;/xref&gt; is copied from that specification as a reference, any differences with <xref ref-type="bibr" rid="ref-opc30000">OPC 30000</xref> indicate that this specification is out of date.</p>
-        <table-wrap id="tbl_73">
-          <label>Table 73</label>
+        <table-wrap id="tbl_83">
+          <label>Table 83</label>
           <caption>
             <p>Mapping IEC 61131-3 elementary data types to OPC UA built in data types</p>
           </caption>
@@ -6549,8 +6999,8 @@
         <label>B.2</label>
         <title>Mapping of generic data types</title>
         <p>The mapping of IEC 61131-3 generic data types to OPC UA <italic>DataTypes</italic> is formally defined in <xref ref-type="bibr" rid="ref-opc30000">OPC 30000</xref> (PLCOpen companion specification). &lt;xref ref-type="table" rid="tbl_72_mapping-iec-61131-3-generic-data-types-to-opc-ua-data-types"&gt;Table 72&lt;/xref&gt;. is copied from that specification as a reference, any differences with <xref ref-type="bibr" rid="ref-opc30000">OPC 30000</xref> indicate that this specification is out of date. This mapping definition is defined for completeness but is normally not used in an OPC UA <italic>AddressSpace</italic>.</p>
-        <table-wrap id="tbl_74">
-          <label>Table 74</label>
+        <table-wrap id="tbl_84">
+          <label>Table 84</label>
           <caption>
             <p>Mapping IEC 61131-3 generic data types to OPC UA data types</p>
           </caption>
