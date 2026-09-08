@@ -1325,7 +1325,7 @@
                   <td>HasAlarm</td>
                   <td>Variable</td>
                   <td>Alarm</td>
-                  <td>PackMLAlarmDataType[]</td>
+                  <td>PackMLEventDataType[]</td>
                   <td>BaseDataVariableType</td>
                   <td>Optional</td>
                   <td>R</td>
@@ -1343,7 +1343,7 @@
                   <td>HasAlarmHistory</td>
                   <td>Variable</td>
                   <td>AlarmHistory</td>
-                  <td>PackMLAlarmDataType[]</td>
+                  <td>PackMLEventDataType[]</td>
                   <td>BaseDataVariableType</td>
                   <td>Optional</td>
                   <td>R</td>
@@ -1361,7 +1361,7 @@
                   <td>HasWarning</td>
                   <td>Variable</td>
                   <td>Warning</td>
-                  <td>PackMLAlarmDataType[]</td>
+                  <td>PackMLEventDataType[]</td>
                   <td>BaseDataVariableType</td>
                   <td>Optional</td>
                   <td>R</td>
@@ -1379,7 +1379,7 @@
                   <td>HasStopReason</td>
                   <td>Variable</td>
                   <td>StopReason</td>
-                  <td>PackMLAlarmDataType</td>
+                  <td>PackMLEventDataType</td>
                   <td>BaseDataVariableType</td>
                   <td>Optional</td>
                   <td>R</td>
@@ -4818,12 +4818,12 @@
           </sec>
           <sec id="sec_6-8-2-2">
             <label>6.8.2.2</label>
-            <title>PackMLAlarmDataType</title>
-            <p>The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in <xref ref-type="table" rid="tbl_62">Table 62</xref>.</p>
+            <title>PackMLEventDataType</title>
+            <p>The PackMLEventDataType provides the PackML tag alarm structure. It is formally defined in <xref ref-type="table" rid="tbl_62">Table 62</xref>.</p>
             <table-wrap id="tbl_62">
               <label>Table 62</label>
               <caption>
-                <p>PackMLAlarmDataType Structure</p>
+                <p>PackMLEventDataType Structure</p>
               </caption>
               <table>
                 <thead>
@@ -4835,7 +4835,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>PackMLAlarmDataType</td>
+                    <td>PackMLEventDataType</td>
                     <td colspan="2">Structure</td>
                   </tr>
                   <tr>
@@ -5873,7 +5873,7 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.1-alpha</td>
+                <td>2.0.2</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>

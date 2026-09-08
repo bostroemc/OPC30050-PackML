@@ -6,7 +6,7 @@ PackMLAdminObjectType,5,ObjectType
 PackMLBaseObjectType,6,ObjectType
 ProductionMaintenanceModeEnum,11,DataType
 PackMLCountDataType,14,DataType
-PackMLAlarmDataType,15,DataType
+PackMLEventDataType,15,DataType
 PackMLDescriptorDataType,16,DataType
 PackMLIngredientsDataType,17,DataType
 PackMLProductDataType,18,DataType
@@ -61,9 +61,9 @@ PackMLCountDataType_Default_XML,70,Object
 PackMLBaseStateMachineType_Cleared,71,Object
 PackMLObjects,72,Object
 Admin,73,Object
-PackMLAlarmDataType_Default_Binary,74,Object
+PackMLEventDataType_Default_Binary,74,Object
 Running,75,Object
-PackMLAlarmDataType_Default_XML,76,Object
+PackMLEventDataType_Default_XML,76,Object
 PackMLDescriptorDataType_Default_Binary,77,Object
 PackMLDescriptorDataType_Default_XML,78,Object
 PackMLIngredientsDataType_Default_Binary,79,Object

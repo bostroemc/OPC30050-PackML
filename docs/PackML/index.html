@@ -705,13 +705,13 @@
 <tr><td>Reference</td><td>Node Class</td><td>BrowseName</td><td>DataType</td><td>TypeDefinition</td><td>ModelingRule</td><td>RW</td></tr>
 <tr><td colspan="7">Subtype of the BaseObjectType from <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a>.</td></tr>
 <tr><td>HasComponent</td><td>Variable</td><td>Parameter</td><td>PackMLDescriptorDataType[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
-<tr><td>HasAlarm</td><td>Variable</td><td>Alarm</td><td>PackMLAlarmDataType[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
+<tr><td>HasAlarm</td><td>Variable</td><td>Alarm</td><td>PackMLEventDataType[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
 <tr><td>HasComponent</td><td>Variable</td><td>AlarmExtent</td><td>Int32</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
-<tr><td>HasAlarmHistory</td><td>Variable</td><td>AlarmHistory</td><td>PackMLAlarmDataType[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
+<tr><td>HasAlarmHistory</td><td>Variable</td><td>AlarmHistory</td><td>PackMLEventDataType[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
 <tr><td>HasComponent</td><td>Variable</td><td>AlarmHistoryExtent</td><td>Int32</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
-<tr><td>HasWarning</td><td>Variable</td><td>Warning</td><td>PackMLAlarmDataType[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
+<tr><td>HasWarning</td><td>Variable</td><td>Warning</td><td>PackMLEventDataType[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
 <tr><td>HasComponent</td><td>Variable</td><td>WarningExtent</td><td>Int32</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
-<tr><td>HasStopReason</td><td>Variable</td><td>StopReason</td><td>PackMLAlarmDataType</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
+<tr><td>HasStopReason</td><td>Variable</td><td>StopReason</td><td>PackMLEventDataType</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
 <tr><td>HasComponent</td><td>Variable</td><td>StopReasonExtent</td><td>Int32</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
 <tr><td>HasComponent</td><td>Variable</td><td>ModeCurrentTime</td><td>Int32[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
 <tr><td>HasComponent</td><td>Variable</td><td>ModeCumulativeTime</td><td>Int32[]</td><td>BaseDataVariableType</td><td>Optional</td><td>R</td></tr>
@@ -1996,16 +1996,16 @@
 <p>The following <em>VariableType</em> is used to report alarms in the PackML unit. In addition, the data is also available as a structured datatype, which is much like an event.</p>
 </section>
 <section id="sec_6-8-2-2" class="clause">
-<h5><span class="label">6.8.2.2</span> PackMLAlarmDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1352-1367" title="Open the source of this clause">&#128221;</a></h5>
-<p>The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in <a class="xref" href="#tbl_62" data-ref-type="table">Table 62</a>.</p>
+<h5><span class="label">6.8.2.2</span> PackMLEventDataType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1352-1367" title="Open the source of this clause">&#128221;</a></h5>
+<p>The PackMLEventDataType provides the PackML tag alarm structure. It is formally defined in <a class="xref" href="#tbl_62" data-ref-type="table">Table 62</a>.</p>
 <figure class="table-wrap" id="tbl_62">
-<figcaption><span class="label">Table 62</span> PackMLAlarmDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1357-1367" title="Open the source of this clause">&#128221;</a></figcaption>
+<figcaption><span class="label">Table 62</span> PackMLEventDataType Structure<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1357-1367" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>PackMLAlarmDataType</td><td colspan="2">Structure</td></tr>
+<tr><td>PackMLEventDataType</td><td colspan="2">Structure</td></tr>
 <tr><td>ID</td><td>Int32</td><td>A unique number assigned to each type of alarm, stop or warning.</td></tr>
 <tr><td>Value</td><td>Int32</td><td>An alarm, stop or warning message number associated to the ID to allow for user specific detail or to break down the Alarm.ID to greater detail</td></tr>
 <tr><td>Message</td><td>String</td><td>The actual text of the alarm, stop or warning for those machines capable of providing string information</td></tr>
@@ -2288,7 +2288,7 @@
 </thead>
 <tbody>
 <tr><td>NamespaceUri</td><td>String</td><td>http://opcfoundation.org/UA/PackML/</td></tr>
-<tr><td>NamespaceVersion</td><td>String</td><td>2.0.1-alpha</td></tr>
+<tr><td>NamespaceVersion</td><td>String</td><td>2.0.2</td></tr>
 <tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-09-08</td></tr>
 <tr><td>IsNamespaceSubset</td><td>Boolean</td><td>False</td></tr>
 <tr><td>StaticNodeIdTypes</td><td>IdType []</td><td></td></tr>
@@ -2555,7 +2555,7 @@ END_VAR</code></pre>
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"4d77858e5251199bf453cfafd5b947ecb43ce391","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"34d780a6f9db833e46ee03c5356d71094deece25","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;
