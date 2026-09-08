@@ -202,13 +202,13 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | Reference	| Node Class	| BrowseName 	| DataType	| TypeDefinition	| ModelingRule	| RW |
 | Subtype of the BaseObjectType from OPC 10000-5. |  |  |  |  |  |  |
 | HasComponent	| Variable	| Parameter	| PackMLDescriptorDataType[]	| BaseDataVariableType 	| Optional	| R |
-| HasAlarm	| Variable	| Alarm	| PackMLAlarmDataType[]	| BaseDataVariableType	| Optional	| R |
+| HasAlarm	| Variable	| Alarm	| PackMLEventDataType[]	| BaseDataVariableType	| Optional	| R |
 | HasComponent	| Variable	| AlarmExtent	| Int32	| BaseDataVariableType	| Optional	| R |
-| HasAlarmHistory	| Variable	| AlarmHistory	| PackMLAlarmDataType[]	| BaseDataVariableType	| Optional 	| R |
+| HasAlarmHistory	| Variable	| AlarmHistory	| PackMLEventDataType[]	| BaseDataVariableType	| Optional 	| R |
 | HasComponent	| Variable	| AlarmHistoryExtent	| Int32	| BaseDataVariableType	| Optional	| R |
-| HasWarning	| Variable	| Warning	| PackMLAlarmDataType[]	| BaseDataVariableType	| Optional 	| R |
+| HasWarning	| Variable	| Warning	| PackMLEventDataType[]	| BaseDataVariableType	| Optional 	| R |
 | HasComponent	| Variable	| WarningExtent	| Int32	| BaseDataVariableType	| Optional	| R |
-| HasStopReason	| Variable	| StopReason	| PackMLAlarmDataType	| BaseDataVariableType	| Optional 	| R |
+| HasStopReason	| Variable	| StopReason	| PackMLEventDataType	| BaseDataVariableType	| Optional 	| R |
 | HasComponent	| Variable	| StopReasonExtent	| Int32	| BaseDataVariableType	| Optional	| R |
 | HasComponent	| Variable	| ModeCurrentTime	| Int32[]	| BaseDataVariableType	| Optional	| R |
 | HasComponent	| Variable	| ModeCumulativeTime	| Int32[]	| BaseDataVariableType	| Optional	| R |
@@ -573,19 +573,19 @@ This section defines any enumeration or structure that are defined as part of th
 
 #### ProductionMaintenanceModeEnum {#sec-productionmaintenancemodeenum}
 
-The *ProductionMaintenanceModeEnum* describes the predefined modes. This is a default mode enumeration. A *Server* may define additional enumeration that describe the modes they support, but any such enumeration must include "Produce" as enumeration 1 and if Maintenance or Manual are include, they must be 2 and 3 respectively. Any additional mode must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. The ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. The *ProductionMaintenanceModeEnum* is defined in [](#tbl-productionmaintenancemodeenum-values).
+*ProductionMaintenanceModeEnum* describes the predefined modes. This is a default mode enumeration. A *Server* may define additional enumerations that describe the modes it supports, but any such enumeration must include "Production" as enumeration 1 and if Maintenance or Manual are included, they must be 2 and 3 respectively. Any additional modes must start at 4 or greater. If vendor specific or end user specific mode enumerations are included, they shall be defined as a subtype of this enumeration. ProductionMaintenanceModeEnum is the default enumeration that shall be used if no vendor or end user mode enumeration is defined. *ProductionMaintenanceModeEnum* is defined in [](#tbl-productionmaintenancemodeenum-values).
 
 *Table - ProductionMaintenanceModeEnum values* {#tbl-productionmaintenancemodeenum-values defines=ProductionMaintenanceModeEnum}
 | Name	| Value	| Description |
 | --- | --- | --- |
-| Invalid	| 0	| This is an invalid mode |
-| Produce	| 1	| Machine is in production mode |
+| Invalid	| 0	| Not used |
+| Production	| 1	| Machine is in production mode |
 | Maintenance	| 2	| Machine is in maintenance mode |
 | Manual	| 3	| Machine is in manual mode |
 
 
-where the following definition apply:
--Produce corresponds to the PackML Production Mode which is routine production.
+where the following definitions apply:
+-Production corresponds to the PackML Production Mode which is routine production.
 -Maintenance corresponds to the PackML Maintenance Mode which is the ability to run a machine independent of other machine in a production line.
 -Manual corresponds to the PackML Manual Mode which provides direct control of the individual machine elements.
 
@@ -1476,15 +1476,15 @@ The section defines alarms. Alarms in PackML are provided via a set of tags. Ala
 
 The following *VariableType* is used to report alarms in the PackML unit. In addition, the data is also available as a structured datatype, which is much like an event.
 
-##### PackMLAlarmDataType {#sec-packmlalarmdatatype}
+##### PackMLEventDataType {#sec-packmleventdatatype}
 
-The PackMLAlarmDataType provides the PackML tag alarm structure. It is formally defined in [](#tbl-packmlalarmdatatype-structure). 
+The PackMLEventDataType provides the PackML tag alarm structure. It is formally defined in [](#tbl-packmleventdatatype-structure). 
 
 
-*Table - PackMLAlarmDataType Structure* {#tbl-packmlalarmdatatype-structure defines=PackMLAlarmDataType}
+*Table - PackMLEventDataType Structure* {#tbl-packmleventdatatype-structure defines=PackMLEventDataType}
 | Name	| Type	| Description |
 | --- | --- | --- |
-| PackMLAlarmDataType	| Structure	 | |
+| PackMLEventDataType	| Structure	 | |
 | ID	| Int32	| A unique number assigned to each type of alarm, stop or warning. |
 | Value	| Int32	| An alarm, stop or warning message number associated to the ID to allow for user specific detail or to break down the Alarm.ID to greater detail |
 | Message	| String	| The actual text of the alarm, stop or warning for those machines capable of providing string information |
