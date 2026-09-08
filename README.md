@@ -55,27 +55,7 @@ template sets up.
 
 ## Start here
 
-**1. Create your repository from this template.** *Use this template ▸ Create a new repository*.
-
-Name it `<number>-<short name>`:
-
-```
-OPC40001-Machinery
-OPC40750-BatteryProduction
-OPC30080-FDI
-OPC40700-SurfaceTechnology
-```
-
-No space after `OPC`, no dots, and the short name in PascalCase. The number comes first so that
-a list of repositories sorts into document order rather than alphabetically by subject, which is
-how the documents themselves are catalogued.
-
-**Where a repository holds several parts, both halves name the series rather than any one part.**
-A repository publishing OPC 40700, 40701 and 40702 is `OPC40700-SurfaceTechnology`, not
-`OPC40702-OCT-MSS` — the series number is the lowest, and the short name is the series title. The
-individual parts are directories under `source/`, each with its own number in its `manifest.json`,
-and they are what the published site is organised by. Renaming the repository later means fixing
-every link anyone has already saved, so it is worth getting right at this step.
+**1. Fork this repository
 
 **2. Install the tools.** Two are published: the **publisher**, which is what this repository is
 built with, and the **validator**, which converts a Word specification into this format and checks
