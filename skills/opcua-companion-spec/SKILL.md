@@ -143,8 +143,9 @@ generated from there. So
   rest. Layout, routing and colour are yours and are not compared.
 - **Forgetting `freeform: true`.** A workflow or state diagram is not an address-space
   view and the notation does not govern it. Mark it exempt rather than contorting it.
-- **A compressed .drawio.** draw.io deflates the body by default and the file becomes a
-  base64 blob — no shape check, no review. Turn compression off in File > Properties.
+- **Naming the `.svg` as the figure's source.** Name the `.drawio`; it is the only figure file
+  under `source/`. The tool draws the SVG into `docs/` when it publishes, so a directive
+  pointing at an `.svg` names a file that is not there.
 - **Reaching for an image when the figure depicts the address space.** A `.png` or plain
   `.svg` is fine for a photo, a screenshot, or artwork from elsewhere, and the validator says
   so once and carries it. For an address-space diagram it is the wrong choice: nothing can

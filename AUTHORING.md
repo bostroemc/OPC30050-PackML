@@ -337,6 +337,29 @@ read from the caption, so keep the wording (`... Definition`, `... Additional Re
 `OPC009` reports a `defines=` naming a type the model does not declare; `OPC010` reports a
 type in the model that nothing defines.
 
+## Column widths
+
+Tables are laid out by the renderer from what they hold — Word autofits, the browser does the
+same — and two kinds of cell are held on one line whatever that costs:
+
+- **every column heading**, and
+- **the first column**, which is what a reader scans to find a row.
+
+Both are how a reader navigates rather than what they came to read, so "TypeDefinition" broken
+as "Type / Definition", or a BrowseName split down the middle, costs more than any value
+wrapping. A cell only qualifies if it would fit in half the table; one that turns out to hold a
+sentence is left to wrap like anything else.
+
+Not wrapping is a claim on width, so the set is chosen against a budget: holds are given up —
+the widest heading first, the first column last — until what the table demands fits the page.
+And a table whose columns hold names longer than any share of the page can set is laid out to
+measured widths instead, because a renderer asked to autofit that table widens it until it runs
+off the paper.
+
+All of it is automatic. There is nothing to write in the source and nothing to tune, and tables
+run 0.6 cm past the right margin, which is where the published specifications have always put
+them: a grid of short values does not want the measure that suits a paragraph.
+
 ## DataType field tables
 
 A Structure, Union, Enumeration or OptionSet is documented by two tables: the definition table
@@ -448,8 +471,8 @@ Not every figure is the same kind of thing, so not every figure is checked the s
 
 | What it is | Save it as | Checked against the model? |
 |---|---|---|
-| An address-space diagram | `.drawio.svg` | **yes** — shapes, arrowheads, completeness |
-| Any other diagram you draw | `.drawio.svg` + `freeform: true` | no |
+| An address-space diagram | `.drawio` | **yes** — shapes, arrowheads, completeness |
+| Any other diagram you draw | `.drawio` + `freeform: true` | no |
 | A drawing carried over from a Word master | its original `.vsdx` or `.pptx`, plus the `.svg` a generator renders from it | no — the rendered SVG is opaque |
 | A photo, screenshot or artwork from elsewhere | `.png`, `.jpg`, `.svg` | no — it is opaque |
 | A sequence or state diagram | `.mmd` | no |
@@ -460,24 +483,51 @@ extension to a generator, and edits them in the application that drew them; `upd
 re-renders the SVG and both are committed together. Publishing that way is complete and correct.
 What it costs is the checking in column three — an exported SVG carries no diagram to read, so
 nothing compares its shapes against the model. Moving to a checkable figure later is one line in
-`figureGenerators`, and `.drawio.svg` is one destination for it rather than the only one.
+`figureGenerators`, and a `.drawio` is one destination for it rather than the only one.
 
 ````markdown
 ```{figure}
 id: fig-information-model-overview
 caption: Information Model overview
-source: figures/information-model-overview.drawio.svg
+source: figures/information-model-overview.drawio
 ```
 ````
 
-A **`.drawio.svg`** is an SVG that carries its own diagram, so the picture and the source are
-one file: it renders on GitHub and reopens in the editor, and nothing in the pipeline ever
-has to render a diagram. In VS Code the Draw.io Integration extension edits one in place —
-open, edit, save. There is no export step.
+**Name the `.drawio`, and nothing else.** It is the file you draw in, the file the validator
+checks, and the only figure file in `source/`. The tool draws it to
+`information-model-overview.svg` when it publishes — into `docs/`, along with the rest of the
+generated output — and the Word edition draws it in memory. You do not name the SVG anywhere,
+you do not run anything to produce it, and nothing writes one back beside your diagram.
 
-Compression is fine; draw.io deflates the embedded diagram by default and the validator
-inflates it. `OPC012` fires only when there is no readable diagram at all, or when a file
-named `.svg` is really plain draw.io XML and so renders nowhere.
+The renderer is in the tool. That is what makes the plain `.drawio` the format to standardise
+on: it needs no draw.io installation, it works the same on Windows, Linux and macOS, and it
+works in CI — so which editor you draw in is your own business. draw.io desktop, the web app at
+app.diagrams.net, the VS Code extension, anything that writes the format.
+
+There is nothing to commit but the `.drawio`. The rendered SVG is generated output and lives
+with the generated output: `docs/<spec>/figures/`, which the publish workflow commits. Building
+locally does not add anything to `source/` and does not dirty your working copy.
+
+The cost is that a pull request changing a figure shows a diff of mxGraph XML rather than the
+picture. To see the change, build and publish locally and open
+`_work/docs/<spec>/index.html` — or read it on the published site once the branch merges.
+
+A **`.drawio.svg`** — an SVG carrying its own diagram, so the picture and the source are one
+file — also still works, and a repository full of them needs no migration. The build leaves one
+alone: it is already the figure, drawn by draw.io itself, and re-rendering it would replace
+draw.io's picture with this renderer's. In VS Code the Draw.io Integration extension edits one in
+place, open, edit, save, with no export step; outside VS Code the plain `.drawio` is the easier
+format, which is why it is the one recommended above.
+
+**Renaming a `.drawio` to `.drawio.svg` is not the same thing** and does not work. A `.drawio` is
+draw.io's own XML with an `<mxfile>` root; a `.drawio.svg` is a real `<svg>` that happens to
+carry that XML in a `content` attribute. Renaming changes neither. It appears to work only
+because draw.io editors dispatch on the file name and rewrite the file properly the first time
+you save it — until then, the figure renders nowhere: not on GitHub, not on the published site,
+and not in the Word edition. `OPC012` reports exactly this.
+
+Compression is fine; draw.io deflates the diagram by default and both the renderer and the
+validator inflate it.
 
 **Images are accepted and not argued with.** A `.png` or a plain `.svg` is right for a
 photograph, a screenshot, or artwork produced somewhere else. You get one note (`OPC033`)
@@ -497,6 +547,13 @@ The script is called as `<script> <source> <svg>` from the repository root and m
 SVG; `.ps1` and `.sh` are both run, so the choice of language is yours. Only `update` runs
 them — a build reads the committed `.svg` and executes nothing, so it does not matter what is
 installed on the machine that builds. Commit the source and the `.svg` together.
+
+A `.drawio` is the exception, and the reason it is an exception is the same reason the rule
+exists. The rule is about a build not depending on what a particular machine has installed; the
+draw.io renderer is inside the tool, so a build that draws one is not shelling out to anything
+and cannot come out differently on somebody else's machine. Naming a generator for `.drawio`
+anyway overrides it — a working group with the draw.io CLI installed and a reason to prefer its
+output is not argued with — and then the usual rule applies and only `update --write` runs it.
 
 Where the renderer is not the same program on every platform — a Visio drawing is rendered by
 Visio on Windows and by LibreOffice elsewhere — name one per platform instead:

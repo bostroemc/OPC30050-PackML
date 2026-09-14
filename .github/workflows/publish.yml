@@ -53,6 +53,19 @@ on:
       - "artifacts/**"
       - "docs/**"
   workflow_dispatch:
+  # The same build, run against the merge result before it is a merge.
+  #
+  # It is the whole job and not a subset: `build` refuses anything the STS cannot carry, the
+  # render is a standing check that every clause survived the round trip, and the validator
+  # step below reads the STS - so a pull request that goes green here is one whose document
+  # publishes. Running a cut-down version would leave exactly the failures that only appear
+  # on main, which is where they are most expensive.
+  #
+  # No paths-ignore. A pull request is reviewed as a whole, and a change to the tool pin or to
+  # this workflow is a change to what the build does; the reason main filters those paths is
+  # to stop its own commit retriggering it, and a pull request makes no such commit.
+  pull_request:
+    branches: [main]
 
 # The tool version is not set here. `dotnet tool restore` below takes it from
 # .config/dotnet-tools.json, so CI runs exactly the build an author has locally and moving to
@@ -92,8 +105,26 @@ jobs:
       # package list, so a build that relies on it being there is relying on something no one
       # promised. It also brings the DejaVu fonts, without which the diagram labels rasterise
       # blank. Seconds when it is already present.
-      - name: Install fontconfig, for rasterising the figures
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq libfontconfig1
+      #
+      # The two font packages are why the figures come out of CI looking like the figures come
+      # out of a laptop. draw.io labels name Calibri, Arial and Helvetica, none of which a
+      # runner has: DejaVu answers for all three, it is about a quarter wider, and the labels
+      # rasterise in the wrong face overrunning the boxes they sit in. Carlito and Liberation
+      # are metric-compatible stand-ins - same advance widths as Calibri and as Arial and
+      # Helvetica - so a line occupies the width the diagram was drawn for.
+      #
+      # It matters beyond the raster. A label that changes format partway through is measured
+      # at build time to place its parts, and a measurement taken against a substitute a quarter
+      # too wide is written into an SVG that still names Calibri - so Word, which has Calibri,
+      # draws it from a position computed for a font it is not using. Metric-compatible fonts
+      # make the measurement here agree with the one the reader's Word makes there.
+      - name: Install fontconfig and the fonts the figures name
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            libfontconfig1 \
+            fonts-crosextra-carlito \
+            fonts-liberation
 
 
       # A red main publishes nothing. The rules run on every pull request, but main can take
@@ -156,6 +187,16 @@ jobs:
           dotnet Opc.Ua.SpecificationPublisher publish --in artifacts/ --out docs/ ${url:+--site-url "$url"}
 
       - name: Commit what changed
+        # Never on a pull request. Everything above this point is a check and writes only to the
+        # runner; this step is the one that writes to the repository, and a pull request has no
+        # business publishing. It would commit the merge result to the *base* branch - the
+        # rendering of a document nobody has approved yet, landing on main ahead of the change
+        # that produced it - and the push would fail anyway on a fork, whose token is read-only.
+        #
+        # The build output is still available on a pull request: the upload step below runs
+        # unconditionally, so a reviewer can read the rendering this run produced without it
+        # having been committed anywhere.
+        if: ${{ github.event_name != 'pull_request' }}
         # This commit touches artifacts/ and docs/ and nothing else, which is precisely what
         # `paths-ignore` above excludes - so it does not retrigger the workflow.
         run: |

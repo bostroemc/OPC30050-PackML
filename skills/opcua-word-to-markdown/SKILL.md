@@ -320,7 +320,6 @@ In that specification's `manifest.json`:
 
 ```json
   "figureGenerators": {
-    ".drawio.svg": "",
     ".vsdx": { "win": "tools/office-to-svg.ps1", "default": "tools/office-to-svg.sh" },
     ".pptx": { "win": "tools/office-to-svg.ps1", "default": "tools/office-to-svg.sh" }
   }
@@ -334,9 +333,10 @@ whose authors are not all on one platform, and it exists because Visio renders a
 Windows and LibreOffice renders it everywhere else. Ask which case this working group is in
 rather than assuming; it is not something to infer from the machine you are running on.
 
-Keep the `.drawio.svg` line with its empty script even when nothing uses it yet — an empty
-generator means "this source already is the figure", and the block is what says which kinds of
-figure source this repository has.
+Only the Office formats are listed. A `.drawio` needs no entry — the tool draws one itself, as
+part of the build — and neither does a `.drawio.svg`, which already is the figure. The block
+says which kinds of figure source need a *script*, so a repository whose figures are all draw.io
+has no `figureGenerators` at all.
 
 ### Render, and commit both
 
@@ -397,10 +397,11 @@ arrowheads against the model, because there is no diagram inside it to read. Tha
 that hides here: the diagram showed the types the model had on the day it was drawn, and nothing
 can tell when the model moves on.
 
-Moving to a checkable figure is a **later, optional decision the author makes**, and
-`.drawio.svg` is one way to take it — the picture and its editable diagram in one file, with the
-shapes dragged out of the OPC UA palette, `source/figures/uashapes-library.drawio.xml`, which is
-a draw.io shape library the tool ships and `upgrade` keeps current. It is not the only way. The generator
+Moving to a checkable figure is a **later, optional decision the author makes**, and redrawing
+it as a `.drawio` is the usual way to take it — with the shapes dragged out of the OPC UA
+palette, `source/figures/uashapes-library.drawio.xml`, which is a draw.io shape library the tool
+ships and `upgrade` keeps current. That needs no generator and no draw.io installation: the tool
+draws the figure itself, into the published site. It is not the only way. The generator
 contract is `<script> <source> <svg>` and nothing in the tool knows what is on the other end, so
 a group can move to PlantUML, Graphviz, a Python renderer, or anything else that emits SVG.
 Changing is one line in `figureGenerators` and the new source committed beside it.

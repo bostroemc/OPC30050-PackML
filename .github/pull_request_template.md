@@ -7,8 +7,9 @@
 - [ ] `dotnet Opc.Ua.SpecificationPublisher build` reports no problems
 - [ ] If a type was added, renamed or removed, the NodeSet and the clause both changed
 - [ ] If a conformance unit was added or renamed, the Profiles clause and the model agree
-- [ ] Figures changed are `.drawio.svg` under `source/<spec>/figures/`, with their shapes
-      dragged out of the OPC UA palette rather than drawn by hand
+- [ ] Figures changed are `.drawio` under `source/<spec>/figures/`, with their shapes
+      dragged out of the OPC UA palette rather than drawn by hand (the rendered `.svg` is
+      generated into `docs/` — do not add one to `source/`)
 - [ ] `artifacts/` was not hand-edited
 
 ## Model impact
