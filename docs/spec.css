@@ -323,6 +323,21 @@ table {
   line-height: 1.45;
 }
 
+/* A table whose caption stated its column widths. A browser honours a colgroup only under a
+ * fixed layout; left to measure the content for itself it treats the stated widths as a hint and
+ * lays the table out as though they were not there. */
+table.sized { table-layout: fixed; }
+
+/* Under a fixed layout the browser will not widen a column for a name that does not fit, so a
+ * qualified BrowseName would otherwise run out over the rule into the cell beside it. */
+table.sized th, table.sized td { overflow-wrap: break-word; }
+
+/* Everything else is laid out by the browser from its content, which is the counterpart of the
+ * autofit the Word edition asks for — and these are the cells that autofit is told to keep on
+ * one line: every column heading, and the first column, which is what a reader scans to find a
+ * row. Only cells the writer measured as short carry the class. */
+th.nowrap, td.nowrap { white-space: nowrap; }
+
 th, td {
   border: 1px solid var(--rule-strong);
   padding: 0.35rem 0.55rem;
