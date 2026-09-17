@@ -118,7 +118,7 @@ The *PackMLStatusObjectType* defines an *ObjectType* that is used to group all o
 
 ```{figure}
 id: fig-packmlstatusobjecttype-overview
-caption: PackMLStatusObjectType Overview
+caption: PackMLStatusObjectType Overview -- TODO: Update figure
 source: figures/fig_12_packmlstatusobjecttype-overview.png
 ```
 
