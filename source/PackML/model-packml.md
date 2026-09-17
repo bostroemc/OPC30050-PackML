@@ -160,7 +160,7 @@ In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provide
 
     *UnitModeChangeInProcess* - a flag that indicates a unit change has been requested and is in progress
 
-    *StateCurrent* -  the current state of the PackML device.  This value is included here for completeness only and must always agree with the state as defined in the *StateMachine*.
+    *StateCurrent* - the current state of the PackML device.  This value is included here for completeness only and must always agree with the state as defined in the *StateMachine*.
 
     *StateRequested* - this value is used for state transition checking, to ensure that transitions to a target state can be achieved. The target state, *StateRequested*, is a numerical value corresponding to a state in the base state model (shown above).
 
