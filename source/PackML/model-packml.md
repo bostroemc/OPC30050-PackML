@@ -140,13 +140,13 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | HasComponent	| Variable	| StateChangeInProcess	| Boolean	| BaseDataVariableType	| Optional	| R| 
 | HasComponent	| Variable 	| MachSpeed	| Float	| AnalogItemType	| Mandatory	| R| 
 | HasComponent	| Variable 	| CurMachSpeed	| Float	| AnalogItemType	| Mandatory	| R| 
-| HasComponent	| Variable	| EquipmentBlocked	| Boolean	| BaseDataVariableType	| Mandatory	| R| 
-| HasComponent	| Variable	| EquipmentStarved	| Boolean	| BaseDataVariableType	| Mandatory	| R| 
-| HasComponent	| Variable	| MaterialInterlocked	| Boolean	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| EquipmentInterlock| PackMLEquipmentInterlockDataType	| BaseDataVariableType	| Mandatory	| R| 
 | HasInterlock	| Variable	| MaterialInterlock	| Boolean[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Parameter	| PackMLDescriptorDataType[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| RemoteParameter	| PackMLRemoteInterfaceDataType[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Product	| PackMLProductDataType[]	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| Parameter_REAL	| PackMLParameterRealDataType[]	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| Parameter_STRING	| PackMLParameterStringDataType[]	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| Parameter_LREAL	| PackMLParameterLRealDataType[]	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| Parameter_DINT	| PackMLParameterDIntDataType[]	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| Recipe	| PackMLRecipeDataType[]	| BaseDataVariableType	| Optional	| R| 
 
 In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in [OPC 10000-5](#ref-uapart5).
             
@@ -166,19 +166,21 @@ In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provide
 
     *CurMachSpeed* - Current speed of the unit.
 
-    *Equipment*Blocked - If TRUE, then processing is suspended because downstream equipment is unable to receive material (e.g. downstream buffer is full)
+    *EquipmentInterlock.Blocked* - If TRUE, then processing is suspended because downstream equipment is unable to receive material (e.g. downstream buffer is full)
 
-    *Equipment*Starved - If TRUE, then processing is suspended because upstream equipment is unable to send material.
-
-    *MaterialInterlocked* - a flag that indicates this machine is interlocked. It is a summary of the interlock variable that is associated with this machine.
+    *EquipmentInterlock.Starved* - If TRUE, then processing is suspended because upstream equipment is unable to send material.
 
     *MaterialInterlock* - this is an array and describes the status of the materials that are ready for processing. It is comprised of a series of Boolean with 1 equaling readyor not low, 0 equaling not ready or low. Each bit represents a different user material.
 
-    *Parameter* - Current parameters used in the production job. This reflects the last parameter sent via the *SetParameter* *Method*.
+    *Parameter_REAL* - Current parameters of type float used in the production job. This reflects the last parameter of this type sent via the *SetParameter_REAL* *Method*.
+ 
+    *Parameter_STRING* - Current parameters of type string used in the production job. This reflects the last parameter of this type sent via the *SetParameter_STRING* *Method*.
 
-    *RemoteParameter* - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the *RemoteCommand* *Method* is provided this variable shall also be provided. For additional details see the *RemoteCommand* *Method* definition in [](#sec-remotecommand-method).
+    *Parameter_LREAL* - Current parameters of type double used in the production job. This reflects the last parameter of this type sent via the *SetParameter_LREAL* *Method*.
 
-    *Product* - provides a list of the products supported by this machine. The array is typically needed for machines that run multiple products. It defines the IDs of the products and process &amp; process variables associated with the product. The product data can come from either a local HMI or remote systems and are used to process the product on the unit machine.
+    *Parameter_DINT* - Current parameters of type int32 used in the production job. This reflects the last parameter of this type sent via the *SetParameter_DINT* *Method*.
+
+    *Recipe* - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.
 
  
 #### PackMLAdminObjectType {#sec-packmladminobjecttype}
