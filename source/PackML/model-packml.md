@@ -136,6 +136,7 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | HasProperty	| Variable	| UnitSupportedModes	| NodeId	| PropertyType	| Mandatory	| R| 
 | HasComponent	| Variable	| UnitModeCurrent	| Enumeration	| BaseDataVariableType	| Mandatory	| R| 
 | HasComponent	| Variable 	| UnitModeChangeInProcess	| Boolean	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| StateCurrent	| Int32	| BaseDataVariableType	| Optional	| R| 
 | HasComponent	| Variable	| StateRequested	| Int32	| BaseDataVariableType	| Optional	| R| 
 | HasComponent	| Variable	| StateChangeInProcess	| Boolean	| BaseDataVariableType	| Optional	| R| 
 | HasComponent	| Variable 	| MachSpeed	| Float	| AnalogItemType	| Mandatory	| R| 
@@ -147,10 +148,11 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | HasComponent	| Variable	| Parameter_LREAL	| PackMLParameterLRealDataType[]	| BaseDataVariableType	| Optional	| R| 
 | HasComponent	| Variable	| Parameter_DINT	| PackMLParameterDIntDataType[]	| BaseDataVariableType	| Optional	| R| 
 | HasComponent	| Variable	| Recipe	| PackMLRecipeDataType[]	| BaseDataVariableType	| Optional	| R| 
+| HasComponent	| Variable	| Stacklight	| Int32[]	| BaseDataVariableType	| Optional	| R| 
 
 In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in [OPC 10000-5](#ref-uapart5).
             
-    *UnitModeRequested* - If TRUE, indicates that a unit mode change was requested, reflects the status of the Command UnitModeRequested.
+    *UnitModeRequested* - if TRUE, indicates that a unit mode change was requested, reflects the status of the Command UnitModeRequested.
             
     *UnitSupportedModes* - provides the *NodeId* of the enumeration *DataType* that describes the available modes for this PackML instance. A *Server* might have more than one of these instances; each instance might expose a different set of available modes and thus have a different enumeration. 
           
@@ -158,30 +160,33 @@ In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provide
 
     *UnitModeChangeInProcess* - a flag that indicates a unit change has been requested and is in progress
 
-    *StateRequested* - This value is used for state transition checking, to ensure that transitions to a target state can be achieved. The target state, *StateRequested*, is a numerical value corresponding to a state in the base state model (shown above).
+    *StateCurrent* -  the current state of the PackML device.  This value is included here for completeness only and must always agree with the state as defined in the *StateMachine*.
+
+    *StateRequested* - this value is used for state transition checking, to ensure that transitions to a target state can be achieved. The target state, *StateRequested*, is a numerical value corresponding to a state in the base state model (shown above).
 
     *StateChangeInProcess* - a flag that indicates that a state change has been requested and is in progress. The StateMachine will report the current state.
 
-    *MachSpeed* - Setpoint speed of the unit.
+    *MachSpeed* - setpoint speed of the unit.
 
-    *CurMachSpeed* - Current speed of the unit.
+    *CurMachSpeed* - current speed of the unit.
 
-    *EquipmentInterlock.Blocked* - If TRUE, then processing is suspended because downstream equipment is unable to receive material (e.g. downstream buffer is full)
+    *EquipmentInterlock.Blocked* - if TRUE, then processing is suspended because downstream equipment is unable to receive material (e.g. downstream buffer is full)
 
-    *EquipmentInterlock.Starved* - If TRUE, then processing is suspended because upstream equipment is unable to send material.
+    *EquipmentInterlock.Starved* - if TRUE, then processing is suspended because upstream equipment is unable to send material.
 
     *MaterialInterlock* - this is an array and describes the status of the materials that are ready for processing. It is comprised of a series of Boolean with 1 equaling readyor not low, 0 equaling not ready or low. Each bit represents a different user material.
 
-    *Parameter_REAL* - Current parameters of type float used in the production job. This reflects the last parameter of this type sent via the *SetParameter_REAL* *Method*.
+    *Parameter_REAL* - current parameters of type float used in the production job. This reflects the last parameter of this type sent via the *SetParameter_REAL* *Method*.
  
-    *Parameter_STRING* - Current parameters of type string used in the production job. This reflects the last parameter of this type sent via the *SetParameter_STRING* *Method*.
+    *Parameter_STRING* - current parameters of type string used in the production job. This reflects the last parameter of this type sent via the *SetParameter_STRING* *Method*.
 
-    *Parameter_LREAL* - Current parameters of type double used in the production job. This reflects the last parameter of this type sent via the *SetParameter_LREAL* *Method*.
+    *Parameter_LREAL* - current parameters of type double used in the production job. This reflects the last parameter of this type sent via the *SetParameter_LREAL* *Method*.
 
-    *Parameter_DINT* - Current parameters of type int32 used in the production job. This reflects the last parameter of this type sent via the *SetParameter_DINT* *Method*.
+    *Parameter_DINT* - current parameters of type int32 used in the production job. This reflects the last parameter of this type sent via the *SetParameter_DINT* *Method*.
 
     *Recipe* - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.
 
+	*Stacklight* - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.
  
 #### PackMLAdminObjectType {#sec-packmladminobjecttype}
 
