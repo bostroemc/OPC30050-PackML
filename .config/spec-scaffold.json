@@ -1,10 +1,10 @@
 {
   "$comment": "Written by Opc.Ua.SpecificationPublisher upgrade. 'files' is what the tool last wrote, so a file you have edited can be told from one that is merely out of date; 'yours' is the files you have taken over, which it will not touch again. Not edited by hand.",
-  "version": "1.0.65",
+  "version": "1.0.68",
   "files": {
     ".gitattributes": "796c85299b5b5b58b6dbd6d3d0b749e3963ab16fe36384de83567e0e555c9e12",
     ".github/pull_request_template.md": "b05e8e41a3e0431f2cabe3cd7fc0f24aa0c2fe49dbfcb09eea300060c5caf094",
-    ".github/workflows/publish.yml": "f67b9234d56ab0db07f9edbd005c868eecc7703dacfcc8b1dc93bb8019779557",
+    ".github/workflows/publish.yml": "07aadae0d241ee1cebb342cc2afb18bd6d036f8d72c8d247e08bb287212c0802",
     ".gitignore": "ff1b0d5a105ec4bc3f62c215df7f2caa2685c74a9f9501e79cc09197cc0589f5",
     ".markdownlint-cli2.yaml": "affef9a767ea74aee2cdd18584e09697ec46f6d58add0d8036c80c3ba95f6d22",
     "AUTHORING.md": "dc177d9098c33d824b1a2d0cc464d11a770d8ed84aed60c3f5fa1a0734dab6a2",
