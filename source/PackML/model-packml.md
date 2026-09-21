@@ -216,7 +216,10 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | 0:HasComponent | Variable | 4:MachDesignSpeed | 0:Float | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:ModeCumulativeTime | 0:Int32[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:ModeCurrentTime | 0:Int32[] | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:Parameter | 4:PackMLDescriptorDataType[] | 0:BaseDataVariableType | O |
+| 0:HasComponent	| Variable	| 4:Parameter_DINT	| 4:PackMLParameterDIntDataType[]	| BaseDataVariableType	| O	|
+| 0:HasComponent	| Variable	| 4:Parameter_LREAL	| 4:PackMLParameterLRealDataType[]	| BaseDataVariableType	| O	| 
+| 0:HasComponent	| Variable	| 4:Parameter_REAL	| 4:PackMLParameterRealDataType[]	| BaseDataVariableType	| O | 
+| 0:HasComponent	| Variable	| 4:Parameter_STRING	| 4:PackMLParameterStringDataType[]	| BaseDataVariableType	| O | 
 | 0:HasComponent | Variable | 4:ProdConsumedCount | 4:PackMLCountDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:ProdDefectiveCount | 4:PackMLCountDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:ProdProcessedCount | 4:PackMLCountDataType[] | 0:BaseDataVariableType | O |
@@ -227,49 +230,48 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | 4:HasWarning | Variable | 4:Warning | 4:PackMLEventDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:WarningExtent | 0:Int32 | 0:BaseDataVariableType | O |
 						
-*Parameter* - The parameter tags associated with the local interface are typically used as parameters that are displayed or used on the unit locally, for example from an HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. The *Parameters* are typically limited to parameters related the unit. The length of the array is the maximum number of parameters needed.
+*Parameter_DINT* - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user’s supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. *Parameters_DINT* is typically limited to Int32-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed. 
 
-*Alarm* - Alarm Events (trigger, value, message, category,…). The alarm tags associated to the local interface are typically used as parameters that are displayed or used on the unit locally, for example from an HMI. These alarm parameters can be used to display any alarm, or machine downtime cause that is currently occurring in the system. The alarms are typically limited to the machine unit.  Each machine can define as many alarms as are required for the machine. 
-            
-*AlarmExtent* - Defines the maximum number of alarms available, for the machine annunciation or reporting
+*Parameter_LREAL* - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user’s supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. *Parameters_LREAL* is typically limited to Double-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed. 
 
-AlarmHistory - These alarm history parameters can be used to display any alarm history, or machine downtime cause.
+*Parameter_REAL* - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user’s supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. *Parameters_REAL* is typically limited to Float-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed. 
 
-AlarmHistoryExtend - associated with the maximum number of alarms needed to be archived or tagged as alarm history for the machine.
+*Parameter_STRING* - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user’s supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. *Parameters_STRING* is typically limited to String-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed. 
 
-Warning - Array of warning information Events. Warnings are general events that do not cause the machine to stop, but may require operator action because a stoppage may be imminent. Warning elements have the same structure as Stop Reason elements.
+*Alarm* - The alarm tags associated to the local interface are typically used as parameters that are displayed or used on the unit locally, for example from an HMI. These alarm parameters can be used to display any alarm, or machine downtime cause, that is currently occurring in the system. The alarms are typically limited to the machine unit. The extent of the array is the maximum number of alarms needed to be enunciated. 
 
-*WarningExtent* - Defines the maximum number of warning elements available.
+*AlarmExtent* - The alarm extent is associated with the maximum number of alarms needed for the machine annunciation or reporting. This tag can be used by a remote machine to understand the extent of the alarm array, or locally to manage the use of the array.
 
-*StopReason* - A structure for the stop reason *Event* (similar to Alarms) which define the possible stop reasons (trigger, value, message, category).  Stop Reason is typically used for "First Out Fault" Reporting and Other Stoppage Events. The stop reason is the first event captured during an abort, held, suspended or stop event.
+*AlarmHistory* - The AlarmHistory array is reserved for alarms that have occurred on the unit/machine and can be sorted in chronological order with the most recently occurring alarmed indexed as Admin.AlarmHistory[0]. The extent of the array is the maximum number of historical alarms needed to be retained for later viewing.
 
-*StopReasonExtent* - Defines the maximum number of stop reason elements or available.
+*AlarmHistoryExtent* - The alarm history extent is associated with the maximum number of alarms needed to be archived or tagged as alarm history for the machine. This tag can be used by a remote machine to understand the extent of the alarm array, or locally to manage the array.
 
-*ModeCurrentTime* - The current amount of time, in seconds, that the machine has been in each mode. The array index for a mode is the Unit mode value.  The values roll over to 0 at 2,147,483,647.
+*Warning* - Machine warnings are for general events that do not cause the machine to stop, but may require operator action as a stoppage may be imminent. Warnings are not typically stored in history.
 
-*ModeCumulativeTime* - The cumulative amount of time, in seconds, that the machine has been in each mode. The array index for a mode is the Unit mode value. The value is the cumulative elapsed time the machine has spent in each mode since its timers and counters were reset. The values roll over to 0 at 2,147,483,647.
+*WarningExtent* - The warning extent is associated with the maximum number of warnings needed to be archived or tagged as warnings for the machine. This tag can be used by a remote machine to understand the extent of the warning array, or locally to manage the array.
 
-*StateCurrentTime* - The current amount of time, in seconds, that the machine has been in each state for each mode. The first array index for is the Unit mode value, the second array index is the state value.. The values roll over to 0 at 2,147,483,647.
+*StopReason* - *StopReason* is typically used for “First Out Fault” reporting and other stoppage events. The stop reason is the first event captured during an abort, held, suspended, or stop event.
 
-*StateCumulativeTime* - The cumulative amount of time, in seconds, that the machine has been in each state for each mode. The first array index for is the Unit mode value, the second array index is the state value.  The value is the cumulative elapsed time the machine has spent in each mode and state since its timers and counters were reset. The values roll over to 0 at 2,147,483,647
+*ModeTimeCurrent* - *ModeTimeCurrent* represents the current amount of time in seconds spent in the current Mode as indicated by Status.UnitModeCurrent. The value will start from 0 every time the Mode is changed. The values roll over to 0 after 2,147,483,647.
 
-*ProdConsumedCount* - Represents the material used/consumed in the production machine.  An example of tag usage would be the number of bags consumed in a filler, or bagger packaging machine, or the amount of linear length used, or the number caps used. This tag can be used locally or remotely if needed.  The extent of the array is typically limited to the number of raw materials needed to be counted.  The array is typically used for unit machines that run multiple raw materials.
+*ModeStateCurrent* - *ModeStateCurrent* represents the current amount of time in seconds spent in the current State as indicated by Status.StateCurrent. The value will start from 0 every time the State is changed. The values roll over to 0 after 2,147,483,647.
 
-*ProdProcessedCount* - Represents the products processed in the production machine. An example of tag usage would be the number of products that were made, including all good and defective products. The structure of the *ProdProcessedCount* is the same as the *ProdConsumedCount*. The length of the array is typically limited to the number of products that need to be counted. The number of products processed minus the defective count is the number of non-defective products made by the machine. The array index of # = 0 should be reserved for the count of the number of units from the primary production stream.
+*CumulativeTimes* - *CumulativeTimes* represents a collection of accumulated time in seconds spent in any defined state of any defined mode. The user may define a variable number of time-tracking collections indicated by the array index and may also define when the time values in each collection are reset. The minimum array extent is 1.
 
-*ProdDefectiveCount* - Represents the products marked as defective in the production machine. The structure of the *ProdDefectiveCount* is the same as the *ProdConsumedCount*. The length of the array is typically limited to the number of products that need to be counted.  The number of products processed minus the defective count is the number of non-defective products made by the machine. The array index of # = 0 should be reserved for the count of the number of units from the primary production stream.
+*ProductData* - *ProductData* represents a collection of information about each unique input or output product stream of the machine unit. The extent of the array is typically limited to the maximum number of input and output product streams. The array index of # = 0 can typically be reserved for data regarding the primary product stream (i.e., cans, bottles) flowing through the machine unit. In such a case, Admin.RecipeData[0].PrimaryQty would equal 1.0.
 
-*AccTimeSinceReset* - Represents the amount of time, in seconds, since the last reset of all counters as triggered.  Counters that are reset are: 
-- UnitName.Admin.ModeCurrentTime[#]
-- UnitName.Admin.ModeCumulativeTime[#]
-- UnitName.Admin.StateCurrentTime[#,#]
-- UnitName.Admin.StateCumulativeTime[#,#]
-- UnitName.Admin.ProdConsumedCount[#].Count
-- UnitName.Admin.ProdProcessedCount[#].Count
-- UnitName.Admin.ProdDefectiveCount[#].Count
-- UnitName.Admin.AccTimeSinceReset
+*MachDesignSpeed* - *MachDesignSpeed* represents the maximum design speed of the machine in primary packages per minute for the package configuration being run. This speed is NOT the maximum speed as specified by the manufacturer, but rather the speed of the machine is designed to run in its installed environment. Note that in practice the maximum speed of the machine as used for efficiency calculations will be a function of how it is set up and what products it is producing.
 
-*MachDesignSpeed* - Represents the maximum design speed of the machine in primary packages per minute for the package configuration being run. This speed is NOT the maximum speed as specified by the manufacturer, but rather the speed of the machine is designed to run in its installed environment.
+*DisabledStatesCfg* -  An array reflecting the Disabled States Configuration for all defined Modes. The array index represents the Mode number. Bit locations within the DWORD value represent State numbers. A value of 1 in a bit location indicates that the corresponding state number is disabled. State 0 is an Undefined State, therefore bit 0 is unused. Ex: If the SUSPENDED, SUSPENDING and UNSUSPENDING states were to be disabled for Mode 2, a 1 would be placed in bit locations 13, 5 and 14 of array element 2. Admin.DisabledStatesCfg[2] = 0110_0000_0010_0000 (binary), = 6020 (hex), = 24608 (decimal). See section 4.3 for Minimum Required States that should not be disabled. Note that some state transition rules may over-ride the disable bits. For example, if HOLDING is not disabled, then HELD cannot be disabled.
+
+*CurDisabledStates* - Reflects the disabled states for the current Mode (Status.UnitModeCurrent). State numbers are represented by bit location. A value of 1 in a certain bit location indicates that the corresponding state number is disabled. State 0 is an Undefined State, therefore bit 0 is unused. Ex: If the SUSPENDING, SUSPENDED and UNSUSPENDING states were disabled for the current mode, a 1 would be placed in bit locations 13, 5 and 14. Admin.CurDisabledStates = 0110_0000_0010_0000 (binary), = 6020 (hex), = 24608 (decimal). Note that some state transition rules may over-ride the disable bits set in Admin.DisabledStatesCfg[#]. For example, if HOLDING is not disabled, then HELD cannot be disabled.
+
+*EnabledModesCfg* - An element reflecting the Enabled Modes Configuration for the unit/machine. Bit locations within the DWORD represent Mode numbers. A value of 1 in a bit location [0-31] indicates that the corresponding Mode number is enabled. Mode 0 is an Invalid Mode, therefore bit 0 is unused. Ex: If Modes 1, 2 and 3 are used in the Unit/machine, a 1 would be placed in bit locations 1, 2 and 3. Admin.EnabledModesCfg = 0000_0000_0000_1110 (binary), = 000E (hex), = 14 (decimal).
+
+*ModeTransitionCfg* - An array reflecting the Mode Transition Configuration for all modes of the unit/machine. The array index represents the Mode number. Bit locations within the DWORD value represent State numbers. A value of 1 in a bit location indicates that a mode transition from the corresponding state number is allowed. Ex: For Mode 2, if transitions are to be allowed while in the Stopped, Aborted or Idle states, a 1 would be placed in bit locations 2, 9 and 4. Admin.ModeTransitionCfg[2] = 2# 0000 0010 0001 0100, = 16#214, = DINT#532. Both modes involved in a mode transition attempt from a particular state must be configured to allow a transition to/from that state.
+
+*PLCDateTime* - Current date and time of the programmable logic controller.
+
 
 #### StateMachines Overview {#sec-statemachines-overview}
 
