@@ -1,6 +1,6 @@
 # Overview
 
-This is a temporary repository to hold the markdown source for the JWG revising the OPC UA PackML companion specification: OPC 30050.
+This is a temporary repository to hold the markdown source for the JWG currently revising the OPC UA PackML companion specification: OPC 30050.
 
 Group members may contribute to the paper by submitting pull requests.  Known open points are listed in the Issues section.  If you are working on a particular issue, please indicate it in the comments so that we are not duplicating our efforts. 
 
