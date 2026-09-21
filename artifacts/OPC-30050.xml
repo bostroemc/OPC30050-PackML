@@ -54,6 +54,7 @@
                 <p>The intellectual property and copyright are solely owned by the OPC Foundation.</p>
               </list-item>
             </list>
+            <p>OPC Foundation members and non-members are prohibited from copying and redistributing this specification. All copies must be obtained on an individual basis, directly from the OPC Foundation website https://opcfoundation.org/ or from the OMAC website  http://omac.org.</p>
           </sec>
           <sec>
             <title>PATENTS</title>
@@ -66,7 +67,7 @@
           </sec>
           <sec>
             <title>RESTRICTED RIGHTS LEGEND</title>
-            <p>This Specification is provided with Restricted Rights. Use, duplication, or disclosure by the U.S. government is subject to restrictions as set forth in (a) this Agreement pursuant to DFARs 227.7202-3(a); (b) subparagraph (c)(1)(i) of the Rights in Technical Data and Computer Software clause at DFARs 252.227-7013; or (c) the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 subdivision (c)(1) and (2), as applicable. Contractor / manufacturer are the OPC Foundation, 16101 N. 82nd Street, Suite 3B, Scottsdale, AZ, 85260-1830</p>
+            <p>This Specification is provided with Restricted Rights. Use, duplication or disclosure by the U.S. government is subject to restrictions as set forth in (a) this Agreement pursuant to DFARs 227.7202-3(a); (b) subparagraph (c)(1)(i) of the Rights in Technical Data and Computer Software clause at DFARs 252.227-7013; or (c) the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 subdivision (c)(1) and (2), as applicable. Contractor / manufacturer are the OPC Foundation,. 16101 N. 82nd Street, Suite 3B, Scottsdale, AZ, 85260-1830 and OMAC 11911 Freedom Drive, Suite 600,  Reston, VA 20190</p>
           </sec>
           <sec>
             <title>COMPLIANCE</title>
@@ -79,7 +80,7 @@
           <sec>
             <title>GENERAL PROVISIONS</title>
             <p>Should any provision of this Agreement be held to be void, invalid, unenforceable, or illegal by a court, the validity and enforceability of the other provisions shall not be affected thereby.</p>
-            <p>This Agreement shall be governed by and construed under the laws of Germany.</p>
+            <p>This Agreement shall be governed by and construed under the laws of the State of Minnesota, excluding its choice or law rules.</p>
             <p>This Agreement embodies the entire understanding between the parties with respect to, and supersedes any prior understanding or agreement (oral or written) relating to, this specification.</p>
           </sec>
           <sec>
@@ -344,15 +345,17 @@
           </list-item>
           <list-item>
             <p>Identify a common tag structure for automated machines in order to:</p>
-          </list-item>
-          <list-item>
-            <p>Provide for "connect &amp; pack" functionality</p>
-          </list-item>
-          <list-item>
-            <p>Provide functional interoperability and a consistent look and feel across the plant floor.</p>
-          </list-item>
-          <list-item>
-            <p>Provide consistent tag structure for connection to plant MES and enterprise systems.</p>
+            <list list-type="bullet">
+              <list-item>
+                <p>Provide for "connect &amp; pack" functionality</p>
+              </list-item>
+              <list-item>
+                <p>Provide functional interoperability and a consistent look and feel across the plant floor.</p>
+              </list-item>
+              <list-item>
+                <p>Provide consistent tag structure for connection to plant MES and enterprise systems.</p>
+              </list-item>
+            </list>
           </list-item>
         </list>
         <p>If automated machinery is modelled in an <xref ref-type="bibr" rid="ref-s88">ANSI/ISA-88.01-1995</xref> physical hierarchy, the example mapping shown in <xref ref-type="fig" rid="fig_1">Figure 1</xref> is possible, from <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>. The example in this document will assume that a machine can represent the unit level in the ISA88 hierarchy.</p>
@@ -399,9 +402,17 @@
           <label>4.2.3</label>
           <title>PackML Elements</title>
           <p>In order to provide a standard interface PackML defines three elements:</p>
-          <p>1. PackML Unit Modes - A standard model that is used to control which state is being used (Producing, Maintenance, Manual, ….).</p>
-          <p>2. PackML StateMachine - Standard state machine models that are used to represent the internal operational state of the machine/unit. (Note: StateMachine may change for Units and for the Mode of the unit.)</p>
-          <p>3. PackTags -A standard set of tag names and extension used to control the mode and state, send commands to the machine/unit, and monitor the status of the machine/unit.</p>
+          <list list-type="order">
+            <list-item>
+              <p>PackML Unit Modes - A standard model that is used to control which state is being used (Producing, Maintenance, Manual, ….).</p>
+            </list-item>
+            <list-item>
+              <p>PackML StateMachine - Standard state machine models that are used to represent the internal operational state of the machine/unit. (Note: StateMachine may change for Units and for the Mode of the unit.)</p>
+            </list-item>
+            <list-item>
+              <p>PackTags -A standard set of tag names and extension used to control the mode and state, send commands to the machine/unit, and monitor the status of the machine/unit.</p>
+            </list-item>
+          </list>
           <p>These three aspects will be translated to OPC UA models.</p>
         </sec>
         <sec id="sec_4-2-4">
@@ -848,7 +859,7 @@
                 <th>
                   <bold>Attribute</bold>
                 </th>
-                <th colspan="3">
+                <th colspan="5">
                   <bold>Value</bold>
                 </th>
               </tr>
@@ -856,31 +867,38 @@
             <tbody>
               <tr>
                 <td>BrowseName</td>
-                <td colspan="3">PackMLObjects</td>
+                <td colspan="5">4:PackMLObjects</td>
               </tr>
               <tr>
-                <td>
-                  <bold>References</bold>
-                </td>
-                <td>
-                  <bold>NodeClass</bold>
-                </td>
-                <td>
-                  <bold>BrowseName</bold>
-                </td>
-                <td>
-                  <bold>TypeDefinition</bold>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3">Organized by the Objects Folder defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
-              </tr>
-              <tr>
-                <td>HasTypeDefinition</td>
-                <td>ObjectType</td>
-                <td colspan="2">FolderType</td>
+                <td>IsAbstract</td>
+                <td colspan="5">False</td>
               </tr>
             </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <bold>References</bold>
+                </th>
+                <th>
+                  <bold>Node Class</bold>
+                </th>
+                <th>
+                  <bold>BrowseName</bold>
+                </th>
+                <th>
+                  <bold>DataType</bold>
+                </th>
+                <th>
+                  <bold>TypeDefinition</bold>
+                </th>
+                <th>
+                  <bold>Other</bold>
+                </th>
+              </tr>
+            </thead>
+            <tbody />
           </table>
         </table-wrap>
       </sec>
@@ -913,120 +931,139 @@
             <table>
               <thead>
                 <tr>
-                  <th>Attribute</th>
-                  <th colspan="6">Value</th>
+                  <th>
+                    <bold>Attribute</bold>
+                  </th>
+                  <th colspan="5">
+                    <bold>Value</bold>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="6">PackMLBaseObjectType</td>
+                  <td colspan="5">4:PackMLBaseObjectType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
-                  <td colspan="6">False</td>
+                  <td colspan="5">False</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <bold>References</bold>
+                  </th>
+                  <th>
+                    <bold>Node Class</bold>
+                  </th>
+                  <th>
+                    <bold>BrowseName</bold>
+                  </th>
+                  <th>
+                    <bold>DataType</bold>
+                  </th>
+                  <th>
+                    <bold>TypeDefinition</bold>
+                  </th>
+                  <th>
+                    <bold>Other</bold>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">Subtype of the 0:BaseObjectType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
                 </tr>
                 <tr>
-                  <td>Reference</td>
-                  <td>Node Class</td>
-                  <td>BrowseName</td>
-                  <td>DataType</td>
-                  <td>TypeDefinition</td>
-                  <td>ModellingRule</td>
-                  <td>RW</td>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Admin</td>
+                  <td></td>
+                  <td>4:PackMLAdminObjectType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td colspan="7">Subtype of the BaseObjectType  from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:BaseStateMachine</td>
+                  <td></td>
+                  <td>4:PackMLBaseStateMachineType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasProperty</td>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:RemoteCommand</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:SetInterlock</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:SetMachSpeed</td>
+                  <td></td>
+                  <td></td>
+                  <td>M</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:SetParameter</td>
+                  <td></td>
+                  <td></td>
+                  <td>M</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:SetProduct</td>
+                  <td></td>
+                  <td></td>
+                  <td>M</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:SetUnitMode</td>
+                  <td></td>
+                  <td></td>
+                  <td>M</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Status</td>
+                  <td></td>
+                  <td>4:PackMLStatusObjectType</td>
+                  <td>M</td>
+                </tr>
+                <tr>
+                  <td>0:HasProperty</td>
                   <td>Variable</td>
-                  <td>TagID</td>
-                  <td>String</td>
-                  <td>PropertyType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:PackMLVersion</td>
+                  <td>0:String</td>
+                  <td>0:PropertyType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasProperty</td>
+                  <td>0:HasProperty</td>
                   <td>Variable</td>
-                  <td>PackMLVersion</td>
-                  <td>String</td>
-                  <td>PropertyType</td>
-                  <td>Optional</td>
-                  <td>R</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Admin</td>
-                  <td></td>
-                  <td>PackMLAdminObjectType</td>
-                  <td colspan="2">Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Status</td>
-                  <td></td>
-                  <td>PackMLStatusObjectType</td>
-                  <td colspan="2">Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>BaseStateMachine</td>
-                  <td></td>
-                  <td>PackMLBaseStateMachineType</td>
-                  <td colspan="2">Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>SetUnitMode</td>
-                  <td>Defined in section 6.7.2</td>
-                  <td></td>
-                  <td colspan="2">Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>SetMachSpeed</td>
-                  <td>Defined in section 6.7.3</td>
-                  <td></td>
-                  <td colspan="2">Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>SetProduct</td>
-                  <td>Defined in section 6.7.4</td>
-                  <td></td>
-                  <td colspan="2">Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>SetParameter</td>
-                  <td>Defined in section 6.7.17</td>
-                  <td></td>
-                  <td colspan="2">Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>RemoteCommand</td>
-                  <td>Defined in section 6.7.15</td>
-                  <td></td>
-                  <td colspan="2">Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>SetInterlock</td>
-                  <td>Defined in section 6.7.16</td>
-                  <td></td>
-                  <td colspan="2">Optional</td>
+                  <td>4:TagID</td>
+                  <td>0:String</td>
+                  <td>0:PropertyType</td>
+                  <td>O</td>
                 </tr>
               </tbody>
             </table>
@@ -1071,165 +1108,171 @@
             <table>
               <thead>
                 <tr>
-                  <th>Attribute</th>
-                  <th colspan="6">Value</th>
+                  <th>
+                    <bold>Attribute</bold>
+                  </th>
+                  <th colspan="5">
+                    <bold>Value</bold>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="6">PackMLStatusObjectType</td>
+                  <td colspan="5">4:PackMLStatusObjectType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
-                  <td colspan="6">False</td>
+                  <td colspan="5">False</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <bold>References</bold>
+                  </th>
+                  <th>
+                    <bold>Node Class</bold>
+                  </th>
+                  <th>
+                    <bold>BrowseName</bold>
+                  </th>
+                  <th>
+                    <bold>DataType</bold>
+                  </th>
+                  <th>
+                    <bold>TypeDefinition</bold>
+                  </th>
+                  <th>
+                    <bold>Other</bold>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">Subtype of the 0:BaseObjectType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
                 </tr>
                 <tr>
-                  <td>Reference</td>
-                  <td>Node Class</td>
-                  <td>BrowseName</td>
-                  <td>DataType</td>
-                  <td>TypeDefinition</td>
-                  <td>ModellingRule</td>
-                  <td>RW</td>
-                </tr>
-                <tr>
-                  <td colspan="7">Subtype of the BaseObjectType from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>UnitModeRequested</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:CurMachSpeed</td>
+                  <td>0:Float</td>
+                  <td>0:AnalogItemType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasProperty</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>UnitSupportedModes</td>
-                  <td>NodeId</td>
-                  <td>PropertyType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>4:EquipmentBlocked</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>UnitModeCurrent</td>
-                  <td>Enumeration</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>4:EquipmentStarved</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>UnitModeChangeInProcess</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:MachSpeed</td>
+                  <td>0:Float</td>
+                  <td>0:AnalogItemType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>4:HasInterlock</td>
                   <td>Variable</td>
-                  <td>StateRequested</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:MaterialInterlock</td>
+                  <td>0:Boolean[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StateChangeInProcess</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:MaterialInterlocked</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>MachSpeed</td>
-                  <td>Float</td>
-                  <td>AnalogItemType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>4:Parameter</td>
+                  <td>4:PackMLDescriptorDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>CurMachSpeed</td>
-                  <td>Float</td>
-                  <td>AnalogItemType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>4:Product</td>
+                  <td>4:PackMLProductDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>EquipmentBlocked</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>4:RemoteParameter</td>
+                  <td>4:PackMLRemoteInterfaceDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>EquipmentStarved</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>4:StateChangeInProcess</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>MaterialInterlocked</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:StateRequested</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasInterlock</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>MaterialInterlock</td>
-                  <td>Boolean[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:UnitModeChangeInProcess</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Parameter</td>
-                  <td>PackMLDescriptorDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:UnitModeCurrent</td>
+                  <td>0:Enumeration</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>RemoteParameter</td>
-                  <td>PackMLRemoteInterfaceDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:UnitModeRequested</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasProperty</td>
                   <td>Variable</td>
-                  <td>Product</td>
-                  <td>PackMLProductDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:UnitSupportedModes</td>
+                  <td>0:NodeId</td>
+                  <td>0:PropertyType</td>
+                  <td>M</td>
                 </tr>
               </tbody>
             </table>
@@ -1287,192 +1330,195 @@
             <table>
               <thead>
                 <tr>
-                  <th>Attribute</th>
-                  <th colspan="6">Value</th>
+                  <th>
+                    <bold>Attribute</bold>
+                  </th>
+                  <th colspan="5">
+                    <bold>Value</bold>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="6">PackMLAdminObjectType</td>
+                  <td colspan="5">4:PackMLAdminObjectType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
-                  <td colspan="6">False</td>
+                  <td colspan="5">False</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <bold>References</bold>
+                  </th>
+                  <th>
+                    <bold>Node Class</bold>
+                  </th>
+                  <th>
+                    <bold>BrowseName</bold>
+                  </th>
+                  <th>
+                    <bold>DataType</bold>
+                  </th>
+                  <th>
+                    <bold>TypeDefinition</bold>
+                  </th>
+                  <th>
+                    <bold>Other</bold>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">Subtype of the 0:BaseObjectType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
                 </tr>
                 <tr>
-                  <td>Reference</td>
-                  <td>Node Class</td>
-                  <td>BrowseName</td>
-                  <td>DataType</td>
-                  <td>TypeDefinition</td>
-                  <td>ModelingRule</td>
-                  <td>RW</td>
-                </tr>
-                <tr>
-                  <td colspan="7">Subtype of the BaseObjectType from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Parameter</td>
-                  <td>PackMLDescriptorDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:AccTimeSinceReset</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasAlarm</td>
+                  <td>4:HasAlarm</td>
                   <td>Variable</td>
-                  <td>Alarm</td>
-                  <td>PackMLEventDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:Alarm</td>
+                  <td>4:PackMLEventDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>AlarmExtent</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:AlarmExtent</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasAlarmHistory</td>
+                  <td>4:HasAlarmHistory</td>
                   <td>Variable</td>
-                  <td>AlarmHistory</td>
-                  <td>PackMLEventDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:AlarmHistory</td>
+                  <td>4:PackMLEventDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>AlarmHistoryExtent</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:AlarmHistoryExtent</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasWarning</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Warning</td>
-                  <td>PackMLEventDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:MachDesignSpeed</td>
+                  <td>0:Float</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>WarningExtent</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:ModeCumulativeTime</td>
+                  <td>0:Int32[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasStopReason</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StopReason</td>
-                  <td>PackMLEventDataType</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:ModeCurrentTime</td>
+                  <td>0:Int32[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StopReasonExtent</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:Parameter</td>
+                  <td>4:PackMLDescriptorDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>ModeCurrentTime</td>
-                  <td>Int32[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:ProdConsumedCount</td>
+                  <td>4:PackMLCountDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>ModeCumulativeTime</td>
-                  <td>Int32[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:ProdDefectiveCount</td>
+                  <td>4:PackMLCountDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StateCurrentTime</td>
-                  <td>Int32[][]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:ProdProcessedCount</td>
+                  <td>4:PackMLCountDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StateCumulativeTime</td>
-                  <td>Int32[][]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:StateCumulativeTime</td>
+                  <td>0:Int32[][]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>ProdConsumedCount</td>
-                  <td>PackMLCountDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:StateCurrentTime</td>
+                  <td>0:Int32[][]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>4:HasStopReason</td>
                   <td>Variable</td>
-                  <td>ProdProcessedCount</td>
-                  <td>PackMLCountDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:StopReason</td>
+                  <td>4:PackMLEventDataType</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>ProdDefectiveCount</td>
-                  <td>PackMLCountDataType[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:StopReasonExtent</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>4:HasWarning</td>
                   <td>Variable</td>
-                  <td>AccTimeSinceReset</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:Warning</td>
+                  <td>4:PackMLEventDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>MachDesignSpeed</td>
-                  <td>Float</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>4:WarningExtent</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
                 </tr>
               </tbody>
             </table>
@@ -1578,111 +1624,134 @@
             <table>
               <thead>
                 <tr>
-                  <th>Attribute</th>
-                  <th colspan="5">Value</th>
+                  <th>
+                    <bold>Attribute</bold>
+                  </th>
+                  <th colspan="5">
+                    <bold>Value</bold>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="5">PackMLBaseStateMachineType</td>
+                  <td colspan="5">4:PackMLBaseStateMachineType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
                   <td colspan="5">False</td>
                 </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
                 <tr>
-                  <td>References</td>
-                  <td>Node Class</td>
-                  <td>BrowseName</td>
-                  <td>DataType</td>
-                  <td>TypeDefinition</td>
-                  <td>ModellingRule</td>
+                  <th>
+                    <bold>References</bold>
+                  </th>
+                  <th>
+                    <bold>Node Class</bold>
+                  </th>
+                  <th>
+                    <bold>BrowseName</bold>
+                  </th>
+                  <th>
+                    <bold>DataType</bold>
+                  </th>
+                  <th>
+                    <bold>TypeDefinition</bold>
+                  </th>
+                  <th>
+                    <bold>Other</bold>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">Subtype of the 0:FiniteStateMachineType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
                 </tr>
                 <tr>
-                  <td colspan="6">Subtype of the FiniteStateMachineType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Abort</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Aborted</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:AbortedToCleared</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Aborting</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:AbortingToAborted</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Clear</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:ClearedToAborting</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:MachineState</td>
+                  <td></td>
+                  <td>4:PackMLMachineStateMachineType</td>
+                  <td>M</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Cleared</td>
+                  <td></td>
+                  <td>0:StateType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>0:AvailableTransitions</td>
-                  <td>NodeId[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
+                  <td>0:NodeId[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>0:AvailableStates</td>
-                  <td>NodeId[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Aborting</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Aborted</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Cleared</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>MachineState</td>
-                  <td></td>
-                  <td>PackMLMachineStateMachineType</td>
-                  <td>Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>AbortedToCleared</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>AbortingToAborted</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>ClearedToAborting</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Abort</td>
-                  <td>Defined in 6.7.5</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Clear</td>
-                  <td>Defined in 6.7.6</td>
-                  <td></td>
-                  <td>Optional</td>
+                  <td>0:NodeId[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
               </tbody>
             </table>
@@ -1791,125 +1860,147 @@
             <table>
               <thead>
                 <tr>
-                  <th>Attribute</th>
-                  <th colspan="5">Value</th>
+                  <th>
+                    <bold>Attribute</bold>
+                  </th>
+                  <th colspan="5">
+                    <bold>Value</bold>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="5">PackMLMachineStateMachineType</td>
+                  <td colspan="5">4:PackMLMachineStateMachineType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
                   <td colspan="5">False</td>
                 </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
                 <tr>
-                  <td>Reference</td>
-                  <td>Node Class</td>
-                  <td>BrowseName</td>
-                  <td>DataType</td>
-                  <td>TypeDefinition</td>
-                  <td>ModellingRule</td>
+                  <th>
+                    <bold>References</bold>
+                  </th>
+                  <th>
+                    <bold>Node Class</bold>
+                  </th>
+                  <th>
+                    <bold>BrowseName</bold>
+                  </th>
+                  <th>
+                    <bold>DataType</bold>
+                  </th>
+                  <th>
+                    <bold>TypeDefinition</bold>
+                  </th>
+                  <th>
+                    <bold>Other</bold>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">Subtype of the 0:FiniteStateMachineType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
                 </tr>
                 <tr>
-                  <td colspan="6">Subtype of the FiniteStateMachineType from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Clearing</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:ClearingToStopped</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:ExecuteState</td>
+                  <td></td>
+                  <td>4:PackMLExecuteStateMachineType</td>
+                  <td>M</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Reset</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Running</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:RunningToStopping</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Stop</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Stopped</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:StoppedToRunning</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Stopping</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:StoppingToStopped</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>0:AvailableTransitions</td>
-                  <td>NodeId[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
+                  <td>0:NodeId[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>0:AvailableStates</td>
-                  <td>NodeId[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Stopped</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Stopping</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Clearing</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Running</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>ExecuteState</td>
-                  <td></td>
-                  <td>PackMLExecuteStateMachineType</td>
-                  <td>Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>StoppingToStopped</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>ClearingToStopped</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>StoppedToRunning</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>RunningToStopping</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Stop</td>
-                  <td>Defined in 6.7.7</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Reset</td>
-                  <td>Defined in 6.7.8</td>
-                  <td></td>
-                  <td>Optional</td>
+                  <td>0:NodeId[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
               </tbody>
             </table>
@@ -2029,318 +2120,340 @@
             <table>
               <thead>
                 <tr>
-                  <th>Attribute</th>
-                  <th colspan="5">Value</th>
+                  <th>
+                    <bold>Attribute</bold>
+                  </th>
+                  <th colspan="5">
+                    <bold>Value</bold>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="5">PackMLExecuteStateMachineType</td>
+                  <td colspan="5">4:PackMLExecuteStateMachineType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
                   <td colspan="5">False</td>
                 </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
                 <tr>
-                  <td>References</td>
-                  <td>NodeClass</td>
-                  <td>BrowseName</td>
-                  <td>DataType</td>
-                  <td>TypeDefinition</td>
-                  <td>Modelling Rule</td>
+                  <th>
+                    <bold>References</bold>
+                  </th>
+                  <th>
+                    <bold>Node Class</bold>
+                  </th>
+                  <th>
+                    <bold>BrowseName</bold>
+                  </th>
+                  <th>
+                    <bold>DataType</bold>
+                  </th>
+                  <th>
+                    <bold>TypeDefinition</bold>
+                  </th>
+                  <th>
+                    <bold>Other</bold>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">Subtype of the 0:FiniteStateMachineType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
                 </tr>
                 <tr>
-                  <td colspan="6">Subtype of the FiniteStateMachineType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Complete</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:CompleteToResetting</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Completing</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:CompletingToComplete</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Execute</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:ExecuteToCompleting</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:ExecuteToHolding</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:ExecuteToSuspending</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Held</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:HeldToUnholding</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Hold</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Holding</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:HoldingToHeld</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Idle</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:IdleToStarting</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Reset</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Resetting</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:ResettingToIdle</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Start</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Starting</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:StartingToExecute</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:StartingToHolding</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Suspend</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Suspended</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:SuspendedToHolding</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:SuspendedToUnsuspending</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Suspending</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:SuspendingToHolding</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:SuspendingToSuspended</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:ToComplete</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Unhold</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Unholding</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:UnholdingToExecute</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:UnholdingToHolding</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Method</td>
+                  <td>4:Unsuspend</td>
+                  <td></td>
+                  <td></td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:Unsuspending</td>
+                  <td></td>
+                  <td colspan="2">0:StateType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:UnsuspendingToExecute</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Object</td>
+                  <td>4:UnsuspendingToHolding</td>
+                  <td></td>
+                  <td colspan="2">0:TransitionType</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>0:AvailableTransitions</td>
-                  <td>NodeId[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
+                  <td>0:NodeId[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>0:AvailableStates</td>
-                  <td>NodeId[]</td>
-                  <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Resetting</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Idle</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Starting</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Suspending</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Suspended</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Unsuspending</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Holding</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Held</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Unholding</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Execute</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Completing</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>Complete</td>
-                  <td></td>
-                  <td colspan="2">StateType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>ResettingToIdle</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>IdleToStarting</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>StartingToExecute</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>ExecuteToSuspending</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>SuspendingToSuspended</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>SuspendedToUnsuspending</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>UnsuspendingToExecute</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>ExecuteToHolding</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>HoldingToHeld</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>HeldToUnholding</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>UnholdingToExecute</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>ExecuteToCompleting</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>CompletingToComplete</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>CompleteToResetting</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>StartingToHolding</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>UnsuspendingToHolding</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>SuspendedToHolding</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>SuspendingToHolding</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Object</td>
-                  <td>UnholdingToHolding</td>
-                  <td></td>
-                  <td colspan="2">TransitionType</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Reset</td>
-                  <td>Defined in Clause 6.7.8</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>ToComplete</td>
-                  <td>Defined in Clause 6.7.9</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Start</td>
-                  <td>Defined in Clause 6.7.10</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Unhold</td>
-                  <td>Defined in Clause 6.7.11</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Suspend</td>
-                  <td>Defined in Clause 6.7.12</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Hold</td>
-                  <td>Defined in Clause 6.7.14</td>
-                  <td></td>
-                  <td>Optional</td>
-                </tr>
-                <tr>
-                  <td>HasComponent</td>
-                  <td>Method</td>
-                  <td>Unsuspend</td>
-                  <td>Defined in Clause 6.7.13</td>
-                  <td></td>
-                  <td>Optional</td>
+                  <td>0:NodeId[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>M</td>
                 </tr>
               </tbody>
             </table>
@@ -3689,9 +3802,8 @@
           <p>
             <bold>Signature</bold>
           </p>
-          <code preserve-space="preserve">	SetUnitMode(
-		[in] Int32 RequestedMode
-		);</code>
+          <code preserve-space="preserve">SetUnitMode (
+  [in]  0:Int32 RequestedMode);</code>
           <table-wrap id="tbl_33">
             <label>Table 33</label>
             <caption>
@@ -3807,9 +3919,8 @@
           <p>
             <bold>Signature</bold>
           </p>
-          <code preserve-space="preserve">	SetMachSpeed(
-		[in] Float RequestedMachineSpeed
-		);</code>
+          <code preserve-space="preserve">SetUnitMode (
+  [in]  0:Int32 RequestedMode);</code>
           <table-wrap id="tbl_36">
             <label>Table 36</label>
             <caption>
@@ -6390,6 +6501,10 @@
                 <td>http://opcfoundation.org/UA/Dictionary/IRDI</td>
                 <td>Namespace for <italic>NodeIds</italic> and <italic>BrowseNames</italic> defined in this IRDI dictionary model. Note that IRDI model is never available as a single NodeSet. The NodeIds are IRDIs which identify the target even if an IRDI NodeSet with the NodeId is not available.</td>
               </tr>
+              <tr>
+                <td>http://opcfoundation.org/UA/PackML/</td>
+                <td>Namespace for <italic>NodeIds</italic> and <italic>BrowseNames</italic> defined in this model. The namespace index is <italic>Server</italic> specific.</td>
+              </tr>
             </tbody>
           </table>
         </table-wrap>
@@ -6427,6 +6542,11 @@
               <tr>
                 <td>http://opcfoundation.org/UA/Dictionary/IRDI</td>
                 <td>3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>http://opcfoundation.org/UA/PackML/</td>
+                <td>4</td>
                 <td></td>
               </tr>
             </tbody>
