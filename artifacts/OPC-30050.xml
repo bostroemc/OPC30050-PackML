@@ -1109,17 +1109,17 @@
               <thead>
                 <tr>
                   <th>Attribute</th>
-                  <th colspan="6">Value</th>
+                  <th colspan="5">Value</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="6">PackMLStatusObjectType</td>
+                  <td colspan="5">PackMLStatusObjectType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
-                  <td colspan="6">False</td>
+                  <td colspan="5">False</td>
                 </tr>
                 <tr>
                   <td>Reference</td>
@@ -1127,11 +1127,10 @@
                   <td>BrowseName</td>
                   <td>DataType</td>
                   <td>TypeDefinition</td>
-                  <td>ModellingRule</td>
-                  <td>RW</td>
+                  <td>Other</td>
                 </tr>
                 <tr>
-                  <td colspan="7">Subtype of the BaseObjectType from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
+                  <td colspan="6">Subtype of the BaseObjectType from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1139,8 +1138,7 @@
                   <td>UnitModeRequested</td>
                   <td>Boolean</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasProperty</td>
@@ -1148,8 +1146,7 @@
                   <td>UnitSupportedModes</td>
                   <td>NodeId</td>
                   <td>PropertyType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>M</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1157,8 +1154,7 @@
                   <td>UnitModeCurrent</td>
                   <td>Enumeration</td>
                   <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>M</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1166,8 +1162,7 @@
                   <td>UnitModeChangeInProcess</td>
                   <td>Boolean</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1175,8 +1170,7 @@
                   <td>StateCurrent</td>
                   <td>Int32</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1184,8 +1178,7 @@
                   <td>StateRequested</td>
                   <td>Int32</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1193,8 +1186,7 @@
                   <td>StateChangeInProcess</td>
                   <td>Boolean</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1202,8 +1194,7 @@
                   <td>MachSpeed</td>
                   <td>Float</td>
                   <td>AnalogItemType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>M</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1211,8 +1202,7 @@
                   <td>CurMachSpeed</td>
                   <td>Float</td>
                   <td>AnalogItemType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>M</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1220,8 +1210,7 @@
                   <td>EquipmentInterlock</td>
                   <td>PackMLEquipmentInterlockDataType</td>
                   <td>BaseDataVariableType</td>
-                  <td>Mandatory</td>
-                  <td>R</td>
+                  <td>M</td>
                 </tr>
                 <tr>
                   <td>HasInterlock</td>
@@ -1229,8 +1218,7 @@
                   <td>MaterialInterlock</td>
                   <td>Boolean[]</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1238,8 +1226,7 @@
                   <td>Parameter_REAL</td>
                   <td>PackMLParameterRealDataType[]</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1247,8 +1234,7 @@
                   <td>Parameter_STRING</td>
                   <td>PackMLParameterStringDataType[]</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1256,8 +1242,7 @@
                   <td>Parameter_LREAL</td>
                   <td>PackMLParameterLRealDataType[]</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1265,8 +1250,7 @@
                   <td>Parameter_DINT</td>
                   <td>PackMLParameterDIntDataType[]</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
@@ -1274,17 +1258,15 @@
                   <td>Recipe</td>
                   <td>PackMLRecipeDataType[]</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>Stacklight</td>
+                  <td>StackLight</td>
                   <td>Int32[]</td>
                   <td>BaseDataVariableType</td>
-                  <td>Optional</td>
-                  <td>R</td>
+                  <td>O</td>
                 </tr>
               </tbody>
             </table>
@@ -1325,7 +1307,7 @@
           <p>
             <italic>Recipe</italic> - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp;amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.</p>
           <p>
-            <italic>Stacklight</italic> - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.</p>
+            <italic>StackLight</italic> - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.</p>
         </sec>
         <sec id="sec_6-3-4">
           <label>6.3.4</label>
@@ -1395,14 +1377,6 @@
                   <td colspan="6">Subtype of the 0:BaseObjectType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
-                  <td>Variable</td>
-                  <td>4:AccTimeSinceReset</td>
-                  <td>0:Int32</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
-                </tr>
-                <tr>
                   <td>4:HasAlarm</td>
                   <td>Variable</td>
                   <td>4:Alarm</td>
@@ -1445,65 +1419,33 @@
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>4:ModeCumulativeTime</td>
-                  <td>0:Int32[]</td>
-                  <td>0:BaseDataVariableType</td>
+                  <td>4:Parameter_DINT</td>
+                  <td>4:PackMLParameterDIntDataType[]</td>
+                  <td>BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>4:ModeCurrentTime</td>
-                  <td>0:Int32[]</td>
-                  <td>0:BaseDataVariableType</td>
+                  <td>4:Parameter_LREAL</td>
+                  <td>4:PackMLParameterLRealDataType[]</td>
+                  <td>BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>4:Parameter</td>
-                  <td>4:PackMLDescriptorDataType[]</td>
-                  <td>0:BaseDataVariableType</td>
+                  <td>4:Parameter_REAL</td>
+                  <td>4:PackMLParameterRealDataType[]</td>
+                  <td>BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>4:ProdConsumedCount</td>
-                  <td>4:PackMLCountDataType[]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
-                </tr>
-                <tr>
-                  <td>0:HasComponent</td>
-                  <td>Variable</td>
-                  <td>4:ProdDefectiveCount</td>
-                  <td>4:PackMLCountDataType[]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
-                </tr>
-                <tr>
-                  <td>0:HasComponent</td>
-                  <td>Variable</td>
-                  <td>4:ProdProcessedCount</td>
-                  <td>4:PackMLCountDataType[]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
-                </tr>
-                <tr>
-                  <td>0:HasComponent</td>
-                  <td>Variable</td>
-                  <td>4:StateCumulativeTime</td>
-                  <td>0:Int32[][]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
-                </tr>
-                <tr>
-                  <td>0:HasComponent</td>
-                  <td>Variable</td>
-                  <td>4:StateCurrentTime</td>
-                  <td>0:Int32[][]</td>
-                  <td>0:BaseDataVariableType</td>
+                  <td>4:Parameter_STRING</td>
+                  <td>4:PackMLParameterStringDataType[]</td>
+                  <td>BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
@@ -1511,14 +1453,6 @@
                   <td>Variable</td>
                   <td>4:StopReason</td>
                   <td>4:PackMLEventDataType</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
-                </tr>
-                <tr>
-                  <td>0:HasComponent</td>
-                  <td>Variable</td>
-                  <td>4:StopReasonExtent</td>
-                  <td>0:Int32</td>
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
@@ -1538,68 +1472,123 @@
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:ModeTimeCurrent</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:StateTimeCurrent</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:CumulativeTimes</td>
+                  <td>4:PackMLCumulativeTimesDataType</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:ProductData</td>
+                  <td>4:PackMLProductDataType</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:DisabledStatesCfg</td>
+                  <td>0:Uint32[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:CurDisabledStates</td>
+                  <td>0:Uint32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:EnabledModesCfg</td>
+                  <td>0:Uint32</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:ModeTransitionCfg</td>
+                  <td>0:Uint32[]</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>0:HasComponent</td>
+                  <td>Variable</td>
+                  <td>4:PLCDateTime</td>
+                  <td>0:DateTime</td>
+                  <td>0:BaseDataVariableType</td>
+                  <td>O</td>
+                </tr>
               </tbody>
             </table>
           </table-wrap>
           <p>
-            <italic>Parameter</italic> - The parameter tags associated with the local interface are typically used as parameters that are displayed or used on the unit locally, for example from an HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. The <italic>Parameters</italic> are typically limited to parameters related the unit. The length of the array is the maximum number of parameters needed.</p>
+            <italic>Parameter_DINT</italic> - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user's supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. <italic>Parameters_DINT</italic> is typically limited to Int32-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed.</p>
           <p>
-            <italic>Alarm</italic> - Alarm Events (trigger, value, message, category,…). The alarm tags associated to the local interface are typically used as parameters that are displayed or used on the unit locally, for example from an HMI. These alarm parameters can be used to display any alarm, or machine downtime cause that is currently occurring in the system. The alarms are typically limited to the machine unit.  Each machine can define as many alarms as are required for the machine.</p>
+            <italic>Parameter_LREAL</italic> - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user's supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. <italic>Parameters_LREAL</italic> is typically limited to Double-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed.</p>
           <p>
-            <italic>AlarmExtent</italic> - Defines the maximum number of alarms available, for the machine annunciation or reporting</p>
-          <p>AlarmHistory - These alarm history parameters can be used to display any alarm history, or machine downtime cause.</p>
-          <p>AlarmHistoryExtend - associated with the maximum number of alarms needed to be archived or tagged as alarm history for the machine.</p>
-          <p>Warning - Array of warning information Events. Warnings are general events that do not cause the machine to stop, but may require operator action because a stoppage may be imminent. Warning elements have the same structure as Stop Reason elements.</p>
+            <italic>Parameter_REAL</italic> - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user's supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. <italic>Parameters_REAL</italic> is typically limited to Float-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed.</p>
           <p>
-            <italic>WarningExtent</italic> - Defines the maximum number of warning elements available.</p>
+            <italic>Parameter_STRING</italic> - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user's supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. <italic>Parameters_STRING</italic> is typically limited to String-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed.</p>
           <p>
-            <italic>StopReason</italic> - A structure for the stop reason <italic>Event</italic> (similar to Alarms) which define the possible stop reasons (trigger, value, message, category).  Stop Reason is typically used for "First Out Fault" Reporting and Other Stoppage Events. The stop reason is the first event captured during an abort, held, suspended or stop event.</p>
+            <italic>Alarm</italic> - The alarm tags associated to the local interface are typically used as parameters that are displayed or used on the unit locally, for example from an HMI. These alarm parameters can be used to display any alarm, or machine downtime cause, that is currently occurring in the system. The alarms are typically limited to the machine unit. The extent of the array is the maximum number of alarms needed to be enunciated.</p>
           <p>
-            <italic>StopReasonExtent</italic> - Defines the maximum number of stop reason elements or available.</p>
+            <italic>AlarmExtent</italic> - The alarm extent is associated with the maximum number of alarms needed for the machine annunciation or reporting. This tag can be used by a remote machine to understand the extent of the alarm array, or locally to manage the use of the array.</p>
           <p>
-            <italic>ModeCurrentTime</italic> - The current amount of time, in seconds, that the machine has been in each mode. The array index for a mode is the Unit mode value.  The values roll over to 0 at 2,147,483,647.</p>
+            <italic>AlarmHistory</italic> - The AlarmHistory array is reserved for alarms that have occurred on the unit/machine and can be sorted in chronological order with the most recently occurring alarmed indexed as Admin.AlarmHistory[0]. The extent of the array is the maximum number of historical alarms needed to be retained for later viewing.</p>
           <p>
-            <italic>ModeCumulativeTime</italic> - The cumulative amount of time, in seconds, that the machine has been in each mode. The array index for a mode is the Unit mode value. The value is the cumulative elapsed time the machine has spent in each mode since its timers and counters were reset. The values roll over to 0 at 2,147,483,647.</p>
+            <italic>AlarmHistoryExtent</italic> - The alarm history extent is associated with the maximum number of alarms needed to be archived or tagged as alarm history for the machine. This tag can be used by a remote machine to understand the extent of the alarm array, or locally to manage the array.</p>
           <p>
-            <italic>StateCurrentTime</italic> - The current amount of time, in seconds, that the machine has been in each state for each mode. The first array index for is the Unit mode value, the second array index is the state value.. The values roll over to 0 at 2,147,483,647.</p>
+            <italic>Warning</italic> - Machine warnings are for general events that do not cause the machine to stop, but may require operator action as a stoppage may be imminent. Warnings are not typically stored in history.</p>
           <p>
-            <italic>StateCumulativeTime</italic> - The cumulative amount of time, in seconds, that the machine has been in each state for each mode. The first array index for is the Unit mode value, the second array index is the state value.  The value is the cumulative elapsed time the machine has spent in each mode and state since its timers and counters were reset. The values roll over to 0 at 2,147,483,647</p>
+            <italic>WarningExtent</italic> - The warning extent is associated with the maximum number of warnings needed to be archived or tagged as warnings for the machine. This tag can be used by a remote machine to understand the extent of the warning array, or locally to manage the array.</p>
           <p>
-            <italic>ProdConsumedCount</italic> - Represents the material used/consumed in the production machine.  An example of tag usage would be the number of bags consumed in a filler, or bagger packaging machine, or the amount of linear length used, or the number caps used. This tag can be used locally or remotely if needed.  The extent of the array is typically limited to the number of raw materials needed to be counted.  The array is typically used for unit machines that run multiple raw materials.</p>
+            <italic>StopReason</italic> - <italic>StopReason</italic> is typically used for "First Out Fault" reporting and other stoppage events. The stop reason is the first event captured during an abort, held, suspended, or stop event.</p>
           <p>
-            <italic>ProdProcessedCount</italic> - Represents the products processed in the production machine. An example of tag usage would be the number of products that were made, including all good and defective products. The structure of the <italic>ProdProcessedCount</italic> is the same as the <italic>ProdConsumedCount</italic>. The length of the array is typically limited to the number of products that need to be counted. The number of products processed minus the defective count is the number of non-defective products made by the machine. The array index of # = 0 should be reserved for the count of the number of units from the primary production stream.</p>
+            <italic>ModeTimeCurrent</italic> - <italic>ModeTimeCurrent</italic> represents the current amount of time in seconds spent in the current Mode as indicated by Status.UnitModeCurrent. The value will start from 0 every time the Mode is changed. The values roll over to 0 after 2,147,483,647.</p>
           <p>
-            <italic>ProdDefectiveCount</italic> - Represents the products marked as defective in the production machine. The structure of the <italic>ProdDefectiveCount</italic> is the same as the <italic>ProdConsumedCount</italic>. The length of the array is typically limited to the number of products that need to be counted.  The number of products processed minus the defective count is the number of non-defective products made by the machine. The array index of # = 0 should be reserved for the count of the number of units from the primary production stream.</p>
+            <italic>StateTimeCurrent</italic> - <italic>StateTimeCurrent</italic> represents the current amount of time in seconds spent in the current State as indicated by Status.StateCurrent. The value will start from 0 every time the State is changed. The values roll over to 0 after 2,147,483,647.</p>
           <p>
-            <italic>AccTimeSinceReset</italic> - Represents the amount of time, in seconds, since the last reset of all counters as triggered.  Counters that are reset are:</p>
-          <list list-type="bullet">
-            <list-item>
-              <p>UnitName.Admin.ModeCurrentTime[#]</p>
-            </list-item>
-            <list-item>
-              <p>UnitName.Admin.ModeCumulativeTime[#]</p>
-            </list-item>
-            <list-item>
-              <p>UnitName.Admin.StateCurrentTime[#,#]</p>
-            </list-item>
-            <list-item>
-              <p>UnitName.Admin.StateCumulativeTime[#,#]</p>
-            </list-item>
-            <list-item>
-              <p>UnitName.Admin.ProdConsumedCount[#].Count</p>
-            </list-item>
-            <list-item>
-              <p>UnitName.Admin.ProdProcessedCount[#].Count</p>
-            </list-item>
-            <list-item>
-              <p>UnitName.Admin.ProdDefectiveCount[#].Count</p>
-            </list-item>
-            <list-item>
-              <p>UnitName.Admin.AccTimeSinceReset</p>
-            </list-item>
-          </list>
+            <italic>CumulativeTimes</italic> - <italic>CumulativeTimes</italic> represents a collection of accumulated time in seconds spent in any defined state of any defined mode. The user may define a variable number of time-tracking collections indicated by the array index and may also define when the time values in each collection are reset. The minimum array extent is 1.</p>
           <p>
-            <italic>MachDesignSpeed</italic> - Represents the maximum design speed of the machine in primary packages per minute for the package configuration being run. This speed is NOT the maximum speed as specified by the manufacturer, but rather the speed of the machine is designed to run in its installed environment.</p>
+            <italic>ProductData</italic> - <italic>ProductData</italic> represents a collection of information about each unique input or output product stream of the machine unit. The extent of the array is typically limited to the maximum number of input and output product streams. The array index of # = 0 can typically be reserved for data regarding the primary product stream (i.e., cans, bottles) flowing through the machine unit. In such a case, Admin.RecipeData[0].PrimaryQty would equal 1.0.</p>
+          <p>
+            <italic>MachDesignSpeed</italic> - <italic>MachDesignSpeed</italic> represents the maximum design speed of the machine in primary packages per minute for the package configuration being run. This speed is NOT the maximum speed as specified by the manufacturer, but rather the speed of the machine is designed to run in its installed environment. Note that in practice the maximum speed of the machine as used for efficiency calculations will be a function of how it is set up and what products it is producing.</p>
+          <p>
+            <italic>DisabledStatesCfg</italic> -  An array reflecting the Disabled States Configuration for all defined Modes. The array index represents the Mode number. Bit locations within the DWORD value represent State numbers. A value of 1 in a bit location indicates that the corresponding state number is disabled. State 0 is an Undefined State, therefore bit 0 is unused. Ex: If the SUSPENDED, SUSPENDING and UNSUSPENDING states were to be disabled for Mode 2, a 1 would be placed in bit locations 13, 5 and 14 of array element 2. Admin.DisabledStatesCfg[2] = 0110_0000_0010_0000 (binary), = 6020 (hex), = 24608 (decimal). See section 4.3 for Minimum Required States that should not be disabled. Note that some state transition rules may over-ride the disable bits. For example, if HOLDING is not disabled, then HELD cannot be disabled.</p>
+          <p>
+            <italic>CurDisabledStates</italic> - Reflects the disabled states for the current Mode (Status.UnitModeCurrent). State numbers are represented by bit location. A value of 1 in a certain bit location indicates that the corresponding state number is disabled. State 0 is an Undefined State, therefore bit 0 is unused. Ex: If the SUSPENDING, SUSPENDED and UNSUSPENDING states were disabled for the current mode, a 1 would be placed in bit locations 13, 5 and 14. Admin.CurDisabledStates = 0110_0000_0010_0000 (binary), = 6020 (hex), = 24608 (decimal). Note that some state transition rules may over-ride the disable bits set in Admin.DisabledStatesCfg[#]. For example, if HOLDING is not disabled, then HELD cannot be disabled.</p>
+          <p>
+            <italic>EnabledModesCfg</italic> - An element reflecting the Enabled Modes Configuration for the unit/machine. Bit locations within the DWORD represent Mode numbers. A value of 1 in a bit location [0-31] indicates that the corresponding Mode number is enabled. Mode 0 is an Invalid Mode, therefore bit 0 is unused. Ex: If Modes 1, 2 and 3 are used in the Unit/machine, a 1 would be placed in bit locations 1, 2 and 3. Admin.EnabledModesCfg = 0000_0000_0000_1110 (binary), = 000E (hex), = 14 (decimal).</p>
+          <p>
+            <italic>ModeTransitionCfg</italic> - An array reflecting the Mode Transition Configuration for all modes of the unit/machine. The array index represents the Mode number. Bit locations within the DWORD value represent State numbers. A value of 1 in a bit location indicates that a mode transition from the corresponding state number is allowed. Ex: For Mode 2, if transitions are to be allowed while in the Stopped, Aborted or Idle states, a 1 would be placed in bit locations 2, 9 and 4. Admin.ModeTransitionCfg[2] = 2# 0000 0010 0001 0100, = 16#214, = DINT#532. Both modes involved in a mode transition attempt from a particular state must be configured to allow a transition to/from that state.</p>
+          <p>
+            <italic>PLCDateTime</italic> - Current date and time of the programmable logic controller.</p>
         </sec>
         <sec id="sec_6-3-5">
           <label>6.3.5</label>
@@ -6452,7 +6441,7 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.4</td>
+                <td>2.0.5</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
