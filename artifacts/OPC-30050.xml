@@ -1094,9 +1094,9 @@
           <fig id="fig_12">
             <label>Figure 12</label>
             <caption>
-              <p>PackMLStatusObjectType Overview -- TODO: Update figure</p>
+              <p>PackMLStatusObjectType Overview</p>
             </caption>
-            <graphic xlink:href="fig_12_packmlstatusobjecttype-overview.png" alt="PackMLStatusObjectType Overview -- TODO: Update figure" mimetype="image/png" />
+            <graphic xlink:href="fig_12_packmlstatusobjecttype-overview.png" alt="PackMLStatusObjectType Overview" mimetype="image/png" />
           </fig>
           <p>
             <xref ref-type="table" rid="tbl_4">Table 4</xref> formally defines the <italic>PackMLStatusObjectType</italic>.</p>
@@ -1121,151 +1121,169 @@
                   <td>IsAbstract</td>
                   <td colspan="5">False</td>
                 </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
                 <tr>
-                  <td>Reference</td>
-                  <td>Node Class</td>
-                  <td>BrowseName</td>
-                  <td>DataType</td>
-                  <td>TypeDefinition</td>
-                  <td>Other</td>
+                  <th>
+                    <bold>References</bold>
+                  </th>
+                  <th>
+                    <bold>Node Class</bold>
+                  </th>
+                  <th>
+                    <bold>BrowseName</bold>
+                  </th>
+                  <th>
+                    <bold>DataType</bold>
+                  </th>
+                  <th>
+                    <bold>TypeDefinition</bold>
+                  </th>
+                  <th>
+                    <bold>Other</bold>
+                  </th>
                 </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <td colspan="6">Subtype of the BaseObjectType from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>UnitModeRequested</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:UnitModeRequested</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasProperty</td>
+                  <td>0:HasProperty</td>
                   <td>Variable</td>
-                  <td>UnitSupportedModes</td>
-                  <td>NodeId</td>
-                  <td>PropertyType</td>
+                  <td>4:UnitSupportedModes</td>
+                  <td>0:NodeId</td>
+                  <td>0:PropertyType</td>
                   <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>UnitModeCurrent</td>
-                  <td>Enumeration</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:UnitModeCurrent</td>
+                  <td>0:Enumeration</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>UnitModeChangeInProcess</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:UnitModeChangeInProcess</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StateCurrent</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:StateCurrent</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StateRequested</td>
-                  <td>Int32</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:StateRequested</td>
+                  <td>0:Int32</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StateChangeInProcess</td>
-                  <td>Boolean</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:StateChangeInProcess</td>
+                  <td>0:Boolean</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>MachSpeed</td>
-                  <td>Float</td>
-                  <td>AnalogItemType</td>
+                  <td>4:MachSpeed</td>
+                  <td>0:Float</td>
+                  <td>0:AnalogItemType</td>
                   <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>CurMachSpeed</td>
-                  <td>Float</td>
-                  <td>AnalogItemType</td>
+                  <td>4:CurMachSpeed</td>
+                  <td>0:Float</td>
+                  <td>0:AnalogItemType</td>
                   <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>EquipmentInterlock</td>
+                  <td>4:EquipmentInterlock</td>
                   <td>PackMLEquipmentInterlockDataType</td>
-                  <td>BaseDataVariableType</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>M</td>
                 </tr>
                 <tr>
-                  <td>HasInterlock</td>
+                  <td>4:HasInterlock</td>
                   <td>Variable</td>
-                  <td>MaterialInterlock</td>
-                  <td>Boolean[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:MaterialInterlock</td>
+                  <td>0:Boolean[]</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Parameter_REAL</td>
-                  <td>PackMLParameterRealDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:Parameter_REAL</td>
+                  <td>4:PackMLParameterRealDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Parameter_STRING</td>
-                  <td>PackMLParameterStringDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:Parameter_STRING</td>
+                  <td>4:PackMLParameterStringDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Parameter_LREAL</td>
-                  <td>PackMLParameterLRealDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:Parameter_LREAL</td>
+                  <td>4:PackMLParameterLRealDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Parameter_DINT</td>
-                  <td>PackMLParameterDIntDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:Parameter_DINT</td>
+                  <td>4:PackMLParameterDIntDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>Recipe</td>
-                  <td>PackMLRecipeDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:Recipe</td>
+                  <td>4:PackMLRecipeDataType[]</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
-                  <td>HasComponent</td>
+                  <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>StackLight</td>
-                  <td>Int32[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>4:StackLight</td>
+                  <td>0:Int32[]</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
               </tbody>
@@ -1421,7 +1439,7 @@
                   <td>Variable</td>
                   <td>4:Parameter_DINT</td>
                   <td>4:PackMLParameterDIntDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
@@ -1429,7 +1447,7 @@
                   <td>Variable</td>
                   <td>4:Parameter_LREAL</td>
                   <td>4:PackMLParameterLRealDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
@@ -1437,7 +1455,7 @@
                   <td>Variable</td>
                   <td>4:Parameter_REAL</td>
                   <td>4:PackMLParameterRealDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
@@ -1445,7 +1463,7 @@
                   <td>Variable</td>
                   <td>4:Parameter_STRING</td>
                   <td>4:PackMLParameterStringDataType[]</td>
-                  <td>BaseDataVariableType</td>
+                  <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
                 <tr>
