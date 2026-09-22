@@ -6,7 +6,7 @@
     <Uri>http://opcfoundation.org/UA/PackML/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.3" PublicationDate="2026-09-08T18:04:24.0230572Z" ModelVersion="2.0.3-alpha">
+    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.4" PublicationDate="2026-09-22T12:48:56.0493445Z" ModelVersion="2.0.4-alpha">
       <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.07" PublicationDate="2026-07-30T00:00:00Z" />
     </Model>
   </Models>
@@ -388,6 +388,8 @@
     <DisplayName>PackMLParameterRealDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=406</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=407</Reference>
     </References>
     <Definition Name="1:PackMLParameterRealDataType">
       <Field Name="ID" DataType="i=6">
@@ -404,10 +406,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=406" BrowseName="Default Binary" ParentNodeId="ns=1;i=405">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=405</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=407" BrowseName="Default XML" ParentNodeId="ns=1;i=405">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=405</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=408" BrowseName="1:PackMLParameterStringDataType">
     <DisplayName>PackMLParameterStringDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=409</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=410</Reference>
     </References>
     <Definition Name="1:PackMLParameterStringDataType">
       <Field Name="ID" DataType="i=6">
@@ -424,10 +442,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=409" BrowseName="Default Binary" ParentNodeId="ns=1;i=408">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=408</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=410" BrowseName="Default XML" ParentNodeId="ns=1;i=408">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=408</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=411" BrowseName="1:PackMLParameterLRealDataType">
     <DisplayName>PackMLParameterLRealDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=412</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=413</Reference>
     </References>
     <Definition Name="1:PackMLParameterLRealDataType">
       <Field Name="ID" DataType="i=6">
@@ -444,10 +478,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=412" BrowseName="Default Binary" ParentNodeId="ns=1;i=411">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=411</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=413" BrowseName="Default XML" ParentNodeId="ns=1;i=411">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=411</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=414" BrowseName="1:PackMLParameterDIntDataType">
     <DisplayName>PackMLParameterDIntDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=415</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=416</Reference>
     </References>
     <Definition Name="1:PackMLParameterDIntDataType">
       <Field Name="ID" DataType="i=6">
@@ -464,10 +514,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=415" BrowseName="Default Binary" ParentNodeId="ns=1;i=414">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=414</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=416" BrowseName="Default XML" ParentNodeId="ns=1;i=414">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=414</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=417" BrowseName="1:PackMLRecipeDataType">
     <DisplayName>PackMLRecipeDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=419</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=418</Reference>
     </References>
     <Definition Name="1:PackMLRecipeDataType">
       <Field Name="ID" DataType="i=6">
@@ -490,10 +556,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=419" BrowseName="Default XML" ParentNodeId="ns=1;i=417">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=417</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=418" BrowseName="Default Binary" ParentNodeId="ns=1;i=417">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=417</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=420" BrowseName="1:PackMLCumulativeTimesDataType">
     <DisplayName>PackMLCumulativeTimesDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=421</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=422</Reference>
     </References>
     <Definition Name="1:PackMLCumulativeTimesDataType">
       <Field Name="AccTimeSinceReset" DataType="i=6">
@@ -504,10 +586,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=421" BrowseName="Default Binary" ParentNodeId="ns=1;i=420">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=420</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=422" BrowseName="Default XML" ParentNodeId="ns=1;i=420">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=420</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=423" BrowseName="1:PackMLModeStateTimesDataType">
     <DisplayName>PackMLModeStateTimesDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=424</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=425</Reference>
     </References>
     <Definition Name="1:PackMLModeStateTimesDataType">
       <Field Name="Mode" DataType="i=6">
@@ -518,10 +616,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=424" BrowseName="Default Binary" ParentNodeId="ns=1;i=423">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=423</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=425" BrowseName="Default XML" ParentNodeId="ns=1;i=423">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=423</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=426" BrowseName="1:PackMLProcessVariablesDataType">
     <DisplayName>PackMLProcessVariablesDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=427</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=428</Reference>
     </References>
     <Definition Name="1:PackMLProcessVariablesDataType">
       <Field Name="Parameter_REAL" DataType="ns=1;i=405" ValueRank="1">
@@ -538,10 +652,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=427" BrowseName="Default Binary" ParentNodeId="ns=1;i=426">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=426</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=428" BrowseName="Default XML" ParentNodeId="ns=1;i=426">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=426</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=429" BrowseName="1:PackMLIngredientsDataType">
     <DisplayName>PackMLIngredientsDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=430</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=431</Reference>
     </References>
     <Definition Name="1:PackMLIngredientsDataType">
       <Field Name="Parameter_REAL" DataType="ns=1;i=405" ValueRank="1">
@@ -558,10 +688,26 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=430" BrowseName="Default Binary" ParentNodeId="ns=1;i=429">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=429</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=431" BrowseName="Default XML" ParentNodeId="ns=1;i=429">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=429</Reference>
+    </References>
+  </UAObject>
   <UADataType NodeId="ns=1;i=432" BrowseName="1:PackMLEquipmentInterlockDataType">
     <DisplayName>PackMLEquipmentInterlockDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=22</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=433</Reference>
+      <Reference ReferenceType="i=38">ns=1;i=434</Reference>
     </References>
     <Definition Name="1:PackMLEquipmentInterlockDataType">
       <Field Name="Blocked" DataType="i=1">
@@ -572,6 +718,20 @@
       </Field>
     </Definition>
   </UADataType>
+  <UAObject NodeId="ns=1;i=433" BrowseName="Default Binary" ParentNodeId="ns=1;i=432">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=432</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=434" BrowseName="Default XML" ParentNodeId="ns=1;i=432">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="i=40">i=76</Reference>
+      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=432</Reference>
+    </References>
+  </UAObject>
   <UAObjectType NodeId="ns=1;i=5" BrowseName="1:PackMLAdminObjectType">
     <DisplayName>PackMLAdminObjectType</DisplayName>
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.3.4</Documentation>
@@ -784,13 +944,8 @@
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=58</Reference>
       <Reference ReferenceType="i=47">ns=1;i=232</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=211</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=224</Reference>
       <Reference ReferenceType="i=47">ns=1;i=219</Reference>
       <Reference ReferenceType="ns=1;i=21">ns=1;i=237</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=236</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=121</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=122</Reference>
       <Reference ReferenceType="i=47">ns=1;i=123</Reference>
       <Reference ReferenceType="i=47">ns=1;i=210</Reference>
       <Reference ReferenceType="i=47">ns=1;i=209</Reference>
@@ -798,6 +953,17 @@
       <Reference ReferenceType="i=47">ns=1;i=200</Reference>
       <Reference ReferenceType="i=47">ns=1;i=192</Reference>
       <Reference ReferenceType="i=46">ns=1;i=193</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=435</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=436</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=437</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=438</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=439</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=440</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=441</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=442</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=443</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=444</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=445</Reference>
     </References>
   </UAObjectType>
   <UAVariable NodeId="ns=1;i=232" BrowseName="1:CurMachSpeed" ParentNodeId="ns=1;i=4" DataType="i=10">
@@ -815,22 +981,6 @@
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">i=68</Reference>
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=232</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=211" BrowseName="1:EquipmentBlocked" ParentNodeId="ns=1;i=4" DataType="i=1">
-    <DisplayName>EquipmentBlocked</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=78</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=224" BrowseName="1:EquipmentStarved" ParentNodeId="ns=1;i=4" DataType="i=1">
-    <DisplayName>EquipmentStarved</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=78</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
     </References>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=219" BrowseName="1:MachSpeed" ParentNodeId="ns=1;i=4" DataType="i=10">
@@ -856,30 +1006,6 @@
       <Reference ReferenceType="i=37">i=80</Reference>
       <Reference ReferenceType="i=40">i=63</Reference>
       <Reference ReferenceType="ns=1;i=21" IsForward="false">ns=1;i=4</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=236" BrowseName="1:MaterialInterlocked" ParentNodeId="ns=1;i=4" DataType="i=1">
-    <DisplayName>MaterialInterlocked</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=121" BrowseName="1:Parameter" ParentNodeId="ns=1;i=4" DataType="ns=1;i=16" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>Parameter</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=122" BrowseName="1:Product" ParentNodeId="ns=1;i=4" DataType="ns=1;i=18" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>Product</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
     </References>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=123" BrowseName="1:RemoteParameter" ParentNodeId="ns=1;i=4" DataType="ns=1;i=19" ValueRank="1" ArrayDimensions="0">
@@ -936,6 +1062,94 @@
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">i=68</Reference>
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=435" BrowseName="1:StateCurrent" ParentNodeId="ns=1;i=4" DataType="i=6">
+    <DisplayName>StateCurrent</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=436" BrowseName="1:EquipmentInterlock" ParentNodeId="ns=1;i=4" DataType="ns=1;i=432">
+    <DisplayName>EquipmentInterlock</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=78</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=437" BrowseName="1:Parameter_REAL" ParentNodeId="ns=1;i=4" DataType="ns=1;i=405" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_REAL</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=438" BrowseName="1:Parameter_STRING" ParentNodeId="ns=1;i=4" DataType="ns=1;i=408" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_STRING</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=439" BrowseName="1:Parameter_LREAL" ParentNodeId="ns=1;i=4" DataType="ns=1;i=411" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_LREAL</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=440" BrowseName="1:Parameter_DINT" ParentNodeId="ns=1;i=4" DataType="ns=1;i=414" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_DINT</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=441" BrowseName="1:RecipeCurrent" ParentNodeId="ns=1;i=4" DataType="i=6">
+    <DisplayName>RecipeCurrent</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=442" BrowseName="1:RecipeRequested" ParentNodeId="ns=1;i=4" DataType="i=6">
+    <DisplayName>RecipeRequested</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=443" BrowseName="1:RecipeChangeInProcess" ParentNodeId="ns=1;i=4" DataType="i=1">
+    <DisplayName>RecipeChangeInProcess</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=444" BrowseName="1:Recipe" ParentNodeId="ns=1;i=4" DataType="ns=1;i=417" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Recipe</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=445" BrowseName="1:StackLight" ParentNodeId="ns=1;i=4" DataType="i=7" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>StackLight</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=4</Reference>
     </References>
   </UAVariable>
   <UAObjectType NodeId="ns=1;i=3" BrowseName="1:PackMLBaseStateMachineType">
@@ -1707,7 +1921,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:DateTime>2026-09-08T18:04:24.0230572Z</uax:DateTime>
+      <uax:DateTime>2026-09-22T12:48:56.0493445Z</uax:DateTime>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=356" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=117" DataType="i=12">
@@ -1727,7 +1941,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.3</uax:String>
+      <uax:String>2.0.4</uax:String>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=358" BrowseName="StaticNodeIdTypes" ParentNodeId="ns=1;i=117" DataType="i=256" ValueRank="1" ArrayDimensions="0">
@@ -1758,7 +1972,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.3-alpha</uax:String>
+      <uax:String>2.0.4-alpha</uax:String>
     </Value>
   </UAVariable>
   <UAObject NodeId="ns=1;i=27" BrowseName="1:Resetting">
@@ -2967,144 +3181,4 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=103</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=406" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=405</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=407" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=405</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=409" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=408</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=410" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=408</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=412" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=411</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=413" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=411</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=415" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=414</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=416" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=414</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=419" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=417</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=418" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=417</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=421" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=420</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=422" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=420</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=424" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=423</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=425" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=423</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=427" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=426</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=428" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=426</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=430" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=429</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=431" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=429</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=433" BrowseName="Default Binary">
-    <DisplayName>Default Binary</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=432</Reference>
-    </References>
-  </UAObject>
-  <UAObject NodeId="ns=1;i=434" BrowseName="Default XML">
-    <DisplayName>Default XML</DisplayName>
-    <References>
-      <Reference ReferenceType="i=40">i=76</Reference>
-      <Reference ReferenceType="i=38" IsForward="false">ns=1;i=432</Reference>
-    </References>
-  </UAObject>
 </UANodeSet>
