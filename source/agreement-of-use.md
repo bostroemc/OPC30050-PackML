@@ -7,7 +7,6 @@
 
 ### AGREEMENT OF USE
   
-
 #### COPYRIGHT RESTRICTIONS
 * This document is provided "as is" by the OPC Foundation.
 * Right of use for this specification is restricted to this specification and does not grant rights of use for referred documents.
@@ -18,6 +17,7 @@
 * The document shall not be used in conjunction with company advertising, shall not be sold or licensed to any party.
 * The intellectual property and copyright are solely owned by the OPC Foundation.
   
+  OPC Foundation members and non-members are prohibited from copying and redistributing this specification. All copies must be obtained on an individual basis, directly from the OPC Foundation website https://opcfoundation.org/ or from the OMAC website  http://omac.org. 
 
 #### PATENTS
 The attention of adopters is directed to the possibility that compliance with or adoption of OPC specifications may require use of an invention covered by patent rights. OPC Foundation shall not be responsible for identifying patents for which a license may be required by any OPC specification, or for conducting legal inquiries into the legal validity or scope of those patents that are brought to its attention. OPC specifications are prospective and advisory only. Prospective users are responsible for protecting themselves against liability for infringement of patents.
@@ -28,7 +28,7 @@ WHILE THIS PUBLICATION IS BELIEVED TO BE ACCURATE, IT IS PROVIDED "AS IS" AND MA
 The entire risk as to the quality and performance of software developed using this specification is borne by you. 
 
 #### RESTRICTED RIGHTS LEGEND
-This Specification is provided with Restricted Rights. Use, duplication, or disclosure by the U.S. government is subject to restrictions as set forth in (a) this Agreement pursuant to DFARs 227.7202-3(a); (b) subparagraph (c)(1)(i) of the Rights in Technical Data and Computer Software clause at DFARs 252.227-7013; or (c) the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 subdivision (c)(1) and (2), as applicable. Contractor / manufacturer are the OPC Foundation, 16101 N. 82nd Street, Suite 3B, Scottsdale, AZ, 85260-1830
+This Specification is provided with Restricted Rights. Use, duplication or disclosure by the U.S. government is subject to restrictions as set forth in (a) this Agreement pursuant to DFARs 227.7202-3(a); (b) subparagraph (c)(1)(i) of the Rights in Technical Data and Computer Software clause at DFARs 252.227-7013; or (c) the Commercial Computer Software Restricted Rights clause at FAR 52.227-19 subdivision (c)(1) and (2), as applicable. Contractor / manufacturer are the OPC Foundation,. 16101 N. 82nd Street, Suite 3B, Scottsdale, AZ, 85260-1830 and OMAC 11911 Freedom Drive, Suite 600,  Reston, VA 20190
 
 #### COMPLIANCE
 The OPC Foundation shall at all times be the sole entities that may authorize developers, suppliers and sellers of hardware and software to use certification marks, trademarks, or other special designations to indicate compliance with these materials as specified within this document. Products developed using this specification may claim compliance or conformance with this specification if and only if the software satisfactorily meets the certification requirements set by the OPC Foundation. Products that do not meet these requirements may claim only that the product was based on this specification and must not claim compliance or conformance with this specification. 
@@ -39,7 +39,7 @@ Most computer and software brand names have trademarks or registered trademarks.
 #### GENERAL PROVISIONS
 Should any provision of this Agreement be held to be void, invalid, unenforceable, or illegal by a court, the validity and enforceability of the other provisions shall not be affected thereby.  
 
-This Agreement shall be governed by and construed under the laws of Germany.
+This Agreement shall be governed by and construed under the laws of the State of Minnesota, excluding its choice or law rules.
 
 This Agreement embodies the entire understanding between the parties with respect to, and supersedes any prior understanding or agreement (oral or written) relating to, this specification.
 
