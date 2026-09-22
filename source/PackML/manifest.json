@@ -343,30 +343,11 @@
   "namespaces": {
     "documentNamespaceIndex": 1,
     "table": [
-      {
-        "uri": "http://opcfoundation.org/UA/",
-        "index": 0,
-        "example": "0:EngineeringUnits",
-        "definedBy": "uapart5",
-        "description": "Namespace for *NodeIds* and *BrowseNames* defined in the OPC UA specification. This namespace shall have namespace index 0."
-      },
-      {
-        "uri": "urn:opcua:opcfoundation.org.com:2026-08:PackML",
-        "index": 1,
-        "description": "Namespace for *NodeIds* and *BrowseNames* defined in this model."
-      },
-      {
-        "uri": "http://opcfoundation.org/UA/DI/",
-        "index": 2,
-        "example": "2:DeviceRevision",
-        "definedBy": "uapart100",
-        "description": "Namespace for *NodeIds* and *BrowseNames* defined in OPC 10000-100."
-      },
-      {
-        "uri": "http://opcfoundation.org/UA/Dictionary/IRDI",
-        "index": 3,
-        "description": "Namespace for *NodeIds* and *BrowseNames* defined in this IRDI dictionary model. Note that IRDI model is never available as a single NodeSet. The NodeIds are IRDIs which identify the target even if an IRDI NodeSet with the NodeId is not available."
-      }
+      { "uri": "http://opcfoundation.org/UA/", "index": 0, "example": "0:EngineeringUnits", "definedBy": "uapart5", "description": "Namespace for *NodeIds* and *BrowseNames* defined in the OPC UA specification. This namespace shall have namespace index 0." },
+      { "uri": "urn:opcua:opcfoundation.org.com:2026-08:PackML", "index": 1, "description": "Namespace for *NodeIds* and *BrowseNames* defined in this model." },
+      { "uri": "http://opcfoundation.org/UA/DI/", "index": 2, "example": "2:DeviceRevision", "definedBy": "uapart100", "description": "Namespace for *NodeIds* and *BrowseNames* defined in OPC 10000-100." },
+      { "uri": "http://opcfoundation.org/UA/Dictionary/IRDI", "index": 3, "description": "Namespace for *NodeIds* and *BrowseNames* defined in this IRDI dictionary model. Note that IRDI model is never available as a single NodeSet. The NodeIds are IRDIs which identify the target even if an IRDI NodeSet with the NodeId is not available." },
+      { "uri": "http://opcfoundation.org/UA/PackML/", "index": 4, "description": "Namespace for *NodeIds* and *BrowseNames* defined in this model. The namespace index is *Server* specific." }
     ]
   }
 }

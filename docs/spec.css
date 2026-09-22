@@ -293,6 +293,15 @@ p.editorial-note { border-left-color: var(--accent); }
 ul, ol { max-width: var(--measure); padding-left: 1.5rem; }
 li { margin: 0.2rem 0; }
 
+/* An item that holds anything besides its own sentence - a sub-list, most often - writes that
+   sentence as a paragraph, where a plain item writes it bare. Left with a paragraph's margin
+   below it the bullet would sit a full gap above the sub-bullets it introduces, and the run
+   would read as two lists instead of one. Consecutive paragraphs in one item keep their gap:
+   there the space is between two sentences and is wanted. */
+li > p { margin-bottom: 0; }
+li > p + p { margin-top: 0.85rem; }
+li > ul, li > ol { margin: 0.2rem 0 0; }
+
 .list-alpha { list-style-type: lower-alpha; }
 .list-alpha-upper { list-style-type: upper-alpha; }
 .list-roman { list-style-type: lower-roman; }

@@ -6,7 +6,7 @@
 
 The mapping of IEC 61131-3 elementary data types to OPC UA data types is formally defined in OPC 30000 (PLCOpen companion specification). <xref ref-type="table" rid="tbl_71_mapping-iec-61131-3-elementary-data-types-to-opc-ua-built-in">Table 71</xref> is copied from that specification as a reference, any differences with OPC 30000 indicate that this specification is out of date.
 
-*Table - Mapping IEC 61131-3 elementary data types to OPC UA built in data types* {#tbl-mapping-iec-61131-3-elementary-data-types-to-opc-ua-built-in}
+*Table - Mapping IEC 61131-3 elementary data types to OPC UA built in data types* {#tbl-mapping-iec-61131-3-elementary-data-types-to-opc-ua-built-in-data-types}
 | IEC 61131-3 elementary data types	| OPC UA built in data types	| Comment |
 | --- | --- | --- | 
 | BOOL	| Boolean	| A one bit value (true or false). |
