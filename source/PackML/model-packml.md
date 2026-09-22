@@ -121,7 +121,7 @@ The *PackMLStatusObjectType* defines an *ObjectType* that is used to group all o
 
 ```{figure}
 id: fig-packmlstatusobjecttype-overview
-caption: PackMLStatusObjectType Overview -- TODO: Update figure
+caption: PackMLStatusObjectType Overview
 source: figures/fig_12_packmlstatusobjecttype-overview.png
 ```
 
@@ -133,25 +133,27 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | --- | --- | --- | --- | --- | --- |  
 | BrowseName	| PackMLStatusObjectType| | | | |  
 | IsAbstract	| False| | | | |  
-| Reference	| Node Class	| BrowseName 	| DataType	| TypeDefinition	| Other	|  
+
+| **References** | **Node Class** | **BrowseName** | **DataType** | **TypeDefinition** | **Other** |
+| --- | --- | --- | --- | --- | --- |
 | Subtype of the BaseObjectType from OPC 10000-5.| | | | | |  
-| HasComponent	| Variable	| UnitModeRequested	| Boolean	| BaseDataVariableType	| O	|  
-| HasProperty	| Variable	| UnitSupportedModes	| NodeId	| PropertyType	| M	|  
-| HasComponent	| Variable	| UnitModeCurrent	| Enumeration	| BaseDataVariableType	| M	|  
-| HasComponent	| Variable 	| UnitModeChangeInProcess	| Boolean	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| StateCurrent	| Int32	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| StateRequested	| Int32	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| StateChangeInProcess	| Boolean	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable 	| MachSpeed	| Float	| AnalogItemType	| M	|  
-| HasComponent	| Variable 	| CurMachSpeed	| Float	| AnalogItemType	| M	|  
-| HasComponent	| Variable	| EquipmentInterlock| PackMLEquipmentInterlockDataType	| BaseDataVariableType	| M	|  
-| HasInterlock	| Variable	| MaterialInterlock	| Boolean[]	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| Parameter_REAL	| PackMLParameterRealDataType[]	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| Parameter_STRING	| PackMLParameterStringDataType[]	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| Parameter_LREAL	| PackMLParameterLRealDataType[]	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| Parameter_DINT	| PackMLParameterDIntDataType[]	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| Recipe	| PackMLRecipeDataType[]	| BaseDataVariableType	| O	|  
-| HasComponent	| Variable	| StackLight	| Int32[]	| BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:UnitModeRequested	| 0:Boolean	| 0:BaseDataVariableType	| O	|  
+| 0:HasProperty	| Variable	| 4:UnitSupportedModes	| 0:NodeId	| 0:PropertyType	| M	|  
+| 0:HasComponent	| Variable	| 4:UnitModeCurrent	| 0:Enumeration	| 0:BaseDataVariableType	| M	|  
+| 0:HasComponent	| Variable 	| 4:UnitModeChangeInProcess	| 0:Boolean	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:StateCurrent	| 0:Int32	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:StateRequested	| 0:Int32	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:StateChangeInProcess	| 0:Boolean	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable 	| 4:MachSpeed	| 0:Float	| 0:AnalogItemType	| M	|  
+| 0:HasComponent	| Variable 	| 4:CurMachSpeed	| 0:Float	| 0:AnalogItemType	| M	|  
+| 0:HasComponent	| Variable	| 4:EquipmentInterlock| PackMLEquipmentInterlockDataType	| 0:BaseDataVariableType	| M	|  
+| 4:HasInterlock	| Variable	| 4:MaterialInterlock	| 0:Boolean[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:Parameter_REAL	| 4:PackMLParameterRealDataType[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:Parameter_STRING	| 4:PackMLParameterStringDataType[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:Parameter_LREAL	| 4:PackMLParameterLRealDataType[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:Parameter_DINT	| 4:PackMLParameterDIntDataType[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:Recipe	| 4:PackMLRecipeDataType[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:StackLight	| 0:Int32[]	| 0:BaseDataVariableType	| O	|  
 
 In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in [OPC 10000-5](#ref-uapart5).
             
@@ -218,10 +220,10 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | 4:HasAlarmHistory | Variable | 4:AlarmHistory | 4:PackMLEventDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:AlarmHistoryExtent | 0:Int32 | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:MachDesignSpeed | 0:Float | 0:BaseDataVariableType | O |
-| 0:HasComponent	| Variable	| 4:Parameter_DINT	| 4:PackMLParameterDIntDataType[]	| BaseDataVariableType	| O	|
-| 0:HasComponent	| Variable	| 4:Parameter_LREAL	| 4:PackMLParameterLRealDataType[]	| BaseDataVariableType	| O	| 
-| 0:HasComponent	| Variable	| 4:Parameter_REAL	| 4:PackMLParameterRealDataType[]	| BaseDataVariableType	| O | 
-| 0:HasComponent	| Variable	| 4:Parameter_STRING	| 4:PackMLParameterStringDataType[]	| BaseDataVariableType	| O | 
+| 0:HasComponent	| Variable	| 4:Parameter_DINT	| 4:PackMLParameterDIntDataType[]	| 0:BaseDataVariableType	| O	|
+| 0:HasComponent	| Variable	| 4:Parameter_LREAL	| 4:PackMLParameterLRealDataType[]	| 0:BaseDataVariableType	| O	| 
+| 0:HasComponent	| Variable	| 4:Parameter_REAL	| 4:PackMLParameterRealDataType[]	| 0:BaseDataVariableType	| O | 
+| 0:HasComponent	| Variable	| 4:Parameter_STRING	| 4:PackMLParameterStringDataType[]	| 0:BaseDataVariableType	| O | 
 | 4:HasStopReason | Variable | 4:StopReason | 4:PackMLEventDataType | 0:BaseDataVariableType | O |
 | 4:HasWarning | Variable | 4:Warning | 4:PackMLEventDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:WarningExtent | 0:Int32 | 0:BaseDataVariableType | O |
