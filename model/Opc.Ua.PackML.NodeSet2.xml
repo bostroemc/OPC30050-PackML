@@ -6,7 +6,7 @@
     <Uri>http://opcfoundation.org/UA/PackML/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.4" PublicationDate="2026-09-22T12:48:56.0493445Z" ModelVersion="2.0.4-alpha">
+    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.5" PublicationDate="2026-09-22T14:57:26.2365406Z" ModelVersion="2.0.5-alpha">
       <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.07" PublicationDate="2026-07-30T00:00:00Z" />
     </Model>
   </Models>
@@ -737,34 +737,29 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.3.4</Documentation>
     <References>
       <Reference ReferenceType="i=45" IsForward="false">i=58</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=252</Reference>
       <Reference ReferenceType="ns=1;i=22">ns=1;i=238</Reference>
       <Reference ReferenceType="i=47">ns=1;i=239</Reference>
       <Reference ReferenceType="ns=1;i=23">ns=1;i=240</Reference>
       <Reference ReferenceType="i=47">ns=1;i=241</Reference>
       <Reference ReferenceType="i=47">ns=1;i=253</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=247</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=246</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=276</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=124</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=119</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=120</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=249</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=248</Reference>
       <Reference ReferenceType="ns=1;i=25">ns=1;i=244</Reference>
-      <Reference ReferenceType="i=47">ns=1;i=245</Reference>
       <Reference ReferenceType="ns=1;i=24">ns=1;i=242</Reference>
       <Reference ReferenceType="i=47">ns=1;i=243</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=446</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=447</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=448</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=449</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=450</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=451</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=452</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=453</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=454</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=455</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=456</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=457</Reference>
+      <Reference ReferenceType="i=47">ns=1;i=458</Reference>
     </References>
   </UAObjectType>
-  <UAVariable NodeId="ns=1;i=252" BrowseName="1:AccTimeSinceReset" ParentNodeId="ns=1;i=5" DataType="i=6">
-    <DisplayName>AccTimeSinceReset</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
   <UAVariable NodeId="ns=1;i=238" BrowseName="1:Alarm" ParentNodeId="ns=1;i=5" DataType="ns=1;i=15" ValueRank="1" ArrayDimensions="0">
     <DisplayName>Alarm</DisplayName>
     <References>
@@ -805,84 +800,12 @@
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=247" BrowseName="1:ModeCumulativeTime" ParentNodeId="ns=1;i=5" DataType="i=6" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>ModeCumulativeTime</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=246" BrowseName="1:ModeCurrentTime" ParentNodeId="ns=1;i=5" DataType="i=6" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>ModeCurrentTime</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=276" BrowseName="1:Parameter" ParentNodeId="ns=1;i=5" DataType="ns=1;i=16" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>Parameter</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=124" BrowseName="1:ProdConsumedCount" ParentNodeId="ns=1;i=5" DataType="ns=1;i=14" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>ProdConsumedCount</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=119" BrowseName="1:ProdDefectiveCount" ParentNodeId="ns=1;i=5" DataType="ns=1;i=14" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>ProdDefectiveCount</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=120" BrowseName="1:ProdProcessedCount" ParentNodeId="ns=1;i=5" DataType="ns=1;i=14" ValueRank="1" ArrayDimensions="0">
-    <DisplayName>ProdProcessedCount</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=249" BrowseName="1:StateCumulativeTime" ParentNodeId="ns=1;i=5" DataType="i=6" ValueRank="2" ArrayDimensions="0,0">
-    <DisplayName>StateCumulativeTime</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=248" BrowseName="1:StateCurrentTime" ParentNodeId="ns=1;i=5" DataType="i=6" ValueRank="2" ArrayDimensions="0,0">
-    <DisplayName>StateCurrentTime</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
   <UAVariable NodeId="ns=1;i=244" BrowseName="1:StopReason" ParentNodeId="ns=1;i=5" DataType="ns=1;i=15">
     <DisplayName>StopReason</DisplayName>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
       <Reference ReferenceType="i=40">i=63</Reference>
       <Reference ReferenceType="ns=1;i=25" IsForward="false">ns=1;i=5</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=245" BrowseName="1:StopReasonExtent" ParentNodeId="ns=1;i=5" DataType="i=6">
-    <DisplayName>StopReasonExtent</DisplayName>
-    <References>
-      <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=40">i=63</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
     </References>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=242" BrowseName="1:Warning" ParentNodeId="ns=1;i=5" DataType="ns=1;i=15" ValueRank="1" ArrayDimensions="0">
@@ -895,6 +818,110 @@
   </UAVariable>
   <UAVariable NodeId="ns=1;i=243" BrowseName="1:WarningExtent" ParentNodeId="ns=1;i=5" DataType="i=6">
     <DisplayName>WarningExtent</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=446" BrowseName="1:Parameter_REAL" ParentNodeId="ns=1;i=5" DataType="ns=1;i=405" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_REAL</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=447" BrowseName="1:Parameter_STRING" ParentNodeId="ns=1;i=5" DataType="ns=1;i=408" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_STRING</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=448" BrowseName="1:Parameter_LREAL" ParentNodeId="ns=1;i=5" DataType="ns=1;i=411" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_LREAL</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=449" BrowseName="1:Parameter_DINT" ParentNodeId="ns=1;i=5" DataType="ns=1;i=414" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>Parameter_DINT</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=450" BrowseName="1:ModeTimeCurrent" ParentNodeId="ns=1;i=5" DataType="i=6">
+    <DisplayName>ModeTimeCurrent</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=451" BrowseName="1:StateTimeCurrent" ParentNodeId="ns=1;i=5" DataType="i=6">
+    <DisplayName>StateTimeCurrent</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=452" BrowseName="1:CumulativeTimes" ParentNodeId="ns=1;i=5" DataType="ns=1;i=420" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>CumulativeTimes</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=453" BrowseName="1:ProductData" ParentNodeId="ns=1;i=5" DataType="ns=1;i=18" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>ProductData</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=454" BrowseName="1:DisabledStatesCfg" ParentNodeId="ns=1;i=5" DataType="i=7" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>DisabledStatesCfg</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=455" BrowseName="1:CurDisabledStates" ParentNodeId="ns=1;i=5" DataType="i=7">
+    <DisplayName>CurDisabledStates</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=456" BrowseName="1:EnabledModesCfg" ParentNodeId="ns=1;i=5" DataType="i=7">
+    <DisplayName>EnabledModesCfg</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=457" BrowseName="1:ModeTransitionCfg" ParentNodeId="ns=1;i=5" DataType="i=7" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>ModeTransitionCfg</DisplayName>
+    <References>
+      <Reference ReferenceType="i=37">i=80</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=5</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=458" BrowseName="1:PLCDateTime" ParentNodeId="ns=1;i=5" DataType="i=13">
+    <DisplayName>PLCDateTime</DisplayName>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
       <Reference ReferenceType="i=40">i=63</Reference>
@@ -1921,7 +1948,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:DateTime>2026-09-22T12:48:56.0493445Z</uax:DateTime>
+      <uax:DateTime>2026-09-22T14:57:26.2365406Z</uax:DateTime>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=356" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=117" DataType="i=12">
@@ -1941,7 +1968,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.4</uax:String>
+      <uax:String>2.0.5</uax:String>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=358" BrowseName="StaticNodeIdTypes" ParentNodeId="ns=1;i=117" DataType="i=256" ValueRank="1" ArrayDimensions="0">
@@ -1972,7 +1999,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.4-alpha</uax:String>
+      <uax:String>2.0.5-alpha</uax:String>
     </Value>
   </UAVariable>
   <UAObject NodeId="ns=1;i=27" BrowseName="1:Resetting">

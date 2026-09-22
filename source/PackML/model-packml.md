@@ -129,29 +129,29 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 
 *Table - PackMLStatusObjectType Definition* {#tbl-packmlstatusobjecttype-definition defines=PackMLStatusObjectType}
 
-| Attribute	| Value| | | | | | 
-| --- | --- | --- | --- | --- | --- | --- | 
-| BrowseName	| PackMLStatusObjectType| | | | | | 
-| IsAbstract	| False| | | | | | 
-| Reference	| Node Class	| BrowseName 	| DataType	| TypeDefinition	| ModellingRule	| RW| 
-| Subtype of the BaseObjectType from OPC 10000-5.| | | | | | | 
-| HasComponent	| Variable	| UnitModeRequested	| Boolean	| BaseDataVariableType	| Optional	| R| 
-| HasProperty	| Variable	| UnitSupportedModes	| NodeId	| PropertyType	| Mandatory	| R| 
-| HasComponent	| Variable	| UnitModeCurrent	| Enumeration	| BaseDataVariableType	| Mandatory	| R| 
-| HasComponent	| Variable 	| UnitModeChangeInProcess	| Boolean	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| StateCurrent	| Int32	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| StateRequested	| Int32	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| StateChangeInProcess	| Boolean	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable 	| MachSpeed	| Float	| AnalogItemType	| Mandatory	| R| 
-| HasComponent	| Variable 	| CurMachSpeed	| Float	| AnalogItemType	| Mandatory	| R| 
-| HasComponent	| Variable	| EquipmentInterlock| PackMLEquipmentInterlockDataType	| BaseDataVariableType	| Mandatory	| R| 
-| HasInterlock	| Variable	| MaterialInterlock	| Boolean[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Parameter_REAL	| PackMLParameterRealDataType[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Parameter_STRING	| PackMLParameterStringDataType[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Parameter_LREAL	| PackMLParameterLRealDataType[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Parameter_DINT	| PackMLParameterDIntDataType[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Recipe	| PackMLRecipeDataType[]	| BaseDataVariableType	| Optional	| R| 
-| HasComponent	| Variable	| Stacklight	| Int32[]	| BaseDataVariableType	| Optional	| R| 
+| Attribute	| Value| | | | |  
+| --- | --- | --- | --- | --- | --- |  
+| BrowseName	| PackMLStatusObjectType| | | | |  
+| IsAbstract	| False| | | | |  
+| Reference	| Node Class	| BrowseName 	| DataType	| TypeDefinition	| Other	|  
+| Subtype of the BaseObjectType from OPC 10000-5.| | | | | |  
+| HasComponent	| Variable	| UnitModeRequested	| Boolean	| BaseDataVariableType	| O	|  
+| HasProperty	| Variable	| UnitSupportedModes	| NodeId	| PropertyType	| M	|  
+| HasComponent	| Variable	| UnitModeCurrent	| Enumeration	| BaseDataVariableType	| M	|  
+| HasComponent	| Variable 	| UnitModeChangeInProcess	| Boolean	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| StateCurrent	| Int32	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| StateRequested	| Int32	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| StateChangeInProcess	| Boolean	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable 	| MachSpeed	| Float	| AnalogItemType	| M	|  
+| HasComponent	| Variable 	| CurMachSpeed	| Float	| AnalogItemType	| M	|  
+| HasComponent	| Variable	| EquipmentInterlock| PackMLEquipmentInterlockDataType	| BaseDataVariableType	| M	|  
+| HasInterlock	| Variable	| MaterialInterlock	| Boolean[]	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| Parameter_REAL	| PackMLParameterRealDataType[]	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| Parameter_STRING	| PackMLParameterStringDataType[]	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| Parameter_LREAL	| PackMLParameterLRealDataType[]	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| Parameter_DINT	| PackMLParameterDIntDataType[]	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| Recipe	| PackMLRecipeDataType[]	| BaseDataVariableType	| O	|  
+| HasComponent	| Variable	| StackLight	| Int32[]	| BaseDataVariableType	| O	|  
 
 In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in [OPC 10000-5](#ref-uapart5).
             
@@ -189,7 +189,7 @@ In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provide
 
     *Recipe* - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.
 
-	*Stacklight* - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.
+	*StackLight* - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.
  
 #### PackMLAdminObjectType {#sec-packmladminobjecttype}
 
@@ -213,27 +213,27 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | **References** | **Node Class** | **BrowseName** | **DataType** | **TypeDefinition** | **Other** |
 | --- | --- | --- | --- | --- | --- |
 | Subtype of the 0:BaseObjectType defined in [](#ref-uapart5) |  |  |  |  |  |
-| 0:HasComponent | Variable | 4:AccTimeSinceReset | 0:Int32 | 0:BaseDataVariableType | O |
 | 4:HasAlarm | Variable | 4:Alarm | 4:PackMLEventDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:AlarmExtent | 0:Int32 | 0:BaseDataVariableType | O |
 | 4:HasAlarmHistory | Variable | 4:AlarmHistory | 4:PackMLEventDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:AlarmHistoryExtent | 0:Int32 | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:MachDesignSpeed | 0:Float | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:ModeCumulativeTime | 0:Int32[] | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:ModeCurrentTime | 0:Int32[] | 0:BaseDataVariableType | O |
 | 0:HasComponent	| Variable	| 4:Parameter_DINT	| 4:PackMLParameterDIntDataType[]	| BaseDataVariableType	| O	|
 | 0:HasComponent	| Variable	| 4:Parameter_LREAL	| 4:PackMLParameterLRealDataType[]	| BaseDataVariableType	| O	| 
 | 0:HasComponent	| Variable	| 4:Parameter_REAL	| 4:PackMLParameterRealDataType[]	| BaseDataVariableType	| O | 
 | 0:HasComponent	| Variable	| 4:Parameter_STRING	| 4:PackMLParameterStringDataType[]	| BaseDataVariableType	| O | 
-| 0:HasComponent | Variable | 4:ProdConsumedCount | 4:PackMLCountDataType[] | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:ProdDefectiveCount | 4:PackMLCountDataType[] | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:ProdProcessedCount | 4:PackMLCountDataType[] | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:StateCumulativeTime | 0:Int32[][] | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:StateCurrentTime | 0:Int32[][] | 0:BaseDataVariableType | O |
 | 4:HasStopReason | Variable | 4:StopReason | 4:PackMLEventDataType | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:StopReasonExtent | 0:Int32 | 0:BaseDataVariableType | O |
 | 4:HasWarning | Variable | 4:Warning | 4:PackMLEventDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:WarningExtent | 0:Int32 | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:ModeTimeCurrent | 0:Int32 | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:StateTimeCurrent | 0:Int32 | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:CumulativeTimes | 4:PackMLCumulativeTimesDataType | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:ProductData | 4:PackMLProductDataType | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:DisabledStatesCfg | 0:Uint32[] | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:CurDisabledStates | 0:Uint32 | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:EnabledModesCfg | 0:Uint32 | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:ModeTransitionCfg | 0:Uint32[] | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:PLCDateTime | 0:DateTime | 0:BaseDataVariableType | O |
 						
 *Parameter_DINT* - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user’s supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. *Parameters_DINT* is typically limited to Int32-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed. 
 
@@ -259,7 +259,7 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 
 *ModeTimeCurrent* - *ModeTimeCurrent* represents the current amount of time in seconds spent in the current Mode as indicated by Status.UnitModeCurrent. The value will start from 0 every time the Mode is changed. The values roll over to 0 after 2,147,483,647.
 
-*ModeStateCurrent* - *ModeStateCurrent* represents the current amount of time in seconds spent in the current State as indicated by Status.StateCurrent. The value will start from 0 every time the State is changed. The values roll over to 0 after 2,147,483,647.
+*StateTimeCurrent* - *StateTimeCurrent* represents the current amount of time in seconds spent in the current State as indicated by Status.StateCurrent. The value will start from 0 every time the State is changed. The values roll over to 0 after 2,147,483,647.
 
 *CumulativeTimes* - *CumulativeTimes* represents a collection of accumulated time in seconds spent in any defined state of any defined mode. The user may define a variable number of time-tracking collections indicated by the array index and may also define when the time values in each collection are reset. The minimum array extent is 1.
 
