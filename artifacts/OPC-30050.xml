@@ -1094,9 +1094,9 @@
           <fig id="fig_12">
             <label>Figure 12</label>
             <caption>
-              <p>PackMLStatusObjectType Overview</p>
+              <p>PackMLStatusObjectType Overview -- TODO: Update figure</p>
             </caption>
-            <graphic xlink:href="fig_12_packmlstatusobjecttype-overview.png" alt="PackMLStatusObjectType Overview" mimetype="image/png" />
+            <graphic xlink:href="fig_12_packmlstatusobjecttype-overview.png" alt="PackMLStatusObjectType Overview -- TODO: Update figure" mimetype="image/png" />
           </fig>
           <p>
             <xref ref-type="table" rid="tbl_4">Table 4</xref> formally defines the <italic>PackMLStatusObjectType</italic>.</p>
@@ -1108,178 +1108,190 @@
             <table>
               <thead>
                 <tr>
-                  <th>
-                    <bold>Attribute</bold>
-                  </th>
-                  <th colspan="5">
-                    <bold>Value</bold>
-                  </th>
+                  <th>Attribute</th>
+                  <th colspan="6">Value</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="5">4:PackMLStatusObjectType</td>
+                  <td colspan="6">PackMLStatusObjectType</td>
                 </tr>
                 <tr>
                   <td>IsAbstract</td>
-                  <td colspan="5">False</td>
-                </tr>
-              </tbody>
-            </table>
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    <bold>References</bold>
-                  </th>
-                  <th>
-                    <bold>Node Class</bold>
-                  </th>
-                  <th>
-                    <bold>BrowseName</bold>
-                  </th>
-                  <th>
-                    <bold>DataType</bold>
-                  </th>
-                  <th>
-                    <bold>TypeDefinition</bold>
-                  </th>
-                  <th>
-                    <bold>Other</bold>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colspan="6">Subtype of the 0:BaseObjectType defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref></td>
+                  <td colspan="6">False</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>Reference</td>
+                  <td>Node Class</td>
+                  <td>BrowseName</td>
+                  <td>DataType</td>
+                  <td>TypeDefinition</td>
+                  <td>ModellingRule</td>
+                  <td>RW</td>
+                </tr>
+                <tr>
+                  <td colspan="7">Subtype of the BaseObjectType from <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</td>
+                </tr>
+                <tr>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:CurMachSpeed</td>
-                  <td>0:Float</td>
-                  <td>0:AnalogItemType</td>
-                  <td>M</td>
+                  <td>UnitModeRequested</td>
+                  <td>Boolean</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasProperty</td>
                   <td>Variable</td>
-                  <td>4:EquipmentBlocked</td>
-                  <td>0:Boolean</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>M</td>
+                  <td>UnitSupportedModes</td>
+                  <td>NodeId</td>
+                  <td>PropertyType</td>
+                  <td>Mandatory</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:EquipmentStarved</td>
-                  <td>0:Boolean</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>M</td>
+                  <td>UnitModeCurrent</td>
+                  <td>Enumeration</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Mandatory</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:MachSpeed</td>
-                  <td>0:Float</td>
-                  <td>0:AnalogItemType</td>
-                  <td>M</td>
+                  <td>UnitModeChangeInProcess</td>
+                  <td>Boolean</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>4:HasInterlock</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:MaterialInterlock</td>
-                  <td>0:Boolean[]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>StateCurrent</td>
+                  <td>Int32</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:MaterialInterlocked</td>
-                  <td>0:Boolean</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>StateRequested</td>
+                  <td>Int32</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:Parameter</td>
-                  <td>4:PackMLDescriptorDataType[]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>StateChangeInProcess</td>
+                  <td>Boolean</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:Product</td>
-                  <td>4:PackMLProductDataType[]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>MachSpeed</td>
+                  <td>Float</td>
+                  <td>AnalogItemType</td>
+                  <td>Mandatory</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:RemoteParameter</td>
-                  <td>4:PackMLRemoteInterfaceDataType[]</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>CurMachSpeed</td>
+                  <td>Float</td>
+                  <td>AnalogItemType</td>
+                  <td>Mandatory</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:StateChangeInProcess</td>
-                  <td>0:Boolean</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>EquipmentInterlock</td>
+                  <td>PackMLEquipmentInterlockDataType</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Mandatory</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasInterlock</td>
                   <td>Variable</td>
-                  <td>4:StateRequested</td>
-                  <td>0:Int32</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>MaterialInterlock</td>
+                  <td>Boolean[]</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:UnitModeChangeInProcess</td>
-                  <td>0:Boolean</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>Parameter_REAL</td>
+                  <td>PackMLParameterRealDataType[]</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:UnitModeCurrent</td>
-                  <td>0:Enumeration</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>M</td>
+                  <td>Parameter_STRING</td>
+                  <td>PackMLParameterStringDataType[]</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasComponent</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:UnitModeRequested</td>
-                  <td>0:Boolean</td>
-                  <td>0:BaseDataVariableType</td>
-                  <td>O</td>
+                  <td>Parameter_LREAL</td>
+                  <td>PackMLParameterLRealDataType[]</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
                 <tr>
-                  <td>0:HasProperty</td>
+                  <td>HasComponent</td>
                   <td>Variable</td>
-                  <td>4:UnitSupportedModes</td>
-                  <td>0:NodeId</td>
-                  <td>0:PropertyType</td>
-                  <td>M</td>
+                  <td>Parameter_DINT</td>
+                  <td>PackMLParameterDIntDataType[]</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
+                </tr>
+                <tr>
+                  <td>HasComponent</td>
+                  <td>Variable</td>
+                  <td>Recipe</td>
+                  <td>PackMLRecipeDataType[]</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
+                </tr>
+                <tr>
+                  <td>HasComponent</td>
+                  <td>Variable</td>
+                  <td>Stacklight</td>
+                  <td>Int32[]</td>
+                  <td>BaseDataVariableType</td>
+                  <td>Optional</td>
+                  <td>R</td>
                 </tr>
               </tbody>
             </table>
           </table-wrap>
           <p>In OPC UA defined <italic>StateMachines</italic>, a mandatory <italic>Variable</italic> <italic>CurrentState</italic> provides the current state of the <italic>StateMachine</italic>, which is the current state of the PackML device. <italic>CurrentState</italic> is defined in <xref ref-type="bibr" rid="ref-uapart5">OPC 10000-5</xref>.</p>
           <p>
-            <italic>UnitModeRequested</italic> - If TRUE, indicates that a unit mode change was requested, reflects the status of the Command UnitModeRequested.</p>
+            <italic>UnitModeRequested</italic> - if TRUE, indicates that a unit mode change was requested, reflects the status of the Command UnitModeRequested.</p>
           <p>
             <italic>UnitSupportedModes</italic> - provides the <italic>NodeId</italic> of the enumeration <italic>DataType</italic> that describes the available modes for this PackML instance. A <italic>Server</italic> might have more than one of these instances; each instance might expose a different set of available modes and thus have a different enumeration.</p>
           <p>
@@ -1287,27 +1299,33 @@
           <p>
             <italic>UnitModeChangeInProcess</italic> - a flag that indicates a unit change has been requested and is in progress</p>
           <p>
-            <italic>StateRequested</italic> - This value is used for state transition checking, to ensure that transitions to a target state can be achieved. The target state, <italic>StateRequested</italic>, is a numerical value corresponding to a state in the base state model (shown above).</p>
+            <italic>StateCurrent</italic> - the current state of the PackML device.  This value is included here for completeness only and must always agree with the state as defined in the <italic>StateMachine</italic>.</p>
+          <p>
+            <italic>StateRequested</italic> - this value is used for state transition checking, to ensure that transitions to a target state can be achieved. The target state, <italic>StateRequested</italic>, is a numerical value corresponding to a state in the base state model (shown above).</p>
           <p>
             <italic>StateChangeInProcess</italic> - a flag that indicates that a state change has been requested and is in progress. The StateMachine will report the current state.</p>
           <p>
-            <italic>MachSpeed</italic> - Setpoint speed of the unit.</p>
+            <italic>MachSpeed</italic> - setpoint speed of the unit.</p>
           <p>
-            <italic>CurMachSpeed</italic> - Current speed of the unit.</p>
+            <italic>CurMachSpeed</italic> - current speed of the unit.</p>
           <p>
-            <italic>Equipment</italic>Blocked - If TRUE, then processing is suspended because downstream equipment is unable to receive material (e.g. downstream buffer is full)</p>
+            <italic>EquipmentInterlock.Blocked</italic> - if TRUE, then processing is suspended because downstream equipment is unable to receive material (e.g. downstream buffer is full)</p>
           <p>
-            <italic>Equipment</italic>Starved - If TRUE, then processing is suspended because upstream equipment is unable to send material.</p>
-          <p>
-            <italic>MaterialInterlocked</italic> - a flag that indicates this machine is interlocked. It is a summary of the interlock variable that is associated with this machine.</p>
+            <italic>EquipmentInterlock.Starved</italic> - if TRUE, then processing is suspended because upstream equipment is unable to send material.</p>
           <p>
             <italic>MaterialInterlock</italic> - this is an array and describes the status of the materials that are ready for processing. It is comprised of a series of Boolean with 1 equaling readyor not low, 0 equaling not ready or low. Each bit represents a different user material.</p>
           <p>
-            <italic>Parameter</italic> - Current parameters used in the production job. This reflects the last parameter sent via the <italic>SetParameter</italic> <italic>Method</italic>.</p>
+            <italic>Parameter_REAL</italic> - current parameters of type float used in the production job. This reflects the last parameter of this type sent via the <italic>SetParameter_REAL</italic> <italic>Method</italic>.</p>
           <p>
-            <italic>RemoteParameter</italic> - the last remote parameter that were sent to the machine. This is optional variable is provided only if sending remote parameters are supported, the <italic>RemoteCommand</italic> <italic>Method</italic> is provided this variable shall also be provided. For additional details see the <italic>RemoteCommand</italic> <italic>Method</italic> definition in <xref ref-type="sec" rid="sec_6-7-15">6.7.15</xref>.</p>
+            <italic>Parameter_STRING</italic> - current parameters of type string used in the production job. This reflects the last parameter of this type sent via the <italic>SetParameter_STRING</italic> <italic>Method</italic>.</p>
           <p>
-            <italic>Product</italic> - provides a list of the products supported by this machine. The array is typically needed for machines that run multiple products. It defines the IDs of the products and process &amp;amp; process variables associated with the product. The product data can come from either a local HMI or remote systems and are used to process the product on the unit machine.</p>
+            <italic>Parameter_LREAL</italic> - current parameters of type double used in the production job. This reflects the last parameter of this type sent via the <italic>SetParameter_LREAL</italic> <italic>Method</italic>.</p>
+          <p>
+            <italic>Parameter_DINT</italic> - current parameters of type int32 used in the production job. This reflects the last parameter of this type sent via the <italic>SetParameter_DINT</italic> <italic>Method</italic>.</p>
+          <p>
+            <italic>Recipe</italic> - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp;amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.</p>
+          <p>
+            <italic>Stacklight</italic> - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.</p>
         </sec>
         <sec id="sec_6-3-4">
           <label>6.3.4</label>
@@ -6434,12 +6452,12 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.3</td>
+                <td>2.0.4</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
                 <td>DateTime</td>
-                <td>2026-09-08</td>
+                <td>2026-09-22</td>
               </tr>
               <tr>
                 <td>IsNamespaceSubset</td>
