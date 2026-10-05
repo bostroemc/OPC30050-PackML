@@ -368,12 +368,6 @@
     },
     {
       "category": "Client",
-      "name": "PackML RemoteCommand Client",
-      "group": "PackML Model",
-      "description": "The Client makes use of the optional RemoteCommand Method"
-    },
-    {
-      "category": "Client",
       "name": "PackML SetInterlock Client",
       "group": "PackML Model",
       "description": "The Client makes use of the optional SetInterlock Method"
@@ -395,12 +389,6 @@
       "name": "PackML-Status Interlock Client",
       "group": "PackML Model",
       "description": "The Client makes use of at least one MaterialInterlock and the summary MaterialInterlocked flag."
-    },
-    {
-      "category": "Client",
-      "name": "PackML-Status RemoteParameter Client",
-      "group": "PackML Model",
-      "description": "The Client makes use of exposing of the configured RemoteParameter"
     },
     {
       "category": "Client",
@@ -569,10 +557,6 @@
           "optional": true
         },
         {
-          "name": "PackML RemoteCommand",
-          "optional": true
-        },
-        {
           "name": "PackML SetInterlock",
           "optional": true
         },
@@ -590,10 +574,6 @@
         },
         {
           "name": "PackML Status Interlock",
-          "optional": true
-        },
-        {
-          "name": "PackML Status RemoteParameter",
           "optional": true
         },
         {
@@ -753,10 +733,6 @@
           "optional": true
         },
         {
-          "name": "PackML RemoteCommand Client",
-          "optional": true
-        },
-        {
           "name": "PackML SetInterlock Client",
           "optional": true
         },
@@ -770,10 +746,6 @@
         },
         {
           "name": "PackML-Status Interlock Client",
-          "optional": true
-        },
-        {
-          "name": "PackML-Status RemoteParameter Client",
           "optional": true
         },
         {
