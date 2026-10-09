@@ -1281,8 +1281,8 @@
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Variable</td>
-                  <td>4:StackLight</td>
-                  <td>0:Int32[]</td>
+                  <td>4:Stacklight</td>
+                  <td>0:UInt32[]</td>
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
@@ -1325,7 +1325,7 @@
           <p>
             <italic>Recipe</italic> - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp;amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.</p>
           <p>
-            <italic>StackLight</italic> - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.</p>
+            <italic>Stacklight</italic> - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.</p>
         </sec>
         <sec id="sec_6-3-4">
           <label>6.3.4</label>
@@ -6459,12 +6459,12 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.5</td>
+                <td>2.0.6</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
                 <td>DateTime</td>
-                <td>2026-09-22</td>
+                <td>2026-10-09</td>
               </tr>
               <tr>
                 <td>IsNamespaceSubset</td>

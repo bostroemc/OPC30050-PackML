@@ -701,7 +701,7 @@
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:Parameter_LREAL</td><td>4:PackMLParameterLRealDataType[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:Parameter_DINT</td><td>4:PackMLParameterDIntDataType[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:Recipe</td><td>4:PackMLRecipeDataType[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
-<tr><td>0:HasComponent</td><td>Variable</td><td>4:StackLight</td><td>0:Int32[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
+<tr><td>0:HasComponent</td><td>Variable</td><td>4:Stacklight</td><td>0:UInt32[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
 </tbody>
 </table>
 </figure>
@@ -723,7 +723,7 @@
 <p><em>Parameter_LREAL</em> - current parameters of type double used in the production job. This reflects the last parameter of this type sent via the <em>SetParameter_LREAL</em> <em>Method</em>.</p>
 <p><em>Parameter_DINT</em> - current parameters of type int32 used in the production job. This reflects the last parameter of this type sent via the <em>SetParameter_DINT</em> <em>Method</em>.</p>
 <p><em>Recipe</em> - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp;amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.</p>
-<p><em>StackLight</em> - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.</p>
+<p><em>Stacklight</em> - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.</p>
 </section>
 <section id="sec_6-3-4" class="clause">
 <h4><span class="label">6.3.4</span> PackMLAdminObjectType<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="196-280" title="Open the source of this clause">&#128221;</a></h4>
@@ -2534,8 +2534,8 @@
 </thead>
 <tbody>
 <tr><td>NamespaceUri</td><td>String</td><td>http://opcfoundation.org/UA/PackML/</td></tr>
-<tr><td>NamespaceVersion</td><td>String</td><td>2.0.5</td></tr>
-<tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-09-22</td></tr>
+<tr><td>NamespaceVersion</td><td>String</td><td>2.0.6</td></tr>
+<tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-10-09</td></tr>
 <tr><td>IsNamespaceSubset</td><td>Boolean</td><td>False</td></tr>
 <tr><td>StaticNodeIdTypes</td><td>IdType []</td><td></td></tr>
 <tr><td>StaticNumericNodeIdRange</td><td>NumericRange []</td><td></td></tr>
@@ -2803,7 +2803,7 @@ END_VAR</code></pre>
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"fea86a2aecb0271ccd814d790ba80b74c7a94ae3","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"cbb87b4cc7f549c63308d4db9387e52900cc93b7","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;
