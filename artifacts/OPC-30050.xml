@@ -96,7 +96,7 @@
     <sec id="sec_1" sec-type="scope">
       <label>1</label>
       <title>Scope</title>
-      <p>This standard is an extension of the overall OPC Unified Architecture standards and defines an information model that conforms to the PackML object model defined in ISA-TR88.00.02-2015 Machine and Unit States: An Implementation Example of ISA-88, and in the OMAC (Organization for Machine and Automation Control) PackML Unit/Machine Implementation Guide, referred to collectively as PackML. The PackML object model describes a standard way to monitor and control a wide variety of production equipment, following the models defined in the ANSI/ISA 88 standard. ISA-TR88.00.02 has been implemented by manufacturers and machine builders worldwide on various control platforms to increase speed to production, ease line integration and improve reliability. PackML defines standard state models for external control of a piece of equipment, a standard mode model for determining which state model to follow, standard tag names and tag values to command the equipment, determine the status of the equipment, and perform administration of the equipment. The PackML goal is to provide an easy to use and easy to test method of integration of equipment control, into a production line.</p>
+      <p>This standard is an extension of the overall OPC Unified Architecture standards and defines an information model that conforms to the PackML object model defined in <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref> Machine and Unit States: An Implementation Example of ISA-88, and in the OMAC (Organization for Machine and Automation Control) PackML Unit/Machine Implementation Guide, referred to collectively as PackML. The PackML object model describes a standard way to monitor and control a wide variety of production equipment, following the models defined in the ANSI/ISA 88 standard. <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref> has been implemented by manufacturers and machine builders worldwide on various control platforms to increase speed to production, ease line integration and improve reliability. PackML defines standard state models for external control of a piece of equipment, a standard mode model for determining which state model to follow, standard tag names and tag values to command the equipment, determine the status of the equipment, and perform administration of the equipment. The PackML goal is to provide an easy to use and easy to test method of integration of equipment control, into a production line.</p>
       <p>The modelling targets of this standard shall exist in an OPC UA <italic>AddressSpace</italic>. This standard does not consider the modelling targets that are identified in other standards or vendor specifications.</p>
       <p>
         <bold>OPC Foundation</bold>
@@ -427,7 +427,7 @@
             </caption>
             <graphic xlink:href="fig_2_mode-management-of-states_alt.png" alt="Mode Management of States" mimetype="image/png" />
           </fig>
-          <p>PackML includes a standard manner of changing modes as well as displaying the current mode.  For additional information please see the ISA-TR88.00.02-2015.</p>
+          <p>PackML includes a standard manner of changing modes as well as displaying the current mode.  For additional information please see the <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref>.</p>
         </sec>
         <sec id="sec_4-2-5">
           <label>4.2.5</label>
@@ -2483,7 +2483,6 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Not all transitions defined in ANSI/ISA - TR88.00.02 - 2015. Following additional transitions in the object prepared for potential future extensions in TR88: StartingToHolding, UnsuspendingToHolding, SuspendedToHolding, SuspendingToHolding, UnholdingToHolding.</p>
           <p>This <italic>FiniteStateMachine</italic> supports multiple <italic>Active</italic> states. It also supports 19 <italic>Transitions</italic> and a <italic>Method</italic> for transition between states.</p>
           <p>
             <italic>Resetting</italic>: In response to a <italic>Reset</italic> command, the unit/machine will transition to <italic>Resetting</italic> from either <italic>Stopped</italic> or <italic>Complete</italic>. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to <italic>Idle</italic>. No hazardous motion should happen in this state. The value of this <italic>StateType</italic> is 15</p>
@@ -2828,7 +2827,6 @@
               </tbody>
             </table>
           </table-wrap>
-          <p>Not all transitions defined in ANSI/ISA - TR88.00.02 - 2015. Following additional transitions in the object prepared for potential future extensions in TR88: StartingToHolding, UnsuspendingToHolding, SuspendedToHolding, SuspendingToHolding, UnholdingToHolding.</p>
         </sec>
       </sec>
       <sec id="sec_6-4">
