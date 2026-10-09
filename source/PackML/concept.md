@@ -59,7 +59,7 @@ PackML has been implemented in multiple formats for different industrial network
 
 In order to provide a standard interface PackML defines three elements:
           
-1. PackML Unit Modes - A standard model that is used to control which state is being used (Producing, Maintenance, Manual, ….).
+1. PackML Unit Modes - A standard model that is used to control which state is being used (Production, Maintenance, Manual, ….).
           
 2. PackML StateMachine - Standard state machine models that are used to represent the internal operational state of the machine/unit. (Note: StateMachine may change for Units and for the Mode of the unit.)
           
@@ -70,9 +70,9 @@ These three aspects will be translated to OPC UA models.
 
 #### Standard Modes {#sec-standard-modes}
 
-A Unit can be in different modes, for example Producing, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in [](#fig-mode-management-of-states). For example, the producing mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.
+A Unit can be in different modes, for example Production, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in [](#fig-mode-management-of-states). For example, the production mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.
           
-The states that a unit can be in depends on the mode. In the producing mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.
+The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.
 
 ```{figure}
 id: fig-mode-management-of-states
