@@ -404,7 +404,7 @@
           <p>In order to provide a standard interface PackML defines three elements:</p>
           <list list-type="order">
             <list-item>
-              <p>PackML Unit Modes - A standard model that is used to control which state is being used (Producing, Maintenance, Manual, ….).</p>
+              <p>PackML Unit Modes - A standard model that is used to control which state is being used (Production, Maintenance, Manual, ….).</p>
             </list-item>
             <list-item>
               <p>PackML StateMachine - Standard state machine models that are used to represent the internal operational state of the machine/unit. (Note: StateMachine may change for Units and for the Mode of the unit.)</p>
@@ -418,8 +418,8 @@
         <sec id="sec_4-2-4">
           <label>4.2.4</label>
           <title>Standard Modes</title>
-          <p>A Unit can be in different modes, for example Producing, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in <xref ref-type="fig" rid="fig_2">Figure 2</xref>. For example, the producing mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
-          <p>The states that a unit can be in depends on the mode. In the producing mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.</p>
+          <p>A Unit can be in different modes, for example Production, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in <xref ref-type="fig" rid="fig_2">Figure 2</xref>. For example, the production mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
+          <p>The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.</p>
           <fig id="fig_2">
             <label>Figure 2</label>
             <caption>

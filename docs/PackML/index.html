@@ -341,7 +341,7 @@
 <h4><span class="label">4.2.3</span> PackML Elements<a class="src" href="../../source/PackML/concept.md" data-src="source/PackML/concept.md" data-line="58-68" title="Open the source of this clause">&#128221;</a></h4>
 <p>In order to provide a standard interface PackML defines three elements:</p>
 <ol class="list-order">
-<li>PackML Unit Modes - A standard model that is used to control which state is being used (Producing, Maintenance, Manual, ….).</li>
+<li>PackML Unit Modes - A standard model that is used to control which state is being used (Production, Maintenance, Manual, ….).</li>
 <li>PackML StateMachine - Standard state machine models that are used to represent the internal operational state of the machine/unit. (Note: StateMachine may change for Units and for the Mode of the unit.)</li>
 <li>PackTags -A standard set of tag names and extension used to control the mode and state, send commands to the machine/unit, and monitor the status of the machine/unit.</li>
 </ol>
@@ -349,8 +349,8 @@
 </section>
 <section id="sec_4-2-4" class="clause">
 <h4><span class="label">4.2.4</span> Standard Modes<a class="src" href="../../source/PackML/concept.md" data-src="source/PackML/concept.md" data-line="71-83" title="Open the source of this clause">&#128221;</a></h4>
-<p>A Unit can be in different modes, for example Producing, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in <a class="xref" href="#fig_2" data-ref-type="fig">Figure 2</a>. For example, the producing mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
-<p>The states that a unit can be in depends on the mode. In the producing mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.</p>
+<p>A Unit can be in different modes, for example Production, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in <a class="xref" href="#fig_2" data-ref-type="fig">Figure 2</a>. For example, the production mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
+<p>The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.</p>
 <figure class="figure" id="fig_2">
 <img class="figure-image" src="figures/fig_2_mode-management-of-states_alt.png" alt="Mode Management of States">
 <figcaption><span class="label">Figure 2</span> Mode Management of States<a class="src" href="../../source/PackML/concept.md" data-src="source/PackML/concept.md" data-line="77-81" title="Open the source of this clause">&#128221;</a></figcaption>
@@ -2809,7 +2809,7 @@ END_VAR</code></pre>
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"93634a2646566d20f2e061e76b0340f94176375a","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"c80c97211b5796fa10128d770f6146d1619ab84e","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;
