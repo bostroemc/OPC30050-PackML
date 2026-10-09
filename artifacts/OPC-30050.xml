@@ -3043,23 +3043,54 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>PackMLProductDataType</td>
-                  <td colspan="2">Structure</td>
-                </tr>
-                <tr>
-                  <td>ProductID</td>
+                  <td>ID</td>
                   <td>Int32</td>
-                  <td>A unique number assigned to the product.</td>
+                  <td>Numeric value used to report product identity for each product stream.</td>
                 </tr>
                 <tr>
-                  <td>ProcessVariables</td>
-                  <td>PackMLDescriptorDataType[]</td>
-                  <td>The array of Process variables associated with this product</td>
+                  <td>Name</td>
+                  <td>String</td>
+                  <td>String value used to further report the identity of the product within the product stream.</td>
                 </tr>
                 <tr>
-                  <td>Ingredients</td>
-                  <td>PackMLIngredientsDataType[]</td>
-                  <td>The array of ingredients associated with this product.</td>
+                  <td>Unit</td>
+                  <td>EUInformation</td>
+                  <td>Unit of measure of each product stream.</td>
+                </tr>
+                <tr>
+                  <td>PrimaryQty</td>
+                  <td>Float</td>
+                  <td>Product primary quantity value of each product stream.</td>
+                </tr>
+                <tr>
+                  <td>ConsumedCount</td>
+                  <td>Int32</td>
+                  <td>Consumed count of each product stream.</td>
+                </tr>
+                <tr>
+                  <td>ProcessedCount</td>
+                  <td>Int32</td>
+                  <td>Processed count of each product stream.</td>
+                </tr>
+                <tr>
+                  <td>DefectiveCount</td>
+                  <td>Int32</td>
+                  <td>Defective count of each product stream.</td>
+                </tr>
+                <tr>
+                  <td>AccConsumedCount</td>
+                  <td>Int32</td>
+                  <td>Accumulated consumption count of each product stream since last reset.</td>
+                </tr>
+                <tr>
+                  <td>AccProcessedCount</td>
+                  <td>Int32</td>
+                  <td>Accumulated processed count of each product stream since last reset.</td>
+                </tr>
+                <tr>
+                  <td>AccDefectiveCount</td>
+                  <td>Int32</td>
+                  <td>Accumulated defective count of each product stream since last reset.</td>
                 </tr>
               </tbody>
             </table>
@@ -6459,7 +6490,7 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.6</td>
+                <td>2.0.7</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
