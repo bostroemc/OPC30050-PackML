@@ -153,7 +153,7 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | 0:HasComponent	| Variable	| 4:Parameter_LREAL	| 4:PackMLParameterLRealDataType[]	| 0:BaseDataVariableType	| O	|  
 | 0:HasComponent	| Variable	| 4:Parameter_DINT	| 4:PackMLParameterDIntDataType[]	| 0:BaseDataVariableType	| O	|  
 | 0:HasComponent	| Variable	| 4:Recipe	| 4:PackMLRecipeDataType[]	| 0:BaseDataVariableType	| O	|  
-| 0:HasComponent	| Variable	| 4:StackLight	| 0:Int32[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:Stacklight	| 0:UInt32[]	| 0:BaseDataVariableType	| O	|  
 
 In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in [OPC 10000-5](#ref-uapart5).
             
@@ -191,7 +191,7 @@ In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provide
 
     *Recipe* - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.
 
-	*StackLight* - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.
+	*Stacklight* - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.
  
 #### PackMLAdminObjectType {#sec-packmladminobjecttype}
 
