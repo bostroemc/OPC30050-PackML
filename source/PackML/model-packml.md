@@ -663,10 +663,16 @@ The *PackMLProductDataType* provides the PackML product information. The *PackML
 *Table - PackMLProductDataType Structure* {#tbl-packmlproductdatatype-structure defines=PackMLProductDataType}
 | Name	| Type	| Description |
 | --- | --- | --- |
-| PackMLProductDataType	| Structure	 | |
-| ProductID	| Int32	| A unique number assigned to the product. |
-| ProcessVariables	| PackMLDescriptorDataType[]	| The array of Process variables associated with this product |
-| Ingredients	| PackMLIngredientsDataType[]	| The array of ingredients associated with this product. |
+|ID|Int32| Numeric value used to report product identity for each product stream. |
+|Name|String| String value used to further report the identity of the product within the product stream.|
+|Unit|EUInformation| Unit of measure of each product stream.|
+|PrimaryQty|Float| Product primary quantity value of each product stream.|
+|ConsumedCount|Int32|Consumed count of each product stream.|
+|ProcessedCount|Int32|Processed count of each product stream.|
+|DefectiveCount|Int32|Defective count of each product stream.|
+|AccConsumedCount|Int32|Accumulated consumption count of each product stream since last reset.|
+|AccProcessedCount|Int32|Accumulated processed count of each product stream since last reset.|
+|AccDefectiveCount|Int32|Accumulated defective count of each product stream since last reset.|
 
 
 #### PackMLRemoteInterfaceDataType {#sec-packmlremoteinterfacedatatype}
