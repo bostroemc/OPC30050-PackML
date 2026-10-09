@@ -80,7 +80,7 @@ caption: Mode Management of States
 source: figures/fig_2_mode-management-of-states_alt.png
 ```
 
-PackML includes a standard manner of changing modes as well as displaying the current mode.  For additional information please see the ISA-TR88.00.02-2015.
+PackML includes a standard manner of changing modes as well as displaying the current mode.  For additional information please see the [ISA-TR88.00.02-2022](#ref-tr88).
 
 #### Standard States {#sec-standard-states}
 

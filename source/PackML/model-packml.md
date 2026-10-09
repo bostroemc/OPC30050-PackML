@@ -494,8 +494,6 @@ The *PackMLExecuteStateMachineType* is defined in [](#tbl-packmlexecutestatemach
 | 0:HasComponent | Variable | 0:AvailableTransitions | 0:NodeId[] | 0:BaseDataVariableType | M |
 | 0:HasComponent | Variable | 0:AvailableStates | 0:NodeId[] | 0:BaseDataVariableType | M |
 				
-Not all transitions defined in ANSI/ISA - TR88.00.02 - 2015. Following additional transitions in the object prepared for potential future extensions in TR88: StartingToHolding, UnsuspendingToHolding, SuspendedToHolding, SuspendingToHolding, UnholdingToHolding.
-
 This *FiniteStateMachine* supports multiple *Active* states. It also supports 19 *Transitions* and a *Method* for transition between states.
             
 *Resetting*: In response to a *Reset* command, the unit/machine will transition to *Resetting* from either *Stopped* or *Complete*. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to *Idle*. No hazardous motion should happen in this state. The value of this *StateType* is 15
@@ -578,8 +576,6 @@ The *Transitions* are described in [](#tbl-packmlexecutestatemachinetype-additio
 	|| ToState	| True	| Resetting |
 	|| HasCause	| True	| Reset |
 			
-
-Not all transitions defined in ANSI/ISA - TR88.00.02 - 2015. Following additional transitions in the object prepared for potential future extensions in TR88: StartingToHolding, UnsuspendingToHolding, SuspendedToHolding, SuspendingToHolding, UnholdingToHolding.
 
 
 ### Variables and VariableTypes {#sec-variables-and-variabletypes}
