@@ -6,7 +6,7 @@
     <Uri>http://opcfoundation.org/UA/PackML/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.5" PublicationDate="2026-09-22T14:57:26.2365406Z" ModelVersion="2.0.5-alpha">
+    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.8" PublicationDate="2026-09-22T14:57:26.2365406Z" ModelVersion="2.0.8-alpha">
       <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.07" PublicationDate="2026-07-30T00:00:00Z" />
     </Model>
   </Models>
