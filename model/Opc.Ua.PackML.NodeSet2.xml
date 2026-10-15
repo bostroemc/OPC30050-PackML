@@ -6,7 +6,7 @@
     <Uri>http://opcfoundation.org/UA/PackML/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.8" PublicationDate="2026-10-15T14:04:26.2365406Z" ModelVersion="2.0.8-alpha">
+    <Model ModelUri="http://opcfoundation.org/UA/PackML/" Version="2.0.9" PublicationDate="2026-10-15T14:50:53.2518271Z" ModelVersion="2.0.9-alpha">
       <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.05.07" PublicationDate="2026-07-30T00:00:00Z" />
     </Model>
   </Models>
@@ -892,9 +892,9 @@
     <DisplayName>PackMLBaseObjectType</DisplayName>
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.3.2</Documentation>
     <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=58</Reference>
       <Reference ReferenceType="i=47">ns=1;i=73</Reference>
       <Reference ReferenceType="i=47">ns=1;i=88</Reference>
-      <Reference ReferenceType="i=45" IsForward="false">i=58</Reference>
       <Reference ReferenceType="i=47">ns=1;i=404</Reference>
       <Reference ReferenceType="i=47">ns=1;i=400</Reference>
       <Reference ReferenceType="i=47">ns=1;i=402</Reference>
@@ -1133,6 +1133,7 @@
     <DisplayName>PackMLBaseStateMachineType</DisplayName>
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.3.6</Documentation>
     <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=2771</Reference>
       <Reference ReferenceType="i=47">ns=1;i=364</Reference>
       <Reference ReferenceType="i=47">ns=1;i=62</Reference>
       <Reference ReferenceType="i=47">ns=1;i=65</Reference>
@@ -1141,7 +1142,6 @@
       <Reference ReferenceType="i=47">ns=1;i=363</Reference>
       <Reference ReferenceType="i=47">ns=1;i=67</Reference>
       <Reference ReferenceType="i=47">ns=1;i=64</Reference>
-      <Reference ReferenceType="i=45" IsForward="false">i=2771</Reference>
       <Reference ReferenceType="i=47">ns=1;i=71</Reference>
       <Reference ReferenceType="i=47">ns=1;i=167</Reference>
       <Reference ReferenceType="i=47">ns=1;i=158</Reference>
@@ -1153,8 +1153,6 @@
       <Reference ReferenceType="i=37">i=80</Reference>
       <Reference ReferenceType="i=40">i=2307</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=65</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=67</Reference>
       <Reference ReferenceType="i=117">ns=1;i=64</Reference>
       <Reference ReferenceType="i=46">ns=1;i=178</Reference>
     </References>
@@ -1190,6 +1188,7 @@
     <DisplayName>PackMLExecuteStateMachineType</DisplayName>
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.3.8</Documentation>
     <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=2771</Reference>
       <Reference ReferenceType="i=47">ns=1;i=38</Reference>
       <Reference ReferenceType="i=47">ns=1;i=51</Reference>
       <Reference ReferenceType="i=47">ns=1;i=37</Reference>
@@ -1205,7 +1204,6 @@
       <Reference ReferenceType="i=47">ns=1;i=46</Reference>
       <Reference ReferenceType="i=47">ns=1;i=28</Reference>
       <Reference ReferenceType="i=47">ns=1;i=40</Reference>
-      <Reference ReferenceType="i=45" IsForward="false">i=2771</Reference>
       <Reference ReferenceType="i=47">ns=1;i=361</Reference>
       <Reference ReferenceType="i=47">ns=1;i=27</Reference>
       <Reference ReferenceType="i=47">ns=1;i=39</Reference>
@@ -1253,10 +1251,10 @@
     <DisplayName>PackMLMachineStateMachineType</DisplayName>
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.3.7</Documentation>
     <References>
+      <Reference ReferenceType="i=45" IsForward="false">i=2771</Reference>
       <Reference ReferenceType="i=47">ns=1;i=55</Reference>
       <Reference ReferenceType="i=47">ns=1;i=58</Reference>
       <Reference ReferenceType="i=47">ns=1;i=56</Reference>
-      <Reference ReferenceType="i=45" IsForward="false">i=2771</Reference>
       <Reference ReferenceType="i=47">ns=1;i=376</Reference>
       <Reference ReferenceType="i=47">ns=1;i=75</Reference>
       <Reference ReferenceType="i=47">ns=1;i=60</Reference>
@@ -1306,7 +1304,6 @@
     <DisplayName>PackMLAlarmDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=74</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=195</Reference>
     </References>
     <Value>
@@ -1317,7 +1314,6 @@
     <DisplayName>PackMLCountDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=69</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=195</Reference>
     </References>
     <Value>
@@ -1328,7 +1324,6 @@
     <DisplayName>PackMLDescriptorDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=77</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=195</Reference>
     </References>
     <Value>
@@ -1339,7 +1334,6 @@
     <DisplayName>PackMLIngredientsDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=79</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=195</Reference>
     </References>
     <Value>
@@ -1350,7 +1344,6 @@
     <DisplayName>PackMLProductDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=81</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=195</Reference>
     </References>
     <Value>
@@ -1389,7 +1382,6 @@
     <DisplayName>PackMLAlarmDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=76</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=197</Reference>
     </References>
     <Value>
@@ -1400,7 +1392,6 @@
     <DisplayName>PackMLCountDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=70</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=197</Reference>
     </References>
     <Value>
@@ -1411,7 +1402,6 @@
     <DisplayName>PackMLDescriptorDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=78</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=197</Reference>
     </References>
     <Value>
@@ -1422,7 +1412,6 @@
     <DisplayName>PackMLIngredientsDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=80</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=197</Reference>
     </References>
     <Value>
@@ -1433,7 +1422,6 @@
     <DisplayName>PackMLProductDataType</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=69</Reference>
-      <Reference ReferenceType="i=39" IsForward="false">ns=1;i=82</Reference>
       <Reference ReferenceType="i=47" IsForward="false">ns=1;i=197</Reference>
     </References>
     <Value>
@@ -1456,8 +1444,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.8</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=51</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=362" BrowseName="1:SetUnitMode">
@@ -1465,7 +1451,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.2</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
       <Reference ReferenceType="i=46">ns=1;i=118</Reference>
     </References>
   </UAMethod>
@@ -1503,8 +1488,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.6</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=65</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=364" BrowseName="1:Abort">
@@ -1512,17 +1495,12 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.5</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=67</Reference>
     </References>
   </UAMethod>
-  <UAMethod NodeId="ns=1;i=365" BrowseName="1:ToComplete">
-    <DisplayName>ToComplete</DisplayName>
-    <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.9</Documentation>
+  <UAMethod NodeId="ns=1;i=365" BrowseName="1:Complete">
+    <DisplayName>Complete</DisplayName>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=49</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=366" BrowseName="1:Hold">
@@ -1530,13 +1508,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.14</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=45</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=99</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=100</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=101</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=102</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=103</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=367" BrowseName="1:Suspend">
@@ -1544,8 +1515,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.12</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=42</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=368" BrowseName="1:Unhold">
@@ -1553,8 +1522,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.11</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=47</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=369" BrowseName="1:Start">
@@ -1562,8 +1529,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.10</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=40</Reference>
       <Reference ReferenceType="i=46">ns=1;i=342</Reference>
     </References>
   </UAMethod>
@@ -1602,8 +1567,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.13</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=52</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=375" BrowseName="1:Stop">
@@ -1611,16 +1574,12 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.7</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=60</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=376" BrowseName="1:Reset">
     <DisplayName>Reset</DisplayName>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=53" IsForward="false">ns=1;i=59</Reference>
     </References>
   </UAMethod>
   <UAMethod NodeId="ns=1;i=400" BrowseName="1:SetMachSpeed">
@@ -1628,7 +1587,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.3</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
       <Reference ReferenceType="i=46">ns=1;i=348</Reference>
     </References>
   </UAMethod>
@@ -1666,7 +1624,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.4</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
       <Reference ReferenceType="i=46">ns=1;i=349</Reference>
     </References>
   </UAMethod>
@@ -1705,7 +1662,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.17</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
       <Reference ReferenceType="i=46">ns=1;i=352</Reference>
     </References>
   </UAMethod>
@@ -1744,7 +1700,6 @@
     <Documentation>https://reference.opcfoundation.org/v104/PackML/v101/docs/6.7.16</Documentation>
     <References>
       <Reference ReferenceType="i=37">i=80</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
       <Reference ReferenceType="i=46">ns=1;i=351</Reference>
     </References>
   </UAMethod>
@@ -1835,7 +1790,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:DateTime>2026-10-09T15:30:31.4385392Z</uax:DateTime>
+      <uax:DateTime>2026-10-15T14:50:53.2518271Z</uax:DateTime>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=356" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=117" DataType="i=12">
@@ -1855,7 +1810,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.7</uax:String>
+      <uax:String>2.0.9</uax:String>
     </Value>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=358" BrowseName="StaticNodeIdTypes" ParentNodeId="ns=1;i=117" DataType="i=256" ValueRank="1" ArrayDimensions="0">
@@ -1886,7 +1841,7 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=117</Reference>
     </References>
     <Value>
-      <uax:String>2.0.7-alpha</uax:String>
+      <uax:String>2.0.9-alpha</uax:String>
     </Value>
   </UAVariable>
   <UAObject NodeId="ns=1;i=27" BrowseName="1:Resetting">
@@ -1894,9 +1849,6 @@
     <Description>will typically cause a machine to sound a horn and place the machine in a state where components are energized awaiting a START command</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=39</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=51</Reference>
       <Reference ReferenceType="i=46">ns=1;i=127</Reference>
     </References>
   </UAObject>
@@ -1916,9 +1868,6 @@
     <Description>This is a state which indicates that RESETTING is complete. This state maintains the machine conditions which were achieved during the RESETTING state, and performs operations required when the machine is in IDLE.</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=39</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=40</Reference>
       <Reference ReferenceType="i=46">ns=1;i=128</Reference>
     </References>
   </UAObject>
@@ -1938,10 +1887,6 @@
     <Description>This state provides the steps needed to start the machine and is a result of a starting type command (local or remote). Following this command, the machine will begin to Execute</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=40</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=41</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=99</Reference>
       <Reference ReferenceType="i=46">ns=1;i=129</Reference>
     </References>
   </UAObject>
@@ -1961,10 +1906,6 @@
     <Description>This state is a result of a change in monitored conditions due to process conditions or factors. The trigger event will cause a temporary suspension of the EXECUTE state. SUSPENDING is typically the result of starvation of upstream material in-feeds (i.e., container feed, beverage feed, crown feed, lubricant feed, etc.) that is outside the dynamic speed control range or a downstream out-feed blockage that prevents the machine from EXECUTING continued steady production</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=42</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=43</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=102</Reference>
       <Reference ReferenceType="i=46">ns=1;i=130</Reference>
     </References>
   </UAObject>
@@ -1984,10 +1925,6 @@
     <Description>The machine may be running at a relevant set point speed, but there is no product being produced while the machine is waiting for external process conditions to return to normal.</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=43</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=52</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=101</Reference>
       <Reference ReferenceType="i=46">ns=1;i=131</Reference>
     </References>
   </UAObject>
@@ -2007,10 +1944,6 @@
     <Description>This state is a result of a machine generated request from SUSPENDED state to go back to the EXECUTE state. The actions of this state may include ramping up speeds, turning on vacuums, and the re-engagement of clutches.</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=44</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=52</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=100</Reference>
       <Reference ReferenceType="i=46">ns=1;i=132</Reference>
     </References>
   </UAObject>
@@ -2030,14 +1963,6 @@
     <Description>Issuing the Unhold command will retrieve the saved set-points and return the status conditions to prepare the machine to re-enter the normal EXECUTE state</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=45</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=46</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=99</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=100</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=101</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=102</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=103</Reference>
       <Reference ReferenceType="i=46">ns=1;i=133</Reference>
     </References>
   </UAObject>
@@ -2057,9 +1982,6 @@
     <Description>The HELD state holds the machine's operation while material blockages are cleared, or to stop throughput while a downstream problem is resolved, or enable the safe correction of an equipment fault before the production may be resumed.</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=46</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=47</Reference>
       <Reference ReferenceType="i=46">ns=1;i=134</Reference>
     </References>
   </UAObject>
@@ -2079,10 +2001,6 @@
     <Description>The UNHOLDING state is a response to an operator command to resume the EXECUTE state. Issuing the Unhold command will retrieve the saved set-points and return the status conditions to prepare the machine to re-enter the normal EXECUTE state</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=47</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=48</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=103</Reference>
       <Reference ReferenceType="i=46">ns=1;i=135</Reference>
     </References>
   </UAObject>
@@ -2102,13 +2020,6 @@
     <Description>Once the machine is processing materials it is deemed to be executing or in the EXECUTE state.</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=41</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=42</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=44</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=45</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=48</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=49</Reference>
       <Reference ReferenceType="i=46">ns=1;i=136</Reference>
     </References>
   </UAObject>
@@ -2128,9 +2039,6 @@
     <Description>Normal operation has run to completion (i.e., processing of material at the infeed will stop).</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=49</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=50</Reference>
       <Reference ReferenceType="i=46">ns=1;i=137</Reference>
     </References>
   </UAObject>
@@ -2145,14 +2053,11 @@
       <uax:UInt32>16</uax:UInt32>
     </Value>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=38" BrowseName="1:Complete">
-    <DisplayName>Complete</DisplayName>
+  <UAObject NodeId="ns=1;i=38" BrowseName="1:Completed">
+    <DisplayName>Completed</DisplayName>
     <Description>The machine has finished the COMPLETING state and is now waiting for a Reset command before transitioning to the RESETTING state</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=50</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=51</Reference>
       <Reference ReferenceType="i=46">ns=1;i=138</Reference>
     </References>
   </UAObject>
@@ -2173,7 +2078,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=28</Reference>
       <Reference ReferenceType="i=51">ns=1;i=27</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=139</Reference>
     </References>
   </UAObject>
@@ -2190,7 +2094,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=28</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=53">ns=1;i=369</Reference>
       <Reference ReferenceType="i=52">ns=1;i=29</Reference>
       <Reference ReferenceType="i=46">ns=1;i=140</Reference>
@@ -2210,7 +2113,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=36</Reference>
       <Reference ReferenceType="i=51">ns=1;i=29</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=141</Reference>
     </References>
   </UAObject>
@@ -2227,7 +2129,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=36</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=53">ns=1;i=367</Reference>
       <Reference ReferenceType="i=52">ns=1;i=30</Reference>
       <Reference ReferenceType="i=46">ns=1;i=142</Reference>
@@ -2247,7 +2148,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=31</Reference>
       <Reference ReferenceType="i=51">ns=1;i=30</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=143</Reference>
     </References>
   </UAObject>
@@ -2265,7 +2165,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=36</Reference>
       <Reference ReferenceType="i=51">ns=1;i=32</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=144</Reference>
     </References>
   </UAObject>
@@ -2282,7 +2181,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=36</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=53">ns=1;i=366</Reference>
       <Reference ReferenceType="i=52">ns=1;i=33</Reference>
       <Reference ReferenceType="i=46">ns=1;i=145</Reference>
@@ -2302,7 +2200,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=34</Reference>
       <Reference ReferenceType="i=51">ns=1;i=33</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=146</Reference>
     </References>
   </UAObject>
@@ -2319,7 +2216,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=34</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=53">ns=1;i=368</Reference>
       <Reference ReferenceType="i=52">ns=1;i=35</Reference>
       <Reference ReferenceType="i=46">ns=1;i=147</Reference>
@@ -2339,7 +2235,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=36</Reference>
       <Reference ReferenceType="i=51">ns=1;i=35</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=148</Reference>
     </References>
   </UAObject>
@@ -2357,7 +2252,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=37</Reference>
       <Reference ReferenceType="i=51">ns=1;i=36</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=53">ns=1;i=365</Reference>
       <Reference ReferenceType="i=46">ns=1;i=149</Reference>
     </References>
@@ -2370,13 +2264,12 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=49</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=50" BrowseName="1:CompletingToComplete">
-    <DisplayName>CompletingToComplete</DisplayName>
+  <UAObject NodeId="ns=1;i=50" BrowseName="1:CompletingToCompleted">
+    <DisplayName>CompletingToCompleted</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=38</Reference>
       <Reference ReferenceType="i=51">ns=1;i=37</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=150</Reference>
     </References>
   </UAObject>
@@ -2388,12 +2281,11 @@
       <Reference ReferenceType="i=46" IsForward="false">ns=1;i=50</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=51" BrowseName="1:CompleteToResetting">
-    <DisplayName>CompleteToResetting</DisplayName>
+  <UAObject NodeId="ns=1;i=51" BrowseName="1:CompletedToResetting">
+    <DisplayName>CompletedToResetting</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=38</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=53">ns=1;i=361</Reference>
       <Reference ReferenceType="i=52">ns=1;i=27</Reference>
       <Reference ReferenceType="i=46">ns=1;i=151</Reference>
@@ -2412,7 +2304,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=31</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=53">ns=1;i=372</Reference>
       <Reference ReferenceType="i=52">ns=1;i=32</Reference>
       <Reference ReferenceType="i=46">ns=1;i=152</Reference>
@@ -2431,10 +2322,6 @@
     <Description>The machine is powered and stationary after completing the STOPPING state. All communications with other systems are functioning (if applicable).</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=57</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=58</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=59</Reference>
       <Reference ReferenceType="i=46">ns=1;i=155</Reference>
     </References>
   </UAObject>
@@ -2454,9 +2341,6 @@
     <Description>This state executes the logic which brings the machine to a controlled stop as reflected by the STOPPED state.</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=57</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=60</Reference>
       <Reference ReferenceType="i=46">ns=1;i=156</Reference>
     </References>
   </UAObject>
@@ -2476,8 +2360,6 @@
     <Description>Initiated by a state command to clear faults that may have occurred when ABORTING, and are present in the ABORTED state.</Description>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=58</Reference>
       <Reference ReferenceType="i=46">ns=1;i=157</Reference>
     </References>
   </UAObject>
@@ -2498,8 +2380,6 @@
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=117" IsForward="false">ns=1;i=75</Reference>
       <Reference ReferenceType="i=47">ns=1;i=160</Reference>
       <Reference ReferenceType="i=47">ns=1;i=161</Reference>
       <Reference ReferenceType="i=47">ns=1;i=177</Reference>
@@ -2544,7 +2424,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=53</Reference>
       <Reference ReferenceType="i=51">ns=1;i=54</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
       <Reference ReferenceType="i=46">ns=1;i=163</Reference>
     </References>
   </UAObject>
@@ -2561,7 +2440,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=55</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
       <Reference ReferenceType="i=52">ns=1;i=53</Reference>
       <Reference ReferenceType="i=46">ns=1;i=164</Reference>
     </References>
@@ -2581,7 +2459,6 @@
       <Reference ReferenceType="i=53">ns=1;i=376</Reference>
       <Reference ReferenceType="i=52">ns=1;i=75</Reference>
       <Reference ReferenceType="i=51">ns=1;i=53</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
       <Reference ReferenceType="i=46">ns=1;i=165</Reference>
     </References>
   </UAObject>
@@ -2598,7 +2475,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=75</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
       <Reference ReferenceType="i=53">ns=1;i=375</Reference>
       <Reference ReferenceType="i=52">ns=1;i=54</Reference>
       <Reference ReferenceType="i=46">ns=1;i=166</Reference>
@@ -2616,9 +2492,6 @@
     <DisplayName>Aborting</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=66</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=67</Reference>
       <Reference ReferenceType="i=46">ns=1;i=168</Reference>
     </References>
   </UAObject>
@@ -2637,9 +2510,6 @@
     <DisplayName>Aborted</DisplayName>
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=65</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=66</Reference>
       <Reference ReferenceType="i=46">ns=1;i=169</Reference>
     </References>
   </UAObject>
@@ -2659,8 +2529,6 @@
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
-      <Reference ReferenceType="i=117" IsForward="false">ns=1;i=71</Reference>
       <Reference ReferenceType="i=47">ns=1;i=172</Reference>
       <Reference ReferenceType="i=47">ns=1;i=204</Reference>
       <Reference ReferenceType="i=47">ns=1;i=212</Reference>
@@ -2704,7 +2572,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=51">ns=1;i=62</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
       <Reference ReferenceType="i=53">ns=1;i=363</Reference>
       <Reference ReferenceType="i=52">ns=1;i=71</Reference>
       <Reference ReferenceType="i=46">ns=1;i=174</Reference>
@@ -2724,7 +2591,6 @@
       <Reference ReferenceType="i=40">i=2310</Reference>
       <Reference ReferenceType="i=52">ns=1;i=62</Reference>
       <Reference ReferenceType="i=51">ns=1;i=61</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
       <Reference ReferenceType="i=46">ns=1;i=175</Reference>
     </References>
   </UAObject>
@@ -2743,7 +2609,6 @@
       <Reference ReferenceType="i=53">ns=1;i=364</Reference>
       <Reference ReferenceType="i=52">ns=1;i=61</Reference>
       <Reference ReferenceType="i=51">ns=1;i=71</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=3</Reference>
       <Reference ReferenceType="i=46">ns=1;i=176</Reference>
     </References>
   </UAObject>
@@ -2760,7 +2625,6 @@
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">ns=1;i=5</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
     </References>
   </UAObject>
   <UAObject NodeId="ns=1;i=75" BrowseName="1:Running">
@@ -2768,9 +2632,6 @@
     <References>
       <Reference ReferenceType="i=40">i=2307</Reference>
       <Reference ReferenceType="i=117">ns=1;i=56</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=2</Reference>
-      <Reference ReferenceType="i=52" IsForward="false">ns=1;i=59</Reference>
-      <Reference ReferenceType="i=51" IsForward="false">ns=1;i=60</Reference>
       <Reference ReferenceType="i=46">ns=1;i=171</Reference>
     </References>
   </UAObject>
@@ -2790,7 +2651,6 @@
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">ns=1;i=4</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
       <Reference ReferenceType="i=47">ns=1;i=225</Reference>
       <Reference ReferenceType="i=47">ns=1;i=255</Reference>
       <Reference ReferenceType="i=47">ns=1;i=257</Reference>
@@ -2870,7 +2730,6 @@
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">ns=1;i=3</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=6</Reference>
       <Reference ReferenceType="i=47">ns=1;i=89</Reference>
       <Reference ReferenceType="i=47">ns=1;i=202</Reference>
       <Reference ReferenceType="i=47">ns=1;i=259</Reference>
@@ -2916,7 +2775,6 @@
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">ns=1;i=2</Reference>
       <Reference ReferenceType="i=47">ns=1;i=90</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=88</Reference>
       <Reference ReferenceType="i=47">ns=1;i=213</Reference>
       <Reference ReferenceType="i=47">ns=1;i=214</Reference>
       <Reference ReferenceType="i=47">ns=1;i=262</Reference>
@@ -2961,7 +2819,6 @@
     <References>
       <Reference ReferenceType="i=37">i=78</Reference>
       <Reference ReferenceType="i=40">ns=1;i=1</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=89</Reference>
       <Reference ReferenceType="i=47">ns=1;i=222</Reference>
       <Reference ReferenceType="i=47">ns=1;i=223</Reference>
       <Reference ReferenceType="i=47">ns=1;i=266</Reference>
@@ -3007,7 +2864,6 @@
       <Reference ReferenceType="i=53">ns=1;i=366</Reference>
       <Reference ReferenceType="i=52">ns=1;i=33</Reference>
       <Reference ReferenceType="i=51">ns=1;i=29</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=179</Reference>
     </References>
   </UAObject>
@@ -3026,7 +2882,6 @@
       <Reference ReferenceType="i=53">ns=1;i=366</Reference>
       <Reference ReferenceType="i=52">ns=1;i=33</Reference>
       <Reference ReferenceType="i=51">ns=1;i=32</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=208</Reference>
     </References>
   </UAObject>
@@ -3045,7 +2900,6 @@
       <Reference ReferenceType="i=53">ns=1;i=366</Reference>
       <Reference ReferenceType="i=52">ns=1;i=33</Reference>
       <Reference ReferenceType="i=51">ns=1;i=31</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=215</Reference>
     </References>
   </UAObject>
@@ -3064,7 +2918,6 @@
       <Reference ReferenceType="i=53">ns=1;i=366</Reference>
       <Reference ReferenceType="i=52">ns=1;i=33</Reference>
       <Reference ReferenceType="i=51">ns=1;i=30</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=216</Reference>
     </References>
   </UAObject>
@@ -3083,7 +2936,6 @@
       <Reference ReferenceType="i=53">ns=1;i=366</Reference>
       <Reference ReferenceType="i=52">ns=1;i=33</Reference>
       <Reference ReferenceType="i=51">ns=1;i=35</Reference>
-      <Reference ReferenceType="i=47" IsForward="false">ns=1;i=1</Reference>
       <Reference ReferenceType="i=46">ns=1;i=217</Reference>
     </References>
   </UAObject>

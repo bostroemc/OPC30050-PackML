@@ -450,10 +450,10 @@ The *PackMLExecuteStateMachineType* is defined in [](#tbl-packmlexecutestatemach
 | **References** | **Node Class** | **BrowseName** | **DataType** | **TypeDefinition** | **Other** |
 | --- | --- | --- | --- | --- | --- |
 | Subtype of the 0:FiniteStateMachineType defined in OPC 10000-5 |  |  |  |  |  |
-| 0:HasComponent | Object | 4:Complete |  | 0:StateType |  |
-| 0:HasComponent | Object | 4:CompleteToResetting |  | 0:TransitionType |  |
+| 0:HasComponent | Object | 4:Completed |  | 0:StateType |  |
+| 0:HasComponent | Object | 4:CompletedToResetting |  | 0:TransitionType |  |
 | 0:HasComponent | Object | 4:Completing |  | 0:StateType |  |
-| 0:HasComponent | Object | 4:CompletingToComplete |  | 0:TransitionType |  |
+| 0:HasComponent | Object | 4:CompletingToCompleted |  | 0:TransitionType |  |
 | 0:HasComponent | Object | 4:Execute |  | 0:StateType |  |
 | 0:HasComponent | Object | 4:ExecuteToCompleting |  | 0:TransitionType |  |
 | 0:HasComponent | Object | 4:ExecuteToHolding |  | 0:TransitionType |  |
@@ -479,7 +479,7 @@ The *PackMLExecuteStateMachineType* is defined in [](#tbl-packmlexecutestatemach
 | 0:HasComponent | Object | 4:Suspending |  | 0:StateType |  |
 | 0:HasComponent | Object | 4:SuspendingToHolding |  | 0:TransitionType |  |
 | 0:HasComponent | Object | 4:SuspendingToSuspended |  | 0:TransitionType |  |
-| 0:HasComponent | Method | 4:ToComplete |  |  | O |
+| 0:HasComponent | Method | 4:Complete |  |  | O |
 | 0:HasComponent | Method | 4:Unhold |  |  | O |
 | 0:HasComponent | Object | 4:Unholding |  | 0:StateType |  |
 | 0:HasComponent | Object | 4:UnholdingToExecute |  | 0:TransitionType |  |
@@ -493,7 +493,7 @@ The *PackMLExecuteStateMachineType* is defined in [](#tbl-packmlexecutestatemach
 				
 This *FiniteStateMachine* supports multiple *Active* states. It also supports 19 *Transitions* and a *Method* for transition between states.
             
-*Resetting*: In response to a *Reset* command, the unit/machine will transition to *Resetting* from either *Stopped* or *Complete*. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to *Idle*. No hazardous motion should happen in this state. The value of this *StateType* is 15
+*Resetting*: In response to a *Reset* command, the unit/machine will transition to *Resetting* from either *Stopped* or *Completed*. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to *Idle*. No hazardous motion should happen in this state. The value of this *StateType* is 15
 
 *Idle*: The unit/machine is in an error-free state, waiting to start. The unit/machine transitions automatically to *Idle* after all steps necessary for *Resetting* have been completed. All conditions achieved during *Resetting* are maintained. A *Start* command will transition the unit/machine from *Idle* to *Starting. *The value of this *StateType* is 4.
 
@@ -513,9 +513,9 @@ This *FiniteStateMachine* supports multiple *Active* states. It also supports 19
 
 *Execute*: If the unit/machine is actively carrying out the behaviour or activity defined by the selected mode, then the machine is in *Execute* state. If the unit/machine is in production mode, for example, this means that the machine is producing product. The value of this *StateType* is 6.
 
-*Completing*: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from *Execute* to *Completing*. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to *Complete* state. The value of this *StateType* is 16.
+*Completing*: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from *Execute* to *Completing*. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to *Completed* state. The value of this *StateType* is 16.
 
-*Complete*: *Complete* indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a *Reset* command is issued (in which case it will transition to *Resetting*), or until the unit/machine is *Stopped* or *Aborted*. The value of this *StateType* is 17.
+*Completed*: *Completed* indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a *Reset* command is issued (in which case it will transition to *Resetting*), or until the unit/machine is *Stopped* or *Aborted*. The value of this *StateType* is 17.
 
 The *Transitions* are described in [](#tbl-packmlexecutestatemachinetype-additional-references). This *FiniteStateMachine* also supports six *Method*s, for transitioning between states. This *StateMachine* includes transition to Holding from Unholding, *Starting*, *Unsuspending*, *Suspended*, *Suspending*, all of which are extension to the [ISA-TR88.00.02-2022](#ref-tr88) specification.
 
@@ -566,10 +566,10 @@ The *Transitions* are described in [](#tbl-packmlexecutestatemachinetype-additio
 	|| ToState	| True	| Execute |
 | ExecuteToCompleting	| FromState	| True	| Execute |
 	|| ToState	| True	| Completing |
-	|| HasCause	| True	| ToComplete |
-| CompletingToComplete	| FromState	| True	| Completing |
-	|| ToState	| True	| Complete |
-| CompleteToResetting	| FromState	| True	| Complete |
+	|| HasCause	| True	| Complete |
+| CompletingToCompleted	| FromState	| True	| Completing |
+	|| ToState	| True	| Completed |
+| CompletedToResetting	| FromState	| True	| Completed |
 	|| ToState	| True	| Resetting |
 	|| HasCause	| True	| Reset |
 			
@@ -1134,19 +1134,19 @@ Method result codes are defined in [](#tbl-reset-method-result-codes).
 | References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
 | | | | | | |
 
-#### ToComplete Method {#sec-tocomplete-method}
+#### Complete Method {#sec-complete-method}
 
-This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Complete* state.
+This *Method* is used as part of the *PackMLExecuteStateMachineType*. It allows an OPC UA *Client* to change the state of this state machine to the *Completed* state.
 
 **Signature**
 ```
-	ToComplete(
+	Complete(
 		);
 ```
 
-Method result codes are defined in [](#tbl-tocomplete-method-result-codes).
+Method result codes are defined in [](#tbl-complete-method-result-codes).
 
-*Table - ToComplete Method Result Codes* {#tbl-tocomplete-method-result-codes}
+*Table - Complete Method Result Codes* {#tbl-complete-method-result-codes}
 | Result Code	| Description |
 | --- | --- |
 | Bad_MethodInvalid	| See OPC 10000-4 – Services for the description of this result code. (The Method id does not refer to a Method for the specified Object.) |
@@ -1155,12 +1155,12 @@ Method result codes are defined in [](#tbl-tocomplete-method-result-codes).
 | Bad_InvalidState	| See OPC 10000-4 – Services for the description of this result code. (The operation cannot be completed because the Object is closed, uninitialized or in some other invalid state.) |
 | | |
 
-[](#tbl-tocomplete-method-addressspace-definition) specifies the *AddressSpace* representation for the *ToComplete Method*. *ToComplete* has no input or output parameters and has no referenced objects or variables.
+[](#tbl-complete-method-addressspace-definition) specifies the *AddressSpace* representation for the *Complete Method*. *Complete* has no input or output parameters and has no referenced objects or variables.
 
-*Table - ToComplete Method AddressSpace Definition* {#tbl-tocomplete-method-addressspace-definition}
+*Table - Complete Method AddressSpace Definition* {#tbl-complete-method-addressspace-definition}
 | Attribute	| Value | | | | |
 | --- | --- | --- | --- | --- | --- |
-| BrowseName | ToComplete | | | | |
+| BrowseName | Complete | | | | |
 | References | NodeClass | BrowseName | DataType | TypeDefinition | ModellingRule |
 | | | | | | |
 
