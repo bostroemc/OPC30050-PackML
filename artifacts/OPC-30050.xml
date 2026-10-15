@@ -1509,7 +1509,7 @@
                   <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>4:DisabledStatesCfg</td>
-                  <td>0:Uint32[]</td>
+                  <td>0:UInt32[]</td>
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
@@ -1517,7 +1517,7 @@
                   <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>4:CurDisabledStates</td>
-                  <td>0:Uint32</td>
+                  <td>0:UInt32</td>
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
@@ -1525,7 +1525,7 @@
                   <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>4:EnabledModesCfg</td>
-                  <td>0:Uint32</td>
+                  <td>0:UInt32</td>
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
@@ -1533,7 +1533,7 @@
                   <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>4:ModeTransitionCfg</td>
-                  <td>0:Uint32[]</td>
+                  <td>0:UInt32[]</td>
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
