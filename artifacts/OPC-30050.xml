@@ -419,7 +419,7 @@
           <label>4.2.4</label>
           <title>Standard Modes</title>
           <p>A Unit can be in different modes, for example Production, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in <xref ref-type="fig" rid="fig_2">Figure 2</xref>. For example, the production mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
-          <p>The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.</p>
+          <p>The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETED state.</p>
           <fig id="fig_2">
             <label>Figure 2</label>
             <caption>
@@ -2177,14 +2177,14 @@
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Object</td>
-                  <td>4:Complete</td>
+                  <td>4:Completed</td>
                   <td></td>
                   <td colspan="2">0:StateType</td>
                 </tr>
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Object</td>
-                  <td>4:CompleteToResetting</td>
+                  <td>4:CompletedToResetting</td>
                   <td></td>
                   <td colspan="2">0:TransitionType</td>
                 </tr>
@@ -2198,7 +2198,7 @@
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Object</td>
-                  <td>4:CompletingToComplete</td>
+                  <td>4:CompletingToCompleted</td>
                   <td></td>
                   <td colspan="2">0:TransitionType</td>
                 </tr>
@@ -2384,7 +2384,7 @@
                 <tr>
                   <td>0:HasComponent</td>
                   <td>Method</td>
-                  <td>4:ToComplete</td>
+                  <td>4:Complete</td>
                   <td></td>
                   <td></td>
                   <td>O</td>
@@ -2468,7 +2468,7 @@
           </table-wrap>
           <p>This <italic>FiniteStateMachine</italic> supports multiple <italic>Active</italic> states. It also supports 19 <italic>Transitions</italic> and a <italic>Method</italic> for transition between states.</p>
           <p>
-            <italic>Resetting</italic>: In response to a <italic>Reset</italic> command, the unit/machine will transition to <italic>Resetting</italic> from either <italic>Stopped</italic> or <italic>Complete</italic>. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to <italic>Idle</italic>. No hazardous motion should happen in this state. The value of this <italic>StateType</italic> is 15</p>
+            <italic>Resetting</italic>: In response to a <italic>Reset</italic> command, the unit/machine will transition to <italic>Resetting</italic> from either <italic>Stopped</italic> or <italic>Completed</italic>. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to <italic>Idle</italic>. No hazardous motion should happen in this state. The value of this <italic>StateType</italic> is 15</p>
           <p>
             <italic>Idle</italic>: The unit/machine is in an error-free state, waiting to start. The unit/machine transitions automatically to <italic>Idle</italic> after all steps necessary for <italic>Resetting</italic> have been completed. All conditions achieved during <italic>Resetting</italic> are maintained. A <italic>Start</italic> command will transition the unit/machine from <italic>Idle</italic> to <italic>Starting. *The value of this *StateType</italic> is 4.</p>
           <p>
@@ -2488,9 +2488,9 @@
           <p>
             <italic>Execute</italic>: If the unit/machine is actively carrying out the behaviour or activity defined by the selected mode, then the machine is in <italic>Execute</italic> state. If the unit/machine is in production mode, for example, this means that the machine is producing product. The value of this <italic>StateType</italic> is 6.</p>
           <p>
-            <italic>Completing</italic>: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from <italic>Execute</italic> to <italic>Completing</italic>. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to <italic>Complete</italic> state. The value of this <italic>StateType</italic> is 16.</p>
+            <italic>Completing</italic>: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from <italic>Execute</italic> to <italic>Completing</italic>. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to <italic>Completed</italic> state. The value of this <italic>StateType</italic> is 16.</p>
           <p>
-            <italic>Complete</italic>: <italic>Complete</italic> indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a <italic>Reset</italic> command is issued (in which case it will transition to <italic>Resetting</italic>), or until the unit/machine is <italic>Stopped</italic> or <italic>Aborted</italic>. The value of this <italic>StateType</italic> is 17.</p>
+            <italic>Completed</italic>: <italic>Completed</italic> indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a <italic>Reset</italic> command is issued (in which case it will transition to <italic>Resetting</italic>), or until the unit/machine is <italic>Stopped</italic> or <italic>Aborted</italic>. The value of this <italic>StateType</italic> is 17.</p>
           <p>The <italic>Transitions</italic> are described in <xref ref-type="table" rid="tbl_11">Table 11</xref>. This <italic>FiniteStateMachine</italic> also supports six <italic>Method</italic>s, for transitioning between states. This <italic>StateMachine</italic> includes transition to Holding from Unholding, <italic>Starting</italic>, <italic>Unsuspending</italic>, <italic>Suspended</italic>, <italic>Suspending</italic>, all of which are extension to the <xref ref-type="bibr" rid="ref-tr88">ISA-TR88.00.02-2022</xref> specification.</p>
           <table-wrap id="tbl_11">
             <label>Table 11</label>
@@ -2775,10 +2775,10 @@
                   <td></td>
                   <td>HasCause</td>
                   <td>True</td>
-                  <td>ToComplete</td>
+                  <td>Complete</td>
                 </tr>
                 <tr>
-                  <td>CompletingToComplete</td>
+                  <td>CompletingToCompleted</td>
                   <td>FromState</td>
                   <td>True</td>
                   <td>Completing</td>
@@ -2787,13 +2787,13 @@
                   <td></td>
                   <td>ToState</td>
                   <td>True</td>
-                  <td>Complete</td>
+                  <td>Completed</td>
                 </tr>
                 <tr>
-                  <td>CompleteToResetting</td>
+                  <td>CompletedToResetting</td>
                   <td>FromState</td>
                   <td>True</td>
-                  <td>Complete</td>
+                  <td>Completed</td>
                 </tr>
                 <tr>
                   <td></td>
@@ -4461,18 +4461,18 @@
         </sec>
         <sec id="sec_6-7-9">
           <label>6.7.9</label>
-          <title>ToComplete Method</title>
-          <p>This <italic>Method</italic> is used as part of the <italic>PackMLExecuteStateMachineType</italic>. It allows an OPC UA <italic>Client</italic> to change the state of this state machine to the <italic>Complete</italic> state.</p>
+          <title>Complete Method</title>
+          <p>This <italic>Method</italic> is used as part of the <italic>PackMLExecuteStateMachineType</italic>. It allows an OPC UA <italic>Client</italic> to change the state of this state machine to the <italic>Completed</italic> state.</p>
           <p>
             <bold>Signature</bold>
           </p>
-          <code preserve-space="preserve">	ToComplete(
+          <code preserve-space="preserve">	Complete(
 		);</code>
           <p>Method result codes are defined in <xref ref-type="table" rid="tbl_49">Table 49</xref>.</p>
           <table-wrap id="tbl_49">
             <label>Table 49</label>
             <caption>
-              <p>ToComplete Method Result Codes</p>
+              <p>Complete Method Result Codes</p>
             </caption>
             <table>
               <thead>
@@ -4505,11 +4505,11 @@
             </table>
           </table-wrap>
           <p>
-            <xref ref-type="table" rid="tbl_50">Table 50</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>ToComplete Method</italic>. <italic>ToComplete</italic> has no input or output parameters and has no referenced objects or variables.</p>
+            <xref ref-type="table" rid="tbl_50">Table 50</xref> specifies the <italic>AddressSpace</italic> representation for the <italic>Complete Method</italic>. <italic>Complete</italic> has no input or output parameters and has no referenced objects or variables.</p>
           <table-wrap id="tbl_50">
             <label>Table 50</label>
             <caption>
-              <p>ToComplete Method AddressSpace Definition</p>
+              <p>Complete Method AddressSpace Definition</p>
             </caption>
             <table>
               <thead>
@@ -4521,7 +4521,7 @@
               <tbody>
                 <tr>
                   <td>BrowseName</td>
-                  <td colspan="5">ToComplete</td>
+                  <td colspan="5">Complete</td>
                 </tr>
                 <tr>
                   <td>References</td>
@@ -6246,12 +6246,12 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.7</td>
+                <td>2.0.9</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
                 <td>DateTime</td>
-                <td>2026-10-09</td>
+                <td>2026-10-15</td>
               </tr>
               <tr>
                 <td>IsNamespaceSubset</td>
@@ -6503,8 +6503,8 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td>Complete</td>
-                  <td>Complete</td>
+                  <td>Completed</td>
+                  <td>Completed</td>
                   <td>17</td>
                 </tr>
               </tbody>
@@ -6640,7 +6640,7 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td>Complete</td>
+                  <td>Completed</td>
                   <td>Vollständig</td>
                   <td>17</td>
                 </tr>
@@ -6777,7 +6777,7 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td>Complete</td>
+                  <td>Completed</td>
                   <td>Achevé</td>
                   <td>17</td>
                 </tr>

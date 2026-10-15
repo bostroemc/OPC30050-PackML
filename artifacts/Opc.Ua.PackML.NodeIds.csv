@@ -26,7 +26,7 @@ Held,34,Object
 Unholding,35,Object
 Execute,36,Object
 Completing,37,Object
-Complete,38,Object
+Completed,38,Object
 ResettingToIdle,39,Object
 IdleToStarting,40,Object
 StartingToExecute,41,Object
@@ -38,8 +38,8 @@ HoldingToHeld,46,Object
 HeldToUnholding,47,Object
 UnholdingToExecute,48,Object
 ExecuteToCompleting,49,Object
-CompletingToComplete,50,Object
-CompleteToResetting,51,Object
+CompletingToCompleted,50,Object
+CompletedToResetting,51,Object
 SuspendedToUnsuspending,52,Object
 Stopped,53,Object
 Stopping,54,Object
@@ -93,7 +93,7 @@ Held_StateNumber,134,Variable
 Unholding_StateNumber,135,Variable
 Execute_StateNumber,136,Variable
 Completing_StateNumber,137,Variable
-Complete_StateNumber,138,Variable
+Completed_StateNumber,138,Variable
 ResettingToIdle_TransitionNumber,139,Variable
 IdleToStarting_TransitionNumber,140,Variable
 StartingToExecute_TransitionNumber,141,Variable
@@ -105,8 +105,8 @@ HoldingToHeld_TransitionNumber,146,Variable
 HeldToUnholding_TransitionNumber,147,Variable
 UnholdingToExecute_TransitionNumber,148,Variable
 ExecuteToCompleting_TransitionNumber,149,Variable
-CompletingToComplete_TransitionNumber,150,Variable
-CompleteToResetting_TransitionNumber,151,Variable
+CompletingToCompleted_TransitionNumber,150,Variable
+CompletedToResetting_TransitionNumber,151,Variable
 SuspendedToUnsuspending_TransitionNumber,152,Variable
 PackMLMachineStateMachineType_AvailableStates,153,Variable
 PackMLMachineStateMachineType_AvailableTransitions,154,Variable
@@ -211,7 +211,7 @@ Reset,361,Method
 SetUnitMode,362,Method
 Clear,363,Method
 Abort,364,Method
-ToComplete,365,Method
+Complete,365,Method
 Hold,366,Method
 Suspend,367,Method
 Unhold,368,Method

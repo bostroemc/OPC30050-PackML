@@ -114,7 +114,7 @@
 <li><a href="#sec_6-7-6"><span class="label">6.7.6</span> Clear Method</a></li>
 <li><a href="#sec_6-7-7"><span class="label">6.7.7</span> Stop Method</a></li>
 <li><a href="#sec_6-7-8"><span class="label">6.7.8</span> Reset Method</a></li>
-<li><a href="#sec_6-7-9"><span class="label">6.7.9</span> ToComplete Method</a></li>
+<li><a href="#sec_6-7-9"><span class="label">6.7.9</span> Complete Method</a></li>
 <li><a href="#sec_6-7-10"><span class="label">6.7.10</span> Start Method</a></li>
 <li><a href="#sec_6-7-11"><span class="label">6.7.11</span> Unhold Method</a></li>
 <li><a href="#sec_6-7-12"><span class="label">6.7.12</span> Suspend Method</a></li>
@@ -348,7 +348,7 @@
 <section id="sec_4-2-4" class="clause">
 <h4><span class="label">4.2.4</span> Standard Modes<a class="src" href="../../source/PackML/concept.md" data-src="source/PackML/concept.md" data-line="71-83" title="Open the source of this clause">&#128221;</a></h4>
 <p>A Unit can be in different modes, for example Production, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in <a class="xref" href="#fig_2" data-ref-type="fig">Figure 2</a>. For example, the production mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.</p>
-<p>The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.</p>
+<p>The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETED state.</p>
 <figure class="figure" id="fig_2">
 <img class="figure-image" src="figures/fig_2_mode-management-of-states_alt.png" alt="Mode Management of States">
 <figcaption><span class="label">Figure 2</span> Mode Management of States<a class="src" href="../../source/PackML/concept.md" data-src="source/PackML/concept.md" data-line="77-81" title="Open the source of this clause">&#128221;</a></figcaption>
@@ -964,10 +964,10 @@
 </thead>
 <tbody>
 <tr><td colspan="6">Subtype of the 0:FiniteStateMachineType defined in <a class="xref" href="#ref-uapart5" data-ref-type="bibr">OPC 10000-5</a></td></tr>
-<tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:Complete</td><td></td><td colspan="2">0:StateType</td></tr>
-<tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:CompleteToResetting</td><td></td><td colspan="2">0:TransitionType</td></tr>
+<tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:Completed</td><td></td><td colspan="2">0:StateType</td></tr>
+<tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:CompletedToResetting</td><td></td><td colspan="2">0:TransitionType</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:Completing</td><td></td><td colspan="2">0:StateType</td></tr>
-<tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:CompletingToComplete</td><td></td><td colspan="2">0:TransitionType</td></tr>
+<tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:CompletingToCompleted</td><td></td><td colspan="2">0:TransitionType</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:Execute</td><td></td><td colspan="2">0:StateType</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:ExecuteToCompleting</td><td></td><td colspan="2">0:TransitionType</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:ExecuteToHolding</td><td></td><td colspan="2">0:TransitionType</td></tr>
@@ -993,7 +993,7 @@
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:Suspending</td><td></td><td colspan="2">0:StateType</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:SuspendingToHolding</td><td></td><td colspan="2">0:TransitionType</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:SuspendingToSuspended</td><td></td><td colspan="2">0:TransitionType</td></tr>
-<tr><td class="nowrap">0:HasComponent</td><td>Method</td><td>4:ToComplete</td><td></td><td></td><td>O</td></tr>
+<tr><td class="nowrap">0:HasComponent</td><td>Method</td><td>4:Complete</td><td></td><td></td><td>O</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Method</td><td>4:Unhold</td><td></td><td></td><td>O</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:Unholding</td><td></td><td colspan="2">0:StateType</td></tr>
 <tr><td class="nowrap">0:HasComponent</td><td>Object</td><td>4:UnholdingToExecute</td><td></td><td colspan="2">0:TransitionType</td></tr>
@@ -1008,7 +1008,7 @@
 </table>
 </figure>
 <p>This <em>FiniteStateMachine</em> supports multiple <em>Active</em> states. It also supports 19 <em>Transitions</em> and a <em>Method</em> for transition between states.</p>
-<p><em>Resetting</em>: In response to a <em>Reset</em> command, the unit/machine will transition to <em>Resetting</em> from either <em>Stopped</em> or <em>Complete</em>. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to <em>Idle</em>. No hazardous motion should happen in this state. The value of this <em>StateType</em> is 15</p>
+<p><em>Resetting</em>: In response to a <em>Reset</em> command, the unit/machine will transition to <em>Resetting</em> from either <em>Stopped</em> or <em>Completed</em>. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to <em>Idle</em>. No hazardous motion should happen in this state. The value of this <em>StateType</em> is 15</p>
 <p><em>Idle</em>: The unit/machine is in an error-free state, waiting to start. The unit/machine transitions automatically to <em>Idle</em> after all steps necessary for <em>Resetting</em> have been completed. All conditions achieved during <em>Resetting</em> are maintained. A <em>Start</em> command will transition the unit/machine from <em>Idle</em> to <em>Starting. *The value of this *StateType</em> is 4.</p>
 <p><em>Starting</em>: The unit/machine completes all steps necessary to begin execution of the active machine mode. A <em>Start</em> command will cause the unit/machine to transition from Idle to <em>Starting</em>. The unit/machine will transition automatically from <em>Starting</em> to <em>Execute</em> once all required steps have been completed. The value of this <em>StateType</em> is 3.</p>
 <p><em>Suspending</em>: The unit/machine will transition from <em>Execute</em> to <em>Suspending</em> if conditions external to the unit/machine require a pause in production. Such conditions include faults to upstream or downstream equipment. The decision to <em>Suspend</em> may be made be a supervisory system monitoring the production line conditions or by unit/machine sensors detecting downstream blockages or upstream product scarcity. (In the former case, the unit/machine is 'blocked"; in the latter case, the unit/machine is "starved") After all steps required to suspend the machine have been completed, the unit/machine will automatically transition to <em>Suspended</em> state. The value of this <em>StateType</em> is 13.</p>
@@ -1018,8 +1018,8 @@
 <p><em>Held</em>: The unit/machine is paused, waiting for internal process conditions to clear. In this state, the unit/machine shall not produce product, though it may, if required, dry-cycle. A transition to <em>Unholding</em> will occur once internal machine conditions have cleared or if the <em>Unhold</em> command is initiated by an operator. The value of this <em>StateType</em> is 11.</p>
 <p><em>Unholding</em>: After all internal process conditions that caused the unit/machine to hold have cleared, the unit/machine completes all steps required to resume execution of the active machine mode. Once all required actions to unhold the machine have been completed, the unit/machine will transition automatically to <em>Execute</em> state. The value of this <em>StateType</em> is 12.</p>
 <p><em>Execute</em>: If the unit/machine is actively carrying out the behaviour or activity defined by the selected mode, then the machine is in <em>Execute</em> state. If the unit/machine is in production mode, for example, this means that the machine is producing product. The value of this <em>StateType</em> is 6.</p>
-<p><em>Completing</em>: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from <em>Execute</em> to <em>Completing</em>. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to <em>Complete</em> state. The value of this <em>StateType</em> is 16.</p>
-<p><em>Complete</em>: <em>Complete</em> indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a <em>Reset</em> command is issued (in which case it will transition to <em>Resetting</em>), or until the unit/machine is <em>Stopped</em> or <em>Aborted</em>. The value of this <em>StateType</em> is 17.</p>
+<p><em>Completing</em>: Once the process associated with the current mode has reached a defined threshold (e.g. the required number of products for the current job have been produced), the unit/machine transitions from <em>Execute</em> to <em>Completing</em>. In this state all steps necessary to shut down the current process are carried out. The machine then transitions automatically to <em>Completed</em> state. The value of this <em>StateType</em> is 16.</p>
+<p><em>Completed</em>: <em>Completed</em> indicates the process associated with the active mode has come to its defined end. The unit/machine will wait in this state until a <em>Reset</em> command is issued (in which case it will transition to <em>Resetting</em>), or until the unit/machine is <em>Stopped</em> or <em>Aborted</em>. The value of this <em>StateType</em> is 17.</p>
 <p>The <em>Transitions</em> are described in <a class="xref" href="#tbl_11" data-ref-type="table">Table 11</a>. This <em>FiniteStateMachine</em> also supports six <em>Method</em>s, for transitioning between states. This <em>StateMachine</em> includes transition to Holding from Unholding, <em>Starting</em>, <em>Unsuspending</em>, <em>Suspended</em>, <em>Suspending</em>, all of which are extension to the <a class="xref" href="#ref-tr88" data-ref-type="bibr">ISA-TR88.00.02-2022</a> specification.</p>
 <figure class="table-wrap" id="tbl_11">
 <figcaption><span class="label">Table 11</span> PackMLExecuteStateMachineType Additional References<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="522-574" title="Open the source of this clause">&#128221;</a></figcaption>
@@ -1072,10 +1072,10 @@
 <tr><td class="nowrap"></td><td>ToState</td><td>True</td><td>Execute</td></tr>
 <tr><td class="nowrap">ExecuteToCompleting</td><td>FromState</td><td>True</td><td>Execute</td></tr>
 <tr><td class="nowrap"></td><td>ToState</td><td>True</td><td>Completing</td></tr>
-<tr><td class="nowrap"></td><td>HasCause</td><td>True</td><td>ToComplete</td></tr>
-<tr><td class="nowrap">CompletingToComplete</td><td>FromState</td><td>True</td><td>Completing</td></tr>
-<tr><td class="nowrap"></td><td>ToState</td><td>True</td><td>Complete</td></tr>
-<tr><td class="nowrap">CompleteToResetting</td><td>FromState</td><td>True</td><td>Complete</td></tr>
+<tr><td class="nowrap"></td><td>HasCause</td><td>True</td><td>Complete</td></tr>
+<tr><td class="nowrap">CompletingToCompleted</td><td>FromState</td><td>True</td><td>Completing</td></tr>
+<tr><td class="nowrap"></td><td>ToState</td><td>True</td><td>Completed</td></tr>
+<tr><td class="nowrap">CompletedToResetting</td><td>FromState</td><td>True</td><td>Completed</td></tr>
 <tr><td class="nowrap"></td><td>ToState</td><td>True</td><td>Resetting</td></tr>
 <tr><td class="nowrap"></td><td>HasCause</td><td>True</td><td>Reset</td></tr>
 </tbody>
@@ -1801,14 +1801,14 @@
 </figure>
 </section>
 <section id="sec_6-7-9" class="clause">
-<h4><span class="label">6.7.9</span> ToComplete Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1137-1165" title="Open the source of this clause">&#128221;</a></h4>
-<p>This <em>Method</em> is used as part of the <em>PackMLExecuteStateMachineType</em>. It allows an OPC UA <em>Client</em> to change the state of this state machine to the <em>Complete</em> state.</p>
+<h4><span class="label">6.7.9</span> Complete Method<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1137-1165" title="Open the source of this clause">&#128221;</a></h4>
+<p>This <em>Method</em> is used as part of the <em>PackMLExecuteStateMachineType</em>. It allows an OPC UA <em>Client</em> to change the state of this state machine to the <em>Completed</em> state.</p>
 <p><strong>Signature</strong></p>
-<pre><code>	ToComplete(
+<pre><code>	Complete(
 		);</code></pre>
 <p>Method result codes are defined in <a class="xref" href="#tbl_49" data-ref-type="table">Table 49</a>.</p>
 <figure class="table-wrap" id="tbl_49">
-<figcaption><span class="label">Table 49</span> ToComplete Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1149-1156" title="Open the source of this clause">&#128221;</a></figcaption>
+<figcaption><span class="label">Table 49</span> Complete Method Result Codes<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1149-1156" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
 <thead>
 <tr><th class="nowrap">Result Code</th><th class="nowrap">Description</th></tr>
@@ -1822,15 +1822,15 @@
 </tbody>
 </table>
 </figure>
-<p><a class="xref" href="#tbl_50" data-ref-type="table">Table 50</a> specifies the <em>AddressSpace</em> representation for the <em>ToComplete Method</em>. <em>ToComplete</em> has no input or output parameters and has no referenced objects or variables.</p>
+<p><a class="xref" href="#tbl_50" data-ref-type="table">Table 50</a> specifies the <em>AddressSpace</em> representation for the <em>Complete Method</em>. <em>Complete</em> has no input or output parameters and has no referenced objects or variables.</p>
 <figure class="table-wrap" id="tbl_50">
-<figcaption><span class="label">Table 50</span> ToComplete Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1160-1165" title="Open the source of this clause">&#128221;</a></figcaption>
+<figcaption><span class="label">Table 50</span> Complete Method AddressSpace Definition<a class="src" href="../../source/PackML/model-packml.md" data-src="source/PackML/model-packml.md" data-line="1160-1165" title="Open the source of this clause">&#128221;</a></figcaption>
 <table>
 <thead>
 <tr><th class="nowrap">Attribute</th><th colspan="5">Value</th></tr>
 </thead>
 <tbody>
-<tr><td class="nowrap">BrowseName</td><td colspan="5">ToComplete</td></tr>
+<tr><td class="nowrap">BrowseName</td><td colspan="5">Complete</td></tr>
 <tr><td class="nowrap">References</td><td>NodeClass</td><td>BrowseName</td><td>DataType</td><td>TypeDefinition</td><td>ModellingRule</td></tr>
 <tr><td colspan="6"></td></tr>
 </tbody>
@@ -2439,8 +2439,8 @@
 </thead>
 <tbody>
 <tr><td>NamespaceUri</td><td>String</td><td>http://opcfoundation.org/UA/PackML/</td></tr>
-<tr><td>NamespaceVersion</td><td>String</td><td>2.0.7</td></tr>
-<tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-10-09</td></tr>
+<tr><td>NamespaceVersion</td><td>String</td><td>2.0.9</td></tr>
+<tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-10-15</td></tr>
 <tr><td>IsNamespaceSubset</td><td>Boolean</td><td>False</td></tr>
 <tr><td>StaticNodeIdTypes</td><td>IdType []</td><td></td></tr>
 <tr><td>StaticNumericNodeIdRange</td><td>NumericRange []</td><td></td></tr>
@@ -2520,7 +2520,7 @@
 <tr><td class="nowrap"></td><td>Held</td><td>Held</td><td>11</td></tr>
 <tr><td class="nowrap"></td><td>Unholding</td><td>Unholding</td><td>12</td></tr>
 <tr><td class="nowrap"></td><td>Completing</td><td>Completing</td><td>16</td></tr>
-<tr><td class="nowrap"></td><td>Complete</td><td>Complete</td><td>17</td></tr>
+<tr><td class="nowrap"></td><td>Completed</td><td>Completed</td><td>17</td></tr>
 </tbody>
 </table>
 </figure>
@@ -2553,7 +2553,7 @@
 <tr><td class="nowrap"></td><td>Held</td><td>Angehalten</td><td>11</td></tr>
 <tr><td class="nowrap"></td><td>Unholding</td><td>Wiederanlaufen</td><td>12</td></tr>
 <tr><td class="nowrap"></td><td>Completing</td><td>Fertigstellen</td><td>16</td></tr>
-<tr><td class="nowrap"></td><td>Complete</td><td>Vollständig</td><td>17</td></tr>
+<tr><td class="nowrap"></td><td>Completed</td><td>Vollständig</td><td>17</td></tr>
 </tbody>
 </table>
 </figure>
@@ -2586,7 +2586,7 @@
 <tr><td class="nowrap"></td><td>Held</td><td>Tenu</td><td>11</td></tr>
 <tr><td class="nowrap"></td><td>Unholding</td><td>Libéré</td><td>12</td></tr>
 <tr><td class="nowrap"></td><td>Completing</td><td>Achevé (ing)</td><td>16</td></tr>
-<tr><td class="nowrap"></td><td>Complete</td><td>Achevé</td><td>17</td></tr>
+<tr><td class="nowrap"></td><td>Completed</td><td>Achevé</td><td>17</td></tr>
 </tbody>
 </table>
 </figure>
@@ -2708,7 +2708,7 @@ END_VAR</code></pre>
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"f0a11f8cc3e525289513c0556008b8df7dc69982","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"11627ca14e07692bcfe6632ea3c9830b7dd5b01a","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;
