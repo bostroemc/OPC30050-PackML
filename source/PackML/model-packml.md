@@ -150,7 +150,7 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | 0:HasComponent	| Variable	| 4:Parameter_LREAL	| 4:PackMLParameterLRealDataType[]	| 0:BaseDataVariableType	| O	|  
 | 0:HasComponent	| Variable	| 4:Parameter_DINT	| 4:PackMLParameterDIntDataType[]	| 0:BaseDataVariableType	| O	|  
 | 0:HasComponent	| Variable	| 4:Recipe	| 4:PackMLRecipeDataType[]	| 0:BaseDataVariableType	| O	|  
-| 0:HasComponent	| Variable	| 4:StackLight	| 0:Int32[]	| 0:BaseDataVariableType	| O	|  
+| 0:HasComponent	| Variable	| 4:Stacklight	| 0:UInt32[]	| 0:BaseDataVariableType	| O	|  
 
 In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provides the current state of the *StateMachine*, which is the current state of the PackML device. *CurrentState* is defined in [OPC 10000-5](#ref-uapart5).
             
@@ -188,7 +188,7 @@ In OPC UA defined *StateMachines*, a mandatory *Variable* *CurrentState* provide
 
     *Recipe* - provides a list of the recipes supported by this machine. The array is typically needed for machines that run multiple recipes. It defines the IDs of the products and process &amp; process variables associated with the recipe. The recipe data can come from either a local HMI or remote systems and are used to process the recipe on the unit machine.
 
-	*StackLight* - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.
+	*Stacklight* - can be used simultaneously for reporting stacklight conditions and as control bits for physical outputs. The status of a light in the stack is associated to a particular bit location within the register and the user has the ability to define more than one stacklight. Certain bits are reserved as follows in accordance with IEC 60073 and the companion OMAC guideline for HMI and stacklight design.
  
 #### PackMLAdminObjectType {#sec-packmladminobjecttype}
 
@@ -491,8 +491,6 @@ The *PackMLExecuteStateMachineType* is defined in [](#tbl-packmlexecutestatemach
 | 0:HasComponent | Variable | 0:AvailableTransitions | 0:NodeId[] | 0:BaseDataVariableType | M |
 | 0:HasComponent | Variable | 0:AvailableStates | 0:NodeId[] | 0:BaseDataVariableType | M |
 				
-Not all transitions defined in ANSI/ISA - TR88.00.02 - 2015. Following additional transitions in the object prepared for potential future extensions in TR88: StartingToHolding, UnsuspendingToHolding, SuspendedToHolding, SuspendingToHolding, UnholdingToHolding.
-
 This *FiniteStateMachine* supports multiple *Active* states. It also supports 19 *Transitions* and a *Method* for transition between states.
             
 *Resetting*: In response to a *Reset* command, the unit/machine will transition to *Resetting* from either *Stopped* or *Complete*. In this state the unit/machine attempts to clear any standing errors or stop causes. If successful, the unit/machine transitions to *Idle*. No hazardous motion should happen in this state. The value of this *StateType* is 15
@@ -576,8 +574,6 @@ The *Transitions* are described in [](#tbl-packmlexecutestatemachinetype-additio
 	|| HasCause	| True	| Reset |
 			
 
-Not all transitions defined in ANSI/ISA - TR88.00.02 - 2015. Following additional transitions in the object prepared for potential future extensions in TR88: StartingToHolding, UnsuspendingToHolding, SuspendedToHolding, SuspendingToHolding, UnholdingToHolding.
-
 
 ### Variables and VariableTypes {#sec-variables-and-variabletypes}
 
@@ -660,10 +656,16 @@ The *PackMLProductDataType* provides the PackML product information. The *PackML
 *Table - PackMLProductDataType Structure* {#tbl-packmlproductdatatype-structure defines=PackMLProductDataType}
 | Name	| Type	| Description |
 | --- | --- | --- |
-| PackMLProductDataType	| Structure	 | |
-| ProductID	| Int32	| A unique number assigned to the product. |
-| ProcessVariables	| PackMLDescriptorDataType[]	| The array of Process variables associated with this product |
-| Ingredients	| PackMLIngredientsDataType[]	| The array of ingredients associated with this product. |
+|ID|Int32| Numeric value used to report product identity for each product stream. |
+|Name|String| String value used to further report the identity of the product within the product stream.|
+|Unit|EUInformation| Unit of measure of each product stream.|
+|PrimaryQty|Float| Product primary quantity value of each product stream.|
+|ConsumedCount|Int32|Consumed count of each product stream.|
+|ProcessedCount|Int32|Processed count of each product stream.|
+|DefectiveCount|Int32|Defective count of each product stream.|
+|AccConsumedCount|Int32|Accumulated consumption count of each product stream since last reset.|
+|AccProcessedCount|Int32|Accumulated processed count of each product stream since last reset.|
+|AccDefectiveCount|Int32|Accumulated defective count of each product stream since last reset.|
 
 #### PackMLParameterRealDataType {#sec-packmlparameterrealdatatype}
 
