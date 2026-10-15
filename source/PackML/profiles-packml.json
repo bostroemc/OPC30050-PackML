@@ -230,15 +230,15 @@
     },
     {
       "category": "Server",
-      "name": "PackML Equipment Blocked",
+      "name": "PackML EquipmentInterlock Blocked",
       "group": "PackML Model",
-      "description": "The Server supports the EquipmentBlocked flag"
+      "description": "The Server supports the EquipmentInterlock.Blocked flag"
     },
     {
       "category": "Server",
-      "name": "PackML Equipment Starved",
+      "name": "PackML EquipmentInterlock Starved",
       "group": "PackML Model",
-      "description": "The Server supports the EquipmentStarved flag"
+      "description": "The Server supports the EquipmentInterlock.Starved flag"
     },
     {
       "category": "Server",
@@ -458,15 +458,15 @@
     },
     {
       "category": "Client",
-      "name": "PackML Equipment Blocked Client",
+      "name": "PackML EquipmentInterlock Blocked Client",
       "group": "PackML Model",
-      "description": "The Client makes use of the EquipmentBlocked flag"
+      "description": "The Client makes use of the EquipmentInterlock.Blocked flag"
     },
     {
       "category": "Client",
-      "name": "PackML Equipment Starved Client",
+      "name": "PackML EquipmentInterlock Starved Client",
       "group": "PackML Model",
-      "description": "The Client makes use of the EquipmentStarved flag"
+      "description": "The Client makes use of the EquipmentInterlock.Starved flag"
     },
     {
       "category": "Client",
@@ -621,11 +621,11 @@
           "optional": true
         },
         {
-          "name": "PackML Equipment Blocked",
+          "name": "PackML EquipmentInterlock Blocked",
           "optional": true
         },
         {
-          "name": "PackML Equipment Starved",
+          "name": "PackML EquipmentInterlock Starved",
           "optional": true
         },
         {
@@ -793,11 +793,11 @@
           "optional": true
         },
         {
-          "name": "PackML Equipment Blocked Client",
+          "name": "PackML EquipmentInterlock Blocked Client",
           "optional": true
         },
         {
-          "name": "PackML Equipment Starved Client",
+          "name": "PackML EquipmentInterlock Starved Client",
           "optional": true
         },
         {

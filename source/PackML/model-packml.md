@@ -143,7 +143,7 @@ source: figures/fig_12_packmlstatusobjecttype-overview.png
 | 0:HasComponent	| Variable	| 4:StateChangeInProcess	| 0:Boolean	| 0:BaseDataVariableType	| O	|  
 | 0:HasComponent	| Variable 	| 4:MachSpeed	| 0:Float	| 0:AnalogItemType	| M	|  
 | 0:HasComponent	| Variable 	| 4:CurMachSpeed	| 0:Float	| 0:AnalogItemType	| M	|  
-| 0:HasComponent	| Variable	| 4:EquipmentInterlock| PackMLEquipmentInterlockDataType	| 0:BaseDataVariableType	| M	|  
+| 0:HasComponent	| Variable	| 4:EquipmentInterlock| PackMLEquipmentInterlockDataType	| 0:BaseDataVariableType	| O	|  
 | 4:HasInterlock	| Variable	| 4:MaterialInterlock	| 0:Boolean[]	| 0:BaseDataVariableType	| O	|  
 | 0:HasComponent	| Variable	| 4:Parameter_REAL	| 4:PackMLParameterRealDataType[]	| 0:BaseDataVariableType	| O	|  
 | 0:HasComponent	| Variable	| 4:Parameter_STRING	| 4:PackMLParameterStringDataType[]	| 0:BaseDataVariableType	| O	|  
