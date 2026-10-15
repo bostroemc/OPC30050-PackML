@@ -72,7 +72,7 @@ These three aspects will be translated to OPC UA models.
 
 A Unit can be in different modes, for example Production, Maintenance, Manual, Clean, Calibration, etc. A Unit control mode is an ordered subset of states and commands that determines the strategy carried out by the Unit process, as shown in [](#fig-mode-management-of-states). For example, the production mode is used when the unit is producing, a manual mode may be used when the unit is being manually controlled for troubleshooting.
           
-The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETE state.
+The states that a unit can be in depends on the mode. In production mode there is a state called SUSPENDED, where the equipment is not running due to an external event, but this state is not available in maintenance mode, neither is the COMPLETED state.
 
 ```{figure}
 id: fig-mode-management-of-states

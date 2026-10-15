@@ -29,7 +29,7 @@ The recommended state display names for the LocaleId "en" and the State values f
 | | Held	| Held	| 11 |
 | | Unholding	| Unholding	| 12 |
 | | Completing	| Completing	| 16 |
-| | Complete	| Complete	| 17 |
+| | Completed	| Completed	| 17 |
 
 
 
@@ -59,7 +59,7 @@ The recommended state display names for the LocaleId "de" are listed in Table B.
 | | Held	| Angehalten	| 11 |
 | | Unholding	| Wiederanlaufen	| 12 |
 | | Completing	| Fertigstellen	| 16 |
-| | Complete	| Vollständig	| 17 |
+| | Completed	| Vollständig	| 17 |
 
 
 #### LocaleID "fr" {#anx-recommended-display-names-for-localeid-fr}
@@ -88,4 +88,4 @@ The recommended state display names for the LocaleId "fr" are listed in Table B.
 | | Held	| Tenu	| 11 |
 | | Unholding	| Libéré	| 12 |
 | | Completing	| Achevé (ing)	| 16 |
-| | Complete	| Achevé	| 17 |
+| | Completed	| Achevé	| 17 |
