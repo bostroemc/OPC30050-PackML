@@ -228,10 +228,10 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | 0:HasComponent | Variable | 4:StateTimeCurrent | 0:Int32 | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:CumulativeTimes | 4:PackMLCumulativeTimesDataType | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:ProductData | 4:PackMLProductDataType | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:DisabledStatesCfg | 0:Uint32[] | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:CurDisabledStates | 0:Uint32 | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:EnabledModesCfg | 0:Uint32 | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:ModeTransitionCfg | 0:Uint32[] | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:DisabledStatesCfg | 0:UInt32[] | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:CurDisabledStates | 0:UInt32 | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:EnabledModesCfg | 0:UInt32 | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:ModeTransitionCfg | 0:UInt32[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:PLCDateTime | 0:DateTime | 0:BaseDataVariableType | O |
 						
 *Parameter_DINT* - The parameter tags associated to the local interface are typically used for parameters that are displayed by the end user’s supervisory HMI. These parameters can be used to display any quality, alarm, or machine downtime parameter. *Parameters_DINT* is typically limited to Int32-valued parameters related the unit/machine. The extent of the array is the maximum number of parameters needed. 
