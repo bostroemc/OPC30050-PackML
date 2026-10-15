@@ -91,6 +91,9 @@ body {
 .doc-header h1 { margin: 0.35rem 0; font-size: 1.9rem; line-height: 1.25; }
 .doc-facts { margin: 0; color: var(--muted); font-size: 0.9rem; }
 
+/* The way to the redline, on the specification's own page. Present only when there is one. */
+.doc-redline { margin: 0.4rem 0 0; font-size: 0.9rem; }
+
 /* ------------------------------------------------------------------ contents */
 
 .toc {
@@ -470,6 +473,214 @@ td > pre, th > pre {
 }
 
 .src:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ------------------------------------------------------------------ redline
+
+   What a diff against the published edition found. Present only in a document written with
+   --diff; on a normal build nothing carries these classes and none of it applies.
+
+   Two scales. Words inside a paragraph are <ins> and <del>, which say what changed in a
+   sentence somebody has to read anyway. A whole block that was added or taken out gets a
+   coloured bar in the margin instead of a wash over the text, because a page where every
+   added paragraph is highlighted is a page nobody reads — the bar is found by scanning and
+   ignored while reading.
+
+   Colour is never the only signal: <del> is struck through and <ins> underlined, so the
+   redline survives greyscale print and the readers who cannot tell the two hues apart. */
+
+:root {
+  --ins: #0a6b3d;
+  --ins-soft: #e3f3ea;
+  --del: #a3271f;
+  --del-soft: #fbe9e7;
+
+  /* Red, like a deletion, rather than a hue of its own. "Something changed here" and "this went
+     away" are both "read this", and a third colour only made the contents list harder to scan.
+     The two stay distinguishable where it matters: a deletion is struck through and greyed. */
+  --mod: #a3271f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ins: #6ddc9f;
+    --ins-soft: #14291e;
+    --del: #f09a92;
+    --del-soft: #2c1917;
+    --mod: #f09a92;
+  }
+}
+
+ins {
+  color: var(--ins);
+  background: var(--ins-soft);
+  text-decoration: underline;
+}
+
+del {
+  color: var(--del);
+  background: var(--del-soft);
+  text-decoration: line-through;
+}
+
+/* A block that is wholly new or wholly gone: its text carries the colour, and nothing else.
+
+   The wash and the per-word underline come off - a clause where every word is highlighted and
+   underlined is a clause nobody reads, and the whole block being new is already the message. The
+   colour stays, and is the message: green prose is new prose, red prose is prose that went. The
+   runs remain <ins> and <del> in the markup either way, which is what a screen reader announces
+   and what survives with no stylesheet at all. */
+:is(.chg-ins, .chg-del) :is(ins, del),
+.toc :is(ins, del) {
+  background: none;
+  text-decoration: none;
+}
+
+.chg-ins ins { color: var(--ins); }
+.chg-del del { color: var(--del); }
+
+/* Inside a table, plain. Whether the cell is in a new row or in a table inside a whole new
+   clause, the mark is the row tint or the bar on the clause and it has already been made: green
+   text on a green tint is harder to read than ordinary text on one.
+
+   Anchored on .table-wrap, which every table carries, to outweigh the .chg-ins rule above - a
+   bare `td ins` would lose to it on specificity and the cells would go green regardless. The
+   same reason tr.chg-mod below is anchored one level further. */
+.table-wrap :is(td, th) :is(ins, del) { color: inherit; }
+
+/* Unless the change is the words themselves - a cell that was edited rather than added. Then
+   the words are the whole of the information, and they keep their colour. */
+.table-wrap tr.chg-mod :is(td, th) ins { color: var(--ins); }
+.table-wrap tr.chg-mod :is(td, th) del { color: var(--del); }
+
+/* The clause number travels with the heading it belongs to. */
+:is(.chg-ins, .chg-del, .chg-mod) > :is(h2, h3, h4, h5, h6) .label { color: inherit; }
+
+/* ------------------------------------------------- redline: the contents list
+
+   Every clause a diff touched is marked, not only the ones whose heading changed - a reworded
+   paragraph leaves its heading alone, and those are most of a review. The contents is where a
+   reviewer decides what to open, so it has to answer "which clauses do I need to look at", and
+   a list that only showed new and removed headings answered a narrower question than anybody
+   asked.
+
+   The edge is for scanning and the word carries it everywhere the edge cannot go: to a screen
+   reader, and to a page whose stylesheet failed to load. Note that presence alone - any edge at
+   all - already carries the primary message, which is "look here"; the colour only says which
+   of the three it was, so a reader who cannot separate the hues still gets the review list.
+
+   The gutter is reserved on every entry and only coloured on the marked ones. A border that
+   appeared when an entry changed would shift that entry out of its nesting, and a contents list
+   whose changed entries are also its crooked ones reads worse than one where they are merely
+   coloured. Scoped to .redline so an ordinary document's contents is untouched. */
+
+.redline .toc li {
+  border-left: 3px solid transparent;
+  padding-left: 0.5rem;
+}
+
+/* Bar and text together. The bar is what makes a long list scannable; the colour on the text is
+   what makes a single changed entry among forty impossible to scroll past, which a 3px edge on
+   its own is not. Weight carries it the rest of the way, and carries it in greyscale too. */
+.toc li.chg-ins { border-left-color: var(--ins); }
+.toc li.chg-del { border-left-color: var(--del); }
+.toc li.chg-mod { border-left-color: var(--mod); }
+
+/* A new or departed clause takes its whole subtree with it — the subheadings under it are new
+   too, and so are their numbers — so those colour by descent. A changed clause does not: its
+   subclauses are untouched and colouring them would claim otherwise, so it colours its own
+   entry only. The number goes with the entry either way; it is part of the heading, not a
+   separate fact about it. */
+.toc li.chg-ins a, .toc li.chg-ins .label { color: var(--ins); }
+.toc li.chg-del a, .toc li.chg-del .label { color: var(--del); }
+.toc li.chg-mod > a, .toc li.chg-mod > a .label { color: var(--mod); }
+
+/* Weight on the entry that is the change, not on everything beneath it. */
+.toc li:is(.chg-ins, .chg-del, .chg-mod) > a { font-weight: 600; }
+
+/* A removed clause is not somewhere to navigate to in the document it has left. Still listed,
+   and still loud, because a reviewer needs to know it went. */
+.toc li.chg-del a { text-decoration: line-through; }
+
+/* Hover must not quietly undo the mark. */
+.toc li:is(.chg-ins, .chg-del, .chg-mod) a:hover,
+.toc li:is(.chg-ins, .chg-del, .chg-mod) a:hover .label { color: var(--accent); }
+
+/* Said in the markup, shown as the edge. Present when there is no stylesheet to draw the edge,
+   which is the case this guards against - and read aloud regardless. */
+.toc-change {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The margin bar. Padding on the same side keeps the text off it, and the negative margin
+   pulls the pair back so the body text stays on the measure it had without the diff. */
+.chg-ins, .chg-del, .chg-mod {
+  border-left: 3px solid var(--rule-strong);
+  padding-left: 0.8rem;
+  margin-left: -0.8rem;
+}
+
+.chg-ins { border-left-color: var(--ins); }
+.chg-del { border-left-color: var(--del); }
+.chg-mod { border-left-color: var(--mod); }
+
+/* A deleted block is history: still legible, but plainly not part of the document now. */
+/* Red rather than greyed out. A departed clause is something a reviewer has to notice, and
+   fading it is the opposite of saying so. */
+/* Except in a table, where the row tint carries it; the row rules further down mute the cells. */
+.chg-del { color: var(--del); text-decoration: line-through; }
+.chg-del .figure-image { opacity: 0.55; }
+
+/* A section bar would run the length of everything under the heading, which for clause 5 is
+   most of the document. Mark the heading instead. */
+section.chg-ins, section.chg-del, section.chg-mod {
+  border-left: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Bar and text, as in the contents: a heading is what a reader scrolling past actually sees. */
+section.chg-ins > :is(h2, h3, h4, h5, h6) { border-left-color: var(--ins); color: var(--ins); }
+section.chg-del > :is(h2, h3, h4, h5, h6) { border-left-color: var(--del); color: var(--del); }
+section.chg-mod > :is(h2, h3, h4, h5, h6) { border-left-color: var(--mod); color: var(--mod); }
+
+section:is(.chg-ins, .chg-del, .chg-mod) > :is(h2, h3, h4, h5, h6) {
+  border-left: 3px solid var(--rule-strong);
+  padding-left: 0.8rem;
+  margin-left: -0.8rem;
+}
+
+/* The note under the title saying what the page is. */
+.redline-banner {
+  margin: 1rem 0 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  background: var(--surface);
+  max-width: var(--measure);
+}
+
+.redline-banner p { margin: 0; }
+.redline-what { font-size: 0.95rem; }
+.redline-tally { margin-top: 0.35rem; font-size: 0.9rem; color: var(--muted); }
+.redline-home { margin-top: 0.35rem; font-size: 0.9rem; }
+.redline-mod { color: var(--mod); }
+
+/* A tally is a count, not an edit: struck-through numbers are unreadable. */
+.redline-tally ins, .redline-tally del { background: none; text-decoration: none; }
+
+/* A row is inside a grid that owns its borders, so it is tinted rather than barred. */
+tr.chg-ins > :is(td, th) { background: var(--ins-soft); }
+tr.chg-del > :is(td, th) { background: var(--del-soft); color: var(--muted); }
+tr.chg-mod > :is(td, th) { box-shadow: inset 3px 0 0 var(--mod); }
+tr.chg-del > :is(td, th) { text-decoration: line-through; }
 
 /* ------------------------------------------------------------------ print */
 

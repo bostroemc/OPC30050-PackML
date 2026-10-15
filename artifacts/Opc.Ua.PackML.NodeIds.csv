@@ -10,7 +10,6 @@ PackMLEventDataType,15,DataType
 PackMLDescriptorDataType,16,DataType
 PackMLIngredientsDataType,17,DataType
 PackMLProductDataType,18,DataType
-PackMLRemoteInterfaceDataType,19,DataType
 HasInterlock,21,ReferenceType
 HasAlarm,22,ReferenceType
 HasAlarmHistory,23,ReferenceType
@@ -70,8 +69,6 @@ PackMLIngredientsDataType_Default_Binary,79,Object
 PackMLIngredientsDataType_Default_XML,80,Object
 PackMLProductDataType_Default_Binary,81,Object
 PackMLProductDataType_Default_XML,82,Object
-PackMLRemoteInterfaceDataType_Default_Binary,83,Object
-PackMLRemoteInterfaceDataType_Default_XML,84,Object
 Status,87,Object
 BaseStateMachine,88,Object
 MachineState,89,Object
@@ -83,7 +80,6 @@ SuspendingToHolding,102,Object
 UnholdingToHolding,103,Object
 http___opcfoundation_org_UA_PackML_,117,Object
 SetUnitMode_InputArguments,118,Variable
-PackMLStatusObjectType_RemoteParameter,123,Variable
 PackMLExecuteStateMachineType_AvailableStates,125,Variable
 PackMLExecuteStateMachineType_AvailableTransitions,126,Variable
 Resetting_StateNumber,127,Variable
@@ -144,8 +140,6 @@ TypeDictionary_PackMLAlarmDataType,183,Variable
 TypeDictionary_PackMLDescriptorDataType,184,Variable
 TypeDictionary_PackMLDescriptorDataType,185,Variable
 TypeDictionary_PackMLIngredientsDataType,186,Variable
-TypeDictionary_PackMLRemoteInterfaceDataType,187,Variable
-TypeDictionary_PackMLRemoteInterfaceDataType,188,Variable
 TypeDictionary_PackMLIngredientsDataType,189,Variable
 TypeDictionary_PackMLProductDataType,190,Variable
 TypeDictionary_PackMLProductDataType,191,Variable
@@ -204,7 +198,6 @@ Status_UnitSupportedModes,290,Variable
 Start_InputArguments,342,Variable
 SetMachSpeed_InputArguments,348,Variable
 SetProduct_InputArguments,349,Variable
-RemoteCommand_InputArguments,350,Variable
 SetInterlock_InputArguments,351,Variable
 SetParameter_InputArguments,352,Variable
 http___opcfoundation_org_UA_PackML__IsNamespaceSubset,354,Variable
@@ -229,7 +222,6 @@ Reset,376,Method
 SetMachSpeed,400,Method
 SetProduct,401,Method
 SetParameter,402,Method
-RemoteCommand,403,Method
 SetInterlock,404,Method
 PackMLParameterRealDataType,405,DataType
 PackMLParameterRealDataType_Default_Binary,406,Object
