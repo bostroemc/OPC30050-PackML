@@ -1493,7 +1493,7 @@
                   <td>0:HasComponent</td>
                   <td>Variable</td>
                   <td>4:CumulativeTimes</td>
-                  <td>4:PackMLCumulativeTimesDataType</td>
+                  <td>4:PackMLCumulativeTimesDataType[]</td>
                   <td>0:BaseDataVariableType</td>
                   <td>O</td>
                 </tr>
