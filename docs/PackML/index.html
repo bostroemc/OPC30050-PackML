@@ -684,7 +684,7 @@
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:StateChangeInProcess</td><td>0:Boolean</td><td>0:BaseDataVariableType</td><td>O</td></tr>
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:MachSpeed</td><td>0:Float</td><td>0:AnalogItemType</td><td>M</td></tr>
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:CurMachSpeed</td><td>0:Float</td><td>0:AnalogItemType</td><td>M</td></tr>
-<tr><td>0:HasComponent</td><td>Variable</td><td>4:EquipmentInterlock</td><td>PackMLEquipmentInterlockDataType</td><td>0:BaseDataVariableType</td><td>M</td></tr>
+<tr><td>0:HasComponent</td><td>Variable</td><td>4:EquipmentInterlock</td><td>PackMLEquipmentInterlockDataType</td><td>0:BaseDataVariableType</td><td>O</td></tr>
 <tr><td>4:HasInterlock</td><td>Variable</td><td>4:MaterialInterlock</td><td>0:Boolean[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:Parameter_REAL</td><td>4:PackMLParameterRealDataType[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
 <tr><td>0:HasComponent</td><td>Variable</td><td>4:Parameter_STRING</td><td>4:PackMLParameterStringDataType[]</td><td>0:BaseDataVariableType</td><td>O</td></tr>
@@ -2230,8 +2230,8 @@
 <tr><td class="nowrap">Server</td><td>PackML Admin ResetTime</td><td>The server supports the PackML Time since reset</td></tr>
 <tr><td class="nowrap">Server</td><td>PackML Admin machine speed.</td><td>The server supports the PackML Machine Design Speed</td></tr>
 <tr><td class="nowrap">Server</td><td>PackML Machine Speed</td><td>The Server supports the CurMachSpeed information including units</td></tr>
-<tr><td class="nowrap">Server</td><td>PackML Equipment Blocked</td><td>The Server supports the EquipmentBlocked flag</td></tr>
-<tr><td class="nowrap">Server</td><td>PackML Equipment Starved</td><td>The Server supports the EquipmentStarved flag</td></tr>
+<tr><td class="nowrap">Server</td><td>PackML EquipmentInterlock Blocked</td><td>The Server supports the EquipmentInterlock.Blocked flag</td></tr>
+<tr><td class="nowrap">Server</td><td>PackML EquipmentInterlock Starved</td><td>The Server supports the EquipmentInterlock.Starved flag</td></tr>
 <tr><td class="nowrap">Server</td><td>PackML ProdDefectiveCount</td><td>The Server supports ProdDefectiveCount</td></tr>
 <tr><td class="nowrap">Server</td><td>PackML ProdProcessedCount</td><td>The Server supports ProdProcessedCount</td></tr>
 <tr><td class="nowrap">Client</td><td>PackML Base Functionality Client</td><td>The Client makes use of the BaseObjectModel.   This includes exposing all mandatory objects, variables and methods.</td></tr>
@@ -2268,8 +2268,8 @@
 <tr><td class="nowrap">Client</td><td>PackML-Admin ResetTime Client</td><td>The Client makes use of the PackML Time since reset</td></tr>
 <tr><td class="nowrap">Client</td><td>PackML-Admin machine speed. Client</td><td>The Client makes use of the PackML Machine Design Speed</td></tr>
 <tr><td class="nowrap">Client</td><td>PackML Machine Speed Client</td><td>The Client makes use of the CurMachSpeed information including units </td></tr>
-<tr><td class="nowrap">Client</td><td>PackML Equipment Blocked Client</td><td>The Client makes use of the EquipmentBlocked flag</td></tr>
-<tr><td class="nowrap">Client</td><td>PackML Equipment Starved Client</td><td>The Client makes use of the EquipmentStarved flag</td></tr>
+<tr><td class="nowrap">Client</td><td>PackML EquipmentInterlock Blocked Client</td><td>The Client makes use of the EquipmentInterlock.Blocked flag</td></tr>
+<tr><td class="nowrap">Client</td><td>PackML EquipmentInterlock Starved Client</td><td>The Client makes use of the EquipmentInterlock.Starved flag</td></tr>
 <tr><td class="nowrap">Client</td><td>PackML ProdDefectiveCount Client</td><td>The Client makes use of ProdDefectiveCount</td></tr>
 <tr><td class="nowrap">Client</td><td>PackML ProdProcessedCount Client</td><td>The Client makes use of ProdProcessedCount</td></tr>
 </tbody>
@@ -2343,8 +2343,8 @@
 <tr><td class="nowrap">PackML Model</td><td>PackML Admin ResetTime</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML Admin machine speed.</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML Machine Speed</td><td>O</td></tr>
-<tr><td class="nowrap">PackML Model</td><td>PackML Equipment Blocked</td><td>O</td></tr>
-<tr><td class="nowrap">PackML Model</td><td>PackML Equipment Starved</td><td>O</td></tr>
+<tr><td class="nowrap">PackML Model</td><td>PackML EquipmentInterlock Blocked</td><td>O</td></tr>
+<tr><td class="nowrap">PackML Model</td><td>PackML EquipmentInterlock Starved</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML ProdDefectiveCount</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML ProdProcessedCount</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML Base TagID</td><td>O</td></tr>
@@ -2405,8 +2405,8 @@
 <tr><td class="nowrap">PackML Model</td><td>PackML-Admin ResetTime Client</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML-Admin machine speed. Client</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML Machine Speed Client</td><td>O</td></tr>
-<tr><td class="nowrap">PackML Model</td><td>PackML Equipment Blocked Client</td><td>O</td></tr>
-<tr><td class="nowrap">PackML Model</td><td>PackML Equipment Starved Client</td><td>O</td></tr>
+<tr><td class="nowrap">PackML Model</td><td>PackML EquipmentInterlock Blocked Client</td><td>O</td></tr>
+<tr><td class="nowrap">PackML Model</td><td>PackML EquipmentInterlock Starved Client</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML ProdDefectiveCount Client</td><td>O</td></tr>
 <tr><td class="nowrap">PackML Model</td><td>PackML ProdProcessedCount Client</td><td>O</td></tr>
 </tbody>
@@ -2439,7 +2439,7 @@
 </thead>
 <tbody>
 <tr><td>NamespaceUri</td><td>String</td><td>http://opcfoundation.org/UA/PackML/</td></tr>
-<tr><td>NamespaceVersion</td><td>String</td><td>2.0.9</td></tr>
+<tr><td>NamespaceVersion</td><td>String</td><td>2.0.10</td></tr>
 <tr><td>NamespacePublicationDate</td><td>DateTime</td><td>2026-10-15</td></tr>
 <tr><td>IsNamespaceSubset</td><td>Boolean</td><td>False</td></tr>
 <tr><td>StaticNodeIdTypes</td><td>IdType []</td><td></td></tr>
@@ -2708,7 +2708,7 @@ END_VAR</code></pre>
 </section>
 </section>
 </main>
-<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"11627ca14e07692bcfe6632ea3c9830b7dd5b01a","editor":"vscode"};</script>
+<script>window.__specSource={"root":"../..","origin":"https://github.com/bostroemc/OPC30050-PackML","ref":"054ce99aa2f54ca4801f2f1ee1ec8d0ebae227d4","editor":"vscode"};</script>
 <script>
 (function () {
   var cfg = window.__specSource;

@@ -1211,7 +1211,7 @@
                   <td>4:EquipmentInterlock</td>
                   <td>PackMLEquipmentInterlockDataType</td>
                   <td>0:BaseDataVariableType</td>
-                  <td>M</td>
+                  <td>O</td>
                 </tr>
                 <tr>
                   <td>4:HasInterlock</td>
@@ -5497,13 +5497,13 @@
               </tr>
               <tr>
                 <td>Server</td>
-                <td>PackML Equipment Blocked</td>
-                <td>The Server supports the EquipmentBlocked flag</td>
+                <td>PackML EquipmentInterlock Blocked</td>
+                <td>The Server supports the EquipmentInterlock.Blocked flag</td>
               </tr>
               <tr>
                 <td>Server</td>
-                <td>PackML Equipment Starved</td>
-                <td>The Server supports the EquipmentStarved flag</td>
+                <td>PackML EquipmentInterlock Starved</td>
+                <td>The Server supports the EquipmentInterlock.Starved flag</td>
               </tr>
               <tr>
                 <td>Server</td>
@@ -5687,13 +5687,13 @@
               </tr>
               <tr>
                 <td>Client</td>
-                <td>PackML Equipment Blocked Client</td>
-                <td>The Client makes use of the EquipmentBlocked flag</td>
+                <td>PackML EquipmentInterlock Blocked Client</td>
+                <td>The Client makes use of the EquipmentInterlock.Blocked flag</td>
               </tr>
               <tr>
                 <td>Client</td>
-                <td>PackML Equipment Starved Client</td>
-                <td>The Client makes use of the EquipmentStarved flag</td>
+                <td>PackML EquipmentInterlock Starved Client</td>
+                <td>The Client makes use of the EquipmentInterlock.Starved flag</td>
               </tr>
               <tr>
                 <td>Client</td>
@@ -5939,12 +5939,12 @@
                   </tr>
                   <tr>
                     <td>PackML Model</td>
-                    <td>PackML Equipment Blocked</td>
+                    <td>PackML EquipmentInterlock Blocked</td>
                     <td>O</td>
                   </tr>
                   <tr>
                     <td>PackML Model</td>
-                    <td>PackML Equipment Starved</td>
+                    <td>PackML EquipmentInterlock Starved</td>
                     <td>O</td>
                   </tr>
                   <tr>
@@ -6175,12 +6175,12 @@
                   </tr>
                   <tr>
                     <td>PackML Model</td>
-                    <td>PackML Equipment Blocked Client</td>
+                    <td>PackML EquipmentInterlock Blocked Client</td>
                     <td>O</td>
                   </tr>
                   <tr>
                     <td>PackML Model</td>
-                    <td>PackML Equipment Starved Client</td>
+                    <td>PackML EquipmentInterlock Starved Client</td>
                     <td>O</td>
                   </tr>
                   <tr>
@@ -6246,7 +6246,7 @@
               <tr>
                 <td>NamespaceVersion</td>
                 <td>String</td>
-                <td>2.0.9</td>
+                <td>2.0.10</td>
               </tr>
               <tr>
                 <td>NamespacePublicationDate</td>
