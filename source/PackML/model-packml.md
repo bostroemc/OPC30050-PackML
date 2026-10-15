@@ -226,7 +226,7 @@ source: figures/fig_13_packmladminobjecttype-overview.png
 | 0:HasComponent | Variable | 4:WarningExtent | 0:Int32 | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:ModeTimeCurrent | 0:Int32 | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:StateTimeCurrent | 0:Int32 | 0:BaseDataVariableType | O |
-| 0:HasComponent | Variable | 4:CumulativeTimes | 4:PackMLCumulativeTimesDataType | 0:BaseDataVariableType | O |
+| 0:HasComponent | Variable | 4:CumulativeTimes | 4:PackMLCumulativeTimesDataType[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:ProductData | 4:PackMLProductDataType | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:DisabledStatesCfg | 0:UInt32[] | 0:BaseDataVariableType | O |
 | 0:HasComponent | Variable | 4:CurDisabledStates | 0:UInt32 | 0:BaseDataVariableType | O |
